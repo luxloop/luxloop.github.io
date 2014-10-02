@@ -1,0 +1,10 @@
+_site/
+
+# osx noise
+.DS_Store
+profile
+*.swp
+*~.nib
+
+# Thumbnails
+._*
