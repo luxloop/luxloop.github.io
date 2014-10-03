@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#nameText").fitText();
+	$("#infoBar").fitText();
 
 	$.backstretch([
 		  "/img/001.jpg"
