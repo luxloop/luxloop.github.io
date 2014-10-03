@@ -107,9 +107,9 @@ body {
 }
 
 #nametext {
+    display: inline-block;
     text-align: center;
-    display: block;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
     top: 0%;
