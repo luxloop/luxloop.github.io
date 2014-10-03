@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	$("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	$("#shadowBarR").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	$("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	$("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 
 	$.backstretch([
 		  "img/017.jpg"
