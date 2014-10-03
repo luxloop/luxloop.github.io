@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#infoBar").fitText(1.0);
+	$("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 
 	$.backstretch([
 		  "/img/001.jpg"

@@ -96,21 +96,31 @@ body {
 }
 
 #infoBar {
-    color: #ffffff;
     display: block;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255,255,255,0.4);
+    top: 30%;
+    left: 0%;    
+}
+
+#titleBar {
+    color: #ffffff;
+    display: inline-block;
     text-align: center;
     position: absolute;
     width: 100%;
     height: auto;
     min-height: 15%;
     max-height: 40%;
-    background-color: rgba(255,255,255,0.4);
-    top: 30%;
+    top: 0%;
     left: 0%;    
 }
 
 .no-js #infoBar {
-    font-size: 6em;
+    font-size: 100px;
 }
 
 
