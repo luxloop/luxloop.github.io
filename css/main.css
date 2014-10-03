@@ -96,6 +96,7 @@ body {
 }
 
 #infoBar {
+    display: block;
     position: absolute;
     width: 100%;
     height: auto;
@@ -104,6 +105,17 @@ body {
     top: 30%;
     left: 0%;
 }
+
+#nametext {
+    text-align: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0%;
+    left: 0%;
+}
+
 
 
 
