@@ -100,7 +100,7 @@ a:hover {text-decoration: underline;}
 
 
 
-#titleBar {
+#titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
     color: #ffffff;
     display: block;
     text-align: center;
@@ -114,54 +114,18 @@ a:hover {text-decoration: underline;}
     left: 0%;
     z-index: 9999;    
 }
-#shadowBarR {
-    color: #ff0000;
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    min-height: 15%;
-    max-height: 40%;
-    /*background-color: rgba(100,100,100,0.3);*/
-    top: 30%;
-    left: 0%;
-    z-index: 9995;
-    margin-top: 2px;
-    margin-left: 2px;    
+
+#titleBar {
+    text-shadow:
+       2px 2px #ff0000,
+       4px 4px #00ff00,
+       6px 6px #0000ff;
 }
-#shadowBarG {
-    color: #00ff00;
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    min-height: 15%;
-    max-height: 40%;
-    /*background-color: rgba(100,100,100,0.3);*/
-    top: 30%;
-    left: 0%;
-    z-index: 9994;
-    margin-top: 4px;
-    margin-left: 4px;    
-}
-#shadowBarB {
-    color: #0000ff;
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    min-height: 15%;
-    max-height: 40%;
-    /*background-color: rgba(100,100,100,0.3);*/
-    top: 30%;
-    left: 0%;
-    z-index: 9993;
-    margin-top: 6px;
-    margin-left: 6px;    
-}
+
+/* Fallback for text shadow */
+#shadowBarR {color: #ff0000; z-index: 9995; margin-top: 2px; margin-left: 2px;}
+#shadowBarG {color: #00ff00;z-index: 9994; margin-top: 4px; margin-left: 4px;}
+#shadowBarB {color: #0000ff; z-index: 9993; margin-top: 6px; margin-left: 6px;}
 
 #infoBar {
     color: #ffffff;
@@ -171,7 +135,6 @@ a:hover {text-decoration: underline;}
     width: 100%;
     height: auto;
     max-height: 10%;
-    /*background-color: rgba(100,100,100,0.3);*/
     bottom: 10%;
     left: 0%;    
     padding: 5px 0px 5px 0px;
@@ -182,6 +145,26 @@ a:hover {text-decoration: underline;}
 }
 
 
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
 
 
 /* ==========================================================================
