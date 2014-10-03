@@ -16,5 +16,6 @@ $(document).ready(function() {
 	    , "/img/014.png"
 	    , "/img/015.jpg"
 	    , "/img/016.jpg"
+	    , "/img/018.jpg"
 	  ], {duration: 5500, fade: 1000});
 });
