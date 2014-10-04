@@ -93,7 +93,7 @@ textarea {
 
 body {
     background: #333333;
-    background: url('../img/005.jpg');
+    /*background: url('../img/005.jpg');*/
     font-family: "rooney-sans", "helvetica", sans-serif;
 }
 
@@ -126,6 +126,10 @@ a:hover {text-decoration: underline;}
        2px 2px #ff0000,
        4px 4px #00ff00,
        6px 6px #0000ff;
+}
+
+.backstretch {
+    background: none;
 }
 
 /* Fallback for text shadow */
