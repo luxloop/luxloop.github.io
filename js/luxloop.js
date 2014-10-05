@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 	$("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 
+/*
 	$.backstretch([
 		  "img/017.jpg"
 		, "img/001.jpg"
@@ -20,4 +21,5 @@ $(document).ready(function() {
 		, "img/013.png"
 		, "img/014.png"
 	], {duration: 5500, fade: 1000});
+*/
 });

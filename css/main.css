@@ -92,7 +92,7 @@ textarea {
    ========================================================================== */
 
 body {
-    background: #333333;
+    background: #000000;
     /*background: url('../img/005.jpg');*/
     font-family: "rooney-sans", "helvetica", sans-serif;
 }
@@ -110,7 +110,7 @@ a:hover {text-decoration: underline;}
     width: 100%;
     height: auto;
     min-height: 15%;
-    max-height: 40%;
+    max-height: 70%;
     /*background-color: rgba(100,100,100,0.3);*/
     top: 30%;
     left: 0%;
