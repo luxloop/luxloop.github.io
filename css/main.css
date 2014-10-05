@@ -187,6 +187,23 @@ a:hover {text-decoration: underline;}
 
 }
 
+@media only screen and (max-width: 480px) {
+    .rgbShadow {
+        text-shadow:
+           1px 1px #ff0000,
+           2px 2px #00ff00,
+           3px 3px #0000ff;
+    }
+
+    #shadowBarR {margin-top: 1px; margin-left: 1px;}
+    #shadowBarG {margin-top: 2px; margin-left: 2px;}
+    #shadowBarB {margin-top: 3px; margin-left: 3px;}
+
+    #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
+        max-height: 60%;
+    }
+}
+
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
