@@ -91,15 +91,40 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+  height: 100%;
+}
+
 body {
     background: #333333;
     /*background: url('../img/005.jpg');*/
     font-family: "rooney-sans", "helvetica", sans-serif;
+    height: 100%;
 }
 
 a {color: #ffffff; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
+#staticBg, #slideshowBg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#staticBg {
+  z-index: 9000;
+/*  background: url("../img/017.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+#slideshowBg {
+  z-index: 9001;
+}
 
 
 #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
@@ -114,7 +139,7 @@ a:hover {text-decoration: underline;}
     /*background-color: rgba(100,100,100,0.3);*/
     top: 30%;
     left: 0%;
-    z-index: 9999;    
+    z-index: 9996;    
 }
 
 #titleBar {
@@ -148,6 +173,7 @@ a:hover {text-decoration: underline;}
     bottom: 10%;
     left: 0%;    
     padding: 5px 0px 5px 0px;
+    z-index: 9999;
 }
 
 .no-js #titleBar, .no-js #shadowBarR, .no-js #shadowBarG, .no-js #shadowBarB {

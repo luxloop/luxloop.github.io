@@ -4,7 +4,9 @@ $(document).ready(function() {
 	$("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 	$("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 
-	$.backstretch([
+	$("#staticBg").backstretch("img/017.jpg");
+
+	$("#slideshowBg").backstretch([
 		  "img/017.jpg"
 		, "img/001.jpg"
 		, "img/002.jpg"
