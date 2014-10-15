@@ -98,8 +98,6 @@ $(document).ready(function() {
             // blogData = blogData + '<span class="blogFoot">See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a></span>';
             blogData = blogData + '<div class="blogEntry"><p><br />See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a><br />&nbsp;</p></div>';
 
-            
-
             $("#blogContent").prepend(blogData);
 
             $(".blogVid").each(function() {
