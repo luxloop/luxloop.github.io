@@ -94,15 +94,13 @@ textarea {
 html {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-    background: #333333;
+    background: #222222;
     /*background: url('../img/005.jpg');*/
     font-family: "rooney-sans", "helvetica", sans-serif;
     height: 100%;
-    overflow-y: scroll; 
 }
 
 a {color: #ffffff; text-decoration: none;}
@@ -113,7 +111,7 @@ a:hover {text-decoration: underline;}
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 60%;
+  height: 100%;
   overflow: hidden;
   background-color: #cccccc;
 }
@@ -140,7 +138,7 @@ a:hover {text-decoration: underline;}
 }
 
 
-#titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
+#titleHider, #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
     color: #ffffff;
     display: block;
     text-align: center;
@@ -150,7 +148,7 @@ a:hover {text-decoration: underline;}
     min-height: 15%;
     max-height: 40%;
     /*background-color: rgba(100,100,100,0.3);*/
-    top: 15%;
+    top: 30%;
     left: 0%;
     z-index: 9996;    
 }
@@ -159,16 +157,22 @@ a:hover {text-decoration: underline;}
     
 }
 
+#titleHider {
+  top: 0%;
+  overflow: hidden;
+  min-height: 100%;
+  /*background-color: rgba(255,0,0,0.5);*/
+}
+
 #menuBar {
   color: #ffffff;
-  background-color: #111111;
   display: block;
   position: absolute;
   width: 100%;
   height: 8%;
-  /*background-color: rgba(0,0,0,1.0) !important;*/
-  /*background-color: rgba(100,100,100,0.3);*/
-  top: 60%;
+  /*background-color: rgba(255,0,0,0.3);*/
+  background-color: #111111;
+  bottom: 0%;
   left: 0%;
   z-index: 9999;   
 }
@@ -191,15 +195,46 @@ a:hover {text-decoration: underline;}
 
 
 #blogContent {
-  position: absolute;
+  /*position: absolute;*/
   top: 70%;
   left: 0%;
-  /*height: auto;*/
+  height: auto;
   width: 80%;
-  height: 50%;
+  min-height: 50%;
   background-color: #888888;
   padding-bottom: 0px;
-  margin: 0% 10% 0% 10%;
+  /*margin: 0% 10% 0% 10%;*/
+  margin: 0 auto;
+  background-color: #222222;
+}
+
+.blogEntry {
+  margin: 2% 10% 3% 8%;
+  /*border: solid;
+  border-width: 1px;
+  border-color: #555555;*/
+  padding: 0% 3% 0% 3%;
+  background-color: #aaaaaa;
+}
+
+.blogDate, .blogDate a {
+  display: block;
+  color: #ffff00;
+  font-size: 1.1em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  font-family: "rooney-sans", "helvetica", sans-serif;
+}
+
+.blogImg {
+  width: 100%;
+  /*max-width: 600px;*/
+  height: auto;
+}
+
+.blogImg img {
+  width: 100%;
+  height: auto;
 }
 
 #infoBar {
@@ -221,17 +256,20 @@ a:hover {text-decoration: underline;}
   color: #ffffff;
   background-color: #111111;
   display: block;
-  position: absolute;
-  top: 100%;
+  position: relative;
+  /*top: 100%;*/
   left: 0%;
-  width: 127%;
-  height: 100px;
+  width: 100%;
+  height: 600px;
   z-index: 9999;  
-  margin: 2% 0% 0% -14%;
 }
 
 .no-js #titleBar, .no-js #shadowBarR, .no-js #shadowBarG, .no-js #shadowBarB {
     font-size: 100px;
+}
+
+.no-js #titleHider {
+  visibility: visible !important;
 }
 
 
