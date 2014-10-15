@@ -95,7 +95,10 @@ $(document).ready(function() {
         if (postCount >= 1) {
 
             //blogData = blogData + '<div class="blogEntry"><div class="divider"></div><p><br />&nbsp;</p>'
-            blogData = blogData + '<span class="blogFoot">See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a></span>';
+            // blogData = blogData + '<span class="blogFoot">See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a></span>';
+            blogData = blogData + '<div class="blogEntry"><p><br />See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a><br />&nbsp;</p></div>';
+
+            
 
             $("#blogContent").prepend(blogData);
 
