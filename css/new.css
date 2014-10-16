@@ -99,7 +99,7 @@ html {
 body {
     background: #222222;
     /*background: url('../img/005.jpg');*/
-    font-family: "rooney-sans", "helvetica", sans-serif;
+    font-family: "arial", "helvetica", sans-serif;
     height: 100%;
 }
 
@@ -139,6 +139,7 @@ a:hover {text-decoration: underline;}
 
 
 #titleHider, #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
+    font-family: "rooney-sans", "helvetica", sans-serif;
     color: #ffffff;
     display: block;
     text-align: center;
