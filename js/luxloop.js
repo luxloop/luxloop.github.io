@@ -78,13 +78,15 @@ $(document).ready(function() {
                     }
                     ////////////////
 
-                    post = post + '<p>';
+                    //post = post + '<p>';
                     if (tumblr_api_read.posts[i]["tags"] !== 'undefined') {
+                    	post = post + '<div class="tags"><p><br />';
                         for (var j = 0; j < tumblr_api_read.posts[i]["tags"].length; j++) {
                             post = post + '<a href="http://axionexperience.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
                         };
+                        post = post + '</div></p>';
                     }
-                    post = post + '</p><p><br /><br />&nbsp;</p></div>';
+                    post = post + '<p><br />&nbsp;</p></div>';
 
                     blogData = blogData + post;
                     postCount++;

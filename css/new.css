@@ -97,7 +97,7 @@ html {
 }
 
 body {
-    background: #222222;
+    background: #000000;
     /*background: url('../img/005.jpg');*/
     font-family: "arial", "helvetica", sans-serif;
     height: 100%;
@@ -202,20 +202,21 @@ a:hover {text-decoration: underline;}
   height: auto;
   width: 80%;
   min-height: 50%;
-  background-color: #888888;
+  /*background-color: #888888;*/
   padding-bottom: 0px;
   /*margin: 0% 10% 0% 10%;*/
   margin: 0 auto;
-  background-color: #222222;
+  background-color: #000000;
 }
 
 .blogEntry {
   margin: 2% 10% 3% 8%;
   /*border: solid;
-  border-width: 1px;
-  border-color: #555555;*/
-  padding: 0% 3% 0% 3%;
-  background-color: #aaaaaa;
+  border-width: 2px;
+  border-color: #000000;
+  */padding: 0% 3% 0% 3%;
+  background-color: #333333;
+  color: #ffffff;
 /*  box-shadow: 
     2px 3px 0px #ff0000,
     4px 6px 0px #00ff00,
@@ -258,6 +259,15 @@ a:hover {text-decoration: underline;}
   /*margin-top: -15%;*/
 }
 
+.tags {
+  width: 100%;
+  text-align: right;
+}
+
+.hash {
+  padding-left: 6px;
+}
+
 #infoBar {
     color: #ffffff;
     display: block;
@@ -282,8 +292,45 @@ a:hover {text-decoration: underline;}
   left: 0%;
   width: 100%;
   height: 90%;
-  z-index: 9999;  
+  z-index: 9999;
+  overflow: hidden;  
 }
+
+#footMargin {
+  position: absolute;
+  top: 5%;
+  left: 16.5%;
+  width: 65.5%;
+  height: 85%;
+}
+
+#footLeft {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+
+#footRight {
+  position: absolute;
+  top: 0%;
+  left: 53%;
+}
+
+#footRight, #footLeft {
+  background-color: #000000;
+  color: #ffffff;
+  width: 47%;
+  height: 100%;
+  box-shadow:
+       4px 4px #ff0000,
+       8px 8px #00ff00,
+       12px 12px #0000ff;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+}
+
 
 .no-js #titleBar, .no-js #shadowBarR, .no-js #shadowBarG, .no-js #shadowBarB {
     font-size: 100px;
