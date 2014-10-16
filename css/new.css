@@ -221,17 +221,27 @@ a:hover {text-decoration: underline;}
     6px 9px 0px #0000ff;*/
 }
 
-.blogDate, .blogDate a {
-  display: block;
+.blogDate a {
+  display: inline-block;
   color: #ffffff;
-  font-size: 1.1em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  width: 30%;
+  /*background-color: #ffffff;*/
+  border: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  font-size: 1.3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1.5em;
+  padding-left: 0.5em;
+  margin-bottom: 1em; 
+  margin-top: 1em;
+  /*margin-bottom: 0.25em;  */
   font-family: "rooney-sans", "helvetica", sans-serif;
-  text-shadow:
-       1px 1px #ff0000,
-       2px 2px #00ff00,
-       3px 3px #0000ff;
+  box-shadow:
+       2px 2px #ff0000,
+       4px 4px #00ff00,
+       6px 6px #0000ff;
 }
 
 .blogImg {
