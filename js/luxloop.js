@@ -59,7 +59,7 @@ $(document).ready(function() {
                     
                     // Photo Post //
                     if (kind == "photo") {
-                        post = post + '<div class="blogImg"><img src="' + tumblr_api_read.posts[i]["photo-url-1280"] + '" /></div>';
+                        post = post + '<div class="blogImg" data-tall="0" data-width="' + tumblr_api_read.posts[i]["width"] + '" data-height="' + tumblr_api_read.posts[i]["height"] + '" ><img src="' + tumblr_api_read.posts[i]["photo-url-1280"] + '" /></div>';
                         post = post + tumblr_api_read.posts[i]["photo-caption"];
                     }
                     ////////////////
@@ -115,60 +115,93 @@ $(document).ready(function() {
         });
     }
 
-    function blogDate(dString) {
-        var month = "";
-        var numDay =""; 
-        if (dString.charAt(5) == 0) {
-            numDay = String(dString.charAt(6))
-        } else {
-            numDay = String(dString.charAt(5)) + String(dString.charAt(6))
-        };
-        var year = dString.charAt(12) + dString.charAt(13) + dString.charAt(14) + dString.charAt(15);
-        var mon = dString.charAt(8) + dString.charAt(9) + dString.charAt(10);
-        switch(mon) {
-            case "Jan":
-                month = "January";
-                break;
-            case "Feb":
-                month = "February";
-                break
-            case "Mar":
-                month = "March";
-                break
-            case "Apr":
-                month = "April";
-                break
-            case "May":
-                month = "May";
-                break
-            case "Jun":
-                month = "June";
-                break
-            case "Jul":
-                month = "July";
-                break
-            case "Aug":
-                month = "August";
-                break
-            case "Sep":
-                month = "September";
-                break
-            case "Oct":
-                month = "October";
-                break
-            case "Nov":
-                month = "November";
-                break
-            case "Dec":
-                month = "December";
-                break
-            default:
-                month = mon;
-        }
-        var outDate = month + " " + numDay + ", " + year;
-        return outDate;
-    };
+    $(".blogImg").each(function() {
+    	var w = $(this).attr("data-width");
+    	var h = $(this).attr("data-height");
+    	var r = h/w;
+    	if (r > 0.6) {
+    		var off = -1 * ((r - 0.6) * h)/2;
+    		$(this).attr("data-tall","1");
+    		var h = $(this).width() * 0.6;
+    		$(this).css("height",h+"px");
+    		$(this).children().css("margin-top",off+"px");
+    	};
+    });	
+
 });
+
+on_resize(function() {
+	$(".blogImg").each(function() {
+    	var w = $(this).attr("data-width");
+    	var h = $(this).attr("data-height");
+    	var r = h/w;
+    	if (r > 0.6) {
+    		var off = -1 * ((r - 0.6) * h)/2;
+    		var h = $(this).width() * 0.6;
+    		$(this).css("height",h+"px");
+    		$(this).children().css("margin-top",off+"px");
+    		//console.log("resized");
+    	};
+    });	
+})();
+
+
+// debulked onresize handler
+function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
+
+function blogDate(dString) {
+    var month = "";
+    var numDay =""; 
+    if (dString.charAt(5) == 0) {
+        numDay = String(dString.charAt(6))
+    } else {
+        numDay = String(dString.charAt(5)) + String(dString.charAt(6))
+    };
+    var year = dString.charAt(12) + dString.charAt(13) + dString.charAt(14) + dString.charAt(15);
+    var mon = dString.charAt(8) + dString.charAt(9) + dString.charAt(10);
+    switch(mon) {
+        case "Jan":
+            month = "January";
+            break;
+        case "Feb":
+            month = "February";
+            break
+        case "Mar":
+            month = "March";
+            break
+        case "Apr":
+            month = "April";
+            break
+        case "May":
+            month = "May";
+            break
+        case "Jun":
+            month = "June";
+            break
+        case "Jul":
+            month = "July";
+            break
+        case "Aug":
+            month = "August";
+            break
+        case "Sep":
+            month = "September";
+            break
+        case "Oct":
+            month = "October";
+            break
+        case "Nov":
+            month = "November";
+            break
+        case "Dec":
+            month = "December";
+            break
+        default:
+            month = mon;
+    }
+    var outDate = month + " " + numDay + ", " + year;
+    return outDate;
+};
 
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)

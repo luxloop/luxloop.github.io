@@ -215,30 +215,36 @@ a:hover {text-decoration: underline;}
   border-color: #555555;*/
   padding: 0% 3% 0% 3%;
   background-color: #aaaaaa;
-  box-shadow: 
+/*  box-shadow: 
     2px 3px 0px #ff0000,
     4px 6px 0px #00ff00,
-    6px 9px 0px #0000ff;
+    6px 9px 0px #0000ff;*/
 }
 
 .blogDate, .blogDate a {
   display: block;
-  color: #ffff00;
+  color: #ffffff;
   font-size: 1.1em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   font-family: "rooney-sans", "helvetica", sans-serif;
+  text-shadow:
+       1px 1px #ff0000,
+       2px 2px #00ff00,
+       3px 3px #0000ff;
 }
 
 .blogImg {
   width: 100%;
   /*max-width: 600px;*/
   height: auto;
+  overflow: hidden;
 }
 
 .blogImg img {
   width: 100%;
   height: auto;
+  /*margin-top: -15%;*/
 }
 
 #infoBar {
