@@ -9,8 +9,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/new.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/new.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
         <script src="//use.typekit.net/pga1gsl.js"></script>
@@ -21,6 +22,54 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+         <div id="fullpage">
+            <div class="section">
+                
+
+                <span id="titleHider" class="invisible">
+                    <div id="titleBar" class="rgbShadow">luxloop</div>
+                    <span class="rgbLayers">
+                        <div id="shadowBarR">luxloop</div>
+                        <div id="shadowBarG">luxloop</div>
+                        <div id="shadowBarB">luxloop</div>
+                    </span>
+                </span>
+
+                <div id="menuBar">
+
+                </div>
+            </div>
+
+            <div class="section active">
+                <div id="infoBox">
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div id="blogContent">
+                    <div class="blogEntry" id="entry1"></div>
+                    <div class="blogEntry" id="entry2"></div>
+                    <div class="blogEntry" id="entry3"></div>
+                    <div class="blogEntry" id="entry4"></div>
+
+                    <div class="arrow" id="arrowL"></div>
+                    <div class="arrow" id="arrowR"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                
+            </div>
+        </div>
+
+        <div id="bgHolder">
+            <div id="staticBg"></div>
+            <div id="slideshowBg"></div>
+        </div>
+
+
+<!-- 
         <div id="bgHolder">
             <div id="staticBg"></div>
             <div id="slideshowBg"></div>
@@ -53,6 +102,7 @@
                 </div>
             </div>
         </div>
+ -->
 
 
         
@@ -74,6 +124,8 @@
         <script src="js/vendor/jquery.backstretch.min.js"></script>
         <script type="text/javascript" src="js/vendor/jquery.fitvids.js"></script>
         <script src="js/vendor/jquery.fittext.js"></script>
+        <script src="js/vendor/jquery.fullPage.js"></script>
+        <script src="js/vendor/jquery.easings.min.js"></script>
         <script src="js/luxloop.js"></script>
         <!--<script type="text/javascript" src="http://luxloop.tumblr.com/api/read/json?jasoncallback=?&start=0&num=10"></script>-->
         <script type="text/javascript" src="http://blog.ivaylogetov.com/api/read/json?jasoncallback=?&start=0&num=10"></script>

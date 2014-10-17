@@ -1,10 +1,17 @@
+var blogImgRatio = 0.5;
+
 $(document).ready(function() {
 
+    $('#fullpage').fullpage();
+
+    
 	var uA = navigator.userAgent;
 	var isMobile = false;
 	if (jQuery.browser.mobile == true) {
 	    isMobile = true;
 	};
+
+    var moving = false;
 
 
 	$("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
@@ -55,7 +62,7 @@ $(document).ready(function() {
                 if (kind == "photo" || kind == "video" || kind == "regular") {
                     var formatDate = blogDate(tumblr_api_read.posts[i]["date"]);
 
-                    var post = '<div class="blogEntry"><span class="blogDate"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">' + formatDate + '</a></span><div class="divider"></div>';
+                    var post = '<span class="blogDate"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">' + formatDate + '</a></span><div class="divider"></div>';
                     
                     // Photo Post //
                     if (kind == "photo") {
@@ -82,29 +89,39 @@ $(document).ready(function() {
                     if (tumblr_api_read.posts[i]["tags"] !== 'undefined') {
                     	post = post + '<div class="tags"><p><br />';
                         for (var j = 0; j < tumblr_api_read.posts[i]["tags"].length; j++) {
-                            post = post + '<a href="http://axionexperience.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
+                            post = post + '<a href="http://luxloop.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
                         };
                         post = post + '</div></p>';
                     }
-                    post = post + '<p><br />&nbsp;</p></div>';
+                    post = post + '<p><br />&nbsp;</p>';
 
-                    blogData = blogData + post;
+                    //blogData = blogData + post;
                     postCount++;
+                    //$("#blogContent .slide:nth-child("+postCount+")").prepend(post);
+                    $("#blogContent .blogEntry:nth-child("+postCount+")").prepend(post);
                 };
             };              
         };
         // Create the blog posts
         if (postCount >= 1) {
-
+            /*
             //blogData = blogData + '<div class="blogEntry"><div class="divider"></div><p><br />&nbsp;</p>'
             // blogData = blogData + '<span class="blogFoot">See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a></span>';
             blogData = blogData + '<div class="blogEntry"><p><br />See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a><br />&nbsp;</p></div>';
+            */
+            //$("#blogContent").prepend(blogData);
 
-            $("#blogContent").prepend(blogData);
+            $.fn.fullpage.reBuild();
 
             $(".blogVid").each(function() {
                 $(this).fitVids();
             });	
+
+            $(".blogImg").each(function() {
+                var w = $(this).width();
+                var h = w * 0.6;
+                $(this).css("height",h+"px");
+            }); 
             
         };
         
@@ -121,14 +138,38 @@ $(document).ready(function() {
     	var w = $(this).attr("data-width");
     	var h = $(this).attr("data-height");
     	var r = h/w;
-    	if (r > 0.6) {
+    	if (r > blogImgRatio) {
     		var off = -1 * ((r - 0.6) * h)/2;
     		$(this).attr("data-tall","1");
-    		var h = $(this).width() * 0.6;
+    		var h = $(this).width() * blogImgRatio;
     		$(this).css("height",h+"px");
     		$(this).children().css("margin-top",off+"px");
     	};
     });	
+
+
+    $("#arrowR").click(function(){
+        if (moving == false) {
+            moving = true;
+            $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},1000,function(){
+                $("#arrowR").css("visibility","hidden");
+                $("#arrowL").css("visibility","visible");
+                moving = false;
+            });
+        };
+        
+    });
+
+    $("#arrowL").click(function(){
+        if (moving == false) {
+            moving = true;
+            $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},1000,function(){
+                $("#arrowL").css("visibility","hidden");
+                $("#arrowR").css("visibility","visible");
+                moving = false;
+            });
+        };
+    });
 
 });
 
@@ -137,9 +178,9 @@ on_resize(function() {
     	var w = $(this).attr("data-width");
     	var h = $(this).attr("data-height");
     	var r = h/w;
-    	if (r > 0.6) {
+    	if (r > blogImgRatio) {
     		var off = -1 * ((r - 0.6) * h)/2;
-    		var h = $(this).width() * 0.6;
+    		var h = $(this).width() * blogImgRatio;
     		$(this).css("height",h+"px");
     		$(this).children().css("margin-top",off+"px");
     		//console.log("resized");
