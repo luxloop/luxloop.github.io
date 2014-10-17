@@ -103,7 +103,7 @@ body {
 }*/
 
 html, body {
-    background: #ff0000;
+    background: #000000;
     /*background: url('../img/005.jpg');*/
     font-family: "arial", "helvetica", sans-serif;
 
@@ -128,7 +128,7 @@ a:hover {text-decoration: underline;}
   right: 0px;
   height: 100%;
   overflow: hidden;
-  background-color: #cccccc;
+  background-color: #000000;
 }
 
 #staticBg, #slideshowBg {
