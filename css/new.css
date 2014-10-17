@@ -213,8 +213,8 @@ a:hover {text-decoration: underline;}
 #infoBox {
   position: absolute;
   top: 15%;
-  left: 10%;
-  width: 80%;
+  left: 5%;
+  width: 90%;
   height: 75%;
   background-color: #000000;
   color: #ffffff;
@@ -230,7 +230,7 @@ a:hover {text-decoration: underline;}
 
 #blogContent {
   position: relative;
-  background-color: #000000;
+  background-color: rgba(0,0,0,0.6);
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -272,9 +272,9 @@ a:hover {text-decoration: underline;}
 .blogEntry {
   background-color: #333333;
   position: absolute;
-  top: 2%;
+  top: 15%;
   width: 40%;
-  height: 80%;
+  height: 67%;
   color: #ffffff;
   padding: 2%;
 }
@@ -392,22 +392,22 @@ a:hover {text-decoration: underline;}
 
 #footLeft {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 15%;
+  left: 5%;
 }
 
 
 #footRight {
   position: absolute;
-  top: 0%;
-  left: 53%;
+  top: 15%;
+  left: 51%;
 }
 
 #footRight, #footLeft {
   background-color: #000000;
   color: #ffffff;
-  width: 47%;
-  height: 100%;
+  width: 43%;
+  height: 80%;
   box-shadow:
        4px 4px #ff0000,
        8px 8px #00ff00,
