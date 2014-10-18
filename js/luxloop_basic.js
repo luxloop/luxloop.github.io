@@ -2,21 +2,6 @@ var blogImgRatio = 0.5;
 
 $(document).ready(function() {
 
-    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,
-        onLeave: function(index, nextIndex, direction){
-            //after leaving section 2
-            if(index == 1 && direction =='down'){
-                $("#menuBarBot").fadeOut();
-                $("#menuBarTop").fadeIn(1200);
-            }
-
-            else if(index == 2 && direction == 'up'){
-                $("#menuBarTop").fadeOut();
-                $("#menuBarBot").fadeIn(1200);
-            }
-        }
-
-    });
 
     
 	var uA = navigator.userAgent;
