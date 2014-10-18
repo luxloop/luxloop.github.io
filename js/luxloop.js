@@ -190,6 +190,21 @@ $(document).ready(function() {
         };
     });
 
+    $(".botNavLink").click(function(){
+        var dest = $(this).attr("data-dest");
+        $.fn.fullpage.moveTo(dest);
+    });
+
+    $(".topNavLink").click(function(){
+        var dest = $(this).attr("data-dest");
+        $.fn.fullpage.moveTo(dest);
+    });
+
+    $("#topLogo").click(function(){
+        $.fn.fullpage.moveTo(1);
+    });
+
+
 });
 
 on_resize(function() {

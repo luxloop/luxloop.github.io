@@ -118,6 +118,18 @@ html, body {
 a {color: #ffffff; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
+.r {
+  color: #ff0000;
+}
+
+.g {
+  color: #00ff00;
+}
+
+.b {
+  color: #0000ff;
+}
+
 #fullpage{
   z-index: 9999;
 }
@@ -258,11 +270,22 @@ a:hover {text-decoration: underline;}
   left: 5%;
 }
 
+#topLogo:hover {
+  cursor: pointer;
+}
+
 .rgbShadow {
     text-shadow:
        2px 2px #ff0000,
        4px 4px #00ff00,
        6px 6px #0000ff;
+}
+
+.rgbShadowSmall {
+    text-shadow:
+       1px 1px #ff0000,
+       2px 2px #00ff00,
+       3px 3px #0000ff;
 }
 
 .backstretch {
@@ -292,6 +315,32 @@ a:hover {text-decoration: underline;}
   border-color: #ffffff;
 }
 
+#infoBox p {
+  margin: 2em;
+}
+
+#infoBox .eventHead {
+  display: inline-block;
+  width: 8.5em;
+  border-bottom: solid;
+  border-bottom-color: #ff0000;
+  border-bottom-width: 1px;
+  margin-bottom: 0.5em;
+}
+
+#infoBox .eventDate {
+  display: inline-block;
+  width: 8.5em;
+  padding-top: 1em;
+  border-bottom: solid;
+  border-bottom-color: #ff0000;
+  border-bottom-width: 1px;
+}
+
+#infoBox .eventDesc {
+  display: inline-block;
+  font-size: 0.85em;
+}
 
 #blogContent {
   position: relative;
