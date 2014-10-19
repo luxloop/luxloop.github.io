@@ -184,7 +184,7 @@ a:hover {text-decoration: underline;}
 }
 
 #menuBarBot {
-  font-family: "rooney-sans", "helvetica", sans-serif;
+  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   color: #ffffff;
   display: block;
   position: fixed;
@@ -227,7 +227,7 @@ a:hover {text-decoration: underline;}
 }
 
 #menuBarTop {
-  font-family: "rooney-sans", "helvetica", sans-serif;
+  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   color: #ffffff;
   display: block;
   position: fixed;
