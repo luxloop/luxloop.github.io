@@ -101,12 +101,15 @@ $(document).ready(function() {
 
                     //post = post + '<p>';
                     if (tumblr_api_read.posts[i]["tags"] !== 'undefined') {
-                    	post = post + '<div class="tags"><p><br />';
+                    	post = post + '<div class="visuallyhidden"><p><br />';
                         for (var j = 0; j < tumblr_api_read.posts[i]["tags"].length; j++) {
                             post = post + '<a href="http://luxloop.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
                         };
                         post = post + '</div></p>';
                     }
+
+                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Full Post on Tumblr</a></div>'
+
                     post = post + '<p><br />&nbsp;</p>';
 
                     //blogData = blogData + post;
@@ -170,7 +173,7 @@ $(document).ready(function() {
     $("#arrowR").click(function(){
         if (moving == false) {
             moving = true;
-            $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},1000,function(){
+            $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},750,function(){
                 $("#arrowR").css("visibility","hidden");
                 $("#arrowL").css("visibility","visible");
                 moving = false;
@@ -182,7 +185,7 @@ $(document).ready(function() {
     $("#arrowL").click(function(){
         if (moving == false) {
             moving = true;
-            $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},1000,function(){
+            $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},750,function(){
                 $("#arrowL").css("visibility","hidden");
                 $("#arrowR").css("visibility","visible");
                 moving = false;

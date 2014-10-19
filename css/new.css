@@ -131,7 +131,7 @@ a:hover {text-decoration: underline;}
 }
 
 #fullpage{
-  z-index: 9999;
+  z-index: 9995;
 }
 #bgHolder {
   position: absolute;
@@ -313,6 +313,7 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
+  overflow: hidden;
 }
 
 #infoBox p, #footLeft p, #footRight p {
@@ -410,9 +411,10 @@ a:hover {text-decoration: underline;}
   position: absolute;
   top: 15%;
   width: 40%;
-  height: 67%;
+  height: 70%;
   color: #ffffff;
   padding: 2%;
+  overflow: hidden;
 }
 
 #entry1 {
@@ -456,8 +458,8 @@ a:hover {text-decoration: underline;}
   padding-bottom: 0.5em;
   padding-right: 1.5em;
   padding-left: 0.5em;
-  margin-bottom: 2em; 
-  margin-top: 1em;
+  margin-bottom: 1em; 
+  margin-top: 0em;
   font-family: "rooney-sans", "helvetica", sans-serif;
   box-shadow:
        2px 2px #ff0000,
@@ -484,11 +486,36 @@ a:hover {text-decoration: underline;}
   right: 1em;
   width: 100%;
   text-align: right;
+  visibility: hidden;
+}
+
+.elipsis {
+  position: absolute;
+  height: 20%;
+  min-height: 100px;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index:9997;
+}
+
+.permalink {
+  position: absolute;
+  bottom: 0.4em;
+  right: 4%;
+  width: 40%;
+  padding-top: 0.25em;
+  padding-right: 0.25em;
+  text-align: right;
+  border-top: solid;
+  border-top-color: #ff0000;
+  border-top-width: 1px;
+  z-index: 9998;
 }
 
 .hash {
   padding-left: 6px;
-}*/
+}
 
 #infoBar {
     color: #ffffff;
@@ -595,6 +622,21 @@ a:hover {text-decoration: underline;}
 
 .invisible {
     visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 
