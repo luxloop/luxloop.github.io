@@ -8,3 +8,5 @@ profile
 
 # Thumbnails
 ._*
+
+/unused/*
