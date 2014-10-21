@@ -809,7 +809,7 @@ a:hover {text-decoration: underline;}
     }
 
     #bigLogo {
-      width: 45%;
+      width: 50%;
     }
 
     #entry2, #entry3 {
@@ -887,6 +887,10 @@ a:hover {text-decoration: underline;}
     .blogDate a {
       font-size: 1.1em;
       width: 60%;
+    }
+
+    #bigLogo {
+      width: 70%;
     }
 
     #topLinks, #botLinks {
