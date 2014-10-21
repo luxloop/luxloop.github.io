@@ -279,12 +279,12 @@ a:hover {text-decoration: underline;}
 
 #topLogo {
   font-family: "rooney-sans", "helvetica", sans-serif;
-  font-size: 1.3em;
+  font-size: 2em;
   position: absolute;
   width: 45%;
   height: 100%;
   top: 50%;
-  margin-top: -0.5em; 
+  margin-top: -0.7em; 
   left: 5%;
   text-shadow:
        1px 1px #ff0000,
