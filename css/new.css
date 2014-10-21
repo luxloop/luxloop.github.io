@@ -313,8 +313,8 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
-  /*overflow: hidden;*/
-  overflow-y: scroll;
+  overflow: hidden;
+  /*overflow-y: scroll;*/
 }
 
 #infoBox p, #footLeft p, #footRight p {
@@ -415,7 +415,8 @@ a:hover {text-decoration: underline;}
   height: 70%;
   color: #ffffff;
   padding: 2%;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
+  overflow: hidden;
 }
 
 #entry1 {
@@ -495,24 +496,22 @@ a:hover {text-decoration: underline;}
 }
 
 .elipsis {
-  visibility: hidden;
+  /*visibility: hidden;*/
   position: absolute;
   height: 20%;
   min-height: 100px;
   width: 100%;
   left: 0px;
-  top: 100%;
+  bottom: 0%;
   margin-top: -20%;
   z-index:9997;
-  background-color: #ff0000;
 }
 
 .permalink {
-  /*position: relative;
+  position: absolute;
   bottom: 0.4em;
   right: 4%;
-  width: 40%;*/
-  width: 100%;
+  width: 40%;
   padding-top: 0.25em;
   padding-right: 0.25em;
   text-align: right;
@@ -659,7 +658,81 @@ a:hover {text-decoration: underline;}
 
 }
 
+
+@media only screen and (max-width: 700px) {
+
+    #entry2, #entry3 {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    .blogEntry {
+      /*top: 15%;*/
+      width: 90%;
+      height: 70%;
+    }
+
+    #entry1 {
+      left: 3%;
+    }
+
+    #entry4 {
+      left: 103%;
+    }
+
+    .events {
+      visibility: hidden;
+    }
+
+    #infoBox, #footLeft {
+      left: 3%;
+      width: 94%;
+      box-shadow:
+       3px 3px #ff0000,
+       6px 6px #00ff00,
+       9px 9px #0000ff;
+    }
+
+
+
+    #arrowL:hover {
+        border-color: transparent #bbb transparent transparent;
+    }
+    #arrowR:hover {
+        border-color: transparent transparent transparent #bbb;
+    }
+
+    #footRight {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    /*.rgbShadow {
+        text-shadow:
+           1px 1px #ff0000,
+           2px 2px #00ff00,
+           3px 3px #0000ff;
+    }
+
+    #shadowBarR {margin-top: 1px; margin-left: 1px;}
+    #shadowBarG {margin-top: 2px; margin-left: 2px;}
+    #shadowBarB {margin-top: 3px; margin-left: 3px;}
+
+    #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
+        font-size: 50px !important;
+    }
+
+    #infoBar {
+        font-size: 1.1em;
+    }*/
+}
+
 @media only screen and (max-width: 480px) {
+
+    .blogDate a {
+      font-size: 1.1em;
+    }
+
     .rgbShadow {
         text-shadow:
            1px 1px #ff0000,

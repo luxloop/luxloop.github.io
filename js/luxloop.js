@@ -2,7 +2,7 @@ var blogImgRatio = 0.5;
 
 $(document).ready(function() {
 
-    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,normalScrollElements:'.blogEntry',
+    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,normalScrollElements:null,touchSensitivity:15,
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
             if(index == 1 && direction =='down'){
