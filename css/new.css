@@ -354,7 +354,7 @@ a:hover {text-decoration: underline;}
   font-size: 1em;
   margin: 2em;
   margin-bottom: 0em;
-  font-weight: inherit;
+  font-weight: 400;
   text-transform: uppercase;
   width: 15em;
   border-bottom: solid;
