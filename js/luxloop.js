@@ -14,6 +14,11 @@ $(document).ready(function() {
     $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,easing:'swing',normalScrollElements:null,touchSensitivity:15,
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
+
+            $("body").animate({
+                scrollTop: "0px"
+            }, 200);
+
             if(index == 1 && direction =='down'){
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
