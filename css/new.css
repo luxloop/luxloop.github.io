@@ -624,6 +624,67 @@ a:hover {text-decoration: underline;}
   opacity: 0.5;
 }
 
+#mc_embed_signup {
+  width: 70%;
+  display: inline-block;
+  /*background-color: #ff0000;*/
+  padding: 1em 2em 1em 2em;
+  line-height: 1.6em;
+}
+
+#mc_embed_signup input {
+  width:100%;
+  display:block;
+  border: 1px solid #333;
+  height: 25px;
+  margin-bottom: 1em;
+  color: #aaa;
+  padding-left: 5px;
+  background-color: #333;
+}
+
+#mc_embed_signup label {
+  font-size: 0.9em;
+}
+
+#mc-embedded-subscribe {
+  width: 15em !important;
+  background:#000 !important;
+  color:#fff !important;
+  height:30px;
+  border: 1px solid #999;
+}
+
+#mc-embedded-subscribe:hover {
+  background:#333 !important;
+}
+
+::-webkit-input-placeholder {
+   color: #555;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+#beOurFriend {
+  margin-top: -0.5em !important;
+}
+
+
+
+/* ==========================================================================
+   No-JS classes
+   ========================================================================== */
+
 .no-js #titleBar, .no-js #shadowBarR, .no-js #shadowBarG, .no-js #shadowBarB {
     font-size: 100px;
 }
