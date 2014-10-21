@@ -23,7 +23,7 @@ $(document).ready(function() {
             // }, 200);
 
             if(index == 1 && direction =='down'){
-                $("body").scrollTop(0);
+                $("body").scrollTop(1);
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
             }
