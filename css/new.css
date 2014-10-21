@@ -279,6 +279,7 @@ a:hover {text-decoration: underline;}
 
 #topLogo {
   font-family: "rooney-sans", "helvetica", sans-serif;
+  font-weight: 300;
   font-size: 2em;
   position: absolute;
   width: 45%;
