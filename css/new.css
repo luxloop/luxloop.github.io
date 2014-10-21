@@ -172,6 +172,11 @@ a:hover {text-decoration: underline;}
   height: auto;
 }
 
+#cornerSvg {
+  height: 40%;
+  width: auto;
+}
+
 /*
 #titleHider, #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
     font-family: "rooney-sans", "helvetica", sans-serif;
@@ -273,12 +278,18 @@ a:hover {text-decoration: underline;}
 }
 
 #topLogo {
+  font-family: "rooney-sans", "helvetica", sans-serif;
+  font-size: 1.3em;
   position: absolute;
   width: 45%;
   height: 100%;
   top: 50%;
   margin-top: -0.5em; 
   left: 5%;
+  text-shadow:
+       1px 1px #ff0000,
+       2px 2px #00ff00,
+       3px 3px #0000ff;
 }
 
 #topLogo:hover {
