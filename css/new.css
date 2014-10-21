@@ -106,6 +106,7 @@ html, body {
     background: #000000;
     /*background: url('../img/005.jpg');*/
     font-family: "camingodos-web", "arial", sans-serif;
+    font-size: 100%;
 
     margin: 0;
     padding: 0;
@@ -778,6 +779,10 @@ a:hover {text-decoration: underline;}
 
 @media only screen and (max-width: 700px) {
 
+    body {
+      font-size: 90%;
+    }
+
     #entry2, #entry3 {
       display: none !important;
       visibility: hidden;
@@ -845,6 +850,10 @@ a:hover {text-decoration: underline;}
 }
 
 @media only screen and (max-width: 480px) {
+
+    body {
+      font-size: 80%;
+    }
 
     .blogDate a {
       font-size: 1.1em;
