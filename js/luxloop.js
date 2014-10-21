@@ -226,7 +226,7 @@ $(document).ready(function() {
     $(".blogEntry").scroll(function() {
         //var pos = $(this).scrollTop() + $(this).innerHeight();
         //console.log(pos + "/" + $(this)[0].scrollHeight);
-        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight + 1) {
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
             //console.log("bottom");
             $.fn.fullpage.moveTo(4);
         } else if($(this).scrollTop() == 0) {
@@ -238,7 +238,7 @@ $(document).ready(function() {
     $("#infoBox").scroll(function() {
         //var pos = $(this).scrollTop() + $(this).innerHeight();
         //console.log(pos + "/" + $(this)[0].scrollHeight);
-        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight + 1) {
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
             //console.log("bottom");
             $.fn.fullpage.moveTo(3);
         } else if($(this).scrollTop() == 0) {
