@@ -172,7 +172,7 @@ a:hover {text-decoration: underline;}
   height: auto;
 }
 
-
+/*
 #titleHider, #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
     font-family: "rooney-sans", "helvetica", sans-serif;
     color: #ffffff;
@@ -183,7 +183,6 @@ a:hover {text-decoration: underline;}
     height: auto;
     min-height: 15%;
     max-height: 40%;
-    /*background-color: rgba(100,100,100,0.3);*/
     top: 30%;
     left: 0%;
     z-index: 9996;    
@@ -193,8 +192,7 @@ a:hover {text-decoration: underline;}
   top: 0%;
   overflow: hidden;
   min-height: 100%;
-  /*background-color: rgba(255,0,0,0.5);*/
-}
+}*/
 
 #menuBarBot {
   /*font-family: "rooney-sans", "helvetica", sans-serif;*/
@@ -306,9 +304,9 @@ a:hover {text-decoration: underline;}
 }
 
 /* Fallback for text shadow */
-#shadowBarR {color: #ff0000; z-index: 9995; margin-top: 2px; margin-left: 2px;}
+/*#shadowBarR {color: #ff0000; z-index: 9995; margin-top: 2px; margin-left: 2px;}
 #shadowBarG {color: #00ff00;z-index: 9994; margin-top: 4px; margin-left: 4px;}
-#shadowBarB {color: #0000ff; z-index: 9993; margin-top: 6px; margin-left: 6px;}
+#shadowBarB {color: #0000ff; z-index: 9993; margin-top: 6px; margin-left: 6px;}*/
 
 
 #infoBox {

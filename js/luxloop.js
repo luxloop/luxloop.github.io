@@ -2,6 +2,8 @@ var blogImgRatio = 0.5;
 
 $(document).ready(function() {
 
+    $("#staticBg").backstretch("img/017.jpg");
+
     $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,normalScrollElements:null,touchSensitivity:15,
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
@@ -25,6 +27,23 @@ $(document).ready(function() {
 
     });
 
+    $("#slideshowBg").backstretch([
+          "img/017.jpg"
+        , "img/001.jpg"
+        , "img/002.jpg"
+        , "img/003.png"
+        , "img/004.png"
+        , "img/005.jpg"
+        , "img/006.jpg"
+        , "img/007.jpg"
+        , "img/008.jpg"
+        , "img/010.jpg"
+        , "img/011.jpg"
+        , "img/012.jpg"
+        , "img/013.png"
+        , "img/014.png"
+    ], {duration: 5500, fade: 1000});
+
     
 	var uA = navigator.userAgent;
 	var isMobile = false;
@@ -35,31 +54,14 @@ $(document).ready(function() {
     var moving = false;
 
 
-	$("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	$("#shadowBarR").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	$("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	$("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	// $("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	// $("#shadowBarR").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	// $("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
+	// $("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
 
-	$("#titleHider").removeClass("invisible");
+	// $("#titleHider").removeClass("invisible");
 
-	$("#staticBg").backstretch("img/017.jpg");
-
-	$("#slideshowBg").backstretch([
-		  "img/017.jpg"
-		, "img/001.jpg"
-		, "img/002.jpg"
-		, "img/003.png"
-		, "img/004.png"
-		, "img/005.jpg"
-		, "img/006.jpg"
-		, "img/007.jpg"
-		, "img/008.jpg"
-		, "img/010.jpg"
-		, "img/011.jpg"
-		, "img/012.jpg"
-		, "img/013.png"
-		, "img/014.png"
-	], {duration: 5500, fade: 1000});
+	
 
 
 	/////////////////////////////////////////////////////
