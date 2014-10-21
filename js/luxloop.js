@@ -22,9 +22,12 @@ $(document).ready(function() {
             //     scrollTop: "0px"
             // }, 200);
 
+            window.scrollTo(1, 1);
+            alert("scrolled")
+
             if(index == 1 && direction =='down'){
                 //$("body").scrollTop(1);
-                window.scrollTo(0, 1);
+                //window.scrollTo(1, 1);
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
             }
