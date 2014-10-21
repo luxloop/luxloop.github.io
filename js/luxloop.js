@@ -2,7 +2,7 @@ var blogImgRatio = 0.5;
 
 $(document).ready(function() {
 
-    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,
+    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,normalScrollElements:'.blogEntry',
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
             if(index == 1 && direction =='down'){
@@ -10,10 +10,17 @@ $(document).ready(function() {
                 $("#menuBarTop").fadeIn(1200);
             }
 
-            else if(index == 2 && direction == 'up'){
+            // else if(index == 2 && direction == 'up'){
+            //     $("#menuBarTop").fadeOut();
+            //     $("#menuBarBot").fadeIn(1200);
+            // }
+
+            else if(nextIndex == 1){
                 $("#menuBarTop").fadeOut();
                 $("#menuBarBot").fadeIn(1200);
             }
+
+
         }
 
     });
@@ -78,6 +85,12 @@ $(document).ready(function() {
 
                     var post = '<span class="blogDate"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">' + formatDate + '</a></span><div class="divider"></div>';
                     
+                    // if Has Title //
+                    if (tumblr_api_read.posts[i]["regular-title"] !== undefined) {
+                        post = post + '<span class="postTitle"><p>This is a post Title YEAAAAAHHH</p></span>';
+                    }
+                    
+
                     // Photo Post //
                     if (kind == "photo") {
                         post = post + '<div class="blogImg" data-tall="0" data-width="' + tumblr_api_read.posts[i]["width"] + '" data-height="' + tumblr_api_read.posts[i]["height"] + '" ><img src="' + tumblr_api_read.posts[i]["photo-url-1280"] + '" /></div>';
@@ -100,7 +113,7 @@ $(document).ready(function() {
                     ////////////////
 
                     //post = post + '<p>';
-                    if (tumblr_api_read.posts[i]["tags"] !== 'undefined') {
+                    if (tumblr_api_read.posts[i]["tags"] !== undefined) {
                     	post = post + '<div class="visuallyhidden"><p><br />';
                         for (var j = 0; j < tumblr_api_read.posts[i]["tags"].length; j++) {
                             post = post + '<a href="http://luxloop.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
@@ -108,9 +121,13 @@ $(document).ready(function() {
                         post = post + '</div></p>';
                     }
 
-                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Full Post on Tumblr</a></div>'
 
                     post = post + '<p><br />&nbsp;</p>';
+                    post = post + '<p><br />&nbsp;</p>';
+
+                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Post on Tumblr</a></div>'
+
+                    //post = post + '<p><br />&nbsp;</p>';
 
                     //blogData = blogData + post;
                     postCount++;
@@ -138,8 +155,7 @@ $(document).ready(function() {
                 var w = $(this).width();
                 var h = w * 0.6;
                 $(this).css("height",h+"px");
-            }); 
-            
+            });
         };
         
     } else {
@@ -207,6 +223,29 @@ $(document).ready(function() {
         $.fn.fullpage.moveTo(1);
     });
 
+    $(".blogEntry").scroll(function() {
+        //var pos = $(this).scrollTop() + $(this).innerHeight();
+        //console.log(pos + "/" + $(this)[0].scrollHeight);
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight + 1) {
+            //console.log("bottom");
+            $.fn.fullpage.moveTo(4);
+        } else if($(this).scrollTop() == 0) {
+            //console.log("top");
+            $.fn.fullpage.moveTo(2);
+        }
+    });
+
+    $("#infoBox").scroll(function() {
+        //var pos = $(this).scrollTop() + $(this).innerHeight();
+        //console.log(pos + "/" + $(this)[0].scrollHeight);
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight + 1) {
+            //console.log("bottom");
+            $.fn.fullpage.moveTo(3);
+        } else if($(this).scrollTop() == 0) {
+            //console.log("top");
+            $.fn.fullpage.moveTo(1);
+        }
+    });
 
 });
 

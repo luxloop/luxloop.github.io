@@ -313,7 +313,8 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow-y: scroll;
 }
 
 #infoBox p, #footLeft p, #footRight p {
@@ -414,7 +415,7 @@ a:hover {text-decoration: underline;}
   height: 70%;
   color: #ffffff;
   padding: 2%;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #entry1 {
@@ -480,6 +481,10 @@ a:hover {text-decoration: underline;}
   height: auto;
 }
 
+.postTitle {
+  font-size: 1.2em;
+}
+
 .tags {
   position: absolute;
   bottom: 1em;
@@ -490,20 +495,24 @@ a:hover {text-decoration: underline;}
 }
 
 .elipsis {
+  visibility: hidden;
   position: absolute;
   height: 20%;
   min-height: 100px;
   width: 100%;
   left: 0px;
-  bottom: 0px;
+  top: 100%;
+  margin-top: -20%;
   z-index:9997;
+  background-color: #ff0000;
 }
 
 .permalink {
-  position: absolute;
+  /*position: relative;
   bottom: 0.4em;
   right: 4%;
-  width: 40%;
+  width: 40%;*/
+  width: 100%;
   padding-top: 0.25em;
   padding-right: 0.25em;
   text-align: right;
