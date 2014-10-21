@@ -313,8 +313,8 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
-  overflow: hidden;
-  /*overflow-y: scroll;*/
+  /*overflow: hidden;*/
+  overflow-y: scroll;
 }
 
 #infoBox p, #footLeft p, #footRight p {

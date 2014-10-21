@@ -229,23 +229,29 @@ $(document).ready(function() {
         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
             //console.log("bottom");
             $.fn.fullpage.moveTo(4);
+            $(this).animate({
+                scrollTop: $(this)[0].scrollHeight
+            }, 700);
         } else if($(this).scrollTop() == 0) {
             //console.log("top");
             $.fn.fullpage.moveTo(2);
         }
     });
 
-    // $("#infoBox").scroll(function() {
-    //     //var pos = $(this).scrollTop() + $(this).innerHeight();
-    //     //console.log(pos + "/" + $(this)[0].scrollHeight);
-    //     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-    //         //console.log("bottom");
-    //         $.fn.fullpage.moveTo(3);
-    //     } else if($(this).scrollTop() == 0) {
-    //         //console.log("top");
-    //         $.fn.fullpage.moveTo(1);
-    //     }
-    // });
+    $("#infoBox").scroll(function() {
+        //var pos = $(this).scrollTop() + $(this).innerHeight();
+        //console.log(pos + "/" + $(this)[0].scrollHeight);
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+            //console.log("bottom");
+            $.fn.fullpage.moveTo(3);
+            $(this).animate({
+                scrollTop: $(this)[0].scrollHeight
+            }, 700);
+        } else if($(this).scrollTop() == 0) {
+            //console.log("top");
+            $.fn.fullpage.moveTo(1);
+        }
+    });
 
 });
 
