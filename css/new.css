@@ -104,12 +104,8 @@ body {
 
 html, body {
     background: #000000;
-    /*background: url('../img/005.jpg');*/
     font-family: "camingodos-web", "arial", sans-serif;
-    /*font-family: "rooney-web", "arial", sans-serif;*/
-    /*signo*/
-    /*kepler-std*/
-    font-weight: 300;
+    font-weight: w00;
     font-size: 100%;
 
     margin: 0;
@@ -117,14 +113,6 @@ html, body {
     overflow:hidden;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.hvy {
-  font-weight: 300;
-}
-
-.lght {
-  font-weight: 200;
 }
 
 a {color: #ffffff; text-decoration: none;}
