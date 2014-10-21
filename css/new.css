@@ -750,6 +750,7 @@ a:hover {text-decoration: underline;}
   height: 100%;
   background-color: #ff0000;
   visibility: hidden;
+  z-index: 9999;
 }
 
 /* ==========================================================================
