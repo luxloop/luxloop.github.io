@@ -46,28 +46,6 @@ $(document).ready(function() {
         }
     });
 
-    var page   = document.getElementById('page'),
-    ua     = navigator.userAgent,
-    iphone = ~ua.indexOf('iPhone') || ~ua.indexOf('iPod');
-
-    var setupScroll = window.onload = function() {
-      // Start out by adding the height of the location bar to the width, so that
-      // we can scroll past it
-      if (ios) {
-        // iOS reliably returns the innerWindow size for documentElement.clientHeight
-        // but window.innerHeight is sometimes the wrong value after rotating
-        // the orientation
-        var height = document.documentElement.clientHeight;
-        // Only add extra padding to the height on iphone / ipod, since the ipad
-        // browser doesn't scroll off the location bar.
-        if (iphone && !fullscreen) height += 60;
-        page.style.height = height + 'px';
-      }
-      // Scroll after a timeout, since iOS will scroll to the top of the page
-      // after it fires the onload event
-      setTimeout(scrollTo, 0, 0, 1);
-    };
-
     $("#slideshowBg").backstretch([
           "img/017.jpg"
         , "img/001.jpg"
@@ -86,6 +64,7 @@ $(document).ready(function() {
     ], {duration: 5500, fade: 1000});
 
     var moving = false;
+    var blogSlide = 1;
 
 
 	// $("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
@@ -106,9 +85,9 @@ $(document).ready(function() {
         var maxPosts = 3;
 
         if (uA.indexOf("iPhone") > 0 || uA.indexOf("iphone") > 0 || uA.indexOf("iPad") > 0 || uA.indexOf("ipad") > 0) {
-            maxPosts = 2;
+            maxPosts = 3;
         } else if (isMobile == true) {
-            maxPosts = 1;
+            maxPosts = 3;
         };
 
         for (var i = 0; i < tumblr_api_read.posts.length; i++) {
@@ -225,23 +204,32 @@ $(document).ready(function() {
     $("#arrowR").click(function(){
         if (moving == false) {
             moving = true;
+            var win2 = window.innerWidth/2;
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},750,function(){
-                $("#arrowR").css("visibility","hidden");
-                $("#arrowL").css("visibility","visible");
-                moving = false;
+                var be4 = parseInt($("#entry4").css("left"),10);
+                //alert (be4);
+                if (be4 < win2) {
+                    $("#arrowR").css("visibility","hidden");
+                    $("#arrowL").css("visibility","visible");
+                };
             });
+            moving = false;
         };
-        
     });
 
     $("#arrowL").click(function(){
         if (moving == false) {
             moving = true;
+            var win = window.innerWidth;
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},750,function(){
-                $("#arrowL").css("visibility","hidden");
-                $("#arrowR").css("visibility","visible");
-                moving = false;
+                var be4 = parseInt($("#entry4").css("left"),10);
+                //alert (be4);
+                if (be4 > win * 3) {
+                    $("#arrowL").css("visibility","hidden");
+                    $("#arrowR").css("visibility","visible");
+                };
             });
+            moving = false;
         };
     });
 
@@ -259,35 +247,35 @@ $(document).ready(function() {
         $.fn.fullpage.moveTo(1);
     });
 
-    $(".blogEntry").scroll(function() {
-        //var pos = $(this).scrollTop() + $(this).innerHeight();
-        //console.log(pos + "/" + $(this)[0].scrollHeight);
-        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-            //console.log("bottom");
-            $.fn.fullpage.moveTo(4);
-            $(this).animate({
-                scrollTop: $(this)[0].scrollHeight
-            }, 700);
-        } else if($(this).scrollTop() == 0) {
-            //console.log("top");
-            $.fn.fullpage.moveTo(2);
-        }
-    });
+    // $(".blogEntry").scroll(function() {
+    //     //var pos = $(this).scrollTop() + $(this).innerHeight();
+    //     //console.log(pos + "/" + $(this)[0].scrollHeight);
+    //     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+    //         //console.log("bottom");
+    //         $.fn.fullpage.moveTo(4);
+    //         $(this).animate({
+    //             scrollTop: $(this)[0].scrollHeight
+    //         }, 700);
+    //     } else if($(this).scrollTop() == 0) {
+    //         //console.log("top");
+    //         $.fn.fullpage.moveTo(2);
+    //     }
+    // });
 
-    $("#infoBox").scroll(function() {
-        //var pos = $(this).scrollTop() + $(this).innerHeight();
-        //console.log(pos + "/" + $(this)[0].scrollHeight);
-        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-            //console.log("bottom");
-            $.fn.fullpage.moveTo(3);
-            $(this).animate({
-                scrollTop: $(this)[0].scrollHeight
-            }, 700);
-        } else if($(this).scrollTop() == 0) {
-            //console.log("top");
-            $.fn.fullpage.moveTo(1);
-        }
-    });
+    // $("#infoBox").scroll(function() {
+    //     //var pos = $(this).scrollTop() + $(this).innerHeight();
+    //     //console.log(pos + "/" + $(this)[0].scrollHeight);
+    //     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+    //         //console.log("bottom");
+    //         $.fn.fullpage.moveTo(3);
+    //         $(this).animate({
+    //             scrollTop: $(this)[0].scrollHeight
+    //         }, 700);
+    //     } else if($(this).scrollTop() == 0) {
+    //         //console.log("top");
+    //         $.fn.fullpage.moveTo(1);
+    //     }
+    // });
 
     $("#closeIt").click(function() {
         $("#mailChimpFloater").fadeOut();

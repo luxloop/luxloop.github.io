@@ -824,10 +824,10 @@ a:hover {text-decoration: underline;}
       width: 50%;
     }
 
-    #entry2, #entry3 {
+  /*  #entry2, #entry3 {
       display: none !important;
       visibility: hidden;
-    }
+    }*/
 
     .blogEntry {
       /*top: 15%;*/
@@ -839,8 +839,16 @@ a:hover {text-decoration: underline;}
       left: 3%;
     }
 
-    #entry4 {
+     #entry2 {
       left: 103%;
+    }
+
+     #entry3 {
+      left: 203%;
+    }
+
+    #entry4 {
+      left: 303%;
     }
 
     .events {
