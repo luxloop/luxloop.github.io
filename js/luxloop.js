@@ -125,7 +125,7 @@ $(document).ready(function() {
                     post = post + '<p><br />&nbsp;</p>';
                     post = post + '<p><br />&nbsp;</p>';
 
-                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Post on Tumblr</a></div>'
+                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Full Post on Tumblr</a></div>'
 
                     //post = post + '<p><br />&nbsp;</p>';
 
@@ -252,6 +252,17 @@ $(document).ready(function() {
             $.fn.fullpage.moveTo(1);
         }
     });
+
+    $("#closeIt").click(function() {
+        $("#mailChimpFloater").fadeOut();
+    });
+
+    $("#mobileChimpShower").click(function() {
+        $("#mailChimpFloater").fadeIn();
+    });
+
+    
+    
 
 });
 
