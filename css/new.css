@@ -507,7 +507,10 @@ a:hover {text-decoration: underline;}
   padding-left: 0.5em;
   margin-bottom: 1em; 
   margin-top: 0em;
-  font-family: "rooney-sans", "helvetica", sans-serif;
+  font-family: "camingodos-web", "arial", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   box-shadow:
        2px 2px #ff0000,
        4px 4px #00ff00,
