@@ -733,6 +733,10 @@ a:hover {text-decoration: underline;}
       font-size: 1.1em;
     }
 
+    #topLinks, #botLinks {
+      width: 80%;
+    }
+
     .rgbShadow {
         text-shadow:
            1px 1px #ff0000,
