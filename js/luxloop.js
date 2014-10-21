@@ -15,11 +15,12 @@ $(document).ready(function() {
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
 
-            $("body").animate({
-                scrollTop: "0px"
-            }, 200);
+            // $("body").animate({
+            //     scrollTop: "0px"
+            // }, 200);
 
             if(index == 1 && direction =='down'){
+                $("body").scrollTop(0);
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
             }
