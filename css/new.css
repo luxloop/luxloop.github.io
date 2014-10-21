@@ -447,6 +447,28 @@ a:hover {text-decoration: underline;}
 }
 */
 
+#seeMore {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  font-size: 1.1em;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow:
+       2px 2px #ff0000,
+       4px 4px #00ff00,
+       6px 6px #0000ff;
+}
+
+#seeMore a {
+  text-decoration: underline;
+}
+
 
 .blogDate a {
   display: inline-block;
@@ -731,17 +753,55 @@ a:hover {text-decoration: underline;}
 
     .blogDate a {
       font-size: 1.1em;
+      width: 60%;
     }
 
     #topLinks, #botLinks {
       width: 80%;
     }
 
+    .botNavLink, .topNavLink {
+      padding-right: 0.4em;
+    }
+
+    #infoBox, #footLeft {
+      box-shadow:
+       2px 2px #ff0000,
+       4px 4px #00ff00,
+       6px 6px #0000ff;
+    }
+
+
+    .arrow {
+        top: 94%;
+        margin-top: -19px;
+    }
+
+    #arrowL {
+        border-width: 19.25px 17px 19.25px 0;
+    }
+
+    #arrowR {
+        border-width: 19.25px 0 19.25px 17px;
+    }
+
+    #seeMore {
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 70%;
+      height: 70%;
+    }
+
+
+    /***/
+
     .rgbShadow {
-        text-shadow:
-           1px 1px #ff0000,
-           2px 2px #00ff00,
-           3px 3px #0000ff;
+      left: 1%;
+      text-shadow:
+         1px 1px #ff0000,
+         2px 2px #00ff00,
+         3px 3px #0000ff;
     }
 
     #shadowBarR {margin-top: 1px; margin-left: 1px;}
