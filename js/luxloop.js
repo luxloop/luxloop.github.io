@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     $("#staticBg").backstretch("img/017.jpg");
 
-    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,normalScrollElements:null,touchSensitivity:15,
+    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,easing:'swing',normalScrollElements:null,touchSensitivity:15,
         onLeave: function(index, nextIndex, direction){
             //after leaving section 2
             if(index == 1 && direction =='down'){
