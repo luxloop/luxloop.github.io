@@ -742,6 +742,16 @@ a:hover {text-decoration: underline;}
   text-decoration: underline;
 }
 
+#landscaper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+  visibility: hidden;
+}
+
 /* ==========================================================================
    No-JS classes
    ========================================================================== */
@@ -956,6 +966,13 @@ a:hover {text-decoration: underline;}
     #infoBar {
         font-size: 1.1em;
     }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width: 500px) and (orientation : landscape) {
+  #landscaper {
+    visibility: visible;
+  }
 }
 
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
