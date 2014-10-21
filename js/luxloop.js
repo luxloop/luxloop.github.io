@@ -1,6 +1,13 @@
 var blogImgRatio = 0.5;
 
 $(document).ready(function() {
+    var uA = navigator.userAgent;
+    var isMobile = false;
+    if (jQuery.browser.mobile == true) {
+        isMobile = true;
+    };
+    
+    $('body').delay('1000').animate({ scrollTop: '0px' }, 'slow');
 
     $("#staticBg").backstretch("img/017.jpg");
 
@@ -43,13 +50,6 @@ $(document).ready(function() {
         , "img/013.png"
         , "img/014.png"
     ], {duration: 5500, fade: 1000});
-
-    
-	var uA = navigator.userAgent;
-	var isMobile = false;
-	if (jQuery.browser.mobile == true) {
-	    isMobile = true;
-	};
 
     var moving = false;
 
