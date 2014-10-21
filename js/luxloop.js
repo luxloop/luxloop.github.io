@@ -7,7 +7,10 @@ $(document).ready(function() {
         isMobile = true;
     };
 
-    $('body').animate({ scrollTop: '0px' }, 'slow');
+    //$('body').animate({ scrollTop: '0px' }, 'slow');
+
+    //$("body").scrollTop(0);
+    window.scrollTo(0,1);
 
     $("#staticBg").backstretch("img/017.jpg");
 
@@ -20,7 +23,7 @@ $(document).ready(function() {
             // }, 200);
 
             if(index == 1 && direction =='down'){
-                $("body").scrollTop(1);
+                //$("body").scrollTop(1);
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
             }
