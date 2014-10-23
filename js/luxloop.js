@@ -220,6 +220,7 @@ $(document).ready(function() {
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},750,function(){
                 var be4 = parseInt($("#entry4").css("left"),10);
                 //alert (be4);
+                $("#arrowL").css("visibility","visible");
                 if (be4 < win2) {
                     $("#arrowR").css("visibility","hidden");
                     $("#arrowL").css("visibility","visible");
@@ -236,6 +237,7 @@ $(document).ready(function() {
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},750,function(){
                 var be1 = parseInt($("#entry1").css("left"),10);
                 //alert (be4);
+                $("#arrowR").css("visibility","visible");
                 if (be1 > 0) {
                     $("#arrowL").css("visibility","hidden");
                     $("#arrowR").css("visibility","visible");
