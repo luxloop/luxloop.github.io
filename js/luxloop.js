@@ -69,6 +69,8 @@ $(document).ready(function() {
             datesModal();
         }
     });
+    
+    // datesModal();
 
     if (!isMobile) {
         $("#slideshowBg").backstretch([

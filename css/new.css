@@ -840,6 +840,19 @@ a:hover {text-decoration: underline;}
 
 }
 
+@media only screen and (min-width: 700px) and (max-height: 530px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-height: 450px) {
+  body {
+    font-size: 85%;
+  }
+}
+
+
 
 @media only screen and (max-width: 700px) {
 
@@ -891,6 +904,9 @@ a:hover {text-decoration: underline;}
        9px 9px #0000ff;
     }
 
+    #emailSignUpMobile {
+      visibility: visible;
+    }
 
 
     #arrowL:hover {
@@ -975,10 +991,6 @@ a:hover {text-decoration: underline;}
       left: 15%;
       width: 70%;
       height: 70%;
-    }
-
-    #emailSignUpMobile {
-      visibility: visible;
     }
 
     /***/
