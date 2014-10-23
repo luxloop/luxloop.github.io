@@ -1017,6 +1017,7 @@ a:hover {text-decoration: underline;}
 
   .isIphone #fullpage {
     z-index: 9990;
+    visibility: hidden;
   }
 }
 
