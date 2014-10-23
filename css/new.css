@@ -1015,9 +1015,10 @@ a:hover {text-decoration: underline;}
     z-index: 9996;
   }
 
-  .isIphone #fullpage {
+  .isIphone #fullpage, .isIphone #menuBarBot, .isIphone #menuBarTop, .isIphone #arrowR, .isIphone #arrowL {
     z-index: 9990;
     visibility: hidden;
+    display: none;
   }
 }
 
