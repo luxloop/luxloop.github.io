@@ -17,6 +17,9 @@ $(document).ready(function() {
         $(this).fadeOut();
     });
 
+    var eventContent = $(".events").html()
+    $("#eventFloater").prepend(eventContent);
+
     //$('body').animate({ scrollTop: '0px' }, 'slow');
 
     //$("body").scrollTop(0);
@@ -51,8 +54,19 @@ $(document).ready(function() {
                 $("#menuBarTop").fadeOut();
                 $("#menuBarBot").fadeIn(1200);
             }
-
-
+        },
+        afterLoad: function(anchorLink, index){
+            //datesModal();
+            if(index == 1){
+                $("#menuBarTop").fadeOut();
+                $("#menuBarBot").fadeIn(1200);
+            } else {
+                $("#menuBarBot").fadeOut();
+                $("#menuBarTop").fadeIn(1200);
+            }
+        },
+        afterResize: function(){
+            datesModal();
         }
     });
 
@@ -299,9 +313,20 @@ $(document).ready(function() {
         $("#mailChimpFloater").fadeIn();
     });
 
-    
-    
 
+    $("#mobileDateShower").click(function() {
+        $("#eventFloater").fadeIn();
+    });
+
+    $("#closeIt2").click(function() {
+        $("#eventFloater").fadeOut();
+    });
+
+
+});
+
+$( window ).load(function() {
+    datesModal();
 });
 
 on_resize(function() {
@@ -321,6 +346,8 @@ on_resize(function() {
     $("#entry1, #entry2, #entry3, #entry4").css('left', '');
     $("#arrowL").css("visibility","hidden");
     $("#arrowR").css("visibility","visible");
+
+    // datesModal();
 
     // var lh = $("#menuBar").height();
     // $("#topLinks").css("lineHeight",lh+"px");
@@ -384,6 +411,17 @@ function blogDate(dString) {
     }
     var outDate = month + " " + numDay + ", " + year;
     return outDate;
+};
+
+function datesModal(){
+    var eventsBottom = ($(".events").position().top + $(".events").outerHeight(true));
+    var infoHeight = $("#infoBox").innerHeight();
+    if (eventsBottom > infoHeight) {
+        //alert(infoHeight);
+        $("html").addClass("eventLink");
+    } else {
+        $("html").removeClass("eventLink");
+    };
 };
 
 /**

@@ -366,8 +366,7 @@ a:hover {text-decoration: underline;}
 #footLeft, #footRight {
   font-size: 0.9em;
 } 
-
-#infoBox .eventHead {
+.eventHead {
   display: inline-block;
   width: 8.5em;
   border-bottom: solid;
@@ -376,7 +375,11 @@ a:hover {text-decoration: underline;}
   margin-bottom: 0.5em;
 }
 
-#infoBox .eventDate {
+#eventsLink .eventHead {
+  width: 17em;
+}
+
+.eventDate {
   display: inline-block;
   width: 8.5em;
   padding-top: 1em;
@@ -385,9 +388,24 @@ a:hover {text-decoration: underline;}
   border-bottom-width: 1px;
 }
 
-#infoBox .eventDesc {
+.eventDesc {
   display: inline-block;
   font-size: 0.85em;
+}
+
+#eventsLink {
+  visibility: hidden;
+  display: none;
+}
+
+.eventLink #eventsLink {
+  visibility: visible;
+  display: inline-block;
+}
+
+.eventLink .events {
+  visibility: hidden;
+  display: none;
 }
 
 #blogContent {
@@ -479,7 +497,7 @@ a:hover {text-decoration: underline;}
   height: 50%;
   text-align: center;
   /*text-transform: uppercase;*/
-  font-size: 1.1em;
+  font-size: 1.5em;
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
@@ -706,7 +724,7 @@ a:hover {text-decoration: underline;}
   margin-top: -0.5em !important;
 }
 
-#mailChimpFloater {
+#mailChimpFloater, #eventFloater {
   /*visibility: hidden;*/
   display: none;
   color: #fff;
@@ -720,11 +738,17 @@ a:hover {text-decoration: underline;}
   /*padding-top: 25%;*/
 }
 
+#eventFloater {
+  width: 95%;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
 #mailChimpFloater #mc-embedded-subscribe {
   width: 60% !important;
 }
 
-#closeIt {
+#closeIt, #closeIt2 {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -737,7 +761,7 @@ a:hover {text-decoration: underline;}
   visibility: hidden;
 }
 
-#mobileChimpShower {
+#mobileChimpShower, #mobileDateShower {
   cursor: pointer;
   text-decoration: underline;
 }
