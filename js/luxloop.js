@@ -7,6 +7,16 @@ $(document).ready(function() {
         isMobile = true;
     };
 
+    var isIphone = false;
+    if (uA.indexOf("iPhone") > 0 || uA.indexOf("iphone") > 0) {
+        isIphone = true;   
+        $("html").addClass("isIphone");     
+    }
+
+    $(".getRidOf").click(function(){
+        $(this).fadeOut();
+    });
+
     //$('body').animate({ scrollTop: '0px' }, 'slow');
 
     //$("body").scrollTop(0);
@@ -206,7 +216,7 @@ $(document).ready(function() {
     $("#arrowR").click(function(){
         if (moving == false) {
             moving = true;
-            var win2 = window.innerWidth/2;
+            var win2 = window.innerWidth;
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},750,function(){
                 var be4 = parseInt($("#entry4").css("left"),10);
                 //alert (be4);
@@ -222,11 +232,11 @@ $(document).ready(function() {
     $("#arrowL").click(function(){
         if (moving == false) {
             moving = true;
-            var win = window.innerWidth;
+            //var win = window.innerWidth;
             $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},750,function(){
-                var be4 = parseInt($("#entry4").css("left"),10);
+                var be1 = parseInt($("#entry1").css("left"),10);
                 //alert (be4);
-                if (be4 > win * 3) {
+                if (be1 > 0) {
                     $("#arrowL").css("visibility","hidden");
                     $("#arrowR").css("visibility","visible");
                 };
@@ -305,6 +315,10 @@ on_resize(function() {
     		//console.log("resized");
     	};
     });	
+
+    $("#entry1, #entry2, #entry3, #entry4").css('left', '');
+    $("#arrowL").css("visibility","hidden");
+    $("#arrowR").css("visibility","visible");
 
     // var lh = $("#menuBar").height();
     // $("#topLinks").css("lineHeight",lh+"px");
