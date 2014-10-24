@@ -220,7 +220,7 @@ $(document).ready(function() {
     	var h = $(this).attr("data-height");
     	var r = h/w;
     	if (r > blogImgRatio) {
-    		var off = -1 * ((r - 0.6) * h)/2;
+    		var off = -1 * ((r - blogImgRatio) * h)/2;
     		$(this).attr("data-tall","1");
     		var h = $(this).width() * blogImgRatio;
     		$(this).css("height",h+"px");
