@@ -1,4 +1,4 @@
-var blogImgRatio = 0.4;
+var blogImgRatio = 0.5;
 
 $(document).ready(function() {
     var uA = navigator.userAgent;
@@ -196,7 +196,7 @@ $(document).ready(function() {
 
             $(".blogImg").each(function() {
                 var w = $(this).width();
-                var h = w * 0.6;
+                var h = w * blogImgRatio;
                 $(this).css("height",h+"px");
             });
         };
@@ -214,7 +214,7 @@ $(document).ready(function() {
     // $("#topLinks").css("lineHeight",lh+"px");
     // $("#topEmail").css("lineHeight",lh+"px");
 
-    //blogImageSizer();
+    blogImageSizer();
     
 
 
@@ -321,7 +321,7 @@ $( window ).load(function() {
 });
 
 on_resize(function() {
-	// blogImageSizer();
+	blogImageSizer();
 
     $("#entry1, #entry2, #entry3, #entry4").css('left', '');
     $("#arrowL").css("visibility","hidden");
@@ -399,7 +399,7 @@ function blogImageSizer(){
         var h = $(this).attr("data-height");
         var r = h/w;
         if (r > blogImgRatio) {
-            var off = -1 * ((r - blogImgRatio) * h)/2;
+            var off = -1 * ((r - blogImgRatio) * ($(this).width()*r))/3;
             $(this).attr("data-tall","1");
             var h = $(this).width() * blogImgRatio;
             $(this).css("height",h+"px");

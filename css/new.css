@@ -322,7 +322,7 @@ a:hover {text-decoration: underline;}
 #shadowBarB {color: #0000ff; z-index: 9993; margin-top: 6px; margin-left: 6px;}*/
 
 
-#infoBox {
+#infoBox, #updatesBox {
   position: absolute;
   top: 15%;
   left: 5%;
@@ -341,7 +341,7 @@ a:hover {text-decoration: underline;}
   /*overflow-y: scroll;*/
 }
 
-#infoBox p, #footLeft p, #footRight p {
+#infoBox p, #updatesBox p, #footLeft p, #footRight p {
   margin: 2em;
 }
 
@@ -351,7 +351,7 @@ a:hover {text-decoration: underline;}
   line-height: 1.6em;
 }
 
-#infoBox h1, #footLeft h1, #footRight h1 {
+#infoBox h1, #updatesBox h1, #footLeft h1, #footRight h1 {
   font-size: 1em;
   margin: 2em;
   margin-bottom: 0em;
@@ -375,9 +375,9 @@ a:hover {text-decoration: underline;}
   margin-bottom: 0.5em;
 }
 
-#eventsLink .eventHead {
+/*#eventsLink .eventHead {
   width: 17em;
-}
+}*/
 
 .eventDate {
   display: inline-block;
@@ -391,7 +391,7 @@ a:hover {text-decoration: underline;}
 .eventDesc {
   display: inline-block;
   font-size: 0.85em;
-}
+}/*
 
 #eventsLink {
   visibility: hidden;
@@ -406,6 +406,26 @@ a:hover {text-decoration: underline;}
 .eventLink .events {
   visibility: hidden;
   display: none;
+}*/
+
+.eventsL {
+  /*background-color: #ff0000;*/
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 50%;
+}
+
+.eventsR {
+  /*background-color: #ff0000;*/
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 50%;
+}
+
+.eventsL p, .eventsR p {
+  margin: 2em;
 }
 
 #blogContent {
@@ -548,6 +568,7 @@ a:hover {text-decoration: underline;}
   height: 100%;
   overflow: hidden;
   padding-bottom: 2em;
+  margin-top: 2em;
 }
 
 .blogImg img {
@@ -899,11 +920,16 @@ a:hover {text-decoration: underline;}
       left: 303%;
     }
 
-    .events {
-      visibility: hidden;
+    .eventsL {
+      width: 100%;
     }
 
-    #infoBox, #footLeft {
+    .eventsR {
+      visibility: hidden;
+      display: none;
+    }
+
+    #infoBox, #updatesBox, #footLeft {
       left: 3%;
       width: 94%;
       box-shadow:
@@ -972,7 +998,7 @@ a:hover {text-decoration: underline;}
       padding-right: 0.4em;
     }
 
-    #infoBox, #footLeft {
+    #infoBox, #updatesBox, #footLeft {
       box-shadow:
        2px 2px #ff0000,
        4px 4px #00ff00,
