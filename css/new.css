@@ -459,6 +459,12 @@ a:hover {text-decoration: underline;}
   padding: 2%;
   /*overflow-y: scroll;*/
   overflow: hidden;
+  font-size: 0.9em;
+}
+
+.blogEntry img {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #entry1 {
@@ -550,7 +556,7 @@ a:hover {text-decoration: underline;}
 }
 
 .postTitle {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .tags {
@@ -570,8 +576,9 @@ a:hover {text-decoration: underline;}
   width: 100%;
   left: 0px;
   bottom: 0%;
-  margin-top: -20%;
+  margin-top: -20% !important;
   z-index:9997;
+  margin-bottom: 0em !important;
 }
 
 .permalink {

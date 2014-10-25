@@ -130,7 +130,7 @@ $(document).ready(function() {
                     
                     // if Has Title //
                     if (tumblr_api_read.posts[i]["regular-title"] !== undefined) {
-                        post = post + '<span class="postTitle"><p>This is a post Title YEAAAAAHHH</p></span>';
+                        post = post + '<span class="postTitle"><p>' + tumblr_api_read.posts[i]["regular-title"] + '</p></span>';
                     }
                     
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
 
                     // Text Post //
                     if (kind == "regular") {
-                        post = post + "<p><br /> &nbsp;</p>"
+                        //post = post + "<p><br /> &nbsp;</p>"
                         post = post + tumblr_api_read.posts[i]["regular-body"];
                     }
                     ////////////////
