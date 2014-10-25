@@ -508,9 +508,9 @@ a:hover {text-decoration: underline;}
   border-width: 2px;
   border-color: #ffffff;
   box-shadow:
-       2px 2px #ff0000,
-       4px 4px #00ff00,
-       6px 6px #0000ff;
+       4px 4px #ff0000,
+       8px 8px #00ff00,
+       12px 12px #0000ff;
 }
 
 #seeMore a {
@@ -530,7 +530,7 @@ a:hover {text-decoration: underline;}
   padding-bottom: 0.5em;
   padding-right: 1.5em;
   padding-left: 0.5em;
-  margin-bottom: 1em; 
+  /*margin-bottom: 1em; */
   margin-top: 0em;
   font-family: "camingodos-web", "arial", sans-serif;
   font-weight: 400;
@@ -557,6 +557,7 @@ a:hover {text-decoration: underline;}
 
 .postTitle {
   font-size: 1.3em;
+  font-weight: 400;
 }
 
 .tags {
@@ -571,12 +572,12 @@ a:hover {text-decoration: underline;}
 .elipsis {
   /*visibility: hidden;*/
   position: absolute;
-  height: 20%;
+  height: 30%;
   min-height: 100px;
   width: 100%;
   left: 0px;
   bottom: 0%;
-  margin-top: -20% !important;
+  margin-top: -30% !important;
   z-index:9997;
   margin-bottom: 0em !important;
 }

@@ -1,4 +1,4 @@
-var blogImgRatio = 0.5;
+var blogImgRatio = 0.4;
 
 $(document).ready(function() {
     var uA = navigator.userAgent;
@@ -66,7 +66,7 @@ $(document).ready(function() {
             }
         },
         afterResize: function(){
-            datesModal();
+            //datesModal();
         }
     });
     
@@ -214,19 +214,8 @@ $(document).ready(function() {
     // $("#topLinks").css("lineHeight",lh+"px");
     // $("#topEmail").css("lineHeight",lh+"px");
 
-
-    $(".blogImg").each(function() {
-    	var w = $(this).attr("data-width");
-    	var h = $(this).attr("data-height");
-    	var r = h/w;
-    	if (r > blogImgRatio) {
-    		var off = -1 * ((r - blogImgRatio) * h)/2;
-    		$(this).attr("data-tall","1");
-    		var h = $(this).width() * blogImgRatio;
-    		$(this).css("height",h+"px");
-    		$(this).children().css("margin-top",off+"px");
-    	};
-    });	
+    //blogImageSizer();
+    
 
 
     $("#arrowR").click(function(){
@@ -328,22 +317,11 @@ $(document).ready(function() {
 });
 
 $( window ).load(function() {
-    datesModal();
+    //datesModal();
 });
 
 on_resize(function() {
-	$(".blogImg").each(function() {
-    	var w = $(this).attr("data-width");
-    	var h = $(this).attr("data-height");
-    	var r = h/w;
-    	if (r > blogImgRatio) {
-    		var off = -1 * ((r - 0.6) * h)/2;
-    		var h = $(this).width() * blogImgRatio;
-    		$(this).css("height",h+"px");
-    		$(this).children().css("margin-top",off+"px");
-    		//console.log("resized");
-    	};
-    });	
+	// blogImageSizer();
 
     $("#entry1, #entry2, #entry3, #entry4").css('left', '');
     $("#arrowL").css("visibility","hidden");
@@ -414,6 +392,21 @@ function blogDate(dString) {
     var outDate = month + " " + numDay + ", " + year;
     return outDate;
 };
+
+function blogImageSizer(){
+    $(".blogImg").each(function() {
+        var w = $(this).attr("data-width");
+        var h = $(this).attr("data-height");
+        var r = h/w;
+        if (r > blogImgRatio) {
+            var off = -1 * ((r - blogImgRatio) * h)/2;
+            $(this).attr("data-tall","1");
+            var h = $(this).width() * blogImgRatio;
+            $(this).css("height",h+"px");
+            $(this).children().css("margin-top",off+"px");
+        };
+    }); 
+}
 
 function datesModal(){
     var eventsBottom = ($(".events").position().top + $(".events").outerHeight(true));
