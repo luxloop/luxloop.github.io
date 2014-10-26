@@ -128,7 +128,8 @@ a:hover {text-decoration: underline;}
 }
 
 .b {
-  color: #0000ff;
+  color: #5050ff;
+  /*font-weight: 200;*/
 }
 
 #fullpage{
@@ -482,6 +483,10 @@ a:hover {text-decoration: underline;}
   font-size: 0.9em;
 }
 
+.blogEntry p a {
+  text-decoration: underline;
+}
+
 .blogEntry img {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -593,19 +598,19 @@ a:hover {text-decoration: underline;}
 .elipsis {
   /*visibility: hidden;*/
   position: absolute;
-  height: 30%;
+  height: 40%;
   min-height: 100px;
   width: 100%;
   left: 0px;
   bottom: 0%;
-  margin-top: -30% !important;
+  margin-top: -40% !important;
   z-index:9997;
   margin-bottom: 0em !important;
 }
 
 .permalink {
   position: absolute;
-  bottom: 0.4em;
+  bottom: 1em;
   right: 4%;
   width: 40%;
   padding-top: 0.25em;
