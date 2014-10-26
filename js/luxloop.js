@@ -20,37 +20,14 @@ $(document).ready(function() {
     var eventContent = $(".events").html()
     $("#eventFloater").prepend(eventContent);
 
-    //$('body').animate({ scrollTop: '0px' }, 'slow');
-
-    //$("body").scrollTop(0);
-    //window.scrollTo(0,1);
-
     $("#staticBg").backstretch("img/017.jpg");
 
     $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,easing:'swing',normalScrollElements:null,touchSensitivity:15,
         onLeave: function(index, nextIndex, direction){
-            //after leaving section 2
-
-            // $("body").animate({
-            //     scrollTop: "0px"
-            // }, 200);
-
-            //window.scrollTo(1, 1);
-            //alert("scrolled");
-
             if(index == 1 && direction =='down'){
-                //$("body").scrollTop(1);
-                //window.scrollTo(1, 1);
                 $("#menuBarBot").fadeOut();
                 $("#menuBarTop").fadeIn(1200);
-            }
-
-            // else if(index == 2 && direction == 'up'){
-            //     $("#menuBarTop").fadeOut();
-            //     $("#menuBarBot").fadeIn(1200);
-            // }
-
-            else if(nextIndex == 1){
+            } else if(nextIndex == 1){
                 $("#menuBarTop").fadeOut();
                 $("#menuBarBot").fadeIn(1200);
             }
@@ -92,22 +69,12 @@ $(document).ready(function() {
     };
 
     var moving = false;
-    var blogSlide = 1;
-
-
-	// $("#titleBar").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	// $("#shadowBarR").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	// $("#shadowBarG").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-	// $("#shadowBarB").fitText(1.0, { minFontSize: '30px', maxFontSize: '100px' });
-
-	// $("#titleHider").removeClass("invisible");
-
+    //var blogSlide = 1;
 	
-
 
 	/////////////////////////////////////////////////////
     // Render Blog Posts
-    if (typeof tumblr_api_read !== 'undefined') {
+    if (typeof tumblr_api_read !== undefined || typeof tumblr_api_read !== 'undefined') {
         var blogData = "";
         var postCount = 0;
         var maxPosts = 3;
@@ -179,14 +146,9 @@ $(document).ready(function() {
                 };
             };              
         };
+
         // Create the blog posts
         if (postCount >= 1) {
-            /*
-            //blogData = blogData + '<div class="blogEntry"><div class="divider"></div><p><br />&nbsp;</p>'
-            // blogData = blogData + '<span class="blogFoot">See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a></span>';
-            blogData = blogData + '<div class="blogEntry"><p><br />See more updates on our <a href="http://axionexperience.tumblr.com/"target="_blank">tumblr</a><br />&nbsp;</p></div>';
-            */
-            //$("#blogContent").prepend(blogData);
 
             $.fn.fullpage.reBuild();
 
@@ -203,16 +165,12 @@ $(document).ready(function() {
         
     } else {
         console.log("TUMBLR IS UNDEFINED");
-        $("#mediaInfo").css({
-          "width": "80%",
-          "height": "auto",
-          "padding": "3% 10% 10% 3%"
+        $("#entry1, #entry2, #entry3, #arrowR, @#arrowL").addClass("hidden");
+        $("#entry4").css({
+          "left": "15%",
+          "width": "90%"
         });
     }
-
-    // var lh = $("#menuBar").height();
-    // $("#topLinks").css("lineHeight",lh+"px");
-    // $("#topEmail").css("lineHeight",lh+"px");
 
     blogImageSizer();
     
@@ -266,36 +224,6 @@ $(document).ready(function() {
         $.fn.fullpage.moveTo(1);
     });
 
-    // $(".blogEntry").scroll(function() {
-    //     //var pos = $(this).scrollTop() + $(this).innerHeight();
-    //     //console.log(pos + "/" + $(this)[0].scrollHeight);
-    //     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-    //         //console.log("bottom");
-    //         $.fn.fullpage.moveTo(4);
-    //         $(this).animate({
-    //             scrollTop: $(this)[0].scrollHeight
-    //         }, 700);
-    //     } else if($(this).scrollTop() == 0) {
-    //         //console.log("top");
-    //         $.fn.fullpage.moveTo(2);
-    //     }
-    // });
-
-    // $("#infoBox").scroll(function() {
-    //     //var pos = $(this).scrollTop() + $(this).innerHeight();
-    //     //console.log(pos + "/" + $(this)[0].scrollHeight);
-    //     if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-    //         //console.log("bottom");
-    //         $.fn.fullpage.moveTo(3);
-    //         $(this).animate({
-    //             scrollTop: $(this)[0].scrollHeight
-    //         }, 700);
-    //     } else if($(this).scrollTop() == 0) {
-    //         //console.log("top");
-    //         $.fn.fullpage.moveTo(1);
-    //     }
-    // });
-
     $("#closeIt").click(function() {
         $("#mailChimpFloater").fadeOut();
     });
@@ -328,10 +256,6 @@ on_resize(function() {
     $("#arrowR").css("visibility","visible");
 
     // datesModal();
-
-    // var lh = $("#menuBar").height();
-    // $("#topLinks").css("lineHeight",lh+"px");
-    // $("#topEmail").css("lineHeight",lh+"px");
 
 })();
 
@@ -412,7 +336,6 @@ function datesModal(){
     var eventsBottom = ($(".events").position().top + $(".events").outerHeight(true));
     var infoHeight = $("#infoBox").innerHeight();
     if (eventsBottom > infoHeight) {
-        //alert(infoHeight);
         $("html").addClass("eventLink");
     } else {
         $("html").removeClass("eventLink");
