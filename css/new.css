@@ -91,16 +91,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-    background: #000000;
-    font-family: "arial", "helvetica", sans-serif;
-    height: 100%;
-}*/
 
 html, body {
     background: #000000;
@@ -113,7 +103,6 @@ html, body {
     overflow:hidden;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /*height: 105% !important;*/
 }
 
 a {color: #ffffff; text-decoration: none;}
@@ -129,7 +118,6 @@ a:hover {text-decoration: underline;}
 
 .b {
   color: #5050ff;
-  /*font-weight: 200;*/
 }
 
 #fullpage{
@@ -179,37 +167,12 @@ a:hover {text-decoration: underline;}
   width: auto;
 }
 
-/*
-#titleHider, #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
-    font-family: "rooney-sans", "helvetica", sans-serif;
-    color: #ffffff;
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    min-height: 15%;
-    max-height: 40%;
-    top: 30%;
-    left: 0%;
-    z-index: 9996;    
-}
-
-#titleHider {
-  top: 0%;
-  overflow: hidden;
-  min-height: 100%;
-}*/
-
 #menuBarBot {
-  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   color: #ffffff;
   display: block;
   position: fixed;
   width: 100%;
   height: 8%;
-  /*background-color: rgba(255,0,0,0.3);*/
-  /*background-color: #111111;*/
   background-color: rgba(0,0,0,0.8);
   bottom: 0%;
   left: 0%;
@@ -245,14 +208,11 @@ a:hover {text-decoration: underline;}
 }
 
 #menuBarTop {
-  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   color: #ffffff;
   display: block;
   position: fixed;
   width: 100%;
   height: 10%;
-  /*background-color: rgba(255,0,0,0.3);*/
-  /*background-color: #111111;*/
   background-color: rgba(0,0,0,0.8);
   top: 0%;
   left: 0%;
@@ -317,12 +277,6 @@ a:hover {text-decoration: underline;}
     background: none;
 }
 
-/* Fallback for text shadow */
-/*#shadowBarR {color: #ff0000; z-index: 9995; margin-top: 2px; margin-left: 2px;}
-#shadowBarG {color: #00ff00;z-index: 9994; margin-top: 4px; margin-left: 4px;}
-#shadowBarB {color: #0000ff; z-index: 9993; margin-top: 6px; margin-left: 6px;}*/
-
-
 #infoBox, #updatesBox {
   position: absolute;
   top: 15%;
@@ -376,10 +330,6 @@ a:hover {text-decoration: underline;}
   margin-bottom: 0.5em;
 }
 
-/*#eventsLink .eventHead {
-  width: 17em;
-}*/
-
 .eventDate {
   display: inline-block;
   width: 8.5em;
@@ -392,25 +342,9 @@ a:hover {text-decoration: underline;}
 .eventDesc {
   display: inline-block;
   font-size: 0.85em;
-}/*
-
-#eventsLink {
-  visibility: hidden;
-  display: none;
 }
-
-.eventLink #eventsLink {
-  visibility: visible;
-  display: inline-block;
-}
-
-.eventLink .events {
-  visibility: hidden;
-  display: none;
-}*/
 
 .eventsL {
-  /*background-color: #ff0000;*/
   position: absolute;
   top: 0%;
   left: 0%;
@@ -418,7 +352,6 @@ a:hover {text-decoration: underline;}
 }
 
 .eventsR {
-  /*background-color: #ff0000;*/
   position: absolute;
   top: 0%;
   left: 50%;
@@ -524,18 +457,6 @@ a:hover {text-decoration: underline;}
   left: 151%;
 }
 
-/*
-.entryBg {
-  background-color: #333333;
-  width: 160% !important;
-  height: auto;
-  min-height: 80%;
-  margin-top: 12%;
-  margin-left: 20%;
-  display: block;
-}
-*/
-
 #seeMore {
   position: absolute;
   top: 25%;
@@ -543,7 +464,6 @@ a:hover {text-decoration: underline;}
   width: 50%;
   height: 50%;
   text-align: center;
-  /*text-transform: uppercase;*/
   font-size: 1.5em;
   border: solid;
   border-width: 2px;
@@ -571,12 +491,10 @@ a:hover {text-decoration: underline;}
   padding-bottom: 0.5em;
   padding-right: 1.5em;
   padding-left: 0.5em;
-  /*margin-bottom: 1em; */
   margin-top: 0em;
   font-family: "camingodos-web", "arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  /*font-family: "rooney-sans", "helvetica", sans-serif;*/
   box-shadow:
        2px 2px #ff0000,
        4px 4px #00ff00,
@@ -612,7 +530,6 @@ a:hover {text-decoration: underline;}
 }
 
 .elipsis {
-  /*visibility: hidden;*/
   position: absolute;
   height: 40%;
   min-height: 100px;
@@ -656,34 +573,11 @@ a:hover {text-decoration: underline;}
     z-index: 9999;
 }
 
-/*
-#footerBar {
-  color: #ffffff;
-  background-color: #111111;
-  display: block;
-  position: relative;
-  left: 0%;
-  width: 100%;
-  height: 90%;
-  z-index: 9999;
-  overflow: hidden;  
-}
-
-#footMargin {
-  position: absolute;
-  top: 5%;
-  left: 16.5%;
-  width: 65.5%;
-  height: 85%;
-}
-*/
-
 #footLeft {
   position: absolute;
   top: 15%;
   left: 5%;
 }
-
 
 #footRight {
   position: absolute;
@@ -722,7 +616,6 @@ a:hover {text-decoration: underline;}
 #mc_embed_signup {
   width: 70%;
   display: inline-block;
-  /*background-color: #ff0000;*/
   padding: 1em 2em 1em 2em;
   line-height: 1.6em;
 }
@@ -775,7 +668,6 @@ a:hover {text-decoration: underline;}
 }
 
 #mailChimpFloater, #eventFloater {
-  /*visibility: hidden;*/
   display: none;
   color: #fff;
   position: fixed;
@@ -785,7 +677,6 @@ a:hover {text-decoration: underline;}
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.85);
-  /*padding-top: 25%;*/
 }
 
 #eventFloater {
@@ -822,7 +713,6 @@ a:hover {text-decoration: underline;}
   left: 0px;
   width: 0px;
   height: 0px;
-  /*background-color: #ff0000;*/
   visibility: hidden;
   z-index: 0;
   text-align: center;
@@ -834,13 +724,7 @@ a:hover {text-decoration: underline;}
    No-JS classes
    ========================================================================== */
 
-.no-js #titleBar, .no-js #shadowBarR, .no-js #shadowBarG, .no-js #shadowBarB {
-    font-size: 100px;
-}
 
-.no-js #titleHider {
-  visibility: visible !important;
-}
 
 
 /* ==========================================================================
@@ -881,14 +765,8 @@ a:hover {text-decoration: underline;}
 
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
-}
 
 @media only screen and (min-width: 1300px) {
   #fullpage{
@@ -900,6 +778,13 @@ a:hover {text-decoration: underline;}
 @media only screen and (min-width: 1500px) {
   #fullpage{
     max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  #fullpage{
+    max-width: 1800px;
     margin: 0 auto;
   }
 }
@@ -928,13 +813,7 @@ a:hover {text-decoration: underline;}
       width: 50%;
     }
 
-  /*  #entry2, #entry3 {
-      display: none !important;
-      visibility: hidden;
-    }*/
-
     .blogEntry {
-      /*top: 15%;*/
       width: 90%;
       height: 70%;
     }
@@ -989,25 +868,6 @@ a:hover {text-decoration: underline;}
       display: none !important;
       visibility: hidden;
     }
-
-    /*.rgbShadow {
-        text-shadow:
-           1px 1px #ff0000,
-           2px 2px #00ff00,
-           3px 3px #0000ff;
-    }
-
-    #shadowBarR {margin-top: 1px; margin-left: 1px;}
-    #shadowBarG {margin-top: 2px; margin-left: 2px;}
-    #shadowBarB {margin-top: 3px; margin-left: 3px;}
-
-    #titleBar, #shadowBarR, #shadowBarG, #shadowBarB {
-        font-size: 50px !important;
-    }
-
-    #infoBar {
-        font-size: 1.1em;
-    }*/
 }
 
 @media only screen and (max-width: 480px) {
