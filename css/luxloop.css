@@ -819,9 +819,13 @@ a:hover {text-decoration: underline;}
     }
 
     #infoBox p {
-      margin-bottom: 0.5em;
+      margin: 0em 0.8em 0.8em 0.8em
     }
 
+    .first {
+      margin-top: 0.8em !important;
+    }
+    
     .bigLogo {
       width: 50%;
     }
