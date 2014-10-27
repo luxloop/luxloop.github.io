@@ -296,9 +296,18 @@ a:hover {text-decoration: underline;}
   /*overflow-y: scroll;*/
 }
 
-#infoBox p, #updatesBox p, #footLeft p, #footRight p {
+#updatesBox p, #footLeft p, #footRight p {
   margin: 2em;
 }
+
+#infoBox p {
+  margin: 0em 2em 1.5em 2em;
+}
+
+.first {
+  margin-top: 2em !important;
+}
+
 
 #footLeft p, #footRight p {
   margin-top: 1em;
@@ -807,6 +816,10 @@ a:hover {text-decoration: underline;}
 
     body {
       font-size: 90%;
+    }
+
+    #infoBox p {
+      margin-bottom: 0.5em;
     }
 
     .bigLogo {
