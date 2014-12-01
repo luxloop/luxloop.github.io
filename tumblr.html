@@ -309,6 +309,10 @@ Css reset
     </script>
 
     <style>
+
+
+
+    
     </style>
     
   <body onunload="">
@@ -453,541 +457,575 @@ Css reset
               {/block:date}
               <!-- Navi -->  
           </li>
-      {/block:Text}
+          {/block:Text}
 
-      {block:Answer}
-                
-        <div class="Answer">
-          <div class="question">
-            <div style="width:30px;height:30px;position:realtive;" class="questions">
-              <div class="hide-it-end">
-                <div class="aks_container" style="background-image:url('{AskerPortraitURL-24}');"></div>
-                <div class="askker">{Asker}
-                  <div class="rotat"></div>
-                </div>
-              </div>
-            </div>
-            <div class="real-qeustion real-qeustion">{question}
-              <div class="radius"></div>
-            </div>
-          </div>
-          <div class="answer">
-            <img src="{favicon}" class="answers">
-            <div class="real-answer">
-              {Answer}
-              <div class="radius2"></div>
-            </div>
-          </div>
-          <!-- Navi -->
-          {block:date}
-            <div class="note-count"><a href="{permalink}" target="_blank">
-              {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-              {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
-              {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                <span>{Reblogbutton size="14"}</span>
-                <span data-icon="A" class="icon-a">
-                  <div class="locker_container">
-                    <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                    <div class="locker-element2">
-                      <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                      <div class="locker2"><a href="https://twitter.com/home?status={question}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                      <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
-                    </div> 
-                    <div class="rotate-tooltip"></div>
+          {block:Answer}
+                    
+            <div class="Answer">
+              <div class="question">
+                <div style="width:30px;height:30px;position:realtive;" class="questions">
+                  <div class="hide-it-end">
+                    <div class="aks_container" style="background-image:url('{AskerPortraitURL-24}');"></div>
+                    <div class="askker">{Asker}
+                      <div class="rotat"></div>
+                    </div>
                   </div>
-                </span>
-              </div>
-            </div>
-          {/block:date}
-          <!-- Navi -->
-        </div>
-      {/block:Answer}
-
-
-        {block:Photo}
-          <!-- Lightbox -->
-          <div style="display:none">
-            <center>
-              <div id="inline_{postID}" class="lightbox">
-                <div style="background-image:url('{PhotoURL-Highres}');width:{PhotoWidth-500};height:{PhotoHeight-500};{block:ifnotbiggerposts}width:{PhotoWidth-250};height:{PhotoHeight-250};{/block:ifnotbiggerposts}" class="imagebuilder">
-                  <img src="{PhotoURL-100}" class="small" >
+                </div>
+                <div class="real-qeustion real-qeustion">{question}
+                  <div class="radius"></div>
                 </div>
               </div>
-            </center>
-          </div>
-          <!-- Lightbox -->
-    
-          <li>
-            <a href="#inline_{postID}" class="inline">
-              <div style="background-image:url('{PhotoURL-500}')" width="{PhotoWidth-500}" height="{PhotoHeight-500}" class="imagebuilder">
-                <img src="{PhotoURL-100}" >
+              <div class="answer">
+                <img src="{favicon}" class="answers">
+                <div class="real-answer">
+                  {Answer}
+                  <div class="radius2"></div>
+                </div>
               </div>
-            </a>
-                        
-            {block:ifusecaption}{block:Caption}
-            <div class="caption"><div class="caption_inner">
-            {Caption}                    
               <!-- Navi -->
-              <div class="note-count"><a href="{permalink}">
-                {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
-                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                  <div style="text-align:right;margin-top:-17px;" class="shareit">
-                    <span>{likebutton size="14"}</span>
+              {block:date}
+                <div class="note-count"><a href="{permalink}" target="_blank">
+                  {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                  {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                    <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                     <span>{Reblogbutton size="14"}</span>
                     <span data-icon="A" class="icon-a">
-                        <div class="locker_container">
-                            <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                            <div class="locker-element2">
-                              <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                              <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                              <!--
-                              <div class="locker3" style="background-color:#C92228">
-                                 <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                              </div>
-                              -->
-                              <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
-                            </div>
-                            <div class="rotate-tooltip"></div>
-                        </div>
+                      <div class="locker_container">
+                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                        <div class="locker-element2">
+                          <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                          <div class="locker2"><a href="https://twitter.com/home?status={question}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                          <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
+                        </div> 
+                        <div class="rotate-tooltip"></div>
+                      </div>
                     </span>
                   </div>
-              </div> 
-              <!-- Navi -->
-            </div></div>
-            {/block:Caption}{/block:ifusecaption}            
-
-            {block:ifnotusecaption}{block:indexpage}
-              <div class="mikkis">
-                <div class="mikki">
-                  <span>{likebutton color="white" size="16"}</span>
-                  <span> {reblogbutton color="white" size="16"}</span>
-                  <a href="{permalink}"><span data-icon="c" style="color:white;font-size:16px;"></span></a>
                 </div>
-                <div class="not-notes">
-                  {block:NoteCount}{notecount}{/block:NoteCount}
+              {/block:date}
+              <!-- Navi -->
+            </div>
+          {/block:Answer}
+
+
+          {block:Photo}
+            <!-- Lightbox -->
+            <div style="display:none">
+              <center>
+                <div id="inline_{postID}" class="lightbox">
+                  <div style="background-image:url('{PhotoURL-Highres}');width:{PhotoWidth-500};height:{PhotoHeight-500};{block:ifnotbiggerposts}width:{PhotoWidth-250};height:{PhotoHeight-250};{/block:ifnotbiggerposts}" class="imagebuilder">
+                    <img src="{PhotoURL-100}" class="small" >
+                  </div>
+                </div>
+              </center>
+            </div>
+            <!-- Lightbox -->
+      
+            <li>
+              <a href="#inline_{postID}" class="inline">
+                <div style="background-image:url('{PhotoURL-500}')" width="{PhotoWidth-500}" height="{PhotoHeight-500}" class="imagebuilder">
+                  <img src="{PhotoURL-100}" >
+                </div>
+              </a>
+                          
+              {block:ifusecaption}{block:Caption}
+              <div class="caption"><div class="caption_inner">
+              {Caption}                    
+                <!-- Navi -->
+                <div class="note-count"><a href="{permalink}">
+                  {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                  {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                    <div style="text-align:right;margin-top:-17px;" class="shareit">
+                      <span>{likebutton size="14"}</span>
+                      <span>{Reblogbutton size="14"}</span>
+                      <span data-icon="A" class="icon-a">
+                          <div class="locker_container">
+                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                              <div class="locker-element2">
+                                <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                <!--
+                                <div class="locker3" style="background-color:#C92228">
+                                   <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
+                                </div>
+                                -->
+                                <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
+                              </div>
+                              <div class="rotate-tooltip"></div>
+                          </div>
+                      </span>
+                    </div>
+                </div> 
+                <!-- Navi -->
+              </div></div>
+              {/block:Caption}{/block:ifusecaption}            
+
+              {block:ifnotusecaption}{block:indexpage}
+                <div class="mikkis">
+                  <div class="mikki">
+                    <span>{likebutton color="white" size="16"}</span>
+                    <span> {reblogbutton color="white" size="16"}</span>
+                    <a href="{permalink}"><span data-icon="c" style="color:white;font-size:16px;"></span></a>
+                  </div>
+                  <div class="not-notes">
+                    {block:NoteCount}{notecount}{/block:NoteCount}
+                  </div>
+                </div>
+                {/block:indexpage}
+                {block:permalinkpage}
+                {block:Caption}
+                  <div class="caption">
+                    <div class="caption_inner">{Caption}
+                                  
+                                  
+                    <!-- Navi -->
+                    <div class="note-count"><a href="{permalink}">
+                      {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                      {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+                      {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                        <div style="text-align:right;margin-top:-17px;" class="shareit">
+                          <span>{likebutton size="14"}</span>
+                          <span>{Reblogbutton size="14"}</span>
+                          <span data-icon="A" class="icon-a">
+                              <div class="locker_container">
+                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                  <div class="locker-element2">
+                                    <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                    <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                    <!--
+                                    <div class="locker3" style="background-color:#C92228">
+                                       <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
+                                    </div>
+                                    -->
+                                    <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
+                                  </div>
+                                  <div class="rotate-tooltip"></div>
+                              </div>
+                          </span>
+                        </div>
+                    </div> 
+                    <!-- Navi --> 
+                          
+                    </div>
+                  </div>
+                {/block:Caption}
+                {/block:permalinkpage}
+                {/block:ifnotusecaption}
+            </li>
+          {/block:Photo}
+
+          {block:Panorama}
+            <li>
+                {LinkOpenTag}
+                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                {LinkCloseTag}{block:Caption}
+                    <div class="caption"><div class="caption_inner">{Caption}</div></div>
+                {/block:Caption}
+            </li>
+          {/block:Panorama}
+
+          {block:Photoset}
+            <li>
+              <div class="photosets">{block:indexpage}{block:ifusebiggerposts}{Photoset-500}{/block:ifusebiggerposts}
+                {block:ifnotusebiggerposts}{Photoset-250}{/block:ifnotusebiggerposts}{/block:indexpage}
+                {block:permalinkpage}{Photoset-500}{/block:permalinkpage}</div>
+
+                {block:ifusecaption}{block:Caption}
+                  <div class="caption">
+                    <div class="caption_inner">{Caption}
+                      <!-- Navi -->
+                      <div class="note-count"><a href="{permalink}">
+                        {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                        {block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>
+                        {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                          <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                          <span>{Reblogbutton size="14"}</span>
+                              <span data-icon="A" class="icon-a">
+                                  <div class="locker_container">
+                                      <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                       <div class="locker-element2">
+                                           <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                           <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                           <div class="locker3">
+                                               <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                           </div>
+                                           
+                                       </div>
+                                          <div class="rotate-tooltip"></div>
+                                  </div>
+                              </span>
+                          </div>
+                      </div>
+                      <!-- Navi -->
+                    </div>
+                  </div>
+                {/block:Caption}
+                {/block:ifusecaption}            
+
+                {block:ifnotusecaption}
+                  {block:indexpage}
+                    <div class="mikkis" style="margin-top:-4px;">
+                      <div class="mikki">
+                        <span>{likebutton color="white" size="16"}</span>
+                        <span> {reblogbutton color="white" size="16"}</span>
+                        <a href="{permalink}">  
+                          <span data-icon="c" style="color:white;font-size:16px;"></span>
+                        </a>
+                      </div>
+                      <div class="not-notes">{block:NoteCount}{notecount}{/block:NoteCount}</div>
+                    </div>
+                  {/block:indexpage}
+
+                  {block:permalinkpage}
+                  {block:Caption}
+                    <div class="caption"><div class="caption_inner">{Caption}     
+                      <!-- Navi -->
+                      <div class="note-count"><a href="{permalink}">
+                        {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                        {block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>
+                        {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                          <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                          <span>{Reblogbutton size="14"}</span>
+                              <span data-icon="A" class="icon-a">
+                                  <div class="locker_container">
+                                      <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                       <div class="locker-element2">
+                                           <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                           <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                           <div class="locker3">
+                                               <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                           </div>
+                                           
+                                       </div>
+                                          <div class="rotate-tooltip"></div>
+                                  </div>
+                              </span>
+                          </div>
+                      </div>
+                      <!-- Navi -->
+                    </div></div>
+                {/block:Caption}
+                {/block:permalinkpage}    
+                {/block:ifnotusecaption}
+            </li>
+          {/block:Photoset}
+
+          {block:Quote}
+            <li>          
+              {block:Source}
+                  <div class="source">{Source}</div>
+              {/block:Source}
+              <li class="quote">"{Quote}"</li>    
+              <!-- Navi -->
+              <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                  <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                  <span>{Reblogbutton size="14"}</span>
+                      <span data-icon="A" class="icon-a">
+                
+                          <div class="locker_container">
+                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                               <div class="locker-element2">
+                                   <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                   <div class="locker2"><a href="https://twitter.com/home?status={Quote}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                   <div class="locker3">
+                                        <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                   </div>
+                                   
+                               </div>
+                                  <div class="rotate-tooltip"></div>
+                          </div>
+                      </span>
+                  </div>
+              </div>
+              <!-- Navi -->
+            </li>
+          {/block:Quote}
+
+          {block:Link}
+            <li class="link">
+              <div class="link-name">
+                <a href="{URL}" class="link" {Target}>{Name}</a>
+              </div>
+
+              {block:Description}
+                  <div class="description">{Description}</div>
+              {/block:Description}        
+              <!-- Navi -->
+              <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                  <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                  <span>{Reblogbutton size="14"}</span>
+                      <span data-icon="A" class="icon-a">
+                
+                          <div class="locker_container">
+                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                               <div class="locker-element2">
+                                   <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
+    {PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                   <div class="locker2"><a href="https://twitter.com/home?status={Description}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                   <div class="locker3">
+                                         <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                   </div>
+                                   
+                               </div>
+                                  <div class="rotate-tooltip"></div>
+                          </div>
+                      </span>
+                   
+                  </div>
+              </div>
+              <!-- Navi -->
+            </li>
+          {/block:Link}
+
+          {block:Chat}
+            <li class="chat"> 
+                {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}
+
+                <ul class="chat">
+                    {block:Lines}
+                        <li class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                                <span class="label">{Label}</span>
+                            {/block:Label}{Line}
+                        </li>
+                    {/block:Lines}
+                </ul>          
+                
+                <!-- Navi -->
+                <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                    <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                    <span>{Reblogbutton size="14"}</span>
+                        <span data-icon="A" class="icon-a">
+                  
+                            <div class="locker_container">
+                                <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                 <div class="locker-element2">
+                                     <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
+    {PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                     <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                     <div class="locker3">
+                                         <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                     </div>
+                                     
+                                 </div>
+                                    <div class="rotate-tooltip"></div>
+                            </div>
+                        </span>
+                     
+                    </div>
+                </div>
+                <!-- Navi -->
+            </li>
+          {/block:Chat}
+
+          {block:Video}
+            <li class="video">
+              <div class="video_inner"> 
+                <div class="video2"> 
+                  {block:indexpage} 
+                    {block:ifusebiggerposts}{Video-500}{/block:ifusebiggerposts}
+                    {block:ifnotusebiggerposts}{Video-250}{/block:ifnotusebiggerposts}
+                  {/block:indexpage}
+                  {block:permalinkpage}
+                    {Video-500}
+                  {/block:permalinkpage}
                 </div>
               </div>
-              {/block:indexpage}
-              {block:permalinkpage}
+              {block:ifusecaption}
               {block:Caption}
-                <div class="caption">
-                  <div class="caption_inner">{Caption}
-                                
-                                
+                <div class="caption"><div class="caption_inner">{Caption}        
                   <!-- Navi -->
                   <div class="note-count"><a href="{permalink}">
                     {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                    {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
-                    {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                      <div style="text-align:right;margin-top:-17px;" class="shareit">
-                        <span>{likebutton size="14"}</span>
+                    {block:ifnotusebiggerposts}{block:NoteCount}{notecount} Notes {/block:NoteCount}{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                      <span>{Reblogbutton size="14"}</span>
+                          <span data-icon="A" class="icon-a">
+                    
+                              <div class="locker_container">
+                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                   <div class="locker-element2">
+                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                       <div class="locker3">
+                                           <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                       </div>
+                                       
+                                   </div>
+                                      <div class="rotate-tooltip"></div>
+                              </div>
+                          </span>
+                       
+                      </div>
+                  </div>
+                  <!-- Navi -->
+                </div></div>
+
+                {/block:Caption}
+                {/block:ifusecaption}            
+
+                {block:ifnotusecaption}{block:indexpage}
+                  <div class="mikkis" style="margin-top:-4px;">
+                  <div class="mikki">
+                    <span>{likebutton color="white" size="16"}</span>
+                    <span>{reblogbutton color="white" size="16"}</span>
+                      <a href="{permalink}">  
+                        <span data-icon="c" style="color:white;font-size:16px;"></span>
+                      </a>
+                    </div>
+                    <div class="not-notes">{block:NoteCount}{notecount}{/block:NoteCount}</div>
+                  </div>
+                {/block:indexpage}
+                  
+                {block:permalinkpage}
+                {block:Caption}
+                  <div class="caption"><div class="caption_inner">{Caption} 
+                    <!-- Navi -->
+                    <div class="note-count"><a href="{permalink}">
+                      {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
+                      {block:ifnotusebiggerposts}{block:NoteCount}{notecount} Notes {/block:NoteCount}{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                        <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                         <span>{Reblogbutton size="14"}</span>
-                        <span data-icon="A" class="icon-a">
-                            <div class="locker_container">
-                                <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                <div class="locker-element2">
-                                  <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                  <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                  <!--
-                                  <div class="locker3" style="background-color:#C92228">
-                                     <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                  </div>
-                                  -->
-                                  <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
+                            <span data-icon="A" class="icon-a">
+                      
+                                <div class="locker_container">
+                                    <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                     <div class="locker-element2">
+                                         <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                         <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                         <div class="locker3">
+                                             <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                         </div>
+                                         
+                                     </div>
+                                        <div class="rotate-tooltip"></div>
                                 </div>
-                                <div class="rotate-tooltip"></div>
-                            </div>
-                        </span>
+                            </span>
+                         
+                        </div>
+                    </div>
+                    <!-- Navi -->
+                    
+                  </div></div>
+                {/block:Caption}
+                {/block:permalinkpage}
+                {/block:ifnotusecaption}
+                  
+              </li>
+          {/block:Video}
+
+          {block:Audio}
+              <li class="audio">
+                  <div class="audio_embed">
+                       {block:indexpage}{block:ifusebiggerposts}{AudioEmbed-500}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{AudioEmbed-250}{/block:ifnotusebiggerposts}{/block:indexpage}{block:permalinkpage}{AudioEmbed-500}{/block:permalinkpage}
+                  </div>{block:ifusecaption}{block:Caption}
+                      <div class="caption"><div class="caption_inner" style="padding-top:12px;">{Caption}
+                          
+                          
+                                 <!-- Navi -->
+                  <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                      <span>{Reblogbutton size="14"}</span>
+                          <span data-icon="A" class="icon-a">
+                    
+                              <div class="locker_container">
+                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                   <div class="locker-element2">
+                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                       <div class="locker3">
+                                           <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
+                                       </div>
+                                       
+                                   </div>
+                                      <div class="rotate-tooltip"></div>
+                              </div>
+                          </span>
+                       
+                      </div>
+                  </div>
+                  <!-- Navi -->
+                          
+                      </div>
+                       
+                      </div>
+                  {/block:Caption}{/block:ifusecaption}
+                              {block:ifnotusecaption}{block:indexpage}
+                  <div class="mikkis" style="margin-top:-4px;">
+                  <div class="mikki">
+                  <span>
+                  {likebutton color="white" size="16"}</span>
+                 <span> {reblogbutton color="white" size="16"}</span>
+                <a href="{permalink}">  <span data-icon="c" style="color:white;font-size:16px;"></span></a></div>
+                  <div class="not-notes">                         {block:NoteCount}{notecount}{/block:NoteCount}</div></div>{/block:indexpage}
+                  
+                  {block:permalinkpage}
+                  {block:Caption}
+                      <div class="caption"><div class="caption_inner">{Caption}
+                          
+                          
+                                 <!-- Navi -->
+                  <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
+                      <span>{Reblogbutton size="14"}</span>
+                          <span data-icon="A" class="icon-a">
+                    
+                              <div class="locker_container">
+                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
+                                   <div class="locker-element2">
+                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
+                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
+                                       <div class="locker3" style="background-color:#C92228">
+                                           <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
+                                       </div>
+                                       
+                                   </div>
+                                      <div class="rotate-tooltip"></div>
+                              </div>
+                          </span>
+                       
                       </div>
                   </div> 
                   <!-- Navi --> 
-                        
-                  </div>
-                </div>
-              {/block:Caption}
-              {/block:permalinkpage}
-              {/block:ifnotusecaption}
-          </li>
-        {/block:Photo}
+                  
+                      </div></div>
+                  {/block:Caption}
+                  {/block:permalinkpage}
+                  {/block:ifnotusecaption}
+                  
+              </li>
+          {/block:Audio}
 
-        {block:Panorama}
-                    <li>
-                        {LinkOpenTag}
-                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
-                        {LinkCloseTag}{block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}</div></div>
-                        {/block:Caption}
-                    </li>
-                {/block:Panorama}{block:Photoset}
-                    <li>
-                        <div class="photosets">{block:indexpage}{block:ifusebiggerposts}{Photoset-500}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{Photoset-250}{/block:ifnotusebiggerposts}{/block:indexpage}{block:permalinkpage}{Photoset-500}{/block:permalinkpage}</div>
-                        {block:ifusecaption}{block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}
-                                    <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                 <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                            </div></div>
-                        {/block:Caption}
-                        {/block:ifusecaption}            {block:ifnotusecaption}{block:indexpage}
-                        <div class="mikkis" style="margin-top:-4px;">
-                        <div class="mikki">
-                        <span>
-                        {likebutton color="white" size="16"}</span>
-                       <span> {reblogbutton color="white" size="16"}</span>
-                      <a href="{permalink}">  <span data-icon="c" style="color:white;font-size:16px;"></span></a></div>
-                        <div class="not-notes">                         {block:NoteCount}{notecount}{/block:NoteCount}</div></div>
-                    {/block:indexpage}
-                        {block:permalinkpage}
-                        {block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}
-                                
-                                
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3" style="background-color:#C92228">
-                                                 <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div> 
-                        <!-- Navi --> 
-                        
-                            </div></div>
-                        {/block:Caption}
-                        {/block:permalinkpage}    {/block:ifnotusecaption}
-                        
-                    </li>
-                {/block:Photoset}{block:Quote}
-                    <li>
-                    
-                        {block:Source}
-                            <div class="source">{Source}</div>
-                        {/block:Source}
-                        <li class="quote">"{Quote}"</li>
-                        
-                        
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Quote}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                  <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                        
-                        
-                    </li>
-                {/block:Quote}{block:Link}
-                    <li class="link">
-                    <div class="link-name">
-                        <a href="{URL}" class="link" {Target}>{Name}</a></div>
-
-                        {block:Description}
-                            <div class="description">{Description}</div>
-                        {/block:Description}        
-                        
-                         
-                        <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
-{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Description}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                   <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                        
-                        
-                    </li>
-                {/block:Link}{block:Chat}
-                    <li class="chat"> 
-                        {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
-                        {/block:Title}
-
-                        <ul class="chat">
-                            {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
-                                    {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}{Line}
-                                </li>
-                            {/block:Lines}
-                        </ul>          
-                        
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
-{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                 <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                        
-                        
-                    </li>
-                {/block:Chat}{block:Video}
-                    <li class="video">
-                     <div class="video_inner"> <div class="video2"> {block:indexpage} {block:ifusebiggerposts}{Video-500}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{Video-250}{/block:ifnotusebiggerposts}{/block:indexpage}{block:permalinkpage}{Video-500}{/block:permalinkpage}</div></div>
-                     {block:ifusecaption}{block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}
-                                
-                                
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{block:NoteCount}{notecount} Notes {/block:NoteCount}{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                 <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                        
-                        
-                            </div></div>
-                        {/block:Caption}{/block:ifusecaption}            {block:ifnotusecaption}{block:indexpage}
-                        <div class="mikkis" style="margin-top:-4px;">
-                        <div class="mikki">
-                        <span>
-                        {likebutton color="white" size="16"}</span>
-                       <span> {reblogbutton color="white" size="16"}</span>
-                      <a href="{permalink}">  <span data-icon="c" style="color:white;font-size:16px;"></span></a></div>
-                        <div class="not-notes">                         {block:NoteCount}{notecount}{/block:NoteCount}</div></div>{/block:indexpage}
-                        
-                        {block:permalinkpage}
-                        {block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}
-                                
-                                
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3" style="background-color:#C92228">
-                                                 <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div> 
-                        <!-- Navi --> 
-                        
-                            </div></div>
-                        {/block:Caption}
-                        {/block:permalinkpage}
-                        {/block:ifnotusecaption}
-                        
-                    </li>
-                {/block:Video}{block:Audio}
-                    <li class="audio">
-                        <div class="audio_embed">
-                             {block:indexpage}{block:ifusebiggerposts}{AudioEmbed-500}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{AudioEmbed-250}{/block:ifnotusebiggerposts}{/block:indexpage}{block:permalinkpage}{AudioEmbed-500}{/block:permalinkpage}
-                        </div>{block:ifusecaption}{block:Caption}
-                            <div class="caption"><div class="caption_inner" style="padding-top:12px;">{Caption}
-                                
-                                
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3">
-                                                 <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div>
-                        <!-- Navi -->
-                                
-                            </div>
-                             
-                            </div>
-                        {/block:Caption}{/block:ifusecaption}
-                                    {block:ifnotusecaption}{block:indexpage}
-                        <div class="mikkis" style="margin-top:-4px;">
-                        <div class="mikki">
-                        <span>
-                        {likebutton color="white" size="16"}</span>
-                       <span> {reblogbutton color="white" size="16"}</span>
-                      <a href="{permalink}">  <span data-icon="c" style="color:white;font-size:16px;"></span></a></div>
-                        <div class="not-notes">                         {block:NoteCount}{notecount}{/block:NoteCount}</div></div>{/block:indexpage}
-                        
-                        {block:permalinkpage}
-                        {block:Caption}
-                            <div class="caption"><div class="caption_inner">{Caption}
-                                
-                                
-                                       <!-- Navi -->
-                        <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                            <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                                <span data-icon="A" class="icon-a">
-                          
-                                    <div class="locker_container">
-                                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                         <div class="locker-element2">
-                                             <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                             <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                             <div class="locker3" style="background-color:#C92228">
-                                                 <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                             </div>
-                                             
-                                         </div>
-                                            <div class="rotate-tooltip"></div>
-                                    </div>
-                                </span>
-                             
-                            </div>
-                        </div> 
-                        <!-- Navi --> 
-                        
-                            </div></div>
-                        {/block:Caption}
-                        {/block:permalinkpage}
-                        {/block:ifnotusecaption}
-                        
-                    </li>
-                {/block:Audio}</div>
-                
-                        </div>
-                 
-                        {/block:Posts}
-                      {block:permalinkpage} 
-    
- {block:PostNotes} 
-                <div class="post"><div class="inner_container" style="padding:10px;">
-              <div class="postnotes">  
-             
-     {block:Posts}
-     <script>
-                         $(document).ready(function (){
-      {block:photo}$('.post-disqus').fadeIn(1500);{/block:photo}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Answer}$('.post-disqus').fadeIn(1500);{/block:Answer}{block:quote}$('.post-disqus').fadeIn(1500);{/block:quote}{block:text}$('.post-disqus').fadeIn(1500);{/block:text}{block:Panorama}$('.post-disqus').fadeIn(1500);{/block:Panorama}{block:link}$('.post-disqus').fadeIn(1500);{/block:link}{block:video}$('.post-disqus').fadeIn(1500);{/block:video}{block:chat}$('.post-disqus').fadeIn(1500);{/block:chat}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Photoset}$('.post-disqus').fadeIn(1500);{/block:Photoset}
-    });</script>
-    
-    
-    <div class="post-padding"><div class="post-padding2">{PostNotes-16}</div></div> {/block:Posts} </div></div></div>    {/block:PostNotes}
-      {block:IfDisqusShortname}
+        </div></div>
+      {/block:Posts}
+                      
+      {block:permalinkpage}
+        {block:PostNotes} 
+        <div class="post">
+          <div class="inner_container" style="padding:10px;">
+            <div class="postnotes">  
+              {block:Posts}
+              <!--
+              <script>
+                                 $(document).ready(function (){
+              {block:photo}$('.post-disqus').fadeIn(1500);{/block:photo}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Answer}$('.post-disqus').fadeIn(1500);{/block:Answer}{block:quote}$('.post-disqus').fadeIn(1500);{/block:quote}{block:text}$('.post-disqus').fadeIn(1500);{/block:text}{block:Panorama}$('.post-disqus').fadeIn(1500);{/block:Panorama}{block:link}$('.post-disqus').fadeIn(1500);{/block:link}{block:video}$('.post-disqus').fadeIn(1500);{/block:video}{block:chat}$('.post-disqus').fadeIn(1500);{/block:chat}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Photoset}$('.post-disqus').fadeIn(1500);{/block:Photoset}
+              });</script>
+              -->
+                <div class="post-padding"><div class="post-padding2">{PostNotes-16}</div></div> 
+              {/block:Posts}
+            </div>
+          </div>
+        </div>    
+        {/block:PostNotes}
+        <!--
+        {block:IfDisqusShortname}
       
                 <div class="post post-disqus" style="color:#000000 !important;"><div class="inner_container" style="padding:20px;padding-left:30px;padding-right:30px;">
-      <div >
+                <div >
               <div id="disqus_thread">
               </div>
               <script type="text/javascript">
@@ -1002,30 +1040,50 @@ Css reset
                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
               </script></div></div></div>
-      {/block:IfDisqusShortname}
-                      {/block:permalinkpage}
-</div></div>
-<div id="pagination">
-<li>{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}"></a>{/block:PreviousPage}{block:NextPage}<a{block:ifnotusepagination} href="{NextPage}"{/block:ifnotusepagination} class="pagination_nextlink"></a>{/block:NextPage}{/block:Pagination}</li>
-</div>
-{block:ifusepagination}
+        {/block:IfDisqusShortname}
+        -->
+      {/block:permalinkpage}
+    </div></div>
 
-<div class="pagination">
-        {block:Pagination}{block:PreviousPage}
-                <a href="{PreviousPage}" class="prev">Previous</a>
-            {/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
-                    <span class="current_page">{PageNumber}</span>
-                {/block:CurrentPage}{block:JumpPage}
-                  <div class="current-container">  <a class="jump_page" href="{URL}">{PageNumber}</a></div>
-                {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
-                <a href="{NextPage}" class="next">Next</a>
-            {/block:NextPage}{/block:Pagination}</div>
-{/block:ifusepagination}
-  <script>
-      $(document).ready(function(){$(window).scroll(function(){if($(this).scrollTop()>300){$(".supmenu").fadeIn()}else{$(".supmenu").fadeOut()}});$(".smenu").click(function(){$("html, body").animate({scrollTop:0},900);return false})});
-  </script>
-  
-    </body>
-   
-  
+    <div id="pagination">
+      <li>
+      {block:Pagination}
+        {block:PreviousPage}<a href="{PreviousPage}"></a>{/block:PreviousPage}
+        {block:NextPage}<a{block:ifnotusepagination} href="{NextPage}"{/block:ifnotusepagination} class="pagination_nextlink"></a>{/block:NextPage}
+      {/block:Pagination}
+      </li>
+    </div>
+
+    {block:ifusepagination}
+    <div class="pagination">
+      {block:Pagination}
+        {block:PreviousPage}
+          <a href="{PreviousPage}" class="prev">Previous</a>
+        {/block:PreviousPage}
+
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}
+            <span class="current_page">{PageNumber}</span>
+          {/block:CurrentPage}
+
+          {block:JumpPage}
+            <div class="current-container">
+              <a class="jump_page" href="{URL}">{PageNumber}</a>
+            </div>
+          {/block:JumpPage}
+        {/block:JumpPagination}
+
+        {block:NextPage}
+          <a href="{NextPage}" class="next">Next</a>
+        {/block:NextPage}
+      {/block:Pagination}
+    </div>
+    {/block:ifusepagination}
+
+    <!--  
+    <script>
+        $(document).ready(function(){$(window).scroll(function(){if($(this).scrollTop()>300){$(".supmenu").fadeIn()}else{$(".supmenu").fadeOut()}});$(".smenu").click(function(){$("html, body").animate({scrollTop:0},900);return false})});
+    </script>
+    -->
+  </body>
 </html>
