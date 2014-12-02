@@ -661,15 +661,15 @@ a:hover {text-decoration: underline;}
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: red;  
+   color: #555;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: red;  
+   color: #555;  
 }
 
 :-ms-input-placeholder {  
-   color: red;  
+   color: #555;  
 }
 
 #beOurFriend {

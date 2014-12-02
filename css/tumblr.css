@@ -223,8 +223,8 @@
 			eight:23px;
 			display:inline-block;
 			position:absolute;
-			right:70px;
-			top:17px;
+			right:0px;
+			top:0px;
 		}
 
 		.search input:first-child{

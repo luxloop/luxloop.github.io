@@ -250,32 +250,7 @@ Css reset
       (document));
     </script>
 
-    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
-    <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
-
     <link href='http://static.tumblr.com/kvwx9r7/4hkndbfhi/structure.css' rel='stylesheet' type='text/css'>
-
-    <script src="http://static.tumblr.com/cvhjz4y/2Hlndbg5p/colrbox.js"></script>
-
-    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
-
-    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js">
-    </script>
-    <script>
-
-      
-      {block:permalinkpage}
-      $(document).ready(function (){
-        $("#container").css({'height': '100%'});
-      });
-      {/block:permalinkpage};
-
-      $(window).load(function() {
-          $(".pagination").fadeIn(0)
-      });
-
-    </script>
 
     <style>
 
@@ -287,12 +262,7 @@ Css reset
   <body onunload="">
 
   <div class="header">
-    <script>
-      $.backstretch([{block:ifheader1image}"{image:header1}"{/block:ifheader1image}
-                     {block:ifheader2image},"{image:header2}"{block:ifheader2image} 
-                     {block:ifheader3image},"{image:header3}"{block:ifheader3image}
-                    ], {duration: 3000, fade: 750});
-    </script>
+    
    
     <div class = "menubar">
       <div class="menus"> 
@@ -355,10 +325,24 @@ Css reset
       </div>
 
       <div class="menuright">
+
+        {block:ifpersonalsiteurl}
         <span>
-            <a href="archive" class="page">archive</a>
+            <a href="{text:personal site url}" class="page">home</a>
         </span>
-            
+        {/block:ifpersonalsiteurl}
+
+        <span>
+            <a href="/archive" class="page">archive</a>
+        </span>
+
+        <!--
+        <form action="/search" method="get" class="search">
+          <input type="text" name="q" value=""/>
+          <button type="submit" data-icon="c"></button>
+        </form>
+        -->
+
       </div>
     </div>
         
@@ -855,6 +839,38 @@ Css reset
         {/block:NextPage}
       {/block:Pagination}
     </div>
+
+    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
+    <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
+    <script src="http://static.tumblr.com/cvhjz4y/2Hlndbg5p/colrbox.js"></script>
+    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
+    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js"></script>
+
+    <script>
+      
+      $(document).ready(function (){
+        {block:permalinkpage}
+        $("#container").css({'height': '100%'});
+        {/block:permalinkpage};
+
+        $(".header").backstretch([{block:ifheader1image}"{image:header1}"{/block:ifheader1image}
+                     {block:ifheader2image},"{image:header2}"{block:ifheader2image} 
+                     {block:ifheader3image},"{image:header3}"{block:ifheader3image}
+                    ], {duration: 3000, fade: 750});
+
+      });
+      
+
+      $(window).load(function() {
+          $(".pagination").fadeIn(0)
+      });
+
+      
+
+
+    </script>
+
     
   </body>
 </html>
