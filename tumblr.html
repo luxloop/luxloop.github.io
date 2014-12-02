@@ -67,7 +67,7 @@ Css reset
     {block:Description}
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
-    <meta name="viewport" id="viewport" content="user-scalable=0;initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" id="viewport" content="user-scalable=0,initial-scale=1.0,maximum-scale=1.0">
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     
@@ -78,32 +78,8 @@ Css reset
     <meta name="image:Header2" content="https://secure.static.tumblr.com/66746970dfa759afb865bed4883bc999/kvwx9r7/2qqnc7tp2/tumblr_static_15a7yeae7ny80owkcwocso4gc.jpg"/>
     <meta name="image:Header3" content=""/>
 
-
-    <meta name='text:Disqus Shortname' content=''>
-    <meta name='font:Post Title Font' content='Istok Web'>
-
-    <meta name="if:Use Black and white Photo" content="0" />
-
     <meta name="text:Google analytics Web Property ID" content="">
-    <meta name="if:Use Caption" content="1" />
-    <meta name="if:Use Post Border" content="0" />
-    <meta name="if:Use Post Hover Effect" content="0" />
-    <meta name="if:Use Link Border" content="0" />
-    
-    <meta name="if:Use Bigger Posts" content="1" />
-    <meta name="if:Use Archive Button" content="0" />
-    <meta name="if:Use Header Overlay" content="0" />
-    <meta name="if:Use SubMenu" content="1" />
-    <meta name="if:Use Slide down arrow" content="1" />
-    <meta name="if:Use Uppercased Title" content="1" />
-    <meta name="if:Use Pagination" content="0" />
-    <!--
-    <meta name="if:Use Ask Button" content="0" />
-    <meta name="if:Resize Header" content="0" />
-    <meta name="if:Keep Open SubMenu" content="0" />
-    -->
     <meta name="if:Hide Tags" content="1" />
-    <meta name="font:title" content="Lorimer No 2" />
     
     
     <meta name="select:Post Title Size" content="10pt" title="10pt">
@@ -169,20 +145,20 @@ Css reset
     <meta name="select:Title Size" content="75pt" title="75pt">
     <meta name="select:Title Size" content="85pt" title="85pt">
     
-    
+    <!--
     <meta name="select:Arrow To Bottom Size" content="25pt" title="25pt">
     <meta name="select:Arrow To Bottom Size" content="15pt" title="15pt">
     <meta name="select:Arrow To Bottom Size" content="20pt" title="20pt">
     <meta name="select:Arrow To Bottom Size" content="30pt" title="30pt">
     <meta name="select:Arrow To Bottom Size" content="40pt" title="40pt">
     <meta name="select:Arrow To Bottom Size" content="45pt" title="45pt">
+    -->
     
     
     <meta name="color:Select Color" content="#ffd2a5" /> 
     <meta name="color:Menus Color" content="#ffffff" /> 
     <meta name="color:Link Color" content="#9c9c9c" /> 
-    <meta name="color:Link Hover Color" content="#ffd2a5" /> 
-    <meta name="color:Header Overlay" content="#000000" />
+    <meta name="color:Link Hover Color" content="#ffd2a5" />
     <meta name="color:Background Color" content="#efefef" /> 
     <meta name="color:Post Background Color" content="#ffffff" /> 
     <meta name="color:Post Title Color" content="#000000" /> 
@@ -195,7 +171,18 @@ Css reset
     <meta name="color:Sup Menu Background color" content="#ffffff" /> 
     <meta name="color:Sup Menu Icons color" content="#aeaeae" /> 
     <meta name="color:Sup Menu Search Icon color" content="#000000" />
+    <!--
     <meta name="color:Header Scrolldown Arrow Color" content="#ffffff" />
+    -->
+    <meta name="text:Custom tag 1" content="" />
+    <meta name="text:Custom tag 1 title" content="" />
+
+    <meta name="text:Custom tag 2" content="" />
+    <meta name="text:Custom tag 2 title" content="" />
+
+    <meta name="text:Custom tag 3" content="" />
+    <meta name="text:Custom tag 3 title" content="" />
+
     <meta name="text:Custom link 1 URL" content="" />
     <meta name="text:Custom link 1 title" content="" />
     
@@ -204,22 +191,8 @@ Css reset
     
     <meta name="text:Custom link 3 URL" content="" />
     <meta name="text:Custom link 3 title" content="" />
-    <meta name="text:Custom link 4 URL" content="" />
-    
-    <meta name="text:Custom link 4 title" content="" />
-    
-    
     
     <meta name="text:Personal Site URL" content="" />
-    <!--
-    <meta name="text:Facebook URL" content="" />
-    <meta name="text:Twitter URL" content="" />
-    <meta name="text:Pinterest URL" content="" />
-    <meta name="text:Instagram URL" content="" /> 
-    <meta name="text:Shop URL" content="" />
-    <meta name="text:SoundCloud URL" content="" />
-    <meta name="text:SCM Player Code" content="" />
-    -->
 
     <script src="//use.typekit.net/pga1gsl.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -276,114 +249,96 @@ Css reset
       (document));
     </script>
 
-    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
-    <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
-
+    
     <link href='http://static.tumblr.com/kvwx9r7/4hkndbfhi/structure.css' rel='stylesheet' type='text/css'>
-
-    <script src="http://static.tumblr.com/cvhjz4y/2Hlndbg5p/colrbox.js"></script>
-
-    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
-
-    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js">
-    </script>
-    <script>
-
-      $(function(){
-        $('#gdb1').click(function(){
-            $("html, body").animate({ scrollTop: $(window).height()}, 780);
-            return false;
-        });
-      });
-      {block:permalinkpage}
-      $(document).ready(function (){
-        $("#container").css({'height': '100%'});
-      });
-      {/block:permalinkpage};
-
-      $(window).load(function() {
-          $(".pagination").fadeIn(0)
-      });
-
-    </script>
+    
+    
 
     <style>
-
-
-
     
     </style>
     
   <body onunload="">
 
   <div class="header">
-    <script>
-      $.backstretch([{block:ifheader1image}"{image:header1}"{/block:ifheader1image}
-                     {block:ifheader2image},"{image:header2}"{block:ifheader2image} 
-                     {block:ifheader3image},"{image:header3}"{block:ifheader3image}
-                    ], {duration: 3000, fade: 750});
-    </script>
    
     <div class = "menubar">
-      <div class="menus"> {block:ifCustomlink1title}
+      <div class="menus">
+        {block:ifCustomtag1title}
+        <span>
+          <a href="tagged/{text:Custom tag 1}">
+            {text:Custom tag 1 title}
+          </a>
+        </span>
+        {/block:ifCustomtag1title}
+        
+        {block:ifCustomtag2title}
+        <span>
+          <a href="tagged/{text:Custom tag 2}">
+            {text:Custom tag 2 title}
+          </a>
+        </span>
+        {/block:ifCustomtag2title}
+
+        {block:ifCustomtag3title}
+        <span>
+          <a href="tagged/{text:Custom tag 3}">
+            {text:Custom tag 3 title}
+          </a>
+        </span>
+        {/block:ifCustomtag3title}
+
+        {block:ifCustomlink1title}
         <span>
           <a href="{text:Custom link 1 URL}">
             {text:Custom link 1 title}
           </a>
         </span>
-        {/block:ifCustomlink1title}{block:ifCustomlink2title}
+        {/block:ifCustomlink1title}
+
+        {block:ifCustomlink2title}
         <span>
           <a href="{text:Custom link 2 URL}">
             {text:Custom link 2 title}
           </a>
         </span>
-        {/block:ifCustomlink2title}{block:ifCustomlink3title}
+        {/block:ifCustomlink2title}
+
+        {block:ifCustomlink3title}
         <span>
           <a href="{text:Custom link 3 URL}">
             {text:Custom link 3 title}
           </a>
         </span>
-        {/block:ifCustomlink3title}{block:ifCustomlink4title}
-        <span>
-          <a href="{text:Custom link 4 URL}">
-            {text:Custom link 4 title}
-          </a>
-        </span>
-        {/block:ifCustomlink4title}
+        {/block:ifCustomlink3title}
         
-        {block:ifCustomlink5title}
-        <span>
-          <a href="{text:Custom link 5 URL}">
-            {text:Custom link 5 title}
-          </a>
-        </span>
-        {/block:ifCustomlink5title}
-        
-        {block:ifCustomlink6title}
-        <span>
-          <a href="{text:Custom link 6 URL}">
-            {text:Custom link 6 title}
-          </a>
-        </span>
-        {/block:ifCustomlink6title}
-            
-            
         {block:HasPages}
             {block:Pages}
             <span>
                 <a href="{URL}" class="page">{Label}</a>
             </span>
             {/block:Pages}
-        {/block:HasPages}             
+        {/block:HasPages}    
       </div>
 
       <div class="menuright">
-            
-      </div>
-    </div>
+        {block:ifpersonalsiteurl}
+        <span>
+            <a href="{text:personal site url}" class="page">home</a>
+        </span>
+        {/block:ifpersonalsiteurl}
 
-    <div class="overlay" >
+        <span>
+            <a href="/archive" class="page">archive</a>
+        </span>
+        <!--
+        <form action="/search" method="get" class="search">
+          <input type="text" name="q" value=""/>
+          <button type="submit" data-icon="c"></button>
+        </form>
+        -->
+        
+      </div>
     </div>
         
     <div class="contain-content">
@@ -406,8 +361,6 @@ Css reset
         </div>
       </div>
     </div>
-    <div data-icon="u" class="gd1" id="gdb1">
-    </div>
   </div>
     
   <div class="scrollup"></div>
@@ -419,7 +372,7 @@ Css reset
       {block:Posts}
         <div class="post infscr {block:chat}chat-post{/block:chat} {block:quote}quote-post{/block:quote} {block:text}text-post{/block:text} {block:photoset}caption-post{/block:photoset} {block:audio}caption-post{/block:audio} {block:photo}caption-post{/block:photo} {block:video}caption-post{/block:video} {block:link}link-post{/block:link} {block:Answer}text-post{/block:Answer}" id="{postID}">
                     
-        <div class="inner_container" {block:ifnotusepostborder} {block:indexpage} {block:ifnotusecaption} style="{block:video}background-color:{color:background color} !important{/block:video} {block:audio}background-color:{color:background color} !important{/block:audio} {block:photo}background-color:{color:background color} !important{/block:photo} {block:photoset}background-color:{color:background color} !important{/block:photoset}"{/block:ifnotusecaption}{/block:indexpage}{/block:ifnotusepostborder}>
+        <div class="inner_container">
              
           {block:Text}
           <li class="text">
@@ -429,9 +382,7 @@ Css reset
               <div class="text-body">{Body}</div>
               <!-- Navi -->
               {block:date}
-              <div class="note-count"><a href="{permalink}" target="_blank">
-                {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+              <div class="note-count"><a href="{permalink}" target="_blank">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
                 {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
 
                   <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
@@ -471,7 +422,7 @@ Css reset
                     </div>
                   </div>
                 </div>
-                <div class="real-qeustion real-qeustion">{question}
+                <div class="real-qeustion real-question">{question}
                   <div class="radius"></div>
                 </div>
               </div>
@@ -484,9 +435,7 @@ Css reset
               </div>
               <!-- Navi -->
               {block:date}
-                <div class="note-count"><a href="{permalink}" target="_blank">
-                  {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                  {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+                <div class="note-count"><a href="{permalink}" target="_blank">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
                   {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                     <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                     <span>{Reblogbutton size="14"}</span>
@@ -514,7 +463,7 @@ Css reset
             <div style="display:none">
               <center>
                 <div id="inline_{postID}" class="lightbox">
-                  <div style="background-image:url('{PhotoURL-Highres}');width:{PhotoWidth-500};height:{PhotoHeight-500};{block:ifnotbiggerposts}width:{PhotoWidth-250};height:{PhotoHeight-250};{/block:ifnotbiggerposts}" class="imagebuilder">
+                  <div style="background-image:url('{PhotoURL-Highres}');width:{PhotoWidth-500};height:{PhotoHeight-500};" class="imagebuilder">
                     <img src="{PhotoURL-100}" class="small" >
                   </div>
                 </div>
@@ -529,13 +478,11 @@ Css reset
                 </div>
               </a>
                           
-              {block:ifusecaption}{block:Caption}
+              {block:Caption}
               <div class="caption"><div class="caption_inner">
               {Caption}                    
                 <!-- Navi -->
-                <div class="note-count"><a href="{permalink}">
-                  {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                  {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
+                <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
                   {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                     <div style="text-align:right;margin-top:-17px;" class="shareit">
                       <span>{likebutton size="14"}</span>
@@ -560,59 +507,7 @@ Css reset
                 </div> 
                 <!-- Navi -->
               </div></div>
-              {/block:Caption}{/block:ifusecaption}            
-
-              {block:ifnotusecaption}{block:indexpage}
-                <div class="mikkis">
-                  <div class="mikki">
-                    <span>{likebutton color="white" size="16"}</span>
-                    <span> {reblogbutton color="white" size="16"}</span>
-                    <a href="{permalink}"><span data-icon="c" style="color:white;font-size:16px;"></span></a>
-                  </div>
-                  <div class="not-notes">
-                    {block:NoteCount}{notecount}{/block:NoteCount}
-                  </div>
-                </div>
-                {/block:indexpage}
-                {block:permalinkpage}
-                {block:Caption}
-                  <div class="caption">
-                    <div class="caption_inner">{Caption}
-                                  
-                                  
-                    <!-- Navi -->
-                    <div class="note-count"><a href="{permalink}">
-                      {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                      {block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>
-                      {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                        <div style="text-align:right;margin-top:-17px;" class="shareit">
-                          <span>{likebutton size="14"}</span>
-                          <span>{Reblogbutton size="14"}</span>
-                          <span data-icon="A" class="icon-a">
-                              <div class="locker_container">
-                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                  <div class="locker-element2">
-                                    <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                    <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                    <!--
-                                    <div class="locker3" style="background-color:#C92228">
-                                       <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                    </div>
-                                    -->
-                                    <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
-                                  </div>
-                                  <div class="rotate-tooltip"></div>
-                              </div>
-                          </span>
-                        </div>
-                    </div> 
-                    <!-- Navi --> 
-                          
-                    </div>
-                  </div>
-                {/block:Caption}
-                {/block:permalinkpage}
-                {/block:ifnotusecaption}
+              {/block:Caption}           
             </li>
           {/block:Photo}
 
@@ -628,17 +523,14 @@ Css reset
 
           {block:Photoset}
             <li>
-              <div class="photosets">{block:indexpage}{block:ifusebiggerposts}{Photoset-500}{/block:ifusebiggerposts}
-                {block:ifnotusebiggerposts}{Photoset-250}{/block:ifnotusebiggerposts}{/block:indexpage}
+              <div class="photosets">{block:indexpage}{Photoset-500}{/block:indexpage}
                 {block:permalinkpage}{Photoset-500}{/block:permalinkpage}</div>
 
-                {block:ifusecaption}{block:Caption}
+                {block:Caption}
                   <div class="caption">
                     <div class="caption_inner">{Caption}
                       <!-- Navi -->
-                      <div class="note-count"><a href="{permalink}">
-                        {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                        {block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>
+                      <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
                         {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                           <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                           <span>{Reblogbutton size="14"}</span>
@@ -662,53 +554,6 @@ Css reset
                     </div>
                   </div>
                 {/block:Caption}
-                {/block:ifusecaption}            
-
-                {block:ifnotusecaption}
-                  {block:indexpage}
-                    <div class="mikkis" style="margin-top:-4px;">
-                      <div class="mikki">
-                        <span>{likebutton color="white" size="16"}</span>
-                        <span> {reblogbutton color="white" size="16"}</span>
-                        <a href="{permalink}">  
-                          <span data-icon="c" style="color:white;font-size:16px;"></span>
-                        </a>
-                      </div>
-                      <div class="not-notes">{block:NoteCount}{notecount}{/block:NoteCount}</div>
-                    </div>
-                  {/block:indexpage}
-
-                  {block:permalinkpage}
-                  {block:Caption}
-                    <div class="caption"><div class="caption_inner">{Caption}     
-                      <!-- Navi -->
-                      <div class="note-count"><a href="{permalink}">
-                        {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                        {block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>
-                        {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                          <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                          <span>{Reblogbutton size="14"}</span>
-                              <span data-icon="A" class="icon-a">
-                                  <div class="locker_container">
-                                      <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                       <div class="locker-element2">
-                                           <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                           <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                           <div class="locker3">
-                                               <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                           </div>
-                                           
-                                       </div>
-                                          <div class="rotate-tooltip"></div>
-                                  </div>
-                              </span>
-                          </div>
-                      </div>
-                      <!-- Navi -->
-                    </div></div>
-                {/block:Caption}
-                {/block:permalinkpage}    
-                {/block:ifnotusecaption}
             </li>
           {/block:Photoset}
 
@@ -719,7 +564,8 @@ Css reset
               {/block:Source}
               <li class="quote">"{Quote}"</li>    
               <!-- Navi -->
-              <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+              <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
+                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                   <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                   <span>{Reblogbutton size="14"}</span>
                       <span data-icon="A" class="icon-a">
@@ -753,7 +599,8 @@ Css reset
                   <div class="description">{Description}</div>
               {/block:Description}        
               <!-- Navi -->
-              <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+              <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
+                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                   <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                   <span>{Reblogbutton size="14"}</span>
                       <span data-icon="A" class="icon-a">
@@ -796,7 +643,8 @@ Css reset
                 </ul>          
                 
                 <!-- Navi -->
-                <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
+                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                     <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                     <span>{Reblogbutton size="14"}</span>
                         <span data-icon="A" class="icon-a">
@@ -827,21 +675,18 @@ Css reset
               <div class="video_inner"> 
                 <div class="video2"> 
                   {block:indexpage} 
-                    {block:ifusebiggerposts}{Video-500}{/block:ifusebiggerposts}
-                    {block:ifnotusebiggerposts}{Video-250}{/block:ifnotusebiggerposts}
+                    {Video-500}
                   {/block:indexpage}
                   {block:permalinkpage}
                     {Video-500}
                   {/block:permalinkpage}
                 </div>
               </div>
-              {block:ifusecaption}
               {block:Caption}
                 <div class="caption"><div class="caption_inner">{Caption}        
                   <!-- Navi -->
-                  <div class="note-count"><a href="{permalink}">
-                    {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                    {block:ifnotusebiggerposts}{block:NoteCount}{notecount} Notes {/block:NoteCount}{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                  <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
+                    {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                       <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                       <span>{Reblogbutton size="14"}</span>
                           <span data-icon="A" class="icon-a">
@@ -866,68 +711,21 @@ Css reset
                 </div></div>
 
                 {/block:Caption}
-                {/block:ifusecaption}            
-
-                {block:ifnotusecaption}{block:indexpage}
-                  <div class="mikkis" style="margin-top:-4px;">
-                  <div class="mikki">
-                    <span>{likebutton color="white" size="16"}</span>
-                    <span>{reblogbutton color="white" size="16"}</span>
-                      <a href="{permalink}">  
-                        <span data-icon="c" style="color:white;font-size:16px;"></span>
-                      </a>
-                    </div>
-                    <div class="not-notes">{block:NoteCount}{notecount}{/block:NoteCount}</div>
-                  </div>
-                {/block:indexpage}
-                  
-                {block:permalinkpage}
-                {block:Caption}
-                  <div class="caption"><div class="caption_inner">{Caption} 
-                    <!-- Navi -->
-                    <div class="note-count"><a href="{permalink}">
-                      {block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}
-                      {block:ifnotusebiggerposts}{block:NoteCount}{notecount} Notes {/block:NoteCount}{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                        <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                        <span>{Reblogbutton size="14"}</span>
-                            <span data-icon="A" class="icon-a">
-                      
-                                <div class="locker_container">
-                                    <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                     <div class="locker-element2">
-                                         <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                         <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                         <div class="locker3">
-                                             <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                         </div>
-                                         
-                                     </div>
-                                        <div class="rotate-tooltip"></div>
-                                </div>
-                            </span>
-                         
-                        </div>
-                    </div>
-                    <!-- Navi -->
-                    
-                  </div></div>
-                {/block:Caption}
-                {/block:permalinkpage}
-                {/block:ifnotusecaption}
-                  
               </li>
           {/block:Video}
 
           {block:Audio}
               <li class="audio">
                   <div class="audio_embed">
-                       {block:indexpage}{block:ifusebiggerposts}{AudioEmbed-500}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{AudioEmbed-250}{/block:ifnotusebiggerposts}{/block:indexpage}{block:permalinkpage}{AudioEmbed-500}{/block:permalinkpage}
-                  </div>{block:ifusecaption}{block:Caption}
+                       {block:indexpage}{AudioEmbed-500}{/block:indexpage}
+                       {block:permalinkpage}{AudioEmbed-500}{/block:permalinkpage}
+                  </div>{block:Caption}
                       <div class="caption"><div class="caption_inner" style="padding-top:12px;">{Caption}
                           
                           
                                  <!-- Navi -->
-                  <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes{block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
+                  <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
+                    {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
                       <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
                       <span>{Reblogbutton size="14"}</span>
                           <span data-icon="A" class="icon-a">
@@ -953,50 +751,7 @@ Css reset
                       </div>
                        
                       </div>
-                  {/block:Caption}{/block:ifusecaption}
-                              {block:ifnotusecaption}{block:indexpage}
-                  <div class="mikkis" style="margin-top:-4px;">
-                  <div class="mikki">
-                  <span>
-                  {likebutton color="white" size="16"}</span>
-                 <span> {reblogbutton color="white" size="16"}</span>
-                <a href="{permalink}">  <span data-icon="c" style="color:white;font-size:16px;"></span></a></div>
-                  <div class="not-notes">                         {block:NoteCount}{notecount}{/block:NoteCount}</div></div>{/block:indexpage}
-                  
-                  {block:permalinkpage}
-                  {block:Caption}
-                      <div class="caption"><div class="caption_inner">{Caption}
-                          
-                          
-                                 <!-- Navi -->
-                  <div class="note-count"><a href="{permalink}">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} Notes {block:ifnotusebiggerposts}</a>{block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                          <span data-icon="A" class="icon-a">
-                    
-                              <div class="locker_container">
-                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                   <div class="locker-element2">
-                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                       <div class="locker3" style="background-color:#C92228">
-                                           <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                       </div>
-                                       
-                                   </div>
-                                      <div class="rotate-tooltip"></div>
-                              </div>
-                          </span>
-                       
-                      </div>
-                  </div> 
-                  <!-- Navi --> 
-                  
-                      </div></div>
-                  {/block:Caption}
-                  {/block:permalinkpage}
-                  {/block:ifnotusecaption}
-                  
+                  {/block:Caption}           
               </li>
           {/block:Audio}
 
@@ -1043,8 +798,94 @@ Css reset
         {/block:IfDisqusShortname}
         -->
       {/block:permalinkpage}
-    </div></div>
+    </div>
+    
+    <div id="section">
+                <div id="footLeft">
+                    <h1>
+                        Get in touch
+                    </h1>
+                    <p>
+                        We are excited by new ideas and new challenges. Let us know if you think we can work together.<br /><br />
+                        Or if you just want to say hi. 
+                    </p>
+                    <p>
+                        </script><a href="mailto:hello@lux-loop.com">hello@lux-loop.com</a><br>
+                        646.484.8306 (NY)<br>
+                        310.384.6382 (LA)<br><br>
 
+                    </p>
+
+                    <h1 id="beOurFriend">
+                        Be our friend
+                    </h1>
+                    <p>
+                        <a href="#" class="socLink hidden" target="_blank">
+                        <img src="http://static.tumblr.com/3d2g6dd/OSGnfxm3c/s_fb.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/TnYnfxm3c/s_fb.png'" class="social" id="soc_fb" style="display:none">
+                        </a>
+                        <a href="https://twitter.com/luxloop" class="socLink" target="_blank">
+                        <img src="http://static.tumblr.com/3d2g6dd/NN4nfxm3f/s_twitter.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/9Sznfxm3e/s_twitter.png'" class="social" id="soc_tw">
+                        </a>
+                        <a href="https://luxloop.tumblr.com/" class="socLink" target="_blank">
+                        <img src="http://static.tumblr.com/3d2g6dd/uF3nfxm3d/s_tumblr.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/FTBnfxm3d/s_tumblr.png'" class="social" id="soc_tw" style="display:none">
+                        </a>
+                        <a href="http://instagram.com/luxloop" class="socLink" target="_blank">
+                        <img src="http://static.tumblr.com/3d2g6dd/mlKnfxm3d/s_insta.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/BZjnfxm3c/s_insta.png'" class="social" id="soc_ig">
+                        </a>
+                        <a href="https://vimeo.com/luxloop" class="socLink hidden" target="_blank">
+                        <img src="http://static.tumblr.com/3d2g6dd/2zMnfxm3f/s_vimeo.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/7eCnfxm3f/s_vimeo.png'" class="social" id="soc_vm">
+                        </a>
+                    </p>
+                    <span id="emailSignUpMobile">
+                        <h1>
+                            Sign up
+                        </h1>
+                        <p>
+                            Want to receive updates? Click sign up <span id="mobileChimpShower">here</span>.
+                        </p>
+                    </span>
+
+                </div>
+                <div id="footRight">
+                    <h1>
+                        Mailing List
+                    </h1>
+                    <p>
+                        Want to receive updates about our work?
+                    </p>
+                    <p>
+                        <!-- Begin MailChimp Signup Form -->
+                        <div id="mc_embed_signup">
+                            <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <div class="mc-field-group">
+                                        <label for="mce-EMAIL">Email Address </label>
+                                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="(required)">
+                                    </div>
+                                    <div class="mc-field-group">
+                                        <label for="mce-FNAME">First Name </label>
+                                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                    </div>
+                                    <div class="mc-field-group">
+                                        <label for="mce-LNAME">Last Name </label>
+                                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                    </div>
+                                    <div id="mce-responses" class="clear">
+                                        <div class="response" id="mce-error-response" style="display:none"></div>
+                                        <div class="response" id="mce-success-response" style="display:none"></div>
+                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
+                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                        <!--End mc_embed_signup-->
+                    </p>
+                </div>
+            </div>
+    
+    <!--
     <div id="pagination">
       <li>
       {block:Pagination}
@@ -1053,8 +894,9 @@ Css reset
       {/block:Pagination}
       </li>
     </div>
+    -->
 
-    {block:ifusepagination}
+    
     <div class="pagination">
       {block:Pagination}
         {block:PreviousPage}
@@ -1077,13 +919,86 @@ Css reset
           <a href="{NextPage}" class="next">Next</a>
         {/block:NextPage}
       {/block:Pagination}
+    </div>    
     </div>
-    {/block:ifusepagination}
+    
+    
+    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
+    <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
+    <script src="http://static.tumblr.com/cvhjz4y/2Hlndbg5p/colrbox.js"></script>
+    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
+    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js"></script>
 
-    <!--  
     <script>
-        $(document).ready(function(){$(window).scroll(function(){if($(this).scrollTop()>300){$(".supmenu").fadeIn()}else{$(".supmenu").fadeOut()}});$(".smenu").click(function(){$("html, body").animate({scrollTop:0},900);return false})});
+      var gotMargin = false;
+      
+      $(window).load(function() {
+          
+          fixMargins();
+          $(".pagination").fadeIn();
+          $("#section").fadeIn();
+          //alert("woo");
+      });
+
+      $(document).ready(function (){
+        {block:permalinkpage}
+        $("#container").css({'height': '100%'});
+        {/block:permalinkpage};
+
+        $(".header").backstretch([{block:ifheader1image}"{image:header1}"{/block:ifheader1image}
+                     {block:ifheader2image},"{image:header2}"{block:ifheader2image} 
+                     {block:ifheader3image},"{image:header3}"{block:ifheader3image}
+                    ], {duration: 3000, fade: 750});
+                    
+        $("#section").fadeIn();
+        $(".pagination").fadeIn();
+        fixMargins();
+
+
+        // var container = document.querySelector('#content');
+        // var msnry = Masonry.data( container );
+        // console.log(msnry);
+      });
+      
+      $(document).keyup(function(e) {
+          if (e.keyCode == 27) {            // ESC
+              event.preventDefault();
+          }   
+      });
+
+      $( window ).resize(function() {
+        fixMargins();
+      });
+
+      function fixMargins(){
+        var margin;
+        if (!gotMargin) {
+          var intervalID = setInterval(function(){
+            margin = $(".inner_container:first").offset();
+            
+            if (margin.left !== 0) {
+              clearInterval(intervalID);
+              //alert("done");
+              gotMargin = true;
+              console.log(margin.left);
+              $(".menus").css("margin-left",margin.left+"px");
+              $(".menuright").css("margin-right",margin.left+"px");
+            } else {
+              console.log(margin.left);
+            };
+          }, 300);
+        } else {
+          margin = $(".inner_container:first").offset();
+          console.log(margin.left);
+          $(".menus").css("margin-left",margin.left+"px");
+          $(".menuright").css("margin-right",margin.left+"px");
+        };
+      };
+
+
+
     </script>
-    -->
+    
   </body>
 </html>
