@@ -1,4 +1,4 @@
-		html,body{width:100%;height:100%;}  /************/
+html,body{width:100%;height:100%;}  /************/
 
 		html{
 			display:none;
@@ -39,8 +39,8 @@
 		}
 
 		p {
-			font-family: "camingodos-web", "arial", sans-serif;
-			font-weight: 300;
+		    font-family: "camingodos-web", "arial", sans-serif;
+		    font-weight: 300;
 			margin-top: 1em;
 		}
 
@@ -57,6 +57,17 @@
 		.scrollup{
 			cursor:pointer;
 			color:#aeaeae;
+			width:31px;
+			height:31px;
+			opacity:0.8;
+			z-index: 39212302;
+			position:fixed;
+			bottom:30px;
+			right:30px;
+			display:none;
+			text-indent:-9999px;
+			background: url('http://static.tumblr.com/22rx6wh/Ayqmvqc68/image.png') no-repeat;
+			background-size: 30px;
 			background-color:{color:Sup Menu Background color};
 		}
 
@@ -142,7 +153,7 @@
 			max-width: 800px;
 			margin-bottom: 0px;
 			font-weight: 500;
-			color:{color:description color};
+			color:{color:description color}; 
 			text-transform:initial !important;
 		}
 
@@ -226,8 +237,8 @@
 			eight:23px;
 			display:inline-block;
 			position:absolute;
-			right:0px;
-			top:0px;
+			right:70px;
+			top:17px;
 		}
 
 		.search input:first-child{
@@ -302,27 +313,13 @@
 			
 		}
 
-		.scrollup{
-			width:31px;
-			height:31px;
-			opacity:0.8;
-			z-index: 39212302;
-			position:fixed;
-			bottom:30px;
-			right:30px;
-			display:none;
-			text-indent:-9999px;
-			background: url('http://static.tumblr.com/22rx6wh/Ayqmvqc68/image.png') no-repeat;
-			background-size: 30px;
-		}
-
 		.pagination{display:none}
 		.pagination{text-align:center;padding-top:50px;padding-bottom:40px;}
 
 		.post-disqus{display:none}
 		blockquote{ 
 			font-style: italic;
-			border-left-color: {color:select color} !important
+			border-left-color: #ff0000 !important
 		}
 
 		.backstretch img:first-child{z-index:9998 !important}
@@ -439,8 +436,7 @@
 
 		{/block:permalinkpage}
 		/*-----------------------------------*/
-
-
+		
 		#footLeft p, #footRight p {
 		  margin: 2em;
 		}
@@ -465,9 +461,9 @@
 		}
 
 		#footLeft, #footRight {
-		  font-size: 0.9em;
+		  /*font-size: 0.9em;*/
 		} 
-
+		
 		#section {
 		    position: relative;
 		    top: 0%;
@@ -477,7 +473,8 @@
 		    height: auto;
 		    background-color: #000000;
 		    margin-top: 100px;
-		    padding-bottom: 200px;
+		    padding-bottom: 300px;
+		    display:none;
 		}
 		
 		#footLeft {
@@ -496,7 +493,8 @@
 		  background-color: #000000;
 		  color: #ffffff;
 		  width: 43%;
-		  height: 65%;
+		  min-height: 75%;
+		  height: auto;
 		  box-shadow:
 		       4px 4px #ff0000,
 		       8px 8px #00ff00,
@@ -574,7 +572,5 @@
 		#beOurFriend {
 		  margin-top: -0.5em !important;
 		}
-
-
 
 		{customcss}
