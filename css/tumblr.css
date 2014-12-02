@@ -440,4 +440,141 @@
 		{/block:permalinkpage}
 		/*-----------------------------------*/
 
+
+		#footLeft p, #footRight p {
+		  margin: 2em;
+		}
+
+
+		#footLeft p, #footRight p {
+		  margin-top: 1em;
+		  margin-bottom: 1em;
+		  line-height: 1.6em;
+		}
+
+		#footLeft h1, #footRight h1 {
+		  font-size: 1em;
+		  margin: 2em;
+		  margin-bottom: 0em;
+		  font-weight: 400;
+		  text-transform: uppercase;
+		  width: 15em;
+		  border-bottom: solid;
+		  border-bottom-color: #ff0000;
+		  border-bottom-width: 1px;
+		}
+
+		#footLeft, #footRight {
+		  font-size: 0.9em;
+		} 
+
+		#section {
+		    position: relative;
+		    top: 0%;
+		    left: 0%;
+		    width: 100%;
+		    min-height: 400px;
+		    height: auto;
+		    background-color: #000000;
+		    margin-top: 100px;
+		    padding-bottom: 200px;
+		}
+		
+		#footLeft {
+		  position: absolute;
+		  top: 10%;
+		  left: 5%;
+		}
+
+		#footRight {
+		  position: absolute;
+		  top: 10%;
+		  left: 51%;
+		}
+
+		#footRight, #footLeft {
+		  background-color: #000000;
+		  color: #ffffff;
+		  width: 43%;
+		  height: 65%;
+		  box-shadow:
+		       4px 4px #ff0000,
+		       8px 8px #00ff00,
+		       12px 12px #0000ff;
+		  border: solid;
+		  border-width: 2px;
+		  border-color: #ffffff;
+		  margin-bottom: 100px;
+		}
+
+		.socLink:hover {
+		  text-decoration: none;
+		}
+
+		.social {
+		  width: 2.5em;
+		  height: auto;
+		}
+
+		.social:hover {
+		  cursor: pointer;
+		  opacity: 0.5;
+		}
+
+		#mc_embed_signup {
+		  width: 70%;
+		  display: inline-block;
+		  padding: 1em 2em 1em 2em;
+		  line-height: 1.6em;
+		}
+
+		#mc_embed_signup input {
+		  width:100%;
+		  display:block;
+		  border: 1px solid #333;
+		  height: 25px;
+		  margin-bottom: 1em;
+		  color: #aaa;
+		  padding-left: 5px;
+		  background-color: #333;
+		}
+
+		#mc_embed_signup label {
+		  font-size: 0.9em;
+		}
+
+		#mc-embedded-subscribe {
+		  width: 15em !important;
+		  background:#000 !important;
+		  color:#fff !important;
+		  height:30px;
+		  border: 1px solid #999;
+		}
+
+		#mc-embedded-subscribe:hover {
+		  background:#333 !important;
+		}
+
+		::-webkit-input-placeholder {
+		   color: #555;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   color: #555;  
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   color: #555;  
+		}
+
+		:-ms-input-placeholder {  
+		   color: #555;  
+		}
+
+		#beOurFriend {
+		  margin-top: -0.5em !important;
+		}
+
+
+
 		{customcss}
