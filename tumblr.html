@@ -174,15 +174,14 @@ Css reset
     <!--
     <meta name="color:Header Scrolldown Arrow Color" content="#ffffff" />
     -->
+    <meta name="text:Custom tag 1" content="" />
+    <meta name="text:Custom tag 1 title" content="" />
 
-    <meta name="text:Custom Tag 1" content="" />
-    <meta name="text:Custom Tag 1 title" content="" />
+    <meta name="text:Custom tag 2" content="" />
+    <meta name="text:Custom tag 2 title" content="" />
 
-    <meta name="text:Custom Tag 2" content="" />
-    <meta name="text:Custom Tag 2 title" content="" />
-
-    <meta name="text:Custom Tag 3" content="" />
-    <meta name="text:Custom Tag 3 title" content="" />
+    <meta name="text:Custom tag 3" content="" />
+    <meta name="text:Custom tag 3 title" content="" />
 
     <meta name="text:Custom link 1 URL" content="" />
     <meta name="text:Custom link 1 title" content="" />
@@ -250,23 +249,21 @@ Css reset
       (document));
     </script>
 
+    
     <link href='http://static.tumblr.com/kvwx9r7/4hkndbfhi/structure.css' rel='stylesheet' type='text/css'>
+    
+    
 
     <style>
-
-
-
     
     </style>
     
   <body onunload="">
 
   <div class="header">
-    
    
     <div class = "menubar">
-      <div class="menus"> 
-
+      <div class="menus">
         {block:ifCustomtag1title}
         <span>
           <a href="tagged/{text:Custom tag 1}">
@@ -274,7 +271,7 @@ Css reset
           </a>
         </span>
         {/block:ifCustomtag1title}
-
+        
         {block:ifCustomtag2title}
         <span>
           <a href="tagged/{text:Custom tag 2}">
@@ -314,18 +311,17 @@ Css reset
           </a>
         </span>
         {/block:ifCustomlink3title}
-            
+        
         {block:HasPages}
             {block:Pages}
             <span>
                 <a href="{URL}" class="page">{Label}</a>
             </span>
             {/block:Pages}
-        {/block:HasPages}             
+        {/block:HasPages}    
       </div>
 
       <div class="menuright">
-
         {block:ifpersonalsiteurl}
         <span>
             <a href="{text:personal site url}" class="page">home</a>
@@ -335,14 +331,13 @@ Css reset
         <span>
             <a href="/archive" class="page">archive</a>
         </span>
-
         <!--
         <form action="/search" method="get" class="search">
           <input type="text" name="q" value=""/>
           <button type="submit" data-icon="c"></button>
         </form>
         -->
-
+        
       </div>
     </div>
         
@@ -839,7 +834,7 @@ Css reset
         {/block:NextPage}
       {/block:Pagination}
     </div>
-
+    
     <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
     <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
@@ -870,7 +865,6 @@ Css reset
 
 
     </script>
-
     
   </body>
 </html>

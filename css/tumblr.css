@@ -39,6 +39,8 @@
 		}
 
 		p {
+			font-family: "camingodos-web", "arial", sans-serif;
+			font-weight: 300;
 			margin-top: 1em;
 		}
 
@@ -134,15 +136,15 @@
 
 		/* luxloop description */
 		.descrip{
-			color:{color:description color}; 
-			text-transform:initial !important; 
-			margin-top:45px;
-			{block:description}
-			margin-bottom:0px;
-			margin-left:25%;
-			margin-right:25%;
-			{/block:description};
-			font-weight:500; }
+			margin: 45px auto;
+			min-width: 500px;
+			width: 60%;
+			max-width: 800px;
+			margin-bottom: 0px;
+			font-weight: 500;
+			color:{color:description color};
+			text-transform:initial !important;
+		}
 
 		h3.title, .quote-post .source, .link .link-name {
 			font-family: font-family:"rooney-sans", "helvetica", sans-serif;
@@ -213,6 +215,7 @@
 			display:inline-block;
 			margin-top:40px; 
 			font-size:{select:Icons Size} !important;
+			display:none;
 		}
 
 		#content{margin-top:70px;}
@@ -318,6 +321,7 @@
 
 		.post-disqus{display:none}
 		blockquote{ 
+			font-style: italic;
 			border-left-color: {color:select color} !important
 		}
 
