@@ -42,8 +42,12 @@
     p {
         font-family: "camingodos-web", "arial", sans-serif;
         font-weight: 300;
-      margin-top: 1em;
+        margin-top: 1em;
     }
+
+    .caption p, .text p {
+    	font-size: {select:Post Text Size};
+    } 
 
     #infscr-loading{display:none !important}
 
@@ -69,7 +73,7 @@
       text-indent:-9999px;
       background: url('http://static.tumblr.com/22rx6wh/Ayqmvqc68/image.png') no-repeat;
       background-size: 30px;
-      /*background-color:{color:Sup Menu Background color};*/
+      /*background-color:{color:#ffffff;};*/
     }
 
 
@@ -162,8 +166,8 @@
       font-family: font-family:"rooney-sans", "helvetica", sans-serif;
       font-size: 10pt;
       margin-bottom: 10px;
-      font-size: {select:Post Font Size};
-      line-height:{select:Post Font Size};
+      font-size: {select:Post Title Size};
+      line-height:{select:Post Title Size};
     }
 
     .link .link-name{
@@ -175,12 +179,8 @@
     }
 
     .content-title{
-      font-family: font-family:"rooney-sans", "helvetica", sans-serif;
-      font-size:{select:title size};
-      color:{color:title color};
       display:inline-block;
-      margin-bottom:{select:Title Bottom Speacing};
-      letter-spacing:{select:Title Speacing};
+      margin-bottom:14pt;
     }
 
     .content-title a{
@@ -204,7 +204,7 @@
     }
 
     .icon-for-web span{margin-right:8px;}
-    .icon-for-web a{color:{color:Sup Menu Icons color}}
+    .icon-for-web a{color:#aeaeae;}
 
     .table-cell{
       width:100%;
@@ -226,7 +226,7 @@
       width:100%;
       display:inline-block;
       margin-top:40px; 
-      font-size:{select:Icons Size} !important;
+      font-size:10pt !important;
       display:none;
     }
 
@@ -235,7 +235,7 @@
     .search{
       border:1px solid #efefef;
       border-radius:5px;
-      eight:23px;
+      height:23px;
       display:inline-block;
       position:absolute;
       right:70px;
@@ -277,7 +277,7 @@
       border-left:0px;
       height:21px;
       margin-top:-5px;
-      color:{color:Sup Menu Search Icon color};
+      color:#000000;
     }
 
     .menubar {
@@ -326,7 +326,8 @@
     .post-disqus{display:none}
     blockquote{ 
       font-style: italic;
-      border-left-color: #ff0000 !important
+      border-left-color: {color:Blockquote Color} !important
+      /*border-left-color: #ff0000 !important*/
     }
 
     .backstretch img:first-child{z-index:9998 !important}
@@ -399,7 +400,10 @@
     }
 
 
-    .note-count{margin-bottom:-15px;}
+    .note-count{
+    	font-family:"rooney-sans","helvetica", sans-serif;
+    	margin-bottom:-15px;
+    }
 
     {/block:indexpage}
     /*-----------------------------------*/
