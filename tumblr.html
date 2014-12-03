@@ -934,14 +934,81 @@ Css reset
       var gotMargin = false;
       
       $(window).load(function() {
-          
+          var e = $("#content");
+          e.fadeIn(500);
+          e.masonry({
+              itemSelector: ".post",
+              isFitWidth: true
+          });
+          e.infinitescroll({
+              navSelector: "#pagination",
+              nextSelector: "#pagination li a.pagination_nextlink",
+              itemSelector: ".post",
+              isFitWidth: true
+          }, function(t) {
+              var n = $(t).css({
+                  opacity: 0
+              });
+              var r = n.map(function() {
+                  return this.id
+              }).get();
+              n.imagesLoaded(function() {
+                  n.animate({
+                      opacity: 1
+                  });
+                  e.masonry("appended", n, true);
+                  $(".inline").colorbox({
+                      width: "630px",
+                      innerHeight: "auto",
+                      inline: true,
+                      fixed: true
+                  });
+                  $(".lightbox").colorbox({
+                      inline: true,
+                      width: "30%"
+                  });
+                  Tumblr.LikeButton.get_status_by_post_ids(r)
+              })
+          });
+
+          $("#content").fadeIn(0)
+          $("#dvLoading").fadeOut(0)
+
           fixMargins();
           $(".pagination").fadeIn();
           $("#section").fadeIn();
           //alert("woo");
       });
 
-      $(document).ready(function (){
+      $(document).ready(function() {
+        jQuery('.reblog_button').attr('target', '_blank');
+
+        $(".iframe").colorbox({
+            iframe: true,
+            width: "500px",
+            height: "210px"
+        });
+        $(".inline").colorbox({
+            width: "630px",
+            innerHeight: "auto",
+            inline: true,
+            fixed: true
+        });
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $(".scrollup").fadeIn()
+            } else {
+                $(".scrollup").fadeOut()
+            }
+        });
+        $(".scrollup").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 900);
+            return false
+        });
+
         {block:permalinkpage}
         $("#container").css({'height': '100%'});
         {/block:permalinkpage};
@@ -998,6 +1065,11 @@ Css reset
           $(".menuright").css("margin-right",margin.left+"px");
         };
       };
+
+      /*
+      document.write('<style>html{margin-top:-0px;display:inline !important}</style><a href=\"http://themecloset.me/themes/Themecloset/Pouvoir\"><span style=\"width:102px;height:19px;position:fixed;top:26px;right:3px;z-index:2147483647;border:1px solid rgba(0,0,0, 0.4);border-radius:2px;\" class=\"visibility\"><span style=\"width:102px;height:19px;border-radius:1px;background-color:#000000;z-index:2147483646;opacity:0.4;position:absolute\"></span><span style=\"position:absolute;margin-top:-1px;z-index:2147483647\"><span style=\"position:relative;top:4px;left:4px;\"><img src=\"http://static.tumblr.com/22rx6wh/1hYn31m59/icon2.png\" height=\"13px;\"></span><span style=\"font-size:9pt;color:#fff;font-family:arial;position:relative; left:9px;top:1px;font-weight:600;\">Install theme</span></span></span></a>');
+      document.writeln(" <style>html{display:inline !important}</style> ");
+      */
     </script>
     
   </body>
