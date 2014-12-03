@@ -964,6 +964,9 @@ Css reset
       $(document).keyup(function(e) {
           if (e.keyCode == 27) {            // ESC
               event.preventDefault();
+              if ($("#mc_embed_signup").css("display") == "none") {
+                $("#mc_embed_signup").css("display","inline-block");
+              };
           }   
       });
 
@@ -981,23 +984,20 @@ Css reset
               clearInterval(intervalID);
               //alert("done");
               gotMargin = true;
-              console.log(margin.left);
+              //console.log(margin.left);
               $(".menus").css("margin-left",margin.left+"px");
               $(".menuright").css("margin-right",margin.left+"px");
             } else {
-              console.log(margin.left);
+              //console.log(margin.left);
             };
           }, 300);
         } else {
           margin = $(".inner_container:first").offset();
-          console.log(margin.left);
+          //console.log(margin.left);
           $(".menus").css("margin-left",margin.left+"px");
           $(".menuright").css("margin-right",margin.left+"px");
         };
       };
-
-
-
     </script>
     
   </body>
