@@ -411,14 +411,24 @@
     /*+++++++++++++++++++++++++++++++++++*/
     {block:permalinkpage}
     #container{
-      max-width:1130px !important;
+      /*max-width:1130px !important;*/
       margin:auto;
     }
 
     .post{
-      width:550px;
+      width:500px;
+      max-width: 900px;
       margin:0px !important;
     } 
+
+    @media only screen and (min-width: 690px) {.post{width:550px;}}
+    @media only screen and (min-width: 750px) {.post{width:600px;}}
+	@media only screen and (min-width: 812px) {.post{width:650px;}}
+	@media only screen and (min-width: 875px) {.post{width:700px;}}
+	@media only screen and (min-width: 940px) {.post{width:750px;}}
+	@media only screen and (min-width: 1000px) {.post{width:800px;}}
+	@media only screen and (min-width: 1062px) {.post{width:850px;}}
+	@media only screen and (min-width: 1125px) {.post{width:900px;}}
 
     .real-qeustion, .real-question {
       width:81%;

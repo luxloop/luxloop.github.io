@@ -92,7 +92,9 @@ Css reset
     <meta name="select:Post Title Size" content="24pt" title="24pt">
 
     <meta name="select:Post Text Size" content="8pt" title="8pt">
+    <meta name="select:Post Text Size" content="9pt" title="9pt">
     <meta name="select:Post Text Size" content="10pt" title="10pt">
+    <meta name="select:Post Text Size" content="11pt" title="11pt">
     <meta name="select:Post Text Size" content="12pt" title="12pt">
     <meta name="select:Post Text Size" content="14pt" title="14pt">
     <meta name="select:Post Text Size" content="16pt" title="16pt">
@@ -113,7 +115,7 @@ Css reset
     <meta name="color:Description Color" content="#ffffff" />  
     <meta name="color:Post Note Texts Color" content="#aeaeae" />
     <meta name="color:Sup Menu Search Icon color" content="#000000" />
-    
+
     <meta name="text:Custom tag 1" content="" />
     <meta name="text:Custom tag 1 title" content="" />
 
@@ -269,8 +271,13 @@ Css reset
         {/block:ifpersonalsiteurl}
 
         <span>
+            <a href="#" class="page" id="contactLink">contact</a>
+        </span>
+
+        <span>
             <a href="/archive" class="page">archive</a>
         </span>
+
         <!--
         <form action="/search" method="get" class="search">
           <input type="text" name="q" value=""/>
@@ -946,6 +953,16 @@ Css reset
             }, 900);
             return false
         });
+        
+        $("#contactLink").click(function() {
+            event.preventDefault();
+            var dest = $("#section").offset().top;
+            $("html, body").animate({
+              scrollTop: dest
+            }, 900);
+            return false
+        });
+
 
         {block:permalinkpage}
         $("#container").css({'height': '100%'});
