@@ -255,7 +255,7 @@ Css reset
     
 
     <style>
-    
+      
     </style>
     
   <body onunload="">
@@ -800,6 +800,43 @@ Css reset
       {/block:permalinkpage}
     </div>
     
+    <!--
+    <div id="pagination">
+      <li>
+      {block:Pagination}
+        {block:PreviousPage}<a href="{PreviousPage}"></a>{/block:PreviousPage}
+        {block:NextPage}<a{block:ifnotusepagination} href="{NextPage}"{/block:ifnotusepagination} class="pagination_nextlink"></a>{/block:NextPage}
+      {/block:Pagination}
+      </li>
+    </div>
+    -->
+
+    
+    <div class="pagination">
+      {block:Pagination}
+        {block:PreviousPage}
+          <a href="{PreviousPage}" class="prev">Previous</a>
+        {/block:PreviousPage}
+
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}
+            <span class="current_page">{PageNumber}</span>
+          {/block:CurrentPage}
+
+          {block:JumpPage}
+            <div class="current-container">
+              <a class="jump_page" href="{URL}">{PageNumber}</a>
+            </div>
+          {/block:JumpPage}
+        {/block:JumpPagination}
+
+        {block:NextPage}
+          <a href="{NextPage}" class="next">Next</a>
+        {/block:NextPage}
+      {/block:Pagination}
+    </div>  
+    
+    
     <div id="section">
                 <div id="footLeft">
                     <h1>
@@ -885,48 +922,14 @@ Css reset
                 </div>
             </div>
     
-    <!--
-    <div id="pagination">
-      <li>
-      {block:Pagination}
-        {block:PreviousPage}<a href="{PreviousPage}"></a>{/block:PreviousPage}
-        {block:NextPage}<a{block:ifnotusepagination} href="{NextPage}"{/block:ifnotusepagination} class="pagination_nextlink"></a>{/block:NextPage}
-      {/block:Pagination}
-      </li>
-    </div>
-    -->
-
-    
-    <div class="pagination">
-      {block:Pagination}
-        {block:PreviousPage}
-          <a href="{PreviousPage}" class="prev">Previous</a>
-        {/block:PreviousPage}
-
-        {block:JumpPagination length="5"}
-          {block:CurrentPage}
-            <span class="current_page">{PageNumber}</span>
-          {/block:CurrentPage}
-
-          {block:JumpPage}
-            <div class="current-container">
-              <a class="jump_page" href="{URL}">{PageNumber}</a>
-            </div>
-          {/block:JumpPage}
-        {/block:JumpPagination}
-
-        {block:NextPage}
-          <a href="{NextPage}" class="next">Next</a>
-        {/block:NextPage}
-      {/block:Pagination}
-    </div>    
+      
     </div>
     
     
     <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
     <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
-    <script src="http://static.tumblr.com/cvhjz4y/2Hlndbg5p/colrbox.js"></script>
+    <script src="http://static.tumblr.com/3d2g6dd/D9xnfziiw/colorbox.js"></script>
     <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
     <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js"></script>
 
@@ -934,12 +937,14 @@ Css reset
       var gotMargin = false;
       
       $(window).load(function() {
+          //alert("woo");
           var e = $("#content");
           e.fadeIn(500);
           e.masonry({
               itemSelector: ".post",
               isFitWidth: true
           });
+          /*
           e.infinitescroll({
               navSelector: "#pagination",
               nextSelector: "#pagination li a.pagination_nextlink",
@@ -970,6 +975,7 @@ Css reset
                   Tumblr.LikeButton.get_status_by_post_ids(r)
               })
           });
+          */
 
           $("#content").fadeIn(0)
           $("#dvLoading").fadeOut(0)
@@ -1065,11 +1071,13 @@ Css reset
           $(".menuright").css("margin-right",margin.left+"px");
         };
       };
-
       /*
       document.write('<style>html{margin-top:-0px;display:inline !important}</style><a href=\"http://themecloset.me/themes/Themecloset/Pouvoir\"><span style=\"width:102px;height:19px;position:fixed;top:26px;right:3px;z-index:2147483647;border:1px solid rgba(0,0,0, 0.4);border-radius:2px;\" class=\"visibility\"><span style=\"width:102px;height:19px;border-radius:1px;background-color:#000000;z-index:2147483646;opacity:0.4;position:absolute\"></span><span style=\"position:absolute;margin-top:-1px;z-index:2147483647\"><span style=\"position:relative;top:4px;left:4px;\"><img src=\"http://static.tumblr.com/22rx6wh/1hYn31m59/icon2.png\" height=\"13px;\"></span><span style=\"font-size:9pt;color:#fff;font-family:arial;position:relative; left:9px;top:1px;font-weight:600;\">Install theme</span></span></span></a>');
       document.writeln(" <style>html{display:inline !important}</style> ");
       */
+
+
+      document.writeln(" <style>html{display:inline !important}</style> ");
     </script>
     
   </body>
