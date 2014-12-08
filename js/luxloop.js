@@ -1,236 +1,20 @@
+////////////////////////
+// GLOBAL VARS
+
 var blogImgRatio = 0.5;
 var isMobile = false;
 var isScrolling = false;
 
+////////////////////////
+// SETUP ON READY
+
 $(document).ready(function() {
-    var uA = navigator.userAgent;
-    
-    if (jQuery.browser.mobile == true) {
-        isMobile = true;
-    };
-
-    var isIphone = false;
-    if (uA.indexOf("iPhone") > 0 || uA.indexOf("iphone") > 0) {
-        isIphone = true;   
-        $("html").addClass("isIphone");     
-    }
-
-    $(".getRidOf").click(function(){
-        $(this).fadeOut();
-    });
-
-    var eventContent = $(".events").html()
-    $("#eventFloater").prepend(eventContent);
-
     $("#staticBg").backstretch("img/017.jpg");
-
-    /*
-    $('#fullpage').fullpage({resize:false,css3:false,loopBottom:false,easing:'swing',normalScrollElements:null,touchSensitivity:15,
-        onLeave: function(index, nextIndex, direction){
-            if(index == 1 && direction =='down'){
-                $("#menuBarBot").fadeOut();
-                $("#menuBarTop").fadeIn(1200);
-            } else if(nextIndex == 1){
-                $("#menuBarTop").fadeOut();
-                $("#menuBarBot").fadeIn(1200);
-            }
-        },
-        afterLoad: function(anchorLink, index){
-            //datesModal();
-            if(index == 1){
-                $("#menuBarTop").fadeOut();
-                $("#menuBarBot").fadeIn(1200);
-            } else {
-                $("#menuBarBot").fadeOut();
-                $("#menuBarTop").fadeIn(1200);
-            }
-        },
-        afterResize: function(){
-            //datesModal();
-        }
-    });
-    */
-    
-    // datesModal();
-
-
-    var moving = false;
-    //var blogSlide = 1;
-	
-
-	/////////////////////////////////////////////////////
-    // Render Blog Posts
-    if (typeof tumblr_api_read !== undefined || typeof tumblr_api_read !== 'undefined') {
-        var blogData = "";
-        var postCount = 0;
-        var maxPosts = 3;
-
-        if (uA.indexOf("iPhone") > 0 || uA.indexOf("iphone") > 0 || uA.indexOf("iPad") > 0 || uA.indexOf("ipad") > 0) {
-            maxPosts = 3;
-        } else if (isMobile == true) {
-            maxPosts = 3;
-        };
-
-        for (var i = 0; i < tumblr_api_read.posts.length; i++) {
-
-            if (postCount < maxPosts) {
-                var kind = tumblr_api_read.posts[i]["type"];
-
-                if (kind == "photo" || kind == "video" || kind == "regular") {
-                    var formatDate = blogDate(tumblr_api_read.posts[i]["date"]);
-
-                    var post = '<span class="blogDate"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">' + formatDate + '</a></span><div class="divider"></div>';
-                    
-                    // if Has Title //
-                    if (tumblr_api_read.posts[i]["regular-title"] !== undefined) {
-                        post = post + '<span class="postTitle"><p>' + tumblr_api_read.posts[i]["regular-title"] + '</p></span>';
-                    }
-                    
-
-                    // Photo Post //
-                    if (kind == "photo") {
-                        post = post + '<div class="blogImg" data-tall="0" data-width="' + tumblr_api_read.posts[i]["width"] + '" data-height="' + tumblr_api_read.posts[i]["height"] + '" ><img src="' + tumblr_api_read.posts[i]["photo-url-1280"] + '" /></div>';
-                        post = post + tumblr_api_read.posts[i]["photo-caption"];
-                    }
-                    ////////////////
-
-                    // Video Post //
-                    if (kind == "video") {
-                        post = post + '<div class="blogVid">' + tumblr_api_read.posts[i]["video-player-500"] + '</div>';
-                        post = post + tumblr_api_read.posts[i]["video-caption"];
-                    }
-                    ////////////////
-
-                    // Text Post //
-                    if (kind == "regular") {
-                        //post = post + "<p><br /> &nbsp;</p>"
-                        post = post + tumblr_api_read.posts[i]["regular-body"];
-                    }
-                    ////////////////
-
-                    //post = post + '<p>';
-                    if (tumblr_api_read.posts[i]["tags"] !== undefined) {
-                    	post = post + '<div class="visuallyhidden"><p><br />';
-                        for (var j = 0; j < tumblr_api_read.posts[i]["tags"].length; j++) {
-                            post = post + '<a href="http://luxloop.tumblr.com/tagged/' + tumblr_api_read.posts[i]["tags"][j] + '" target="_blank" class="hash">#' + tumblr_api_read.posts[i]["tags"][j] + '</a>';
-                        };
-                        post = post + '</div></p>';
-                    }
-
-
-                    post = post + '<p><br />&nbsp;</p>';
-                    post = post + '<p><br />&nbsp;</p>';
-
-                    post = post + '<div class="permalink"><a href="' + tumblr_api_read.posts[i]["url"] + '"target="_blank">See Full Post on Tumblr</a></div>'
-
-                    //post = post + '<p><br />&nbsp;</p>';
-
-                    //blogData = blogData + post;
-                    postCount++;
-                    //$("#blogContent .slide:nth-child("+postCount+")").prepend(post);
-                    $("#blogContent .blogEntry:nth-child("+postCount+")").prepend(post);
-                };
-            };              
-        };
-
-        // Create the blog posts
-        if (postCount >= 1) {
-
-            //$.fn.fullpage.reBuild();
-
-            $(".blogVid").each(function() {
-                $(this).fitVids();
-            });	
-
-            $(".blogImg").each(function() {
-                var w = $(this).width();
-                var h = w * blogImgRatio;
-                $(this).css("height",h+"px");
-            });
-        };
-        
-    } else {
-        console.log("TUMBLR IS UNDEFINED");
-        $("#entry1, #entry2, #entry3, #arrowR, @#arrowL").addClass("hidden");
-        $("#entry4").css({
-          "left": "15%",
-          "width": "90%"
-        });
-    }
-
-    blogImageSizer();
-    
-
-
-    $("#arrowR").click(function(){
-        if (moving == false) {
-            moving = true;
-            var win2 = window.innerWidth;
-            $("#entry1, #entry2, #entry3, #entry4").animate({left:"-=100%"},750,function(){
-                var be4 = parseInt($("#entry4").css("left"),10);
-                //alert (be4);
-                $("#arrowL").css("visibility","visible");
-                if (be4 < win2) {
-                    $("#arrowR").css("visibility","hidden");
-                    $("#arrowL").css("visibility","visible");
-                };
-            });
-            moving = false;
-        };
-    });
-
-    $("#arrowL").click(function(){
-        if (moving == false) {
-            moving = true;
-            //var win = window.innerWidth;
-            $("#entry1, #entry2, #entry3, #entry4").animate({left:"+=100%"},750,function(){
-                var be1 = parseInt($("#entry1").css("left"),10);
-                //alert (be4);
-                $("#arrowR").css("visibility","visible");
-                if (be1 > 0) {
-                    $("#arrowL").css("visibility","hidden");
-                    $("#arrowR").css("visibility","visible");
-                };
-            });
-            moving = false;
-        };
-    });
-
-    $(".botNavLink").click(function(){
-        var dest = $(this).attr("data-dest");
-        //$.fn.fullpage.moveTo(dest);
-    });
-
-    $(".topNavLink").click(function(){
-        var dest = $(this).attr("data-dest");
-        //$.fn.fullpage.moveTo(dest);
-    });
-
-    $("#topLogo").click(function(){
-        //$.fn.fullpage.moveTo(1);
-    });
-
-    $("#closeIt").click(function() {
-        $("#mailChimpFloater").fadeOut();
-    });
-
-    $("#mobileChimpShower").click(function() {
-        $("#mailChimpFloater").fadeIn();
-    });
-
-
-    $("#mobileDateShower").click(function() {
-        $("#eventFloater").fadeIn();
-    });
-
-    $("#closeIt2").click(function() {
-        $("#eventFloater").fadeOut();
-    });
-
     resizeThumbs();
-
-
 });
+
+////////////////////////
+// EVENTS
 
 $( window ).load(function() {
     if (jQuery.browser.mobile == true) {
@@ -258,6 +42,44 @@ $( window ).load(function() {
             , "img/014.png"
         ], {duration: 5500, fade: 1000});
     };
+});
+
+$(".botNavLink, .topNavLink").click(function(){
+    var dest = $(this).attr("data-dest");
+    var target;
+    if (dest === "#footerSection") {
+        target = Math.floor($(dest).offset().top);
+    } else {
+        target = Math.floor($(dest).offset().top - ($("#menuBarTop").height() * 1.5));
+    };
+    var speed = Math.floor((target - $(window).scrollTop())/3);
+    $("body").animate({
+        scrollTop: target
+    }, Math.abs(speed));
+});
+
+$("#topLogo").click(function(){
+    var speed =  Math.floor($(window).scrollTop()/3);
+    $("body").animate({
+        scrollTop: 0
+    }, speed);
+});
+
+$("#closeIt").click(function() {
+    $("#mailChimpFloater").fadeOut();
+});
+
+$("#mobileChimpShower").click(function() {
+    $("#mailChimpFloater").fadeIn();
+});
+
+
+$("#mobileDateShower").click(function() {
+    $("#eventFloater").fadeIn();
+});
+
+$("#closeIt2").click(function() {
+    $("#eventFloater").fadeOut();
 });
 
 on_resize(function() {
@@ -309,6 +131,9 @@ $(window).on({
     }
 });
 //*/
+
+////////////////////////
+// CUSTOM FUNCTIONS
 
 function slideDown() {
     //alert("woo");
@@ -471,6 +296,9 @@ function resizeThumbs() {
         $(this).css("height",h+"px");
     });
 }
+
+////////////////////////
+// UTILITIES
 
 /*
 $(window).scroll(function() {
