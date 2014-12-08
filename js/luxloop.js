@@ -235,6 +235,9 @@ $(document).ready(function() {
 $( window ).load(function() {
     if (jQuery.browser.mobile == true) {
         isMobile = true;
+        $("body").addClass("isMobile");
+    } else {
+        $("body").addClass("isNotMobile");
     };
     
     if (!isMobile) {

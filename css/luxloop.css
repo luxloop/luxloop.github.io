@@ -261,7 +261,8 @@ a:hover {text-decoration: underline;}
 }
 
 .projThumb {
-  background: #f00;
+  background: #222;
+  position: relative;
   /*width: 33.3%;*/
   width: 50%;
   height: 20px;
@@ -270,14 +271,51 @@ a:hover {text-decoration: underline;}
   vertical-align: top;
 }
 
+.projLabel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+.no-touch.opacity .projLabel {
+    opacity: 0.0;
+}
+
+.opacity .isMobile .projLabel {
+  opacity: 1.0;
+}
+
+.no-touch.opacity.csstransitions .projLabel {
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.no-touch.opacity .isNotMobile .projThumb:hover .projLabel {
+    opacity: 1.0;
+}
+
+.projLabel p {
+  margin-left: 1em;
+}
+
+.rgba .projLabel {
+  background-color: rgba(0,0,0,0.8);
+}
+
 .projThumb:hover {
   cursor: pointer;
 }
 
 .opacity .projThumb:hover {
-  opacity: 0.75;
-  filter: alpha(opacity=50);
+  /*opacity: 0.75;*/
+  /*filter: alpha(opacity=50);*/
 }
+
+
 
 
 
