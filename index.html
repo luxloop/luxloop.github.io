@@ -10,9 +10,9 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-        <link rel="stylesheet" type="text/css" href="css/luxloop_min.css">
-        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/luxloop.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
         <script src="//use.typekit.net/pga1gsl.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -22,201 +22,63 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-         <div id="fullpage">
-            <div class="section">
-                <div class="bigLogo logoTopSlide">
-                    <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logo_large.png'" id="coverSvg">
-                </div>
 
-                <div id="menuBarBot">
-                    <div id="botLinks">
-                        <span class="botNavLink" data-dest="2">info</span>
-                        <span class="botNavLink" data-dest="3">dates</span>
-                        <span class="botNavLink" data-dest="4">blog</span>
-                        <span class="botNavLink" data-dest="5">contact</span>
-                    </div>
-                    <div id="botEmail">
-                        <!-- Email address hidden from robots by: http://hivelogic.com/enkoder/ -->
-                        <script type="text/javascript">
-                        //<![CDATA[
-                        <!--
-                        var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-                        "=48){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-                        ".substr(0,ol);}f(\")18,\\\"730\\\\320\\\\130\\\\010\\\\200\\\\!771\\\\2 vuz" +
-                        "6gyzx>jd|Oaa`nb7*[kjg-rno220\\\\P400\\\\610\\\\620\\\\9720\\\\330\\\\230\\\\"+
-                        "020\\\\430\\\\I530\\\\500\\\\430\\\\600\\\\710\\\\000\\\\N7W710\\\\r\\\\520" +
-                        "\\\\610\\\\E500\\\\_@I610\\\\3;)5)-w,938!0=5\\\"(f};o nruter};))++y(^)i(tAe" +
-                        "doCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;2=*y))y+18(>i(fi{)++i;l<i;0=i(rof;h" +
-                        "tgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"                               ;
-                        while(x=eval(x));
-                        //-->
-                        //]]>
-                        </script>
-                    </div>
-                </div>
+        <!-- logo section -->
+        <div class="section" id="logoSection">
+            <div class="bigLogo logoTopSlide">
+                <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logo_large.png'" id="coverSvg">
             </div>
 
-            <div class="section">
-                <div id="infoBox">
-                    <p class="first">
-                        Hi, we're <span class="r">Luxloop</span>.
-                    </p>
-                    <p>
-                        We are a creative technology studio of <span class="b">dreamers</span>, <span class="b">filmmakers</span>, <span class="b">artists</span>, and <span class="b">hackers</span> excited about the future of media.
-                    </p>
-                    <p>
-                        We concept, we write, we plan, we film, we code, we build, and then we have a beer. Most of our ideas started as someone saying, <span class="g">"Wouldn't it be cool if..."</span>
-                    </p>
-                    <p>
-                        We are creating the storytelling tools that we wanted to use but didn't exist yet, and we want to empower and inspire creators looking for new ways to tell stories and make art.
-                    </p>
-                    <p>
-                        Mostly, we're interested in making memorable interactive experiences. And we hope you are too.
-                    </p>
+            <div id="menuBarBot">
+                <div id="botLinks">
+                    <span class="botNavLink" data-dest="2">info</span>
+                    <span class="botNavLink" data-dest="3">dates</span>
+                    <span class="botNavLink" data-dest="4">blog</span>
+                    <span class="botNavLink" data-dest="5">contact</span>
                 </div>
-            </div>
-
-            <div class="section">
-                <div id="updatesBox">
-                    <span class="eventsL">
-                        <p>
-                            <span class="eventHead">Upcoming Dates:</span><br />
-                        
-                            <span class="eventDate">November 21-23</span><br />
-                            <span class="eventDesc">Refest - Culturehub's Art and Technology Festival @ LaMama Theatre <a href="http://www.culturehub.org/refest/" target="_blank">(link)</a></span>
-                        </p>
-                    </span>
-                    <span class="eventsR">
-                        <p>
-                            <span class="eventHead">Past Exhibitions:</span><br />
-                            <span class="eventDate">October 6</span><br />
-                            <span class="eventDesc">MIT Hacking Arts 2014 - Best Hack in Film/TV/Virtual Reality <a href="http://luxloop.tumblr.com/post/100612831042/" target="_blank">(link)</a></span><br />
-                            <span class="eventDate">September 19</span><br />
-                            <span class="eventDesc">Animamus Art Salon <a href="http://www.animamusartsalon.com/" target="_blank">(link)</a></span><br />
-                            <span class="eventDate">August 1-7 </span><br />
-                            <span class="eventDesc">"Self Love is not Ego" - Braille Arts Group Exhibition</span><br />
-                    </span>
-                </div>
-            </div>
-
-            <div class="section" id="blogSection">
-                <div id="blogContent">
-                    <div class="blogEntry" id="entry1"><img src="img/elipsis.png" class="elipsis"></div>
-                    <div class="blogEntry" id="entry2"><img src="img/elipsis.png" class="elipsis"></div>
-                    <div class="blogEntry" id="entry3"><img src="img/elipsis.png" class="elipsis"></div>
-                    <div class="blogEntry" id="entry4"><!-- <img src="img/elipsis.png" class="elipsis"> -->
-                        <div id="seeMore">
-                            <br />
-                            <br />
-                            Read more posts <br />on our <a href="http://luxloop.tumblr.com">tumblr</a>.
-                        </div>
-                    </div>
-
-                    <div class="arrow" id="arrowL"></div>
-                    <div class="arrow" id="arrowR"></div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div id="footLeft">
-                    <h1>
-                        Get in touch
-                    </h1>
-                    <p>
-                        We are excited by new ideas and new challenges. Let us know if you think we can work together.<br /><br />
-                        Or if you just want to say hi. 
-                    </p>
-                    <p>
-                        <!-- Email address and phones hidden from robots by: http://hivelogic.com/enkoder/ -->
-                        <script type="text/javascript">
-                        //<![CDATA[
-                        <!--
-                        var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-                        "=68){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-                        ".substr(0,ol);}f(\")93,\\\"/#)821!-~i67''tg8*CM(^ODHLWLOE[DBAQPONMLKJIHGFED" +
-                        "CBA@771\\\\~}|{z7400\\\\%n\\\\k{s 3lf720\\\\300\\\\dk|y{771\\\\hq|wlwtt\\\\" +
-                        "630\\\\530\\\\430\\\\330\\\\230\\\\130\\\\030\\\\720\\\\620\\\\520\\\\420\\" +
-                        "\\320\\\\220\\\\120\\\\020\\\\710\\\\610\\\\r\\\\410\\\\310\\\\n\\\\t\\\\01" +
-                        "0\\\\700\\\\HyV771\\\\430\\\\610\\\\000\\\\m|!\\\"\\\\z5%uxu;d|}}=w{aLdfemo" +
-                        "8'Xnmb.610\\\\220\\\\320\\\\720\\\\W100\\\\r\\\\330\\\\6230\\\\! .\\\"\\\\s" +
-                        "'3*,%.`530\\\\}Y[OT330\\\\[500\\\\230\\\\730\\\\XYQG[CG100\\\\ZCIF_JGC\\\"(" +
-                        "f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;i=+y)93==" +
-                        "i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"        ;
-                        while(x=eval(x));
-                        //-->
-                        //]]>
-                        </script>
-                    </p>
-
-                    <h1 id="beOurFriend">
-                        Be our friend
-                    </h1>
-                    <p>
-                        <a href="#" class="socLink hidden" target="_blank">
-                        <img src="img/s_fb.svg" onerror="this.onerror=null; this.src='img/s_fb.png'" class="social" id="soc_fb">
-                        </a>
-                        <a href="https://twitter.com/luxloop" class="socLink" target="_blank">
-                        <img src="img/s_twitter.svg" onerror="this.onerror=null; this.src='img/s_twitter.svg'" class="social" id="soc_tw">
-                        </a>
-                        <a href="http://luxloop.tumblr.com/" class="socLink" target="_blank">
-                        <img src="img/s_tumblr.svg" onerror="this.onerror=null; this.src='img/s_tumblr.svg'" class="social" id="soc_tw">
-                        </a>
-                        <a href="https://instagram.com/luxloop" class="socLink" target="_blank">
-                        <img src="img/s_insta.svg" onerror="this.onerror=null; this.src='img/s_insta.svg'" class="social" id="soc_ig">
-                        </a>
-                        <a href="https://vimeo.com/luxloop" class="socLink hidden" target="_blank">
-                        <img src="img/s_vimeo.svg" onerror="this.onerror=null; this.src='img/s_vimeo.svg'" class="social" id="soc_vm">
-                        </a>
-                    </p>
-                    <span id="emailSignUpMobile">
-                        <h1>
-                            Sign up
-                        </h1>
-                        <p>
-                            Want to receive updates? Click sign up <span id="mobileChimpShower">here</span>.
-                        </p>
-                    </span>
-
-                </div>
-                <div id="footRight">
-                    <h1>
-                        Mailing List
-                    </h1>
-                    <p>
-                        Want to receive updates about our work?
-                    </p>
-                    <p>
-                        <!-- Begin MailChimp Signup Form -->
-                        <div id="mc_embed_signup">
-                            <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div class="mc-field-group">
-                                        <label for="mce-EMAIL">Email Address </label>
-                                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="(required)">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-FNAME">First Name </label>
-                                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-LNAME">Last Name </label>
-                                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-                                    </div>
-                                    <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                        <!--End mc_embed_signup-->
-                    </p>
+                <div id="botEmail">
+                    <!-- Email address hidden from robots by: http://hivelogic.com/enkoder/ -->
+                    <script type="text/javascript">
+                    //<![CDATA[
+                    <!--
+                    var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+                    "=48){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+                    ".substr(0,ol);}f(\")18,\\\"730\\\\320\\\\130\\\\010\\\\200\\\\!771\\\\2 vuz" +
+                    "6gyzx>jd|Oaa`nb7*[kjg-rno220\\\\P400\\\\610\\\\620\\\\9720\\\\330\\\\230\\\\"+
+                    "020\\\\430\\\\I530\\\\500\\\\430\\\\600\\\\710\\\\000\\\\N7W710\\\\r\\\\520" +
+                    "\\\\610\\\\E500\\\\_@I610\\\\3;)5)-w,938!0=5\\\"(f};o nruter};))++y(^)i(tAe" +
+                    "doCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;2=*y))y+18(>i(fi{)++i;l<i;0=i(rof;h" +
+                    "tgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"                               ;
+                    while(x=eval(x));
+                    //-->
+                    //]]>
+                    </script>
                 </div>
             </div>
         </div>
+
+        <!-- about section -->
+        <div class="section" id="infoSection">
+            <div id="infoBox">
+                <p class="first">
+                    Hi, we're <span class="r">Luxloop</span>.
+                </p>
+                <p>
+                    We are a creative technology studio of <span class="b">dreamers</span>, <span class="b">filmmakers</span>, <span class="b">artists</span>, and <span class="b">hackers</span> excited about the future of media.
+                </p>
+                <p>
+                    We concept, we write, we plan, we film, we code, we build, and then we have a beer. Most of our ideas started as someone saying, <span class="g">"Wouldn't it be cool if..."</span>
+                </p>
+                <p>
+                    We are creating the storytelling tools that we wanted to use but didn't exist yet, and we want to empower and inspire creators looking for new ways to tell stories and make art.
+                </p>
+                <p>
+                    Mostly, we're interested in making memorable interactive experiences. And we hope you are too.
+                </p>
+            </div>
+        </div>
+
+
 
         <div id="bgHolder">
             <div id="staticBg"></div>
@@ -285,10 +147,12 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <!-- Vendor JS -->
+        <script src="js/vendor/detectmobile.js"></script>
+        <script src="js/vendor/jquery.mousewheel.min.js"></script>
         <script src="js/vendor/jquery.backstretch.min.js"></script>
         <script type="text/javascript" src="js/vendor/jquery.fitvids.js"></script>
         <!--<script src="js/vendor/jquery.fittext.js"></script>-->
-        <script src="js/vendor/jquery.fullPage.min.js"></script>
+        <!-- <script src="js/vendor/jquery.fullPage.min.js"></script> -->
 
         <!-- Luxloop JS -->
         <script src="js/luxloop.js"></script>

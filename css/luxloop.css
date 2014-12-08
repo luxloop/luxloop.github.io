@@ -100,13 +100,19 @@ html, body {
 
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    height: 100%;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+/*
+body {
+  overflow: scroll;
+}*/
 
 a {color: #ffffff; text-decoration: none;}
 a:hover {text-decoration: underline;}
+
+/******** helpers ********/
 
 .r {
   color: #ff0000;
@@ -120,16 +126,40 @@ a:hover {text-decoration: underline;}
   color: #5050ff;
 }
 
-#fullpage{
-  z-index: 9995;
+.vCenterParent {
+  /* Apply to parent of any element that is vertically centereed
+     using below method to prevent blurry rendering */
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
-#bgHolder {
+
+.vCenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vCenterAlt {
+  /* use if you have a declared height */
+  margin: auto;
   position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/******** image BG ********/
+
+#bgHolder {
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   height: 100%;
   overflow: hidden;
+  z-index: 1;
   background-color: #000000;
 }
 
@@ -149,12 +179,27 @@ a:hover {text-decoration: underline;}
   z-index: 9001;
 }
 
+/******** sections ********/
+
+.section {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+#logoSection {
+  height: 100%;
+}
+
 .bigLogo {
   width: 35%;
-  height: auto;
   margin: 0 auto;
   margin-bottom: 5em;
   z-index: 9999;
+  background: none;
+  position: relative;
+  top: 35%;
 }
 
 #coverSvg {
@@ -167,6 +212,39 @@ a:hover {text-decoration: underline;}
   width: auto;
 }
 
+
+
+#infoSection {
+  min-height: 75%;
+  height: auto;
+}
+
+#infoBox {
+  position: relative;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  min-height: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow:
+       4px 4px #ff0000,
+       8px 8px #00ff00,
+       12px 12px #0000ff;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 2em;
+}
+
+.rgba #infoBox {
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+/******** menu bars ********/
+
 #menuBarBot {
   color: #ffffff;
   display: block;
@@ -177,6 +255,7 @@ a:hover {text-decoration: underline;}
   bottom: 0%;
   left: 0%;
   z-index: 9999;
+  /*display: none;*/
 }
 
 #botLinks {
@@ -277,7 +356,7 @@ a:hover {text-decoration: underline;}
     background: none;
 }
 
-#infoBox, #updatesBox {
+#updatesBox {
   position: absolute;
   top: 15%;
   left: 5%;
