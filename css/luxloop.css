@@ -243,6 +243,11 @@ a:hover {text-decoration: underline;}
 }
 
 
+#datesSection {
+  height: 100%;
+}
+
+
 /******** menu bars ********/
 
 #menuBarBot {
