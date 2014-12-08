@@ -157,7 +157,7 @@ a:hover {text-decoration: underline;}
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 100%;
+  height: 115%;
   overflow: hidden;
   z-index: 1;
   background-color: #000000;
@@ -213,15 +213,29 @@ a:hover {text-decoration: underline;}
 }
 
 
+#projSection {
+  height: auto;
+  margin-bottom: 8em;
+}
 
 #infoSection {
   min-height: 75%;
   height: auto;
 }
 
-#infoBox {
+#datesSection {
+  min-height: 75%;
+  height: auto;
+}
+
+#footerSection {
+  height: 100%;
+}
+
+
+#infoBox, #updatesBox, #projBox {
   position: relative;
-  top: 15%;
+  top: 0%;
   left: 5%;
   width: 90%;
   min-height: 50%;
@@ -238,14 +252,33 @@ a:hover {text-decoration: underline;}
   padding-bottom: 2em;
 }
 
-.rgba #infoBox {
+.rgba #infoBox, .rgba #updatesBox, .rgba #projBox {
   background-color: rgba(0,0,0,0.8);
 }
 
-
-#datesSection {
-  height: 100%;
+#projBox {
+  padding: 0;
 }
+
+.projThumb {
+  background: #f00;
+  /*width: 33.3%;*/
+  width: 50%;
+  height: 20px;
+  display: inline-block;
+  /*float:left;*/
+  vertical-align: top;
+}
+
+.projThumb:hover {
+  cursor: pointer;
+}
+
+.opacity .projThumb:hover {
+  opacity: 0.75;
+  filter: alpha(opacity=50);
+}
+
 
 
 /******** menu bars ********/
@@ -361,24 +394,7 @@ a:hover {text-decoration: underline;}
     background: none;
 }
 
-#updatesBox {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 90%;
-  height: 75%;
-  background-color: #000000;
-  color: #ffffff;
-  box-shadow:
-       4px 4px #ff0000,
-       8px 8px #00ff00,
-       12px 12px #0000ff;
-  border: solid;
-  border-width: 2px;
-  border-color: #ffffff;
-  overflow: hidden;
-  /*overflow-y: scroll;*/
-}
+
 
 #updatesBox p, #footLeft p, #footRight p {
   margin: 2em;
@@ -438,14 +454,14 @@ a:hover {text-decoration: underline;}
 }
 
 .eventsL {
-  position: absolute;
+  position: relative;
   top: 0%;
   left: 0%;
   width: 50%;
 }
 
 .eventsR {
-  position: absolute;
+  position: relative;
   top: 0%;
   left: 50%;
   width: 50%;

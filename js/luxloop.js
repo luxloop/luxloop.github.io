@@ -227,6 +227,8 @@ $(document).ready(function() {
         $("#eventFloater").fadeOut();
     });
 
+    resizeThumbs();
+
 
 });
 
@@ -257,6 +259,7 @@ $( window ).load(function() {
 
 on_resize(function() {
 	blogImageSizer();
+    resizeThumbs();
 
     $("#entry1, #entry2, #entry3, #entry4").css('left', '');
     $("#arrowL").css("visibility","hidden");
@@ -348,11 +351,16 @@ function slideDown() {
 }
 
 $(window).scroll(function(e) {
-    //isScrolling = true;
-    // console.log ($(this).scrollTop())
+    /*
     if ($(this).scrollTop() <= 0) {
         console.log("top");
         isScrolling == false;
+    };
+    */
+    if ($(this).scrollTop() <= $(this).height() && $(this).scrollTop() >= 0) {
+        var difference = $("#bgHolder").height() - $(this).height();
+        var target = Math.floor(difference * ($(this).scrollTop() / $(this).height()));
+        $("#bgHolder").css("top",-target + "px");
     };
 
     if ($(this).scrollTop() > 5) {
@@ -446,6 +454,20 @@ function datesModal(){
         $("html").removeClass("eventLink");
     };
 };
+
+function resizeThumbs() {
+    var ratio = $(window).height()/$(window).width();
+    if (ratio > 3/4) {
+        ratio = 3/4;
+    } else if (ratio < 9/16) {
+        ratio = 9/16;
+    };
+    $(".projThumb").each(function(){
+        //alert($(this).width());
+        var h = $(this).width() * ratio;
+        $(this).css("height",h+"px");
+    });
+}
 
 /*
 $(window).scroll(function() {
