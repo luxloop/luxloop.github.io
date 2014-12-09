@@ -353,10 +353,10 @@ a:hover {text-decoration: underline;}
 
 .eventHead {
   display: inline-block;
-  width: 8.5em;
+  width: 13.5em;
   border-bottom: solid;
   border-bottom-color: #ff0000;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   margin-bottom: 0.5em;
 }
 
@@ -365,6 +365,7 @@ a:hover {text-decoration: underline;}
   width: 8.5em;
   padding-top: 1em;
   border-bottom: solid;
+  /*border-bottom-color: #5050ff;*/
   border-bottom-color: #ff0000;
   border-bottom-width: 1px;
 }
@@ -685,6 +686,12 @@ a:hover {text-decoration: underline;}
 @media only screen and (min-width: 700px) and (max-height: 450px) {
   body {
     font-size: 85%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .eventsL {
+    width: 100%;
   }
 }
 
