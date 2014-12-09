@@ -500,6 +500,25 @@ a:hover {text-decoration: underline;}
    color: #555;  
 }
 
+#shortMailForm p {
+  margin-bottom: 0em !important;
+}
+
+#shortMailForm #mc_embed_signup {
+  width: 92% !important;
+}
+
+#shortMailForm #mce-EMAIL {
+  width: 50% !important;
+  float: left;
+  margin-right: 0.5em;
+}
+
+#shortMailForm #mc-embedded-subscribe {
+  height: 29px !important;
+  width: 40% !important;
+  margin: 0em;
+}
 
 /******** menu bars ********/
 
@@ -674,6 +693,11 @@ a:hover {text-decoration: underline;}
        3px 3px #ff0000,
        6px 6px #00ff00,
        9px 9px #0000ff;
+    }
+
+    #footRight {
+      visibility: hidden;
+      display: none;
     }
 }
 
