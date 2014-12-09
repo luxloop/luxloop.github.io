@@ -420,7 +420,8 @@ a:hover {text-decoration: underline;}
   background-color: #000000;
   color: #ffffff;
   width: 43%;
-  height: 80%;
+  height: auto;
+  min-height: 80%;
   box-shadow:
        4px 4px #ff0000,
        8px 8px #00ff00,
@@ -428,6 +429,7 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
+  margin-bottom: 3em;
 }
 
 .socLink:hover {
@@ -500,24 +502,9 @@ a:hover {text-decoration: underline;}
    color: #555;  
 }
 
-#shortMailForm p {
-  margin-bottom: 0em !important;
-}
-
-#shortMailForm #mc_embed_signup {
-  width: 92% !important;
-}
-
-#shortMailForm #mce-EMAIL {
-  width: 50% !important;
-  float: left;
-  margin-right: 0.5em;
-}
-
-#shortMailForm #mc-embedded-subscribe {
-  height: 29px !important;
-  width: 40% !important;
-  margin: 0em;
+#shortMailForm {
+  visibility: hidden;
+  display: none;
 }
 
 /******** menu bars ********/
@@ -686,7 +673,7 @@ a:hover {text-decoration: underline;}
     }
     */
 
-    #infoBox, #updatesBox, #footLeft {
+    #infoBox, #updatesBox {
       left: 3%;
       width: 94%;
       box-shadow:
@@ -695,10 +682,7 @@ a:hover {text-decoration: underline;}
        9px 9px #0000ff;
     }
 
-    #footRight {
-      visibility: hidden;
-      display: none;
-    }
+    
 }
 
 @media only screen and (min-width: 700px) and (max-height: 530px) {
@@ -716,6 +700,25 @@ a:hover {text-decoration: underline;}
 @media only screen and (max-width: 900px) {
   .eventsL {
     width: 100%;
+  }
+
+  #footLeft {
+    left: 3%;
+    width: 94%;
+    box-shadow:
+     3px 3px #ff0000,
+     6px 6px #00ff00,
+     9px 9px #0000ff;
+  }
+
+  #footRight {
+    visibility: hidden;
+    display: none;
+  }
+
+  #shortMailForm {
+    visibility: visible;
+    display: inline-block;
   }
 }
 

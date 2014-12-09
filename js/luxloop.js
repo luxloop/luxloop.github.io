@@ -68,12 +68,7 @@ $("#topLogo").click(function(){
 on_resize(function() {
     //Throttled on-resize handler
     resizeThumbs();
-
-    $("#entry1, #entry2, #entry3, #entry4").css('left', '');
-    $("#arrowL").css("visibility","hidden");
-    $("#arrowR").css("visibility","visible");
-
-    // datesModal();
+    evenFooters();
     
 })();
 
@@ -119,6 +114,18 @@ function resizeThumbs() {
         var h = $(this).width() * ratio;
         $(this).css("height",h+"px");
     });
+}
+
+function evenFooters() {
+    if ($("#footRight").css("display") !== "none") {
+        var fL = $("#footLeft").height();
+        var fR = $("#footRight").height();
+        if ( fL > fR ) {
+            $("#footRight").css("height",fL+"px");
+        } else if ( fR > fL ) {
+            $("#footLeft").css("height",fR+"px");
+        };
+    };
 }
 
 ////////////////////////
