@@ -65,25 +65,8 @@ $("#topLogo").click(function(){
     }, speed);
 });
 
-$("#closeIt").click(function() {
-    $("#mailChimpFloater").fadeOut();
-});
-
-$("#mobileChimpShower").click(function() {
-    $("#mailChimpFloater").fadeIn();
-});
-
-
-$("#mobileDateShower").click(function() {
-    $("#eventFloater").fadeIn();
-});
-
-$("#closeIt2").click(function() {
-    $("#eventFloater").fadeOut();
-});
-
 on_resize(function() {
-	blogImageSizer();
+    //Throttled on-resize handler
     resizeThumbs();
 
     $("#entry1, #entry2, #entry3, #entry4").css('left', '');
@@ -91,92 +74,12 @@ on_resize(function() {
     $("#arrowR").css("visibility","visible");
 
     // datesModal();
-
+    
 })();
 
-/*
-$('#logoSection').on({
-    'mousewheel': function(e) {
-        if (!Modernizr.touch && !jQuery.browser.mobile) {
-            var scrollZone = $( window ).height()*0.95;
-            if ($(window).scrollTop() < scrollZone) {
-                // console.log(isScrolling);
-
-                if (!isScrolling) {
-                    
-                    if (event.deltaY > 0) {
-                        isScrolling = true;
-                        slideDown();
-                    };
-                    
-                };
-                if (event.deltaY > 0) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                } else {
-                    isScrolling = false;
-                };
-            }
-        }    
-    }
+$( window ).resize(function() {
+    //Normal on-resize handler
 });
-
-
-$(window).on({
-    'mousewheel': function(e) {
-        if (!Modernizr.touch && !jQuery.browser.mobile && isScrolling) {
-            e.preventDefault();
-            e.stopPropagation();
-        }    
-    }
-});
-//*/
-
-////////////////////////
-// CUSTOM FUNCTIONS
-
-function slideDown() {
-    //alert("woo");
-    console.log("bang");
-    var scrollTarget = $( window ).height();
-    var topBar = $("#menuBarTop").height();
-    scrollTarget -= (topBar *1.5);
-    $("body").animate({
-        scrollTop: scrollTarget
-    }, 500, function() {
-        isScrolling = false;
-        console.log("finished");
-    });
-    return false;
-    /*
-    
-    if (!Modernizr.touch && !jQuery.browser.mobile) {
-        if ($(window).scrollTop() < scrollTarget && event.deltaY > 0 && isScrolling == false) {
-            isScrolling = true;
-            
-            $("html, body").animate({
-                scrollTop: scrollTarget
-            }, 700, function() {
-                isScrolling = false;
-            });
-            //console.log("going down " + $(window).scrollTop() + " " + event.deltaY + event.deltaFactor);
-            return false;
-        }
-        /
-        if ($(window).scrollTop() < scrollTarget && event.deltaY < 0 && isScrolling == false) {
-            e.preventDefault();
-            e.stopPropagation();
-            isScrolling = true;
-            $("html, body").animate({
-                scrollTop: 0
-            }, 700, function() {
-                isScrolling = false;
-            });
-            console.log("going up " + $(window).scrollTop() + " " + event.deltaY);
-            return false;
-        };
-        //*/
-}
 
 $(window).scroll(function(e) {
     /*
@@ -201,87 +104,8 @@ $(window).scroll(function(e) {
 });
 
 
-// debulked onresize handler
-function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
-
-function blogDate(dString) {
-    var month = "";
-    var numDay =""; 
-    if (dString.charAt(5) == 0) {
-        numDay = String(dString.charAt(6))
-    } else {
-        numDay = String(dString.charAt(5)) + String(dString.charAt(6))
-    };
-    var year = dString.charAt(12) + dString.charAt(13) + dString.charAt(14) + dString.charAt(15);
-    var mon = dString.charAt(8) + dString.charAt(9) + dString.charAt(10);
-    switch(mon) {
-        case "Jan":
-            month = "January";
-            break;
-        case "Feb":
-            month = "February";
-            break
-        case "Mar":
-            month = "March";
-            break
-        case "Apr":
-            month = "April";
-            break
-        case "May":
-            month = "May";
-            break
-        case "Jun":
-            month = "June";
-            break
-        case "Jul":
-            month = "July";
-            break
-        case "Aug":
-            month = "August";
-            break
-        case "Sep":
-            month = "September";
-            break
-        case "Oct":
-            month = "October";
-            break
-        case "Nov":
-            month = "November";
-            break
-        case "Dec":
-            month = "December";
-            break
-        default:
-            month = mon;
-    }
-    var outDate = month + " " + numDay + ", " + year;
-    return outDate;
-};
-
-function blogImageSizer(){
-    $(".blogImg").each(function() {
-        var w = $(this).attr("data-width");
-        var h = $(this).attr("data-height");
-        var r = h/w;
-        if (r > blogImgRatio) {
-            var off = -1 * ((r - blogImgRatio) * ($(this).width()*r))/3;
-            $(this).attr("data-tall","1");
-            var h = $(this).width() * blogImgRatio;
-            $(this).css("height",h+"px");
-            $(this).children().css("margin-top",off+"px");
-        };
-    }); 
-}
-
-function datesModal(){
-    var eventsBottom = ($(".events").position().top + $(".events").outerHeight(true));
-    var infoHeight = $("#infoBox").innerHeight();
-    if (eventsBottom > infoHeight) {
-        $("html").addClass("eventLink");
-    } else {
-        $("html").removeClass("eventLink");
-    };
-};
+////////////////////////
+// CUSTOM FUNCTIONS
 
 function resizeThumbs() {
     var ratio = $(window).height()/$(window).width();
@@ -300,27 +124,45 @@ function resizeThumbs() {
 ////////////////////////
 // UTILITIES
 
-/*
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 300) {
-        $(".scrollup").fadeIn()
-    } else {
-        $(".scrollup").fadeOut()
-    }
-});
-$(".scrollup").click(function() {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 900);
-    return false
-});
+// debulked onresize handler
+function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
 
-$("#contactLink").click(function() {
-    event.preventDefault();
-    var dest = $("#section").offset().top;
-    $("html, body").animate({
-      scrollTop: dest
-    }, 900);
-    return false
-});
-*/
+
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
+
+// Mailchimp validate
+(function($) {
+    window.fnames = new Array(); 
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';ftypes[0]='email';
+    fnames[1]='FNAME';ftypes[1]='text';
+    fnames[2]='LNAME';ftypes[2]='text';
+}(jQuery));
+var $mcj;
+// init only if loaded external script
+if (window.mc !== undefined) {
+    $mcj = jQuery.noConflict(true);
+};
+
