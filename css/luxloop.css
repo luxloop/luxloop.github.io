@@ -281,28 +281,68 @@ a:hover {text-decoration: underline;}
   height: 20px;
   display: inline-block;
   vertical-align: top;
+  /*
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  */
 }
 
 .projThumb:hover {
   cursor: pointer;
+  /*
+  border: solid;
+  border-width: 2px;
+  border-color: #f00;
+  */
 }
 
-.opacity .projThumb:hover {
-  /*opacity: 0.75;*/
-  /*filter: alpha(opacity=50);*/
+/*
+.opacity .projThumb:hover img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
+*/
 
 .projLabel {
+  font-family: "rooney-sans", "helvetica", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   height: auto;
   background-color: #000;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 }
 
 .projLabel p {
   margin-left: 1em;
+}
+
+.isMobile .projLabel {
+  font-size: 1em;
+}
+
+.touch .projLabel {
+  font-size: 1em;
+}
+
+.no-touch.opacity .isNotMobile .projLabel {
+  height: 100%;
+  text-align: center;
+}
+
+.no-touch.opacity .isNotMobile .projLabel p {
+  margin: initial;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .rgba .projLabel {
@@ -313,7 +353,7 @@ a:hover {text-decoration: underline;}
     opacity: 0.0;
 }
 
-.opacity .isMobile .projLabel {
+.opacity .isMobile .projLabel, .touch .projLabel {
   opacity: 1.0;
 }
 
@@ -324,7 +364,10 @@ a:hover {text-decoration: underline;}
 }
 
 .no-touch.opacity .isNotMobile .projThumb:hover .projLabel {
-    opacity: 1.0;
+  opacity: 1.0;
+  border: solid;
+  border-width: 3px;
+  border-color: #f00;
 }
 
 
@@ -522,7 +565,7 @@ a:hover {text-decoration: underline;}
 }
 
 .rgba .menuBar {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
 }
 
 #menuBarBot {
@@ -739,10 +782,6 @@ a:hover {text-decoration: underline;}
     width: 90%;
     margin: 0 auto;
   }
-
-  .projThumb {
-    width: 33.3%;
-  }
 }
 
 
@@ -751,6 +790,10 @@ a:hover {text-decoration: underline;}
     width: 80%;
     /*max-width: 1700px;*/
     margin: 0 auto;
+  }
+  
+  .projThumb {
+    width: 33.3%;
   }
 }
 
