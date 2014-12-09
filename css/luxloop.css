@@ -559,14 +559,25 @@ a:hover {text-decoration: underline;}
   cursor: pointer;
 }
 
-#botEmail {
+#menuIcons {
   position: absolute;
   width: 45%;
   height: 100%;
   top: 50%;
-  margin-top: -0.5em; 
+  margin-top: -0.8em; 
   right: 5%;
   text-align: right;
+}
+
+.menuSocial {
+  width: 2.1em;
+  height: auto;
+  padding-left: 0.3em;
+}
+
+.menuSocial:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 #topLinks {
@@ -727,6 +738,10 @@ a:hover {text-decoration: underline;}
     /*max-width: 1200px;*/
     width: 90%;
     margin: 0 auto;
+  }
+
+  .projThumb {
+    width: 33.3%;
   }
 }
 
