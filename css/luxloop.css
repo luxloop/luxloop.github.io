@@ -166,7 +166,7 @@ a:hover {text-decoration: underline;}
 
 /******** image BG ********/
 
-#bgHolder {
+#bgHolder, #bgHolderP {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -177,19 +177,19 @@ a:hover {text-decoration: underline;}
   background-color: #000000;
 }
 
-#staticBg, #slideshowBg {
+#staticBg, #slideshowBg, #staticBgP, #slideshowBgP {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-}
+}Ω
 
-#staticBg {
+#staticBg, #staticBgP {
   z-index: 9000;
 }
 
-#slideshowBg {
+#slideshowBg, #slideshowBgP {
   z-index: 9001;
 }
 
@@ -224,7 +224,7 @@ a:hover {text-decoration: underline;}
   margin: 2em;
 }
 
-#infoBox h1, #updatesBox h1, #footLeft h1, #footRight h1 {
+#infoBox h1, #updatesBox h1, #footLeft h1, #footRight h1, .section h1 {
   font-size: 1em;
   margin: 2em;
   margin-bottom: 0em;
@@ -274,27 +274,17 @@ a:hover {text-decoration: underline;}
   padding: 0;
 }
 
-.projThumb {
+.projThumb, .galThumb {
   background: #222;
   position: relative;
   width: 50%;
   height: 20px;
   display: inline-block;
   vertical-align: top;
-  /*
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  */
 }
 
-.projThumb:hover {
+.projThumb:hover, .galThumb:hover {
   cursor: pointer;
-  /*
-  border: solid;
-  border-width: 2px;
-  border-color: #f00;
-  */
 }
 
 /*
@@ -314,9 +304,11 @@ a:hover {text-decoration: underline;}
   width: 100%;
   height: auto;
   background-color: #000;
+  /*
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
+  */
 }
 
 .projLabel p {
@@ -346,7 +338,7 @@ a:hover {text-decoration: underline;}
 }
 
 .rgba .projLabel {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.85);
 }
 
 .no-touch.opacity .projLabel {
@@ -363,11 +355,14 @@ a:hover {text-decoration: underline;}
    -webkit-transition: opacity .25s ease-in-out;
 }
 
-.no-touch.opacity .isNotMobile .projThumb:hover .projLabel {
+.no-touch.opacity .isNotMobile .projThumb:hover .projLabel,
+.no-touch.opacity .isNotMobile .galThumb:hover .projLabel {
   opacity: 1.0;
+  /*
   border: solid;
   border-width: 3px;
   border-color: #f00;
+  */
 }
 
 
@@ -577,6 +572,10 @@ a:hover {text-decoration: underline;}
   display: none;
 }
 
+#projectMenuBar {
+  top: 0%;
+}
+
 .menuMargins{
   position: relative;
   width: 100%;
@@ -661,6 +660,72 @@ a:hover {text-decoration: underline;}
 #topLogo:hover {
   cursor: pointer;
 }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * *  Generic Project Page Styles  * * * * */
+
+#topTitle {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  top: 50%;
+  margin-top: -0.5em; 
+  right: 5%;
+  text-align: right;
+  font-family: "rooney-sans", "helvetica", sans-serif;
+  font-weight: 300;
+}
+
+.vidSection, .imgSection, .galSection {
+  position: relative;
+  height: auto;
+  /*min-height: 100%;*/
+  padding-top: 80px;
+  margin-bottom: 5em;
+}
+
+.vidBox, .imgBox, .galBox {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #222222;
+}
+
+.imgBox img {
+  width: 100%;
+  height: auto;
+}
+
+.textSection {
+  height: 100%;
+}
+
+.textBox {
+  position: relative;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+  min-height: 80%;
+  background-color: #000000;
+  color: #ffffff;
+  border: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 2em;
+}
+
+.galSection {
+  margin-bottom: 8em;
+  padding: 0;
+}
+
+
+.section p {
+  margin: 0em 2em 1.5em 2em;
+}
+
+
 
 
 /* ==========================================================================
@@ -792,7 +857,7 @@ a:hover {text-decoration: underline;}
     margin: 0 auto;
   }
   
-  .projThumb {
+  .projThumb, .galThumb {
     width: 33.3%;
   }
 }

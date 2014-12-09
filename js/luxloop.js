@@ -110,7 +110,7 @@ function resizeThumbs() {
     } else if (ratio < 9/16) {
         ratio = 9/16;
     };
-    $(".projThumb").each(function(){
+    $(".projThumb, .galThumb").each(function(){
         //alert($(this).width());
         var h = $(this).width() * ratio;
         $(this).css("height",h+"px");
@@ -127,7 +127,6 @@ function createProjectThumbs() {
         if (thumb !== undefined && thumb !== null) {
             $(this).backstretch("img/projects/"+thumb);
         };
-        //$("#staticBg").backstretch("img/017.jpg");
     });
 }
 
