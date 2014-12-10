@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Amplified Self</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
@@ -34,7 +34,7 @@
         <div id="projectMenuBar" class="menuBar">
             <div class="menuMargins">
                 <div id="topTitle">
-                    If The Walls Had Eyes
+                    Amplified Self
                 </div>
                 <div id="topLogo">
                     luxloop
@@ -44,23 +44,38 @@
         </div>
 
         <!--video section-->
+
+        <!--- PLEASE REPLACE "113986453" WITH CORRECT VIDEO ID
+
         <div class="section vidSection">
             <div class="vidBox">
                 <iframe src="http://player.vimeo.com/video/113986453?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
 
+        - - - - - - - -->
+
+        <!--image section-->
+
+        <!-- MOVE THIS CHUNK BELOW DESCRIPTION WHEN YOU ADD VIDEO -->
+        <div class="section imgSection">
+            <div class="imgBox">
+                <img src="img/projects/amplifiedself/1.jpg" />
+            </div>
+        </div>
+        <!-- - - - - - - - -->
+
         <!-- section with RGB border-->
         <div class="section textSection">
             <div class="textBox rgbShadowBig">
                 <h1>
-                    If The Walls Had Eyes
+                    Amplified Self
                 </h1>
                 <p class="first">
-                    If The Walls Had Eyes visualizes and humanizes the multiple pairs of eyes that observe the things we putting out into the world on a daily basis, not only by the people we wish to see our personal content, but the digital eyes that are always watching, the ones we don't necessarily think about. Part inspired by an attention-starved roommate, and part by a dream, the interactive projection installation consists of multiple videos that watch and follow the viewer as they pass by.
+                    Amplified Self is a mirror in which viewers can only see their own reflection if they are willing to call attention to themselves. By yelling, the viewer causes the sound waves rendered on screen to coalesce into an image. The louder the noise, the clearer the image in the audio waveforms, therefore prompting the viewer to balance their desire to see themselves with their aversion to drawing attention to this desire.
                 </p>
                 <p>                    
-                    Creative Direction by Mandy Mandelstein<br />
+                    Creative Direction by Ivaylo Getov<br />
                     Software by Luxloop
                     <!--
                     <span class="r">red</span>.
@@ -72,36 +87,16 @@
         <!--image section-->
         <div class="section imgSection">
             <div class="imgBox">
-                <img src="img/004.png" />
+                <img src="img/projects/amplifiedself/2.jpg" />
             </div>
         </div>
 
-        <!-- gallery section -->
-        <div class="section galSection">
-            <div class="galBox rgbShadowBig"><!--
-                --><div class="galThumb" data-thumb="img/projects/eyes/thumb.jpg">
-                        <div class="projLabel vCenterParent"></div>
-                   </div><!--
-
-                --><div class="galThumb" data-thumb="img/projects/obem/thumb.jpg">
-                        <div class="projLabel vCenterParent"></div>
-                   </div><!--
-
-                --><div class="galThumb" data-thumb="img/projects/sheep/thumb.png">
-                        <div class="projLabel vCenterParent"></div>
-                   </div><!--
-
-            --></div>
-        </div>
 
 
         <div id="bgHolderP">
             <div id="staticBgP"></div>
             <div id="slideshowBgP"></div>
         </div>
-
-        
-
 
 
         <!-- JQuery -->
@@ -122,7 +117,7 @@
 
         <script>
         $(document).ready(function() {
-            $("#staticBgP").backstretch("img/017.jpg");
+            $("#staticBgP").backstretch("img/projects/amplifiedself/bg.jpg");
 
             if ($.fn.fitVids !== undefined) {
                 $(".vidBox").each(function(){
@@ -140,24 +135,14 @@
         });
 
         $( window ).load(function() {
+            /*
             if (!isMobile) {
                 $("#slideshowBgP").backstretch([
                       "img/017.jpg"
                     , "img/001.jpg"
-                    , "img/002.jpg"
-                    , "img/003.png"
-                    , "img/004.png"
-                    , "img/005.jpg"
-                    , "img/006.jpg"
-                    , "img/007.jpg"
-                    , "img/008.jpg"
-                    , "img/010.jpg"
-                    , "img/011.jpg"
-                    , "img/012.jpg"
-                    , "img/013.png"
-                    , "img/014.png"
                 ], {duration: 5500, fade: 1000});
             };
+            */
         });
 
         $("#topLogo").click(function(){
