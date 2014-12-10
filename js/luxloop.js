@@ -67,6 +67,15 @@ $("#topLogo").click(function(){
     }, speed);
 });
 
+$(".projThumb").click(function(){
+    var dest = $(this).attr("data-dest");
+    // alert(dest);
+    if (dest !== undefined) {
+        window.location.href = dest;
+    };
+
+})
+
 on_resize(function() {
     //Throttled on-resize handler
     resizeThumbs();
@@ -149,16 +158,17 @@ function evenFooters() {
 }
 
 function projectSizer() {
-    var ratio = 16/9;
+    //var ratio = 16/9;
     var maxWidth = 1280;
     if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
     var margin = $("#projectMenuBar").height();
     var elemHeight = $(window).height() - margin - (margin * 1.25);
-    var elemWidth = elemHeight * ratio;
-
-    if (elemWidth > maxWidth) { elemWidth = maxWidth};
+    
 
     $(".vidBox").each(function(){
+        var ratio = 16/9;
+        var elemWidth = elemHeight * ratio;
+        if (elemWidth > maxWidth) { elemWidth = maxWidth};
         $(this).css({
             "padding-top" : (margin * 1.25) + "px",
             "width" : elemWidth + "px"
@@ -166,6 +176,9 @@ function projectSizer() {
     });
 
     $(".imgBox").each(function(){
+        var ratio = $(this).width()/$(this).height();
+        var elemWidth = elemHeight * ratio;
+        if (elemWidth > maxWidth) { elemWidth = maxWidth};
         $(this).css({
             "padding-top" : (margin * 1.25) + "px",
             "width" : elemWidth + "px"

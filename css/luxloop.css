@@ -668,6 +668,11 @@ a:hover {text-decoration: underline;}
   /*height: 115%;*/
 }
 
+.opacity #bgHolderP img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
 #topTitle {
   position: absolute;
   width: 45%;

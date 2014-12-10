@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>If The Walls Had Eyes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/swipebox.min.css">
+        <link rel="stylesheet" type="text/css" href="css/luxloop.css">
+
+        <style>
+        /*project-specific CSS*/
+        .rgba .projLabel {
+          background-color: rgba(0,0,0,0.5);
+        }
+        </style>
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        
+        <script src="//use.typekit.net/pga1gsl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="projectMenuBar" class="menuBar">
+            <div class="menuMargins">
+                <div id="topTitle">
+                    If The Walls Had Eyes
+                </div>
+                <div id="topLogo">
+                    luxloop
+                    <!-- <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logo_small.png'" id="cornerSvg"> -->
+                </div>
+            </div>
+        </div>
+        <!--video section-->
+        <div class="section vidSection">
+            <div class="vidBox">
+                <iframe src="http://player.vimeo.com/video/113986453?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- section with RGB border-->
+        <div class="section textSection">
+            <div class="textBox rgbShadowBig">
+                <h1>
+                    If The Walls Had Eyes
+                </h1>
+                <p class="first">
+                    If The Walls Had Eyes visualizes and humanizes the multiple pairs of eyes that observe the things we putting out into the world on a daily basis, not only by the people we wish to see our personal content, but the digital eyes that are always watching, the ones we don't necessarily think about. Part inspired by an attention-starved roommate, and part by a dream, the interactive projection installation consists of multiple videos that watch and follow the viewer as they pass by.
+                </p>
+                <p>                    
+                    Creative Direction by Mandy Mandelstein<br />
+                    Software by Luxloop
+                    <!--
+                    <span class="r">red</span>.
+                    -->
+                </p>
+            </div>
+        </div>
+
+        <!--image section-->
+        <div class="section imgSection">
+            <div class="imgBox">
+                <img src="img/projects/eyes/1.jpg" />
+            </div>
+        </div>
+
+        <div class="section imgSection">
+            <div class="imgBox">
+                <img src="img/projects/eyes/2.jpg" />
+            </div>
+        </div>
+
+        <!--
+        <div class="section imgSection">
+            <div class="imgBox">
+                <img src="img/projects/eyes/3.jpg" />
+            </div>
+        </div>
+        -->
+
+
+
+        <div id="bgHolderP">
+            <div id="staticBgP"></div>
+            <div id="slideshowBgP"></div>
+        </div>
+
+        
+
+
+
+        <!-- JQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <!-- Vendor JS -->
+        <script src="js/vendor/detectmobile.js"></script>
+        <script src="js/vendor/jquery.mousewheel.min.js"></script>
+        <script src="js/vendor/jquery.backstretch.min.js"></script>
+        <script src="js/vendor/jquery.fitvids.js"></script>
+        <script src="js/vendor/jquery.swipebox.min.js"></script>
+        <!--<script src="js/vendor/jquery.fittext.js"></script>-->
+        <!-- <script src="js/vendor/jquery.fullPage.min.js"></script> -->
+
+        <!-- Luxloop JS -->
+        <script src="js/luxloop.js"></script>
+
+        <script>
+        $(document).ready(function() {
+            $("#staticBgP").backstretch("img/projects/eyes/bg.jpg");
+
+            if ($.fn.fitVids !== undefined) {
+                $(".vidBox").each(function(){
+                    $(this).fitVids();
+                });
+            };
+
+            $(".galThumb").each(function(){
+                var thumb = $(this).attr("data-thumb");
+                //console.log(thumb);
+                if (thumb !== undefined && thumb !== null) {
+                    $(this).backstretch(thumb);
+                };
+            });
+        });
+
+        $( window ).load(function() {
+            /*
+            if (!isMobile) {
+                $("#slideshowBgP").backstretch([
+                      "img/017.jpg"
+                    , "img/001.jpg"
+                ], {duration: 5500, fade: 1000});
+            };
+            */
+        });
+
+        $("#topLogo").click(function(){
+            window.location.href = "index.html";
+        });
+
+        $('.galThumb').click( function( e ) {
+            e.preventDefault();
+            var index = $(this).index();
+            var galleryImages = [];
+
+            $(".galThumb").each(function(){
+                var thumb = $(this).attr("data-thumb");
+                if (thumb !== undefined && thumb !== null) {
+                    // var path = thumb;
+                    //galleryImages.push("img/projects/"+thumb);
+                    var obj = {href:thumb,title:''};
+                    galleryImages.push(obj);
+                };
+            });
+            //console.log(galleryImages);
+
+            $.swipebox( galleryImages, {
+                useCSS : true,
+                useSVG : true,
+                initialIndexOnArray : index,
+                hideBarsDelay : 1000,
+                loopAtEnd: true
+            } );
+        });
+
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-55385432-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
