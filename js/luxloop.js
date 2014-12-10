@@ -44,8 +44,6 @@ $( window ).load(function() {
             , "img/014.png"
         ], {duration: 5500, fade: 1000});
     };
-
-    projectSizer();
 });
 
 $(".botNavLink, .topNavLink").click(function(){

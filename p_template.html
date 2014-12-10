@@ -118,6 +118,7 @@
         <script src="js/vendor/jquery.backstretch.min.js"></script>
         <script src="js/vendor/jquery.fitvids.js"></script>
         <script src="js/vendor/jquery.swipebox.min.js"></script>
+        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
         <!--<script src="js/vendor/jquery.fittext.js"></script>-->
         <!-- <script src="js/vendor/jquery.fullPage.min.js"></script> -->
 
@@ -127,6 +128,11 @@
         <script>
         $(document).ready(function() {
             $("#staticBgP").backstretch("img/017.jpg");
+            var boxes = document.querySelectorAll('.imgBox');
+            imagesLoaded( boxes, function() {
+                //console.log("loaded")
+                projectSizer();
+            });
 
             if ($.fn.fitVids !== undefined) {
                 $(".vidBox").each(function(){
