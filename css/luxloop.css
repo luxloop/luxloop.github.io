@@ -673,6 +673,11 @@ a:hover {text-decoration: underline;}
   filter: alpha(opacity=50);
 }
 
+.smaller {
+  font-size: 0.8em;
+  padding-left: 0.4em;
+}
+
 #topTitle {
   position: absolute;
   width: 45%;
@@ -728,7 +733,7 @@ a:hover {text-decoration: underline;}
 }
 
 .textSection {
-  height: 100%;
+  height: auto%;
 }
 
 .textBox {
@@ -742,7 +747,6 @@ a:hover {text-decoration: underline;}
   border: solid;
   border-width: 2px;
   border-color: #ffffff;
-  overflow: hidden;
   padding-bottom: 2em;
 }
 
@@ -756,6 +760,21 @@ a:hover {text-decoration: underline;}
   margin: 0em 2em 1.5em 2em;
 }
 
+.textBox p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.textBox p a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.textBox ul {
+  margin: 0em;
+  margin-top: -1.3em;
+  margin-left: 1em;
+}
 
 
 
