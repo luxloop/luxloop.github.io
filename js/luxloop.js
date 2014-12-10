@@ -12,6 +12,7 @@ $(document).ready(function() {
     $("#staticBg").backstretch("img/017.jpg");
     resizeThumbs();
     createProjectThumbs();
+    projectSizer();
 });
 
 ////////////////////////
@@ -70,6 +71,7 @@ on_resize(function() {
     //Throttled on-resize handler
     resizeThumbs();
     evenFooters();
+    projectSizer()
     
 })();
 
@@ -78,13 +80,7 @@ $( window ).resize(function() {
 });
 
 $(window).scroll(function(e) {
-    /*
-    if ($(this).scrollTop() <= 0) {
-        console.log("top");
-        isScrolling == false;
-    };
-    */
-    if ($(this).scrollTop() <= $(this).height() && $(this).scrollTop() >= 0) {
+    if ($(this).scrollTop() <= $(this).height() && $(this).scrollTop() >= 0 && !isMobile) {
         var difference = $("#bgHolder").height() - $(this).height();
         var target = Math.floor(difference * ($(this).scrollTop() / $(this).height()));
         $("#bgHolder").css("top",-target + "px");
@@ -97,6 +93,16 @@ $(window).scroll(function(e) {
         $("#menuBarTop").fadeOut(250);
         $("#menuBarBot").fadeIn(200);
     }
+
+    if ($("#bgHolderP").height() !== null) {
+        //console.log("parallax");
+        var scrollRange = $(document).height() - $(window).height();
+        if ($(this).scrollTop() <= scrollRange && $(this).scrollTop() >= 0 && !isMobile) {
+            var difference = $("#bgHolderP").height() - $(window).height();
+            var target = Math.floor(difference * ($(this).scrollTop()/scrollRange));
+            $("#bgHolderP").css("top",-target + "px");
+        };
+    };
 });
 
 
@@ -140,6 +146,31 @@ function evenFooters() {
             $("#footLeft").css("height",fR+"px");
         };
     };
+}
+
+function projectSizer() {
+    var ratio = 16/9;
+    var maxWidth = 1280;
+    if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
+    var margin = $("#projectMenuBar").height();
+    var elemHeight = $(window).height() - margin - (margin * 1.25);
+    var elemWidth = elemHeight * ratio;
+
+    if (elemWidth > maxWidth) { elemWidth = maxWidth};
+
+    $(".vidBox").each(function(){
+        $(this).css({
+            "padding-top" : (margin * 1.25) + "px",
+            "width" : elemWidth + "px"
+        });
+    });
+
+    $(".imgBox").each(function(){
+        $(this).css({
+            "padding-top" : (margin * 1.25) + "px",
+            "width" : elemWidth + "px"
+        });
+    });
 }
 
 ////////////////////////

@@ -160,6 +160,17 @@
             };
         });
 
+        $(window).scroll(function(e) {
+            // console.log($(document).height());
+            /*
+            if ($(this).scrollTop() <= $(this).height() && $(this).scrollTop() >= 0) {
+                var difference = $("#bgHolder").height() - $(this).height();
+                var target = Math.floor(difference * ($(this).scrollTop() / $(this).height()));
+                $("#bgHolder").css("top",-target + "px");
+            };
+            */
+        });
+
         $('.galThumb').click( function( e ) {
             e.preventDefault();
             var index = $(this).index();
