@@ -705,7 +705,7 @@ a:hover {text-decoration: underline;}
 .imgSection, .vidSection {
   position: relative;
   height: auto;
-  margin-bottom: 5em;
+  margin-bottom: 5em !important;
 }
 
 
