@@ -67,14 +67,16 @@ $("#topLogo").click(function(){
     }, speed);
 });
 
-$(".projThumb").click(function(){
+/*
+$(".projThumb").click(function(event){
+    event.preventDefault();
     var dest = $(this).attr("data-dest");
     // alert(dest);
     if (dest !== undefined) {
         window.location.href = dest;
     };
-
 })
+*/
 
 on_resize(function() {
     //Throttled on-resize handler
