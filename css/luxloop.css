@@ -897,6 +897,16 @@ a:hover {text-decoration: underline;}
     width: 90%;
     margin: 0 auto;
   }
+
+  .projectPage .textSection {
+    max-width: 1280px;
+  }
+
+
+  .projectPage .textBox {
+    left: 0%;
+  }
+
 }
 
 
