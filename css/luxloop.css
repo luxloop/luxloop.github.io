@@ -905,6 +905,7 @@ a:hover {text-decoration: underline;}
 
   .projectPage .textBox {
     left: 0%;
+    width: 100%;
   }
 
 }
