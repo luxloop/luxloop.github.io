@@ -197,6 +197,34 @@ Css reset
     
 
     <style>
+
+    .linkBox {
+      background: #eee;
+      padding: 0.5em;
+      height: 125px;
+    }
+
+    .linkBox:hover {
+      background-color: rgb(255, 100, 100);
+    }
+
+    .linkBox p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "rooney-sans", "helvetica", sans-serif;
+      font-weight: 300;
+    }
+
+    p.linkDest {
+      margin-top: 35px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    p.linkHost {
+      font-size: 0.8em;
+    }
+    
       
     </style>
     
@@ -531,7 +559,12 @@ Css reset
           {block:Link}
             <li class="link">
               <div class="link-name">
-                <a href="{URL}" class="link" {Target}>{Name}</a>
+                <a href="{URL}" class="link" {Target}>
+                  <div class="linkBox">
+                  <p class="linkDest">{Name}</p>
+                  {block:Host} <p class="linkHost">{Host}</p> {/block:Host}
+                  </div>
+                </a>
               </div>
 
               {block:Description}
