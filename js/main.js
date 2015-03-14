@@ -7,7 +7,10 @@ var isMobile = false;
 // SETUP ON READY
 
 $(document).ready(function() {
-    //$("#staticBg").backstretch("img/017.jpg");
+    $("#cover").backstretch("img/cover.jpg");
+
+    var buttWidth = $(".about .row:nth-of-type(2) a").eq(1).outerWidth();
+    $(".about .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 });
 
 ////////////////////////
@@ -21,7 +24,9 @@ $( window ).load(function() {
         $("body").addClass("isNotMobile");
     };
 
+    // $(".firstQuote").css("background","url(img/bgseq/20.jpg)")
     if (!isMobile) {
+        // $(".bigQuote").css("background-attachment","fixed !important");
     };
 });
 

@@ -11,17 +11,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+
       <link rel="stylesheet" href="css/bootstrap.min.css">
 
       <style>
           body {
-              padding-top: 50px;
-              padding-bottom: 20px;
+              /*padding-top: 50px;*/
+              /*padding-bottom: 20px;*/
           }
       </style>
 
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/luxloop.css">
+
+
+      <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+      <!-- <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"> -->
 
       <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
       <script src="js/vendor/encode.js"></script>
@@ -41,11 +46,49 @@
     -->
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="cover">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <div class="bigLogo logoTopSlide">
+            <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logoMed.png'" id="coverLogoSvg">
+        </div>
+        <!-- <div class="downArrow">
+          <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        </div> -->
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,700' rel='stylesheet' type='text/css'>
+
+
+      </div>
+    </div>
+
+    <div class="container-fluid about info">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-justify">
+          <h6>Hi, We're <span class="r">Luxloop</span>.</h6>
+          <p>
+            We are a creative technology studio, focused on finding new ways to captivate, inspire and interact with our fellow humans.
+          </p>
+
+          <p>
+            We are a <span class="b">hybrid agency/production company</span> forged in the fires of commercial and documentary film-production combined with an unceasing impulse to experiment and explore new and near-future formats.
+          </p>
+
+          <p>
+            If you’re interested in creating <span class="b">high-impact</span>, interactive <span class="b">experiences</span> that challenge what you believe is possible, let’s collaborate!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-2 col-md-offset-4 text-right">
+          <a class="btn btn-lg luxButton" href="#">Our Work</a>
+        </div>
+        <div class="col-xs-6 col-md-2 text-left">
+          <a class="btn btn-lg luxButton" href="#">More About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron bigQuote firstQuote">
+      <div class="container">
       </div>
     </div>
 

@@ -1,0 +1,222 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * Global Styles * * * * * * * * */
+
+html, body {
+  background: #1f1f1f;
+  font-family: "fira-sans", "Fira Sans", "arial", sans-serif;
+  /*font-family: "camingodos-web";*/
+  font-weight: 300;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {color: #ffffff; text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * Helpers * * * * * * * * * * */
+
+.r {color: #ff0000;}
+.g {color: #00ff00;}
+.b {color: #5050ff;}
+
+.rgbShadow {
+  box-shadow:
+     2px 2px #ff0000,
+     4px 4px #00ff00,
+     6px 6px #0000ff;
+}
+
+.rgbShadowSmall {
+  box-shadow:
+     1px 1px #ff0000,
+     2px 2px #00ff00,
+     3px 3px #0000ff;
+}
+
+.rgbShadowBig {
+  box-shadow:
+     4px 4px #ff0000,
+     8px 8px #00ff00,
+     12px 12px #0000ff;
+}
+
+.vCenterAlt {
+  /* use if you have a declared height */
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.vCenterParent {
+  /* Apply to parent of any element that is vertically centereed
+     using below method to prevent blurry rendering */
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.vCenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bigQuote {
+  min-height: 80%;
+  background: url(../blank.png);
+  background-position: center center !important;
+  /*background-attachment: fixed !important;*/
+  background-repeat: no-repeat !important;
+}
+
+.isNotMobile .bigQuote {
+  background-attachment: fixed !important;
+}
+
+h6 {
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: solid 1px red;
+  margin-bottom: 1em;
+}
+
+.info {
+  padding-top: 4em;
+  padding-bottom: 6em;
+}
+
+.info p {
+  font-size: 1.0em;
+  font-weight: 300;
+  line-height: 1.2em
+}
+
+.info p:last-of-type {
+  margin-bottom: 3em;
+}
+
+.luxButton  {
+  font-family: "fira-sans", "Fira Sans", "arial", sans-serif;
+  min-width: 100px !important;
+  font-size: 0.9em;
+  font-weight: 300;
+  background: #666;
+  border: solid 1px white;
+  text-decoration: none;
+  
+  box-shadow:
+     2px 2px #ff0000,
+     4px 4px #00ff00,
+     6px 6px #0000ff;
+}
+
+.luxButton:hover {
+  color: #ddd;
+  background: #444;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * Main Page Styles  * * * * * * * */
+
+#cover {
+  min-height: 100%;
+  margin: 0px !important;
+}
+
+.bigLogo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 30%;
+  width: 70%;
+  height: 20px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);  
+}
+
+.bigLogo img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);  
+}
+
+.downArrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);  
+  width: 30px;
+  height: 30px;
+  font-size: 3em;
+}
+
+.firstQuote {
+  background: url(../img/bgseq/1.jpg);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * Media Queries * * * * * * * * */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .jumbotron {
+    margin-bottom: 0px;
+  }
+
+  .bigLogo {
+    width: 55%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bigLogo {
+    width: 40%;
+  }
+
+  .info p {
+    font-size: 1.08em;
+    line-height: 1.4em
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bigLogo {
+    width: 30%;
+  }
+}
+
+
+
+
+
+
+
