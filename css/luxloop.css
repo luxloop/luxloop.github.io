@@ -141,6 +141,7 @@ h6 {
   background: #666;
   border: solid 1px white;
   text-decoration: none;
+  margin: 0em 1em 2em 1em; 
   
   box-shadow:
      2px 2px #ff0000,
