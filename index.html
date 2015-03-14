@@ -19,7 +19,7 @@
               padding-bottom: 20px;
           }
       </style>
-      
+
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="css/main.css">
 
@@ -29,36 +29,18 @@
       <script src="//use.typekit.net/pga1gsl.js"></script>
       <script>try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </nav>
+    -->
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <h1>Hello, world!</h1>
@@ -67,8 +49,9 @@
       </div>
     </div>
 
+
+    <!-- Example row of columns
     <div class="container">
-      <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
           <h2>Heading</h2>
@@ -88,39 +71,38 @@
       </div>
 
       <hr>
+    </div>
+    <footer>
+      <p>&copy; Company 2015</p>
+    </footer>
+    -->
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> 
-    <!-- /container -->        
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-      <!-- JQuery -->
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <!-- Vendor JS -->
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/detectmobile.js"></script>
+    <script src="js/vendor/jquery.backstretch.min.js"></script>
 
-      <!-- Vendor JS -->
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/vendor/detectmobile.js"></script>
-      <script src="js/vendor/jquery.backstretch.min.js"></script>
+    <!-- Mailchimp JS -->
+    <!--
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script>window.mc || document.write('<script src="js/vendor/mc-validate.js"><\/script>')</script>
+    -->
 
-      <!-- Mailchimp JS -->
-      <!--
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-      <script>window.mc || document.write('<script src="js/vendor/mc-validate.js"><\/script>')</script>
-      -->
+    <!-- Luxloop JS -->
+    <script src="js/main.js"></script>
 
-      <!-- Luxloop JS -->
-      <script src="js/main.js"></script>
-
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-      <script>
-          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='//www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','UA-55385432-1','auto');ga('send','pageview');
-      </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-55385432-1','auto');ga('send','pageview');
+    </script>
   </body>
 </html>
