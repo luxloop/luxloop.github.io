@@ -90,6 +90,10 @@ a:hover {text-decoration: underline;}
   /*background-attachment: fixed !important;*/
   background-repeat: no-repeat !important;
   position: relative;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
 
 .bigQuote p {
@@ -218,13 +222,15 @@ h6 {
 }
 
 .clientLogo {
-  width: 14.285714285714285714285714285714%;
-  /*width: 25%;*/
+  /*width: 14.285714285714285714285714285714%;*/
+  width: 25%;
+  min-width: 25%;
   height: auto;
-  background: #eee;
   display: inline-block;
   /*float: left;*/
   white-space: nowrap;
+  padding: 0.2em;
+  max-width: 200px;
 }
 
 .clientLogo img {
@@ -268,6 +274,11 @@ h6 {
 
   .about p {
     font-size: 1.05em;
+  }
+
+  .clientLogo {
+    min-width: 14%;
+    padding: 1em;
   }
 }
 
