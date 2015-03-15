@@ -32,6 +32,16 @@ $( window ).load(function() {
     };
 });
 
+$(".downArrow").hover(
+  function() {
+    $(".downArrow .pointer").addClass("hidden");
+    $(".downArrow .scrollText").removeClass("hidden");
+  }, function() {
+    $(".downArrow .scrollText").addClass("hidden");
+    $(".downArrow .pointer").removeClass("hidden");
+  }
+);
+
 on_resize(function() {
     //Throttled on-resize handler
     resizeClientLogos();
@@ -50,8 +60,8 @@ $(window).scroll(function(e) {
 
 function resizeClientLogos(){
     var logoWidth = $(".logoHolder").width() / $(".clientLogo").length;
-    console.log(logoWidth);
-    $(".clientLogo").css("width",logoWidth);
+    // console.log(logoWidth);
+    $(".clientLogo").css("width",Math.floor(logoWidth));
 }
 
 

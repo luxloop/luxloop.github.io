@@ -68,23 +68,8 @@ a:hover {text-decoration: underline;}
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.vCenterParent {
-  /* Apply to parent of any element that is vertically centereed
-     using below method to prevent blurry rendering */
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.vCenter {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .bigQuote {
-  min-height: 80%;
+  min-height: 50%;
   background: url(../blank.png);
   background-position: center center !important;
   /*background-attachment: fixed !important;*/
@@ -94,6 +79,8 @@ a:hover {text-decoration: underline;}
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
+  padding-top: 12em;
+  padding-bottom: 12em;
 }
 
 .bigQuote p {
@@ -124,7 +111,7 @@ h6 {
 }
 
 .info {
-  padding-top: 4em;
+  padding-top: 6em;
   padding-bottom: 6em;
 }
 
@@ -176,6 +163,39 @@ h6 {
   height: 2em;
 }
 
+hr {
+    display: block;
+    position: absolute;
+    right: 17px;
+    width: 50%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #f00;
+    margin: 1em 0;
+    padding: 0;
+    max-width: 300px;
+    background: none;
+}
+
+.skillIcon {
+  color: #fff;
+  padding-bottom: 0.2em;
+  
+}
+
+footer {
+  background: #000;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9em !important;
+}
+
+.footer .input-group {
+  width: 70%;
+  margin-left: 30%;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -189,7 +209,6 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 30%;
   width: 70%;
   height: 20px;
   -webkit-transform: translateX(-50%);
@@ -209,16 +228,28 @@ h6 {
   position: absolute;
   left: 50%;
   bottom: 0%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);  
-  width: 30px;
+  width: 200px;
   height: 30px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);  
   font-size: 3em;
+  color: black;
+  padding-bottom: 1em;
+}
+
+.downArrow .scrollText {
+  text-transform: uppercase;
+  font-size: 0.3em;
+  font-weight: 200;
 }
 
 .firstQuote {
   background: url(../img/bgseq/1.jpg);
+}
+
+.secondQuote {
+  background: url(../img/mandycloud.jpg);
 }
 
 .clientLogo {
@@ -248,6 +279,9 @@ h6 {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
 
   .jumbotron {
     margin-bottom: 0px;
@@ -260,6 +294,8 @@ h6 {
   .bigQuote p {
     font-size: 4em;
   }
+
+  
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -285,13 +321,30 @@ h6 {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1100px;
+    width: 80%;
+    /*max-width: 1100px;*/
   }
   .bigLogo {
     width: 30%;
   }
 }
 
+/* HD devices (very large desktops and TVs, 1920px and up) */
+@media (min-width: 1920px) {
+  .container {
+    width: 70%;
+    max-width: 1600px;
+  }
+
+  .bigLogo {
+    width: 25%;
+  }
+
+  .bigQuote p {
+    font-size: 5em;
+  }
+
+}
 
 
 
