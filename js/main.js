@@ -11,6 +11,8 @@ $(document).ready(function() {
 
     var buttWidth = $(".about .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".about .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
+
+    resizeClientLogos();
 });
 
 ////////////////////////
@@ -32,6 +34,7 @@ $( window ).load(function() {
 
 on_resize(function() {
     //Throttled on-resize handler
+    resizeClientLogos();
 })();
 
 $( window ).resize(function() {
@@ -45,6 +48,11 @@ $(window).scroll(function(e) {
 ////////////////////////
 // CUSTOM FUNCTIONS
 
+function resizeClientLogos(){
+    var logoWidth = $(".logoHolder").width() / $(".clientLogo").length;
+    console.log(logoWidth);
+    $(".clientLogo").css("width",logoWidth);
+}
 
 
 ////////////////////////

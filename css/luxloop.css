@@ -217,6 +217,21 @@ h6 {
   background: url(../img/bgseq/1.jpg);
 }
 
+.clientLogo {
+  width: 14.285714285714285714285714285714%;
+  /*width: 25%;*/
+  height: auto;
+  background: #eee;
+  display: inline-block;
+  /*float: left;*/
+  white-space: nowrap;
+}
+
+.clientLogo img {
+  width: 100%;
+  height: auto;
+}
+
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
