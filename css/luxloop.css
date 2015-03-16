@@ -71,7 +71,6 @@ a:hover {text-decoration: underline;}
 .bigQuote {
   min-height: 50%;
   background: url(../blank.png);
-  background-position: center center !important;
   /*background-attachment: fixed !important;*/
   background-repeat: no-repeat !important;
   position: relative;
@@ -81,6 +80,10 @@ a:hover {text-decoration: underline;}
   background-size: cover !important;
   padding-top: 12em;
   padding-bottom: 12em;
+}
+
+.parallaxOff {
+  background-position: center 0px !important;
 }
 
 .bigQuote p {

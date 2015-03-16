@@ -2,6 +2,8 @@
 // GLOBAL VARS
 
 var isMobile = false;
+var parallaxOn = true;
+var numHallwayPics = 29;
 
 ////////////////////////
 // SETUP ON READY
@@ -13,6 +15,13 @@ $(document).ready(function() {
     $(".about .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 
     resizeClientLogos();
+
+    if (parallaxOn && !Modernizr.touch) {
+        // console.log("lax me!");
+        $(".parallaxPossible").each(function(){
+            $(this).removeClass("parallaxOff").addClass("parallaxOn").css("background-position","center " + 100 +"px");
+        });
+    };
 });
 
 ////////////////////////
@@ -26,9 +35,14 @@ $( window ).load(function() {
         $("body").addClass("isNotMobile");
     };
 
-    // $(".firstQuote").css("background","url(img/bgseq/20.jpg)")
     if (!isMobile) {
-        // $(".bigQuote").css("background-attachment","fixed !important");
+        var promises = [];
+        for (var i = 1; i <= numHallwayPics; i++) {
+            preloadHallway("img/bgseq/"+i+".jpg", promises[i] = $.Deferred());
+        }
+        $.when.apply($, promises).done(function() {
+            $(".hallway").addClass("moveHallway");
+        });
     };
 });
 
@@ -52,6 +66,12 @@ $( window ).resize(function() {
 });
 
 $(window).scroll(function(e) {
+    if ($("body").hasClass("isNotMobile")) {
+        //console.log($(window).scrollTop())
+        $(".parallaxPossible").each(function(){
+            parallaxIt($(this),$(window).scrollTop(),window.innerHeight);
+        })
+    };
 });
 
 
@@ -62,6 +82,47 @@ function resizeClientLogos(){
     var logoWidth = $(".logoHolder").width() / $(".clientLogo").length;
     // console.log(logoWidth);
     $(".clientLogo").css("width",Math.floor(logoWidth));
+}
+
+
+function preloadHallway(url, promise) {
+    var img = new Image();
+    img.onload = function() {
+      promise.resolve();
+    };
+    img.src = url;
+    // console.log(url);
+}
+
+function parallaxIt(section,scrollPos,winHeight){
+    // console.log("section top: " + section.offset().top + " | " + scrollPos);
+    var sectionBegin = section.offset().top - winHeight;
+    var sectionLength = section.outerHeight();
+    var sectionEnd = section.offset().top + sectionLength;
+    var scrollProportion = Math.abs(sectionBegin - scrollPos) / (winHeight);
+    if (scrollPos > sectionBegin && scrollPos < sectionEnd) {
+        var parallaxShift = 100 - (100*scrollProportion);
+        // console.log(scrollProportion);
+        if (section.hasClass("hallway")) {
+            scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
+        };
+        section.css("background-position","center " + parallaxShift +"px");
+    };
+}
+
+function scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight) {
+    var scrollProportion = Math.abs(sectionBegin - scrollPos) / (sectionLength + winHeight);
+    //console.log(scrollProportion);
+    var whichImg = scrollProportion * numHallwayPics;
+    if (Math.ceil(whichImg) <= 0) {
+        whichImg = 1;
+    } else if (Math.ceil(whichImg) > 0 && Math.ceil(whichImg) <= numHallwayPics){
+        whichImg = Math.ceil(whichImg);
+    } else {
+        whichImg = numHallwayPics;
+    }
+    // console.log(whichImg);
+    $(".hallway").css("background","url(img/bgseq/" + whichImg + ".jpg)")
 }
 
 
