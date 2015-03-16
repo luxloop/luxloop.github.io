@@ -107,6 +107,8 @@ function parallaxIt(section,scrollPos,winHeight){
             scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
         };
         section.css("background-position","center " + parallaxShift +"px");
+    } else {
+        section.removeAttr("style");
     };
 }
 
