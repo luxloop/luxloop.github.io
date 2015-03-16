@@ -5,6 +5,9 @@ var isMobile = false;
 var parallaxOn = true;
 var numHallwayPics = 29;
 
+
+//////////////////////////////////////// ADD Load/Resize function for parralax
+
 ////////////////////////
 // SETUP ON READY
 

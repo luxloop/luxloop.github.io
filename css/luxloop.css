@@ -3,7 +3,7 @@
 
 html, body {
   background: #1f1f1f;
-  font-family: "fira-sans", "Fira Sans", "arial", sans-serif;
+  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
   /*font-family: "camingodos-web", "arial", sans-serif;*/
   font-weight: 300;
   font-size: 100%;
@@ -17,7 +17,7 @@ html, body {
 }
 
 a {color: #ffffff; text-decoration: none;}
-a:hover {text-decoration: underline;}
+a:hover {text-decoration: underline; color: #999;}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
@@ -130,7 +130,7 @@ h6 {
 }
 
 .luxButton  {
-  font-family: "fira-sans", "Fira Sans", "arial", sans-serif;
+  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
   min-width: 100px !important;
   font-size: 0.9em;
   font-weight: 300;
@@ -196,8 +196,13 @@ footer p {
 }
 
 .footer .input-group {
-  width: 70%;
-  margin-left: 30%;
+  width: 100%;
+  max-width: 275px;
+  margin-left: auto;
+}
+
+.socialIcon {
+  margin-right: 0.4em;
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
@@ -345,6 +350,10 @@ footer p {
 
   .bigQuote p {
     font-size: 5em;
+  }
+
+  .footer .input-group {
+    /*width: 70%;  */
   }
 
 }
