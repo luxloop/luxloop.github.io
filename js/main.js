@@ -152,11 +152,11 @@ function parallaxIt(section,scrollPos,winHeight){
 function scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight) {
     var scrollProportion = Math.abs(sectionBegin - scrollPos) / (sectionLength + winHeight);
     //console.log(scrollProportion);
-    var whichImg = scrollProportion * numHallwayPics;
-    if (Math.ceil(whichImg) <= 0) {
+    var value = scrollProportion * numHallwayPics;
+    if (Math.ceil(value) <= 0) {
         whichImg = 1;
-    } else if (Math.ceil(whichImg) > 0 && Math.ceil(whichImg) <= numHallwayPics){
-        whichImg = Math.ceil(whichImg);
+    } else if (Math.ceil(value) > 0 && Math.ceil(value) <= numHallwayPics){
+        whichImg = Math.ceil(value);
     } else {
         whichImg = numHallwayPics;
     }

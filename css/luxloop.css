@@ -346,9 +346,9 @@ footer p {
 #body-nav ul li a {
   display: block;
   text-decoration: none !important;
-  height: 2em;
-  line-height: 1.8em;
-  font-size: 1.8em;
+  height: 1.9em;
+  line-height: 2em;
+  font-size: 2em;
   color: #fff;
   opacity: 0;
   border: none;
@@ -364,10 +364,19 @@ footer p {
   transform: scale(0.3);
 }
 
+
+.no-touch #body-nav ul li a:hover {
+  /*background: #333;*/
+}
+
 #body-nav ul li a.menuIcon {
   /*display: block;*/
   display: inline-block;
   margin: 0em 0.2em;
+}
+
+.no-touch #body-nav ul li a.menuIcon:hover {
+  background: none !important;
 }
 
 .no-touch #body-nav ul li a:hover {
@@ -432,7 +441,6 @@ footer p {
     font-size: 4em;
   }
 
-  
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -455,9 +463,19 @@ footer p {
   }
 
   #body-nav ul li a {
+    height: 2em;
+    line-height: 1.8em;
+    font-size: 1.8em;
+  }
+
+  .bigQuote p {
+    padding: 0em 1.5em;
+  }
+
+  #body-nav ul li a {
     height: 2.5em;
-    line-height: 2em;
-    font-size: 2em;
+    line-height: 2.5em;
+    font-size: 2.5em;
   }
 
 }
@@ -470,12 +488,6 @@ footer p {
   }
   .bigLogo {
     width: 30%;
-  }
-
-  #body-nav ul li a {
-    height: 2.5em;
-    line-height: 2.5em;
-    font-size: 2.5em;
   }
 
 }
@@ -500,7 +512,7 @@ footer p {
   }
 
   #body-nav ul li a {
-    height: 2.5em;
+    height: 2.8em;
     line-height: 3em;
     font-size: 3em;
   }
