@@ -209,6 +209,21 @@ footer p {
   height: 110%;
   width: auto;
 }
+
+#preloadCache {
+  position: absolute;
+  top: 0%;
+  right: 100%;
+  width: 1px;
+  height: 1px;
+  background: red;
+  z-index: 0;
+}
+
+#preloadCache img{
+  width: 1px !important;
+  height: 1px !important;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -415,6 +430,107 @@ footer p {
   -moz-transition-delay: 0.075s;
   -o-transition-delay: 0.075s;
   transition-delay: 0.075s;
+}
+
+
+/* menu icon */
+
+.menuLines {
+  background-color: rgba(0,0,0,1);
+  display: block;
+  position: fixed;
+  top: 6px;
+  right: 4px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+  z-index: 10;
+  /*transform: scale(0.5,0.5);*/
+}
+
+.menuLines:focus {
+  outline: none;
+}
+
+.menuLines span {
+  -webkit-transition: background 0 0.3s;
+          transition: background 0 0.3s;
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  background: white;
+}
+
+.menuLines span::before,
+.menuLines span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
+}
+
+.menuLines span::before {
+  top: -10px;
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.menuLines span::after {
+  bottom: -10px;
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.menuLines.active {
+  background-color: rgba(0,0,0,0);
+}
+
+.menuLines.active span {
+  background: none;
+}
+
+.menuLines.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menuLines.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menuLines.active span::before,
+.menuLines.active span::after {
+  -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */

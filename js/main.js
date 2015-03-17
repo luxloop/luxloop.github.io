@@ -44,6 +44,7 @@ $( window ).load(function() {
             preloadHallway("img/bgseq/"+i+".jpg", promises[i] = $.Deferred());
         }
         $.when.apply($, promises).done(function() {
+            console.log("preloaded");    
             $(".hallway").addClass("moveHallway");
         });
     };
@@ -80,34 +81,23 @@ $(window).scroll(function(e) {
     };
 });
 
-$('.toggle-nav').click(function() {
-    if ($('body').hasClass('show-nav')) {
-        $('body').removeClass('show-nav').addClass('hide-nav');
-
-        setTimeout(function() {
-            $('body').removeClass('hide-nav');
-        }, 500);
-
-    } else {
-        $('body').removeClass('hide-nav').addClass('show-nav');
-    }
-
-    return false;
+$(".menuLines").click(function(e){
+    e.preventDefault();
+    $(this).toggleClass("active");
+    toggleFullScreenMenu();
 });
 
 $(document).keyup(function(e) {
     if (e.keyCode == 27) {
         if ($('body').hasClass('show-nav')) {
             $('body').removeClass('show-nav').addClass('hide-nav');
+            $(".menuLines").removeClass("active");
 
             setTimeout(function() {
                 $('body').removeClass('hide-nav');
             }, 500);
 
-        } else {
-            $('body').removeClass('hide-nav').addClass('show-nav');
         }
-
     }
 });
 
@@ -128,6 +118,7 @@ function preloadHallway(url, promise) {
       promise.resolve();
     };
     img.src = url;
+    $("#preloadCache").append('<img src="' + img.src + '">')
     // console.log(url);
 }
 
@@ -161,7 +152,20 @@ function scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight
         whichImg = numHallwayPics;
     }
     // console.log(whichImg);
-    $(".hallway").css("background","url(img/bgseq/" + whichImg + ".jpg)")
+    $(".moveHallway").css("background","url(img/bgseq/" + whichImg + ".jpg)")
+}
+
+function toggleFullScreenMenu() {
+    if ($('body').hasClass('show-nav')) {
+        $('body').removeClass('show-nav').addClass('hide-nav');
+
+        setTimeout(function() {
+            $('body').removeClass('hide-nav');
+        }, 500);
+
+    } else {
+        $('body').removeClass('hide-nav').addClass('show-nav');
+    }
 }
 
 
