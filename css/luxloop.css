@@ -252,6 +252,38 @@ footer p {
   border-color: initial !important;
 }
 
+#mc_embed_signup input {
+  border-radius: 0px;
+  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
+}
+
+#mc_embed_signup input.button {
+  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
+  font-weight: 300;
+  background: #666;
+  text-shadow: none;
+  color: white;
+}
+
+#mc_embed_signup input.button:hover {
+  color: #ddd;
+  background: #444;
+}
+
+
+.pageTitle {
+  /*min-height: 15%;*/
+  /*background: #1f1f1f;*/
+  background: #000;
+  padding: 2em 0em;
+}
+
+.titleLogoSvg {
+  height: 3.5em;
+  width: auto;
+  margin-bottom: 1em;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -344,6 +376,10 @@ footer p {
           filter: grayscale(100%);
 }
 
+.no-touch .project:hover {
+  cursor: pointer;
+}
+
 .project a {
   font-size: 2em;
   font-weight: 500;
@@ -379,12 +415,34 @@ footer p {
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * About Page Styles * * * * * * * */
+
+#coverHalf {
+  min-height: 50%;
+  margin: 0px !important;
+}
+
+#coverHalf .bigLogo {
+  display: block;
+  position: absolute;
+  /*top: 25%;*/
+}
+
+.teamPicture {
+  background: url(../img/team.jpg);
+}
+
+.aboutPage p {
+  font-size: 0.9em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * Full Screen Nav Styles  * * * * * * */
 
 #body-nav {
   position: fixed;
   overflow: scroll;
-  top: 0;
+  top: 0px;
   background: transparent;
   text-align: left;
   display: block;
@@ -430,13 +488,13 @@ footer p {
   padding: 0em;
   left: 0%;
   width: 100%;
-  top: 50%;
+  top: 10%;
   list-style-type: none;
-  -webkit-transform: translateY(-50%);
+  /*-webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateX(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%);*/
 }
 
 #body-nav ul li a {
@@ -521,7 +579,7 @@ footer p {
   display: block;
   position: fixed;
   top: 6px;
-  right: 4px;
+  right: 6px;
   overflow: hidden;
   margin: 0;
   padding: 0;

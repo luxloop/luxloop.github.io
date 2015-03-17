@@ -12,7 +12,17 @@ var numHallwayPics = 29;
 // SETUP ON READY
 
 $(document).ready(function() {
-    $("#cover").backstretch("img/cover2.jpg");
+    var coverSrc = $("#cover").attr("data-bg");
+    if (coverSrc != undefined) {
+        // console.log(coverSrc);
+        $("#cover").backstretch(coverSrc);
+    };
+
+    coverSrc = $("#coverHalf").attr("data-bg");
+    if (coverSrc != undefined) {
+        // console.log(coverSrc);
+        $("#coverHalf").backstretch(coverSrc);
+    };
 
     if ($("body").hasClass("projPage")) {
         $(".project").each(function(){
@@ -21,8 +31,8 @@ $(document).ready(function() {
         });
     };
 
-    var buttWidth = $(".about .row:nth-of-type(2) a").eq(1).outerWidth();
-    $(".about .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
+    var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
+    $(".resizeButtons .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 
     resizeClientLogos();
 
@@ -51,7 +61,7 @@ $( window ).load(function() {
             preloadHallway("img/bgseq/"+i+".jpg", promises[i] = $.Deferred());
         }
         $.when.apply($, promises).done(function() {
-            console.log("preloaded");    
+            // console.log("preloaded");    
             $(".hallway").addClass("moveHallway");
         });
     };
@@ -94,6 +104,11 @@ $(".menuLines").click(function(e){
     toggleFullScreenMenu();
 });
 
+$("#body-nav").click(function(e){
+    $(".menuLines").removeClass("active");
+    toggleFullScreenMenu();
+});
+
 $(document).keyup(function(e) {
     if (e.keyCode == 27) {
         if ($('body').hasClass('show-nav')) {
@@ -106,6 +121,12 @@ $(document).keyup(function(e) {
 
         }
     }
+});
+
+$(".project").click(function(e){
+    var dest = $("a", this).attr("href");
+    console.log(dest);
+    //document.location.href = whereTo;
 });
 
 
