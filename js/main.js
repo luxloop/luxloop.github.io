@@ -12,7 +12,7 @@ var numHallwayPics = 29;
 // SETUP ON READY
 
 $(document).ready(function() {
-    $("#cover").backstretch("img/cover.jpg");
+    $("#cover").backstretch("img/cover2.jpg");
 
     if ($("body").hasClass("projPage")) {
         $(".project").each(function(){
