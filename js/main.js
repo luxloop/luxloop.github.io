@@ -14,6 +14,13 @@ var numHallwayPics = 29;
 $(document).ready(function() {
     $("#cover").backstretch("img/cover.jpg");
 
+    if ($("body").hasClass("projPage")) {
+        $(".project").each(function(){
+            var imgSrc = $(this).attr("data-bg");
+            $(this).backstretch(imgSrc);
+        });
+    };
+
     var buttWidth = $(".about .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".about .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 
