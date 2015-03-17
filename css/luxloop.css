@@ -195,6 +195,10 @@ footer p {
   font-size: 0.9em !important;
 }
 
+.footer form {
+  width: 100%;
+}
+
 .footer .input-group {
   width: 100%;
   max-width: 275px;
@@ -224,6 +228,28 @@ footer p {
   width: 1px !important;
   height: 1px !important;
 }
+
+.browserupgrade {
+  display: block;
+  min-height: 50px;
+  padding-top: 15px;
+  margin-bottom: 0em;
+  text-align: center;
+  z-index: 20;
+  background: #FF9900;
+}
+
+#mce-responses {
+  font-size: 0.85em;
+  padding-top: 2em;
+}
+
+#mc_embed_signup input.mce_inline_error {
+  background: #9E4F4F;
+  color: white;
+  border-color: initial !important;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -295,6 +321,27 @@ footer p {
 .clientLogo img {
   width: 100%;
   height: auto;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * Project Page Styles * * * * * * * */
+
+.project {
+  margin: 0px !important;
+  min-height: 25%;
+  background: url(../blank.png);
+  background-repeat: no-repeat !important;
+  position: relative;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+.projPage #eyes {
+  background: url(../blank.png);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
@@ -436,7 +483,7 @@ footer p {
 /* menu icon */
 
 .menuLines {
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.75);
   display: block;
   position: fixed;
   top: 6px;
