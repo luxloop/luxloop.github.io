@@ -129,6 +129,17 @@ $(".project").click(function(e){
     //document.location.href = whereTo;
 });
 
+$(".samePageLink").click(function(e){
+    e.preventDefault();
+    var dest = $(this).attr("href");
+    var target;
+    target = Math.floor($(dest).offset().top);
+    var speed = Math.floor((target - $(window).scrollTop())/3);
+    $("body").animate({
+        scrollTop: target
+    }, Math.abs(speed));
+});
+
 
 ////////////////////////
 // CUSTOM FUNCTIONS

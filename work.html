@@ -37,7 +37,7 @@
             <li><a href="about.html">About</a></li> 
             <li><a href="work.html">Work</a></li>
             <li><a href="http://luxloop.tumblr.com">News</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="samePageLink">Contact</a></li>
             <li class="iconsRow">
               <a href="http://instagram.com/luxloop" target="_blank" class="menuIcon"><span class="fa fa-instagram"></span></a>
               <a href="http://luxloop.tumblr.com" target="_blank" class="menuIcon"><span class="fa fa-tumblr-square"></span></a>
@@ -192,70 +192,75 @@
 
     <!-- Footer -->
     <footer id="contact">
-    <div class="container info footer">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
-          <h6>GET IN TOUCH</h6>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
+      <div class="jumbotron">
+        <div class="container info footer">
           <div class="row">
-            <div class="col-md-4">
-              <p>
-                Have a problem?<br />
-                We’ve got a creative way to fix it!
-              </p>
-              <p>
-                Or just say hi. We’re always looking for new collaborators, projects, and connections.
-              </p>
-              <p>
-                <a href="mailto:hello@luxloop.com">hello@luxloop.com</a><br />
-                646.484.8306 (NY)<br />
-                310.384.6382 (LA)
-              </p>
-              <p>
-                <a href="http://instagram.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-instagram fa-2x"></span></a>
-                <a href="http://luxloop.tumblr.com" target="_blank" class="socialIcon"><span class="fa fa-tumblr-square fa-2x"></span></a>
-                <a href="http://twitter.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-twitter-square fa-2x"></span></a>
-              </p>
+            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
+              <h6>GET IN TOUCH</h6>
             </div>
+          </div>
 
-            <div class="col-md-4 text-right">
-            </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
+              <div class="row">
+                <div class="col-md-4">
+                  <p>
+                    Have a problem?<br />
+                    We’ve got a creative way to fix it!
+                  </p>
+                  <p>
+                    Or just say hi. We’re always looking for new collaborators, projects, and connections.
+                  </p>
+                  <p>
+                    <!-- New way to encode contact info. Make sure to include encode.js -Ivaylo -->
+                    <script type="text/javascript">
+                        var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.839.1837 (YN)<oe /><oe /></c>';
+                        document.write(rot13rot5Encode(noRobots));
+                        //console.log(rot13rot5Encode(noRobots));
+                    </script>
+                  </p>
+                  <p>
+                    <a href="http://instagram.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-instagram fa-2x"></span></a>
+                    <a href="http://luxloop.tumblr.com" target="_blank" class="socialIcon"><span class="fa fa-tumblr-square fa-2x"></span></a>
+                    <a href="http://twitter.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-twitter-square fa-2x"></span></a>
+                  </p>
+                </div>
 
-            <div class="col-md-4 text-right">
-              <p>
-                We send out email announcements any time we have a public installation, or every once in a while when we feel like sharing.
-              </p>
-              <p>
-                We won't spam you - we promise.
-              </p>
-              <div id="mc_embed_signup">
-                <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-horizontal" target="_blank" novalidate>
+                <div class="col-md-4 text-right">
+                </div>
 
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
+                <div class="col-md-4 text-right">
+                  <p>
+                    We send out email announcements any time we have a public installation, or every once in a while when we feel like sharing.
+                  </p>
+                  <p>
+                    We won't spam you - we promise.
+                  </p>
+                  <div id="mc_embed_signup">
+                    <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-horizontal" target="_blank" novalidate>
 
-                  <div class="input-group input-group-sm">
-                    <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="Want to receive updates?">
-                    <span class="input-group-btn">
-                      <!-- <button class="btn btn-default" type="button">Sign Up!</button> -->
-                      <input type="submit" value="Sign Up!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default">
-                    </span>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
+
+                      <div class="input-group input-group-sm">
+                        <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="Want to receive updates?">
+                        <span class="input-group-btn">
+                          <!-- <button class="btn btn-default" type="button">Sign Up!</button> -->
+                          <input type="submit" value="Sign Up!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default">
+                        </span>
+                      </div>
+                    </form>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div> 
                   </div>
-                </form>
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </footer>
 
     <div id="preloadCache">
