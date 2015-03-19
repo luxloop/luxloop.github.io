@@ -346,8 +346,8 @@ footer p {
 }
 
 .bigTitle {
-  padding-top: 12em;
-  padding-bottom: 12em;
+  padding-top: 8em;
+  padding-bottom: 6em;
 }
 
 .bigTitle .row {
@@ -544,7 +544,7 @@ footer p {
 
 #body-nav {
   position: fixed;
-  overflow: scroll;
+  overflow: hidden;
   top: 0px;
   background: transparent;
   text-align: left;
@@ -680,7 +680,7 @@ footer p {
 /* menu icon */
 
 .menuLines {
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.5);
   display: block;
   position: fixed;
   top: 10px;
@@ -702,6 +702,9 @@ footer p {
   -webkit-transition: background 0.3s;
           transition: background 0.3s;
   z-index: 10;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
   /*transform: scale(0.5,0.5);*/
 }
 

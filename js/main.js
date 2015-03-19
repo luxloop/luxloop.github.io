@@ -5,6 +5,11 @@ var isMobile = false;
 var parallaxOn = true;
 var numHallwayPics = 29;
 
+/*
+ * TO DO:
+ * redo parallax behavior
+ * resize menu for short windows
+ */
 
 //////////////////////////////////////// ADD Load/Resize function for parralax
 
@@ -13,18 +18,37 @@ var numHallwayPics = 29;
 
 $(document).ready(function() {
     $(".hasFullBg").each(function(){
-        var coverSrc = $(this).attr("data-bg");
+        var cover = $(this);
+        var coverSrc = cover.attr("data-bg");
         if (coverSrc != undefined) {
             // console.log(coverSrc);
-            $(this).backstretch(coverSrc);
+            var img = new Image();
+            img.onload = function() {
+              // console.log("loaded!");
+              cover.backstretch(coverSrc);
+            };
+            img.onerror = function() {
+              //console.log("problem!");
+            };
+            img.src = coverSrc;
+            // cover.backstretch(coverSrc);
         };
     });
 
     $(".hasGifBg").each(function(){
-        var coverSrc = $(this).attr("data-gif");
-        if (coverSrc != undefined) {
+        var coverGif = $(this);
+        var coverGifSrc = coverGif.attr("data-gif");
+        if (coverGifSrc != undefined) {
             // console.log(coverSrc);
-            $(this).backstretch(coverSrc);
+            var img = new Image();
+            img.onload = function() {
+              // console.log("loaded!");
+              coverGif.backstretch(coverGifSrc);
+            };
+            img.onerror = function() {
+              //console.log("problem!");
+            };
+            img.src = coverGifSrc;
         };
     });
 
