@@ -287,10 +287,11 @@ footer p {
 }
 
 .titleLogoSvg {
-  height: 2em;
+  height: 6em;
   width: auto;
   /*margin-bottom: 1em;*/
-  margin-top: 0.5em;
+  /*margin-top: 0.5em;*/
+  margin: 1em 0em;
 
 }
 
