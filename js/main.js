@@ -24,13 +24,16 @@ $(document).ready(function() {
         $(".vidHolder").fitVids();  
     };
 
-    $('.carousel').carousel();
+    $(".carousel").carousel({
+      interval: 4000
+    })
     
 
     var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".resizeButtons .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 
     resizeClientLogos();
+
 
     if (parallaxOn && !Modernizr.touch) {
         // console.log("lax me!");
@@ -50,6 +53,8 @@ $( window ).load(function() {
     } else {
         $("body").addClass("isNotMobile");
     };
+
+    resizeCarousel();
 
     if (!isMobile) {
         var promises = [];
@@ -76,6 +81,7 @@ $(".downArrow").hover(
 on_resize(function() {
     //Throttled on-resize handler
     resizeClientLogos();
+    resizeCarousel();
 })();
 
 $( window ).resize(function() {
@@ -202,6 +208,28 @@ function toggleFullScreenMenu() {
         $('body').removeClass('hide-nav').addClass('show-nav');
     }
 }
+
+function resizeCarousel(){
+    var maxHeight = 800;
+    $(".carousel-inner div").each(function(){
+        var thisHeight = $(this).height();
+        // console.log($(this).height());
+        if (thisHeight < maxHeight) {
+            maxHeight = thisHeight;
+        };
+    });
+
+    $(".carousel-inner").css("max-height",maxHeight + "px");
+
+    $(".carousel-inner div").each(function(){
+        var thisHeight = $(this).height();
+        if (thisHeight > maxHeight) {
+            var offset = -1 * Math.floor((thisHeight - maxHeight)/2);
+            $(this).css("top",offset + "px");
+            //console.log("set: " + offset);
+        };
+    });
+ };
 
 // function projectSizer() {
 //     //var ratio = 16/9;
