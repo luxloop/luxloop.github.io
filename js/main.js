@@ -25,32 +25,34 @@ $(document).ready(function() {
             var img = new Image();
             img.onload = function() {
               // console.log("loaded!");
-              cover.backstretch(coverSrc);
+              cover.backstretch(coverSrc, {fade: 3000});
+              gifBg(cover);
             };
             img.onerror = function() {
               //console.log("problem!");
+              gifBg(cover);
             };
             img.src = coverSrc;
             // cover.backstretch(coverSrc);
         };
     });
 
-    $(".hasGifBg").each(function(){
-        var coverGif = $(this);
-        var coverGifSrc = coverGif.attr("data-gif");
-        if (coverGifSrc != undefined) {
-            // console.log(coverSrc);
-            var img = new Image();
-            img.onload = function() {
-              // console.log("loaded!");
-              coverGif.backstretch(coverGifSrc);
-            };
-            img.onerror = function() {
-              //console.log("problem!");
-            };
-            img.src = coverGifSrc;
-        };
-    });
+    // $(".hasGifBg").each(function(){
+    //     var coverGif = $(this);
+    //     var coverGifSrc = coverGif.attr("data-gif");
+    //     if (coverGifSrc != undefined) {
+    //         // console.log(coverSrc);
+    //         var img = new Image();
+    //         img.onload = function() {
+    //           // console.log("loaded!");
+    //           coverGif.backstretch(coverGifSrc, {fade: 3000});
+    //         };
+    //         img.onerror = function() {
+    //           //console.log("problem!");
+    //         };
+    //         img.src = coverGifSrc;
+    //     };
+    // });
 
 
     projectTitle();
@@ -275,6 +277,22 @@ function resizeCarousel(){
     var pos = $(window).innerHeight()/3;
     $(".bigTitle").css("padding-top",pos);
  }
+
+ function gifBg(element){
+    var coverGifSrc = element.attr("data-gif");
+    if (coverGifSrc != undefined) {
+        // console.log(coverSrc);
+        var img = new Image();
+        img.onload = function() {
+          // console.log("loaded!");
+          element.backstretch(coverGifSrc, {fade: 3000});
+        };
+        img.onerror = function() {
+          //console.log("problem!");
+        };
+        img.src = coverGifSrc;
+    }
+};
 
 // function projectSizer() {
 //     //var ratio = 16/9;
