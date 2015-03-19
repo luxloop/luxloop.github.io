@@ -12,25 +12,6 @@ var numHallwayPics = 29;
 // SETUP ON READY
 
 $(document).ready(function() {
-    // var coverSrc = $("#cover").attr("data-bg");
-    // if (coverSrc != undefined) {
-    //     // console.log(coverSrc);
-    //     $("#cover").backstretch(coverSrc);
-    // };
-
-    // coverSrc = $("#coverHalf").attr("data-bg");
-    // if (coverSrc != undefined) {
-    //     // console.log(coverSrc);
-    //     $("#coverHalf").backstretch(coverSrc);
-    // };
-
-    // if ($("body").hasClass("projPage")) {
-    //     $(".project").each(function(){
-    //         var imgSrc = $(this).attr("data-bg");
-    //         $(this).backstretch(imgSrc);
-    //     });
-    // };
-
     $(".hasFullBg").each(function(){
         var coverSrc = $(this).attr("data-bg");
         if (coverSrc != undefined) {
@@ -39,7 +20,9 @@ $(document).ready(function() {
         };
     });
 
-    $(".vidHolder").fitVids();
+    if ($(".vidHolder").length) {
+        $(".vidHolder").fitVids();  
+    };
 
     $('.carousel').carousel();
     
