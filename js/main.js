@@ -20,6 +20,14 @@ $(document).ready(function() {
         };
     });
 
+    $(".hasGifBg").each(function(){
+        var coverSrc = $(this).attr("data-gif");
+        if (coverSrc != undefined) {
+            // console.log(coverSrc);
+            $(this).backstretch(coverSrc);
+        };
+    });
+
 
     projectTitle();
 
@@ -30,6 +38,8 @@ $(document).ready(function() {
     $(".carousel").carousel({
       interval: 4000
     })
+
+    $('[data-toggle="tooltip"]').tooltip();
     
 
     var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
@@ -111,8 +121,10 @@ $(".menuLines").click(function(e){
 });
 
 $("#body-nav").click(function(e){
+    if ($(".menuLines").hasClass("active")) {
+        toggleFullScreenMenu();
+    };
     $(".menuLines").removeClass("active");
-    toggleFullScreenMenu();
 });
 
 $(document).keyup(function(e) {
