@@ -292,21 +292,15 @@ footer p {
   /*margin-bottom: 1em;*/
   /*margin-top: 0.5em;*/
   margin: 1em 0em;
+  padding-left: 0.5%;
+}
 
+#workTitle p {
+  font-size: 2em;
 }
 
 .vidHolder {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  /*background: red;*/
-  padding: 0em;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 6;
+  margin-bottom: 4em;
 }
 
 .carousel-inner {
@@ -343,6 +337,33 @@ footer p {
   left: 50%;
   margin-left: -10px;
 }
+
+.bigTitle {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+.bigTitle .row {
+  z-index: 5;
+}
+
+.bigTitle p {
+  font-size: 4em;
+  font-weight: 500;
+}
+
+.bigTitle .emphasis {
+  border-bottom: solid red 3px;
+}
+
+.projectLogo {
+  padding-top: 2em;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
@@ -479,6 +500,11 @@ footer p {
 .no-touch.opacity .project:hover .imgOverlay {
   opacity: 0.8;
 }
+
+
+
+
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * About Page Styles * * * * * * * */
@@ -746,7 +772,7 @@ footer p {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .container, .vidHolder {
+  .container {
     width: 90%;
   }
 
@@ -758,7 +784,7 @@ footer p {
     width: 55%;
   }
 
-  .bigQuote p {
+  .bigQuote p, .bigTitle p {
     font-size: 4em;
   }
 
@@ -774,6 +800,10 @@ footer p {
   }
   .carousel-control .fa-angle-left {
     margin-left: -50px;
+  }
+
+  .projectLogo {
+    width: 30%;
   }
 
 }
@@ -803,7 +833,7 @@ footer p {
     font-size: 1.8em;
   }
 
-  .bigQuote p {
+  .bigQuote p, .bigTitle p {
     padding: 0em 1.5em;
   }
 
@@ -817,7 +847,7 @@ footer p {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .container, .vidHolder {
+  .container {
     width: 80%;
     /*max-width: 1100px;*/
   }
@@ -829,11 +859,15 @@ footer p {
     font-size: 3em;
   }
 
+  .projectLogo {
+    width: 25%;
+  }
+
 }
 
 /* HD devices (very large desktops and TVs, 1920px and up) */
 @media (min-width: 1920px) {
-  .container, .vidHolder {
+  .container {
     width: 70%;
     max-width: 1600px;
   }
@@ -842,7 +876,7 @@ footer p {
     width: 25%;
   }
 
-  .bigQuote p {
+  .bigQuote p, .bigTitle p {
     font-size: 5em;
   }
 
@@ -858,6 +892,10 @@ footer p {
 
   .project {
     min-height: 30%;
+  }
+
+  .projectLogo {
+    width: 20%;
   }
 
 }

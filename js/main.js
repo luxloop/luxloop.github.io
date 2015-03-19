@@ -20,6 +20,9 @@ $(document).ready(function() {
         };
     });
 
+
+    projectTitle();
+
     if ($(".vidHolder").length) {
         $(".vidHolder").fitVids();  
     };
@@ -81,6 +84,7 @@ $(".downArrow").hover(
 on_resize(function() {
     //Throttled on-resize handler
     resizeClientLogos();
+    projectTitle();
     resizeCarousel();
 })();
 
@@ -230,6 +234,11 @@ function resizeCarousel(){
         };
     });
  };
+
+ function projectTitle() {
+    var pos = $(window).innerHeight()/3;
+    $(".bigTitle").css("padding-top",pos);
+ }
 
 // function projectSizer() {
 //     //var ratio = 16/9;
