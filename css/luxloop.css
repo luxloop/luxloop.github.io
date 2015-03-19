@@ -279,13 +279,16 @@ footer p {
   /*min-height: 15%;*/
   /*background: #1f1f1f;*/
   background: #000;
-  padding: 2em 0em;
+  padding: 0em 0em;
+  padding-top: 0.5em;
 }
 
 .titleLogoSvg {
-  height: 3.5em;
+  height: 2em;
   width: auto;
-  margin-bottom: 1em;
+  /*margin-bottom: 1em;*/
+  margin-top: 0.5em;
+
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
@@ -782,7 +785,7 @@ footer p {
 
   .project {
     min-height: 30%;
-}
+  }
 
 }
 
