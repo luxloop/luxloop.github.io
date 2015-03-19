@@ -12,24 +12,37 @@ var numHallwayPics = 29;
 // SETUP ON READY
 
 $(document).ready(function() {
-    var coverSrc = $("#cover").attr("data-bg");
-    if (coverSrc != undefined) {
-        // console.log(coverSrc);
-        $("#cover").backstretch(coverSrc);
-    };
+    // var coverSrc = $("#cover").attr("data-bg");
+    // if (coverSrc != undefined) {
+    //     // console.log(coverSrc);
+    //     $("#cover").backstretch(coverSrc);
+    // };
 
-    coverSrc = $("#coverHalf").attr("data-bg");
-    if (coverSrc != undefined) {
-        // console.log(coverSrc);
-        $("#coverHalf").backstretch(coverSrc);
-    };
+    // coverSrc = $("#coverHalf").attr("data-bg");
+    // if (coverSrc != undefined) {
+    //     // console.log(coverSrc);
+    //     $("#coverHalf").backstretch(coverSrc);
+    // };
 
-    if ($("body").hasClass("projPage")) {
-        $(".project").each(function(){
-            var imgSrc = $(this).attr("data-bg");
-            $(this).backstretch(imgSrc);
-        });
-    };
+    // if ($("body").hasClass("projPage")) {
+    //     $(".project").each(function(){
+    //         var imgSrc = $(this).attr("data-bg");
+    //         $(this).backstretch(imgSrc);
+    //     });
+    // };
+
+    $(".hasFullBg").each(function(){
+        var coverSrc = $(this).attr("data-bg");
+        if (coverSrc != undefined) {
+            // console.log(coverSrc);
+            $(this).backstretch(coverSrc);
+        };
+    });
+
+    $(".vidHolder").fitVids();
+
+    $('.carousel').carousel();
+    
 
     var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".resizeButtons .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
@@ -206,6 +219,35 @@ function toggleFullScreenMenu() {
         $('body').removeClass('hide-nav').addClass('show-nav');
     }
 }
+
+// function projectSizer() {
+//     //var ratio = 16/9;
+//     var maxWidth = 1280;
+//     if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
+//     var margin = $("#projectMenuBar").height();
+//     var elemHeight = $(window).height() - margin - (margin * 1.25);
+    
+
+//     $(".vidBox").each(function(){
+//         var ratio = 16/9;
+//         var elemWidth = elemHeight * ratio;
+//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
+//         $(this).css({
+//             "padding-top" : (margin * 1.25) + "px",
+//             "width" : elemWidth + "px"
+//         });
+//     });
+
+//     $(".imgBox").each(function(){
+//         var ratio = $(this).width()/$(this).height();
+//         var elemWidth = elemHeight * ratio;
+//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
+//         $(this).css({
+//             "padding-top" : (margin * 1.25) + "px",
+//             "width" : elemWidth + "px"
+//         });
+//     });
+// }
 
 
 ////////////////////////
