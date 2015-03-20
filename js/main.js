@@ -9,35 +9,36 @@ var numHallwayPics = 29;
  * TO DO:
  * redo parallax behavior
  * write custom mailchimp API call
+ * Add load/resize function for parralax
  */
 
-//////////////////////////////////////// ADD Load/Resize function for parralax
+//////////////////////////////////////// 
 
 ////////////////////////
 // SETUP ON READY
 
 $(document).ready(function() {
+
+    // Build backgrounds
+
     $(".hasFullBg").each(function(){
         var cover = $(this);
         var coverSrc = cover.attr("data-bg");
         if (coverSrc != undefined) {
-            // console.log(coverSrc);
             var img = new Image();
             img.onload = function() {
-              // console.log("loaded!");
               cover.backstretch(coverSrc, {fade: 3000});
               gifBg(cover);
             };
             img.onerror = function() {
-              //console.log("problem!");
               gifBg(cover);
             };
             img.src = coverSrc;
-            // cover.backstretch(coverSrc);
         };
     });
 
-    projectTitle();
+
+    // Initialize plugins
 
     if ($(".vidHolder").length) {
         $(".vidHolder").fitVids();  
@@ -50,39 +51,19 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
     
 
+    // resize and reposition things
+
     var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".resizeButtons .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
 
+    projectTitle();
     resizeClientLogos();
 
-
     if (parallaxOn && !Modernizr.touch) {
-        // console.log("lax me!");
         $(".parallaxPossible").each(function(){
             $(this).removeClass("parallaxOff").addClass("parallaxOn").css("background-position","center " + 100 +"px");
         });
     };
-
-    /*
-    $('.checkVisible').appear();
-    if (typeof $('.checkVisible').appear == "function" && $('.checkVisible').is(':appeared') == false) {
-        console.log("do stuff");
-        $('.checkVisible').each(function(){
-            $(this).addClass("faded");
-        });
-    };
-    
-    $(document.body).on('appear', '.checkVisible', function(e, $affected) {
-        // this code is executed for each appeared element
-        $(this).addClass("isVisible");
-        $(this).removeClass("faded");
-    });
-    $(document.body).on('disappear', '.checkVisible', function(e, $affected) {
-        // this code is executed for each disappeared element
-        // $(this).addClass("isNotVisible");
-    });
-    */
-
 });
 
 ////////////////////////
@@ -96,12 +77,11 @@ $( window ).load(function() {
         $("body").addClass("isNotMobile");
     };
 
-    resizeCarousel();
-    
-
     setTimeout(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
     }, 450);
+
+    resizeCarousel();
 
     if (!isMobile) {
         var promises = [];
@@ -112,12 +92,6 @@ $( window ).load(function() {
             // console.log("preloaded");    
             $(".hallway").addClass("moveHallway");
         });
-
-        // if ($(".projNavArrow").length) {
-        //     $.get("work.html",function(workData) {
-        //         // my_var contains whatever that request returned
-        //     }, 'html');
-        // };
     };
 });
 
@@ -132,31 +106,9 @@ $(".navArrow").hover(
   }
 );
 
-// $(".downArrow").hover(
-//   function() {
-//     $(".downArrow .pointer").addClass("hidden");
-//     $(".downArrow .scrollText").removeClass("hidden");
-//   }, function() {
-//     $(".downArrow .scrollText").addClass("hidden");
-//     $(".downArrow .pointer").removeClass("hidden");
-//   }
-// );
 
-// $(".projNavArrow").hover(
-//   function() {
-//     $("a", this).addClass("hidden");
-//     $(".scrollText", this).removeClass("hidden");
-//   }, function() {
-//     $(".scrollText", this).addClass("hidden");
-//     $("a", this).removeClass("hidden");
-//   }
-// ).click(function(e){
-//     document.location.href = $("a", this).attr("href");
-//     // alert($("a", this).attr("href"));
-// });
-
+//Throttled on-resize handler
 on_resize(function() {
-    //Throttled on-resize handler
     resizeClientLogos();
     projectTitle();
     resizeCarousel();
@@ -165,15 +117,13 @@ on_resize(function() {
     }, 450);
 })();
 
+//Normal on-resize handler
 $( window ).resize(function() {
-    //Normal on-resize handler
 });
 
 $(window).scroll(function(e) {
     if ($("body").hasClass("isNotMobile")) {
         var scrollTop = $(window).scrollTop();
-        
-        //console.log($(window).scrollTop())
         
         $(".parallaxPossible").each(function(){
             parallaxIt($(this),scrollTop,window.innerHeight);
@@ -199,18 +149,15 @@ $(document).keyup(function(e) {
         if ($('body').hasClass('show-nav')) {
             $('body').removeClass('show-nav').addClass('hide-nav');
             $(".menuLines").removeClass("active");
-
             setTimeout(function() {
                 $('body').removeClass('hide-nav');
             }, 500);
-
         }
     }
 });
 
 $(".project").click(function(e){
     var dest = $("a", this).attr("href");
-    //console.log(dest);
     document.location.href = dest;
 });
 
@@ -225,12 +172,12 @@ $(".samePageLink").click(function(e){
     }, Math.abs(speed));
 });
 
+
 ////////////////////////
 // CUSTOM FUNCTIONS
 
 function resizeClientLogos(){
     var logoWidth = $(".logoHolder").width() / $(".clientLogo").length;
-    // console.log(logoWidth);
     $(".clientLogo").css("width",Math.floor(logoWidth));
 }
 
@@ -242,7 +189,6 @@ function preloadHallway(url, promise) {
     };
     img.src = url;
     $("#preloadCache").append('<img src="' + img.src + '">')
-    // console.log(url);
 }
 
 function parallaxIt(section,scrollPos,winHeight){
@@ -351,42 +297,7 @@ function resizeNavMenu(windowHeight,steps){
               resizeNavMenu(windowHeight,steps++);
         }, 150);
     }
-    // steps++;
-    // console.log(nav);
-
-    // if (step < 10 && nav > windowHeight) {  
-    //     resizeNavMenu(windowHeight,step);
-    // }
 }
-
-// function projectSizer() {
-//     //var ratio = 16/9;
-//     var maxWidth = 1280;
-//     if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
-//     var margin = $("#projectMenuBar").height();
-//     var elemHeight = $(window).height() - margin - (margin * 1.25);
-    
-
-//     $(".vidBox").each(function(){
-//         var ratio = 16/9;
-//         var elemWidth = elemHeight * ratio;
-//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
-//         $(this).css({
-//             "padding-top" : (margin * 1.25) + "px",
-//             "width" : elemWidth + "px"
-//         });
-//     });
-
-//     $(".imgBox").each(function(){
-//         var ratio = $(this).width()/$(this).height();
-//         var elemWidth = elemHeight * ratio;
-//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
-//         $(this).css({
-//             "padding-top" : (margin * 1.25) + "px",
-//             "width" : elemWidth + "px"
-//         });
-//     });
-// }
 
 
 ////////////////////////
@@ -434,3 +345,62 @@ if (window.mc !== undefined) {
     $mcj = jQuery.noConflict(true);
 };
 
+
+/////////////////////////////////////
+// Old/Unused/In-progress
+
+/*
+$('.checkVisible').appear();
+if (typeof $('.checkVisible').appear == "function" && $('.checkVisible').is(':appeared') == false) {
+    console.log("do stuff");
+    $('.checkVisible').each(function(){
+        $(this).addClass("faded");
+    });
+};
+
+$(document.body).on('appear', '.checkVisible', function(e, $affected) {
+    // this code is executed for each appeared element
+    $(this).addClass("isVisible");
+    $(this).removeClass("faded");
+});
+$(document.body).on('disappear', '.checkVisible', function(e, $affected) {
+    // this code is executed for each disappeared element
+    // $(this).addClass("isNotVisible");
+});
+*/
+
+// if ($(".projNavArrow").length) {
+//     $.get("work.html",function(workData) {
+//         // my_var contains whatever that request returned
+//     }, 'html');
+// };
+
+
+// function projectSizer() {
+//     //var ratio = 16/9;
+//     var maxWidth = 1280;
+//     if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
+//     var margin = $("#projectMenuBar").height();
+//     var elemHeight = $(window).height() - margin - (margin * 1.25);
+    
+
+//     $(".vidBox").each(function(){
+//         var ratio = 16/9;
+//         var elemWidth = elemHeight * ratio;
+//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
+//         $(this).css({
+//             "padding-top" : (margin * 1.25) + "px",
+//             "width" : elemWidth + "px"
+//         });
+//     });
+
+//     $(".imgBox").each(function(){
+//         var ratio = $(this).width()/$(this).height();
+//         var elemWidth = elemHeight * ratio;
+//         if (elemWidth > maxWidth) { elemWidth = maxWidth};
+//         $(this).css({
+//             "padding-top" : (margin * 1.25) + "px",
+//             "width" : elemWidth + "px"
+//         });
+//     });
+// }
