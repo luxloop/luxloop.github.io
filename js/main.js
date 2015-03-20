@@ -104,6 +104,12 @@ $( window ).load(function() {
             // console.log("preloaded");    
             $(".hallway").addClass("moveHallway");
         });
+
+        // if ($(".projNavArrow").length) {
+        //     $.get("work.html",function(workData) {
+        //         // my_var contains whatever that request returned
+        //     }, 'html');
+        // };
     };
 });
 
@@ -169,8 +175,8 @@ $(document).keyup(function(e) {
 
 $(".project").click(function(e){
     var dest = $("a", this).attr("href");
-    console.log(dest);
-    //document.location.href = whereTo;
+    //console.log(dest);
+    document.location.href = dest;
 });
 
 $(".samePageLink").click(function(e){

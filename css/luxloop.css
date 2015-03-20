@@ -401,6 +401,10 @@ footer p {
           transform: translateY(-50%);  
 }
 
+.backstretch {
+  height: 100% !important;
+}
+
 .downArrow {
   position: absolute;
   left: 50%;
@@ -537,6 +541,60 @@ footer p {
 
 .ampPicture {
   background: url(../projects/amplifiedself/thumb2.jpg);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * Work Page Styles * * * * * * * */
+
+.workInfo {
+  background: #000;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.workInfo div {
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+.projNavArrow {
+  position: absolute;
+  bottom: 0%;
+  /*width: 200px;
+  height: 30px;*/
+  /*-webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);  */
+  font-size: 3em;
+  color: black;
+  z-index: 5;
+  visibility: hidden;
+  display: none;
+}
+
+.isMobile .projNavArrow {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.projLeftArrow {
+  left: 5%;
+}
+
+.projRightArrow {
+  right: 5%;
+}
+
+.opacity.no-touch .projNavArrow {
+  opacity: 0.6;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.opacity.no-touch .projNavArrow:hover {
+  opacity: 1.0;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
@@ -826,6 +884,10 @@ footer p {
     width: 30%;
   }
 
+  .projNavArrow {
+    visibility: visible;
+    display: block;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
