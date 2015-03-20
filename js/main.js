@@ -130,6 +130,19 @@ $(".downArrow").hover(
   }
 );
 
+$(".projNavArrow").hover(
+  function() {
+    $("a", this).addClass("hidden");
+    $(".scrollText", this).removeClass("hidden");
+  }, function() {
+    $(".scrollText", this).addClass("hidden");
+    $("a", this).removeClass("hidden");
+  }
+).click(function(e){
+    document.location.href = $("a", this).attr("href");
+    // alert($("a", this).attr("href"));
+});
+
 on_resize(function() {
     //Throttled on-resize handler
     resizeClientLogos();
