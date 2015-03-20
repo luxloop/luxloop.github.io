@@ -53,10 +53,6 @@
     <div class="jumbotron hasFullBg hasGifBg bigTitle" id="cover" data-bg="projects/amplifiedself/thumb2.jpg" data-gif="projects/amplifiedself/gifSmall2.gif">
       <div class="container">
         <div class="imgOverlay" style="background: rgba(24,24,24,0.1)"></div>
-        <div class="downArrow text-center">
-          <span class="fa fa-angle-down pointer pointerWhite"></span>
-          <span class="scrollText hidden pointerWhite">Scroll Down</span>
-        </div>
         <div class="row text-center">
           <div class="col-xs-10 col-xs-offset-1">
             <p class="emphasis">
@@ -68,13 +64,26 @@
           </div>
         </div>
 
-        <div class="projLeftArrow projNavArrow">
-          <a href="eyes.html" class="projNavLink"><span class="fa fa-caret-left pointerWhite"></span></a>
-          <span class="scrollText hidden pointerWhite">Previous Project</span>
-        </div>
-        <div class="projRightArrow projNavArrow">
-          <a href="#" class="projNavLink"><span class="fa fa-caret-right pointerWhite"></span></a>
-          <span class="scrollText hidden pointerWhite">Next Project</span>
+        <div class="navArrows">
+          <div class="navArrow downArrow text-center">
+            <span class="fa fa-angle-down downArrowIcon pointerWhite"></span>
+            <span class="arrowText hidden pointerWhite">Scroll Down</span>
+          </div>
+
+
+          <a href="eyes.html" class="projNavLink">
+            <div class="navArrow leftArrow text-left">
+              <span class="fa fa-caret-left leftArrowIcon pointerWhite"></span></span>
+              <span class="arrowText hidden pointerWhite">Previous Project</span>
+            </div>
+          </a>
+
+          <a href="#" class="projNavLink">
+            <div class="navArrow rightArrow text-right">
+              <span class="fa fa-caret-right rightArrowIcon pointerWhite"></span></span>
+              <span class="arrowText hidden pointerWhite">Next Project</span>
+            </div>
+          </a>
         </div>
 
       </div>

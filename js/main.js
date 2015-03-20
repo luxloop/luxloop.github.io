@@ -8,6 +8,7 @@ var numHallwayPics = 29;
 /*
  * TO DO:
  * redo parallax behavior
+ * write custom mailchimp API call
  */
 
 //////////////////////////////////////// ADD Load/Resize function for parralax
@@ -120,28 +121,39 @@ $( window ).load(function() {
     };
 });
 
-$(".downArrow").hover(
+
+$(".navArrow").hover(
   function() {
-    $(".downArrow .pointer").addClass("hidden");
-    $(".downArrow .scrollText").removeClass("hidden");
+    $("span:nth-of-type(1)", this).addClass("hidden");
+    $("span:nth-of-type(2)", this).removeClass("hidden");
   }, function() {
-    $(".downArrow .scrollText").addClass("hidden");
-    $(".downArrow .pointer").removeClass("hidden");
+    $("span:nth-of-type(2)", this).addClass("hidden");
+    $("span:nth-of-type(1)", this).removeClass("hidden");
   }
 );
 
-$(".projNavArrow").hover(
-  function() {
-    $("a", this).addClass("hidden");
-    $(".scrollText", this).removeClass("hidden");
-  }, function() {
-    $(".scrollText", this).addClass("hidden");
-    $("a", this).removeClass("hidden");
-  }
-).click(function(e){
-    document.location.href = $("a", this).attr("href");
-    // alert($("a", this).attr("href"));
-});
+// $(".downArrow").hover(
+//   function() {
+//     $(".downArrow .pointer").addClass("hidden");
+//     $(".downArrow .scrollText").removeClass("hidden");
+//   }, function() {
+//     $(".downArrow .scrollText").addClass("hidden");
+//     $(".downArrow .pointer").removeClass("hidden");
+//   }
+// );
+
+// $(".projNavArrow").hover(
+//   function() {
+//     $("a", this).addClass("hidden");
+//     $(".scrollText", this).removeClass("hidden");
+//   }, function() {
+//     $(".scrollText", this).addClass("hidden");
+//     $("a", this).removeClass("hidden");
+//   }
+// ).click(function(e){
+//     document.location.href = $("a", this).attr("href");
+//     // alert($("a", this).attr("href"));
+// });
 
 on_resize(function() {
     //Throttled on-resize handler
