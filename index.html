@@ -15,6 +15,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="css/luxloop.css">
+      <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
 
       <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,700' rel='stylesheet' type='text/css'>
       <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
@@ -27,7 +28,7 @@
       <script>try{Typekit.load();}catch(e){}</script>
   </head>
 
-  <body>
+  <body style="overflow-x: hidden">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="www.outdatedbrowser.com">upgrade your browser</a> to improve your experience: www.outdatedbrowser.com</p>
     <![endif]-->
@@ -65,18 +66,21 @@
     </div>
 
     <!-- Who We Are -->
-    <div class="container about info resizeButtons">
+    <div id="whoWeAre"  class="container about info resizeButtons checkVisible fader" data-appear-top-offset="-100">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-justify">
           <h6>Hi, We're <span class="bolder r">Luxloop</span>.</h6>
+          <!-- <p class="nestedFade transDelay1"> -->
           <p>
             We are a creative technology studio, focused on finding new ways to captivate, inspire and interact with our fellow humans.
           </p>
 
+          <!-- <p class="nestedFade transDelay2"> -->
           <p>
             We are a <span class="b">hybrid agency/production company</span> born in the fires of commercial and documentary film-production combined with an unceasing impulse to experiment and explore new and near-future formats.
           </p>
 
+          <!-- <p class="nestedFade transDelay3"> -->
           <p>
             If you’re interested in creating <span class="b">high-impact</span>, interactive <span class="b">experiences</span> that challenge what you believe is possible, let’s collaborate!
           </p>
@@ -205,22 +209,22 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-2 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-pencil-square-o fa-2x"></span> <br /> Story Development
+            <span id="skill1" class="skillIcon fa fa-pencil-square-o fa-2x"></span> <br /> Story Development
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-ticket fa-2x"></span> <br /> Live Experience Design
+            <span id="skill2" class="skillIcon fa fa-ticket fa-2x"></span> <br /> Live Experience Design
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-laptop fa-2x"></span> <br /> Transmedia Integration
+            <span id="skill3" class="skillIcon fa fa-laptop fa-2x"></span> <br /> Transmedia Integration
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-wrench fa-2x"></span> <br /> Fabrication
+            <span id="skill4" class="skillIcon fa fa-wrench fa-2x"></span> <br /> Fabrication
           </p>
         </div>
       </div>
@@ -228,22 +232,22 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-2 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-video-camera fa-2x"></span> <br /> New-media Production
+            <span id="skill5" class="skillIcon fa fa-video-camera fa-2x"></span> <br /> New-media Production
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-film fa-2x"></span> <br /> New-media Postproduction
+            <span id="skill6" class="skillIcon fa fa-film fa-2x"></span> <br /> New-media Postproduction
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-mobile fa-2x"></span> <br /> Custom Experience Apps
+            <span id="skill7" class="skillIcon fa fa-mobile fa-2x"></span> <br /> Custom Experience Apps
           </p>
         </div>
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
-            <span class="skillIcon fa fa-sitemap fa-2x"></span> <br /> Interaction Design
+            <span id="skill8" class="skillIcon fa fa-sitemap fa-2x"></span> <br /> Interaction Design
           </p>
         </div>
       </div>
@@ -331,6 +335,7 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/detectmobile.js"></script>
     <script src="js/vendor/jquery.backstretch.min.js"></script>
+    <script src="js/vendor/jquery.appear.js"></script>
     <!-- <script src="js/vendor/jquery.fitvids.js"></script> -->
     <!-- <script src="js/vendor/imagesloaded.pkgd.min.js"></script> -->
 
@@ -342,6 +347,9 @@
 
     <!-- Luxloop JS -->
     <script src="js/main.js"></script>
+
+    <!-- (DivPeek must be last)-->
+    <!-- <script src="js/vendor/divPeek.min.js"></script> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

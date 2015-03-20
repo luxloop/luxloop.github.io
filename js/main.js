@@ -8,7 +8,6 @@ var numHallwayPics = 29;
 /*
  * TO DO:
  * redo parallax behavior
- * resize menu for short windows
  */
 
 //////////////////////////////////////// ADD Load/Resize function for parralax
@@ -37,24 +36,6 @@ $(document).ready(function() {
         };
     });
 
-    // $(".hasGifBg").each(function(){
-    //     var coverGif = $(this);
-    //     var coverGifSrc = coverGif.attr("data-gif");
-    //     if (coverGifSrc != undefined) {
-    //         // console.log(coverSrc);
-    //         var img = new Image();
-    //         img.onload = function() {
-    //           // console.log("loaded!");
-    //           coverGif.backstretch(coverGifSrc, {fade: 3000});
-    //         };
-    //         img.onerror = function() {
-    //           //console.log("problem!");
-    //         };
-    //         img.src = coverGifSrc;
-    //     };
-    // });
-
-
     projectTitle();
 
     if ($(".vidHolder").length) {
@@ -80,6 +61,27 @@ $(document).ready(function() {
             $(this).removeClass("parallaxOff").addClass("parallaxOn").css("background-position","center " + 100 +"px");
         });
     };
+
+    /*
+    $('.checkVisible').appear();
+    if (typeof $('.checkVisible').appear == "function" && $('.checkVisible').is(':appeared') == false) {
+        console.log("do stuff");
+        $('.checkVisible').each(function(){
+            $(this).addClass("faded");
+        });
+    };
+    
+    $(document.body).on('appear', '.checkVisible', function(e, $affected) {
+        // this code is executed for each appeared element
+        $(this).addClass("isVisible");
+        $(this).removeClass("faded");
+    });
+    $(document.body).on('disappear', '.checkVisible', function(e, $affected) {
+        // this code is executed for each disappeared element
+        // $(this).addClass("isNotVisible");
+    });
+    */
+
 });
 
 ////////////////////////
@@ -94,6 +96,11 @@ $( window ).load(function() {
     };
 
     resizeCarousel();
+    
+
+    setTimeout(function() {
+          resizeNavMenu(window.innerHeight*0.9,0);
+    }, 450);
 
     if (!isMobile) {
         var promises = [];
@@ -128,6 +135,9 @@ on_resize(function() {
     resizeClientLogos();
     projectTitle();
     resizeCarousel();
+    setTimeout(function() {
+          resizeNavMenu(window.innerHeight*0.9,0);
+    }, 450);
 })();
 
 $( window ).resize(function() {
@@ -189,7 +199,6 @@ $(".samePageLink").click(function(e){
         scrollTop: target
     }, Math.abs(speed));
 });
-
 
 ////////////////////////
 // CUSTOM FUNCTIONS
@@ -280,7 +289,7 @@ function resizeCarousel(){
  };
 
  function projectTitle() {
-    var pos = $(window).innerHeight()/3;
+    var pos = window.innerHeight/3;
     $(".bigTitle").css("padding-top",pos);
  }
 
@@ -299,6 +308,31 @@ function resizeCarousel(){
         img.src = coverGifSrc;
     }
 };
+
+function resizeNavMenu(windowHeight,steps){
+    var nav = $("#body-nav ul");
+    var navLink = $("#body-nav ul li a");
+    
+    if (nav.outerHeight() > windowHeight && steps < 10) {
+        var adjust = navLink.outerHeight() * 0.9;
+        navLink.height(adjust).css("line-height",adjust+"px");  
+        setTimeout(function() {
+              resizeNavMenu(windowHeight,steps++);
+        }, 150);
+    } else if(nav.outerHeight() < windowHeight*0.75 && steps < 10) {
+        var adjust = navLink.outerHeight() * 1.1;
+        navLink.height(adjust).css("line-height",adjust+"px");  
+        setTimeout(function() {
+              resizeNavMenu(windowHeight,steps++);
+        }, 150);
+    }
+    // steps++;
+    // console.log(nav);
+
+    // if (step < 10 && nav > windowHeight) {  
+    //     resizeNavMenu(windowHeight,step);
+    // }
+}
 
 // function projectSizer() {
 //     //var ratio = 16/9;

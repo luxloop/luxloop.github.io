@@ -370,7 +370,33 @@ footer p {
   margin: 0 auto;
 }
 
+/*.opacity .faded {
+  opacity: 0.2;
+}*/
 
+.opacity .faded .nestedFade {
+  opacity: 0.2000001;
+}
+
+.csstransitions .fader {
+  -webkit-transition: opacity 2s linear;
+          transition: opacity 2s linear;
+}
+
+.csstransitions .transDelay1 {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.csstransitions .fader .transDelay2 {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.csstransitions .fader .transDelay3 {
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
