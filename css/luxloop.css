@@ -20,12 +20,6 @@ a {color: #ffffff; text-decoration: none;}
 a:hover {text-decoration: underline; color: #999;}
 
 
-#theVideo {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * Helpers * * * * * * * * * * */
@@ -206,6 +200,11 @@ footer p {
   font-size: 0.9em !important;
 }
 
+.footer {
+  padding-top: 1.5em;
+  padding-bottom: 0em;
+}
+
 .footer form {
   width: 100%;
 }
@@ -353,6 +352,19 @@ footer p {
   background: url(../img/mandycloud.jpg);
 }
 
+#videoBg {
+  position: absolute;
+  bottom: 50%; 
+  right: 50%;
+  -webkit-transform: translate(50%,50%);
+      -ms-transform: translate(50%,50%);
+          transform: translate(50%,50%); 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -408,7 +420,7 @@ footer p {
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * Projects Page Styles  * * * * * * */
 
-.projPage .jumbotron {
+.projPage .jumbotron, .mainPageProjects .jumbotron {
   margin-bottom: 0em !important;
 }
 
@@ -418,6 +430,19 @@ footer p {
   padding-top: 6em;
   padding-bottom: 6em;
   border-bottom: solid 8px black;
+}
+
+.mainPageProjects .project {
+  /*min-height: 40%;*/
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.mainPageProjects .project:nth-of-type(1) {
+  /*min-height: 40%;*/
+  padding-top: 3em;
+  padding-bottom: 3em;
+  border-top: solid 8px black;
 }
 
 .no-touch .project {
@@ -475,6 +500,11 @@ footer p {
 .workInfo div {
   padding-top: 0em;
   padding-bottom: 0em;
+}
+
+.jumbotronFoot {
+  padding: 0em;
+  background: #000;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
