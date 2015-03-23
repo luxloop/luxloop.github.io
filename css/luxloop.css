@@ -272,6 +272,17 @@ footer p {
           transform: translateY(-50%);  
 }
 
+.fixedArrows {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 55%;
+  /*background: rgba(255,0,0,0.3);*/
+  font-size: 3em;
+  z-index: 2;
+}
+
 .navArrows {
   position: absolute;
   left: 0%;
@@ -283,7 +294,7 @@ footer p {
   color: black;
 }
 
-.navArrows .navArrow span {
+.navArrow span {
   z-index: 5;
   min-width: 150px;
   min-height: 50px;
@@ -310,9 +321,9 @@ footer p {
   position: absolute;
   right: 0%;
   bottom: 0%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-15%, -50%);
+      -ms-transform: translate(-15%, -50%);
+          transform: translate(-15%, -50%);
 }
 
 .leftArrow .leftArrowIcon, .leftArrow .arrowText {
@@ -320,9 +331,9 @@ footer p {
   position: absolute;
   left: 0%;
   bottom: 0%;
-  -webkit-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  -webkit-transform: translate(15%, -50%);
+      -ms-transform: translate(15%, -50%);
+          transform: translate(15%, -50%);
 }
 
 .arrowText {
