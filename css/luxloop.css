@@ -20,6 +20,12 @@ a {color: #ffffff; text-decoration: none;}
 a:hover {text-decoration: underline; color: #999;}
 
 
+#theVideo {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * Helpers * * * * * * * * * * */
