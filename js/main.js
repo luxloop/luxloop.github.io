@@ -44,9 +44,10 @@ $(document).ready(function() {
         $(".vidHolder").fitVids();  
     };
 
-    $(".carousel").carousel({
-      interval: 4000
-    })
+    $(".carousel").carousel();
+    $(".carousel").carousel('pause');
+
+
 
     $('[data-toggle="tooltip"]').tooltip();
     
@@ -238,26 +239,41 @@ function toggleFullScreenMenu() {
 }
 
 function resizeCarousel(){
-    // var maxHeight = 800;
-    var maxHeight = window.innerHeight;
-    $(".carousel-inner div.item").each(function(){
-        var thisHeight = $(this).height();
-        // console.log($(this).height());
-        if (thisHeight < maxHeight) {
-            maxHeight = thisHeight;
-        };
-    });
+    // console.log($(".carousel").width());
+    var carWidth = $(".carousel").width();
+    var carHeight = carWidth / 1.77777777777778;
+    $(".carousel").height(carHeight);
 
-    $(".carousel-inner").css("max-height",maxHeight + "px");
+    // $(".carousel-inner div.item").each(function(){
+    //     var thisHeight = $(this).height();
+    //     if (thisHeight > carHeight) {
+    //         var offset = -1 * Math.floor((thisHeight - carHeight)/2);
+    //         $(this).css("top",offset + "px");
+    //         //console.log("set: " + offset);
+    //     };
+    // });
 
-    $(".carousel-inner div.item").each(function(){
-        var thisHeight = $(this).height();
-        if (thisHeight > maxHeight) {
-            var offset = -1 * Math.floor((thisHeight - maxHeight)/2);
-            $(this).css("top",offset + "px");
-            //console.log("set: " + offset);
-        };
-    });
+    // 1.77777777777778
+    // // var maxHeight = 800;
+    // var maxHeight = window.innerHeight;
+    // $(".carousel-inner div.item").each(function(){
+    //     var thisHeight = $(this).height();
+    //     // console.log($(this).height());
+    //     if (thisHeight < maxHeight) {
+    //         maxHeight = thisHeight;
+    //     };
+    // });
+
+    // $(".carousel-inner").css("max-height",maxHeight + "px");
+
+    // $(".carousel-inner div.item").each(function(){
+    //     var thisHeight = $(this).height();
+    //     if (thisHeight > maxHeight) {
+    //         var offset = -1 * Math.floor((thisHeight - maxHeight)/2);
+    //         $(this).css("top",offset + "px");
+    //         //console.log("set: " + offset);
+    //     };
+    // });
  };
 
  function projectTitle() {
