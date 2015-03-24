@@ -440,12 +440,12 @@ footer p {
   height: auto;
 }
 
-#recentWork.carousel {
+#workCarousel.carousel {
   max-height: 100%;
   /*margin-top: 6em;*/
 }
 
-#recentWork.carousel a.projCaption {
+#workCarousel.carousel a.projCaption {
   font-size: 2em;
   font-weight: 500;
   color: #fff;
@@ -453,16 +453,16 @@ footer p {
           transition: 0.5s;
 }
 
-.no-touch #recentWork.carousel a.projCaption:hover {
+.no-touch #workCarousel.carousel a.projCaption:hover {
   text-decoration: none;
   color: #f00;
 }
 
-#recentWork.carousel p.projCaption {
+#workCarousel.carousel p.projCaption {
   font-size: 1em;
 }
 
-.opacity #recentWork.carousel .carousel-inner .item img {
+.opacity #workCarousel.carousel .carousel-inner .item img {
   opacity: 0.75;
 }
 
