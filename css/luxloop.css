@@ -391,6 +391,10 @@ footer p {
   height: auto;
 }
 
+.hasVidBg {
+  overflow:hidden;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * Main Page Styles  * * * * * * * */
 
@@ -588,6 +592,10 @@ footer p {
   color: #ccc;
 }
 
+.singleProject a {
+  text-decoration: underline;
+}
+
 .vidHolder {
   margin-bottom: 4em;
 }
@@ -648,6 +656,11 @@ footer p {
   -webkit-transform: translateY(-30%);
       -ms-transform: translateY(-30%);
           transform: translateY(-30%); 
+}
+
+.carousel-inner .item img {
+  width: 100%;
+  height: auto;
 }
 
 
