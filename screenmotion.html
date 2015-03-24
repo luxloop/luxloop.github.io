@@ -67,13 +67,13 @@
     </div>
 
     <!-- Cover -->
-    <div class="jumbotron hasFullBg hasGifBg bigTitle" id="cover" data-bg="projects/amplifiedself/thumb2.jpg" data-gif="projects/amplifiedself/gifSmall2.gif">
+    <div class="jumbotron hasFullBg hasGifBg bigTitle" id="cover" data-bg="img/cover7.jpg" >
       <div class="container">
         <div class="imgOverlay" style="background: rgba(24,24,24,0.1)"></div>
         <div class="row text-center">
           <div class="col-xs-10 col-xs-offset-1">
             <p class="emphasis">
-              Amplified Self
+              Screen Motion
             </p>
             <div class="projectLogo">
               <img src="img/logoBW.svg" onerror="this.onerror=null; this.src='img/logoMedBW.png'" id="coverLogoSvg">
@@ -109,18 +109,29 @@
     <div class="container about info">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-          <h6>Screen Motionf</h6>
+          <h6>Screen Motion</h6>
           <p>
               2014 &mdash; Exploration of Spatial Control for Media
           </p>
 
           <p>
-            Screen Motion changes things when you move around in front of it. 
+            Screen Motion is an exploration of how a narrative story can be controlled by a viewer in a physical space. We wanted to explore semi-passive interactions by investigating ways that a viewers movement could trigger changes in the narrative elements of a story, while keeping the familiarity of a more traditional film watching experience. 
+
+From a storytelling perspective, we wanted to explore how to make these kinds of interactions make sense, by thinking about how story elements would intensify or cool off based on the viewer's physical relationship to the screen. By adding this kind of interaction, each user has a unique path through the story. When thinking about narrative content for this kind of interaction, a story tree will be developed that covers the different ways that the story branches, similar to the way that a narrative for a video game would be developed.
+
+  <h5>Story Design</h5>
+  For the prototype, we chose to film a conversation between two people because it would make sense that the emotions would change rapidly as each person responds to the previous statement. Each shot plays out for its full duration, regardless of the viewers movement, then at the point of the cut or edit, the next segments emotion is chosen by where the viewer is standing at the time of the cut. For the simplicity in prototyping, we decided to work with a story that has 4 paths of identical action that happen simultaneously, but with a different emotional context. In our prototype, the four paths included anger, flirty, sadness, and happiness. Each emotion corresponds with one of the interaction zones on the previous page.
+
+  <h5>Interaction Tech</h5>
+The interaction space is broken up into multiple zones. A Kinect (or multiple kinects) are hung overhead to detect users in a space. As a viewer moves between zones, it triggers the software to make a change in the content that will be shown. There can be a multiple number of zones in different configurations, that can be altered based on the viewers needs. For our prototype we broke the interaction space into 4 zones that were assigned a particular emotion in the content.
+
           </p>
+          <p>
+            Winner of the best hack in Film/TV/Video at MIT Media Lab's Hacking Arts 2014
         </div>
       </div>
 
-      <div class="row emptyRow"></div>
+
 
       <div class="row">
         <div class="col">
@@ -139,6 +150,13 @@
               <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#projectCarousel" data-slide-to="1"></li>
               <li data-target="#projectCarousel" data-slide-to="2"></li>
+              <li data-target="#projectCarousel" data-slide-to="3"></li>
+              <li data-target="#projectCarousel" data-slide-to="4"></li>
+              <li data-target="#projectCarousel" data-slide-to="5"></li>
+              <li data-target="#projectCarousel" data-slide-to="6"></li>
+              <li data-target="#projectCarousel" data-slide-to="7"></li>
+              <li data-target="#projectCarousel" data-slide-to="8"></li>
+    
             </ol>
 
             <!-- Wrapper for slides -->
@@ -167,12 +185,7 @@
               <div class="item">
                 <img src="projects/screen/8.jpg">
               </div>
-              <div class="item">
-                <img src="projects/screen/9.jpg">
-              </div>
-              <div class="item">
-                <img src="projects/screen/10.jpg">
-              </div>
+           
             </div>
 
             <!-- Controls -->
@@ -194,19 +207,18 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-1 col-xs-offset-1 text-justify">
           <p>
-            Creative Direction by Ivaylo Getov<br/>
+            <br/>
             Software by Luxloop
           </p>
           <p>
-            Featured at:<br/>
-            Culturehub Refest 2014
+           
           </p>
         </div>
         <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 text-right">
           <!-- <span class="skillIcon fa fa-pencil-square-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Story Development"></span> -->
           <span class="skillIcon fa fa-ticket fa-2x" data-toggle="tooltip" data-placement="bottom" title="Live Experience Design"></span>
           <!-- <span class="skillIcon fa fa-laptop fa-2x" data-toggle="tooltip" data-placement="bottom" title="Transmedia Integration"></span> -->
-          <span class="skillIcon fa fa-wrench fa-2x" data-toggle="tooltip" data-placement="bottom" title="Fabrication"></span>
+          <!-- <span class="skillIcon fa fa-wrench fa-2x" data-toggle="tooltip" data-placement="bottom" title="Fabrication"></span> -->
           <span class="skillIcon fa fa-video-camera fa-2x" data-toggle="tooltip" data-placement="bottom" title="New-media Production"></span>
           <!-- <span class="skillIcon fa fa-film fa-2x" data-toggle="tooltip" data-placement="bottom" title="New-media Postproduction"></span> -->
           <!-- <span class="skillIcon fa fa-mobile fa-2x" data-toggle="tooltip" data-placement="bottom" title="Custom Experience Apps"></span> -->
