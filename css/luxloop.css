@@ -685,6 +685,14 @@ footer p {
   height: auto;
 }
 
+.darkIndicators .carousel-indicators .active {
+  background-color: #333;
+}
+
+.darkIndicators .carousel-indicators li {
+  border: 1px solid #333;
+}
+
 
 
 
