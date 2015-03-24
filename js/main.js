@@ -242,7 +242,11 @@ function resizeCarousel(){
     // console.log($(".carousel").width());
     var carWidth = $(".carousel").width();
     var carHeight = carWidth / 1.77777777777778;
-    $(".carousel").height(carHeight);
+    if ($(".carousel").hasClass("tallCarousel")) {
+        $(".carousel").height(carWidth*0.75);
+    } else {
+        $(".carousel").height(carHeight);
+    };
 
     // $(".carousel-inner div.item").each(function(){
     //     var thisHeight = $(this).height();
