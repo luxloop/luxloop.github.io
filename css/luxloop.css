@@ -442,6 +442,10 @@ footer p {
   font-size: 1em;
 }
 
+.opacity #recentWork.carousel .carousel-inner .item img {
+  opacity: 0.75;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * About Page Styles * * * * * * * */
 
@@ -639,9 +643,7 @@ footer p {
           transform: translateY(-30%); 
 }
 
-.opacity .carousel-inner .item img {
-  opacity: 0.75;
-}
+
 
 
 
