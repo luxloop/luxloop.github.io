@@ -41,6 +41,10 @@ a:hover {text-decoration: underline; color: #999;}
   margin-bottom: 0.4em;
 }
 
+.whiteBorder {
+  border: solid 1px white;
+}
+
 .rgbShadow {
   box-shadow:
      2px 2px #ff0000,
@@ -111,6 +115,10 @@ hr {
 
 .emptyRow {
   height: 2em;
+}
+
+.emptyRowTall {
+  height: 4em;
 }
 
 .bigQuote {
