@@ -238,8 +238,9 @@ function toggleFullScreenMenu() {
 }
 
 function resizeCarousel(){
-    var maxHeight = 800;
-    $(".carousel-inner div").each(function(){
+    // var maxHeight = 800;
+    var maxHeight = window.innerHeight;
+    $(".carousel-inner div.item").each(function(){
         var thisHeight = $(this).height();
         // console.log($(this).height());
         if (thisHeight < maxHeight) {
@@ -249,7 +250,7 @@ function resizeCarousel(){
 
     $(".carousel-inner").css("max-height",maxHeight + "px");
 
-    $(".carousel-inner div").each(function(){
+    $(".carousel-inner div.item").each(function(){
         var thisHeight = $(this).height();
         if (thisHeight > maxHeight) {
             var offset = -1 * Math.floor((thisHeight - maxHeight)/2);

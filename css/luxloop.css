@@ -412,6 +412,28 @@ footer p {
   height: auto;
 }
 
+#recentWork.carousel {
+  max-height: 100%;
+  margin-bottom: 6em;
+}
+
+#recentWork.carousel a.projCaption {
+  font-size: 2em;
+  font-weight: 500;
+  color: #fff;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+}
+
+.no-touch #recentWork.carousel a.projCaption:hover {
+  text-decoration: none;
+  color: #f00;
+}
+
+#recentWork.carousel p.projCaption {
+  font-size: 1em;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * About Page Styles * * * * * * * */
 
@@ -560,6 +582,7 @@ footer p {
 
 .carousel-inner {
   min-height: 300px;
+  background: #000;
   /*max-height: 600px;*/
 }
 
@@ -591,6 +614,25 @@ footer p {
 .carousel-control .icon-prev, .carousel-control .fa-angle-left {
   left: 50%;
   margin-left: -10px;
+}
+
+.carousel-caption {
+  /*background: #333;*/
+  /*background: rgba(0,0,0,0.1);*/
+  top: 50%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 5;
+  width: 100%;
+  /*padding: 1em 0em;*/
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%); 
+}
+
+.opacity .carousel-inner .item img {
+  opacity: 0.75;
 }
 
 
