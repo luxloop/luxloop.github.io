@@ -282,13 +282,20 @@ footer p {
 
 .fixedArrows {
   position: fixed;
-  left: 0%;
   top: 0%;
-  width: 100%;
+  width: auto;
   height: 55%;
   /*background: rgba(255,0,0,0.3);*/
   font-size: 3em;
   z-index: 2;
+}
+
+.fixedArrowsL {
+  left: 0%;
+}
+
+.fixedArrowsR {
+  right: 0%;
 }
 
 .navArrows {
