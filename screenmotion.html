@@ -35,7 +35,7 @@
         <ul>
             <li><a href="index.html">Home</a></li> 
             <li><a href="about.html">About</a></li> 
-            <li><a href="work.html">Work</a></li>
+            <li><a href="index.html#recentWork">Work</a></li>
             <li><a href="http://luxloop.tumblr.com">News</a></li>
             <li><a href="#contact" class="samePageLink">Contact</a></li>
             <li class="iconsRow">
@@ -48,6 +48,23 @@
     <button class="menuLines">
       <span>toggle menu</span>
     </button>
+
+    <div class="fixedArrows fixedArrowsL">
+      <a href="eyes.html" class="projNavLink">
+        <div class="navArrow leftArrow text-left">
+          <span class="fa fa-caret-left leftArrowIcon pointerWhite"></span></span>
+          <span class="arrowText hidden pointerWhite">Previous<br>Project</span>
+        </div>
+      </a>
+    </div>
+    <div class="fixedArrows fixedArrowsR">
+      <a href="axion.html" class="projNavLink">
+        <div class="navArrow rightArrow text-right">
+          <span class="fa fa-caret-right rightArrowIcon pointerWhite"></span></span>
+          <span class="arrowText hidden pointerWhite">Next<br>Project</span>
+        </div>
+      </a>
+    </div>
 
     <!-- Cover -->
     <div class="jumbotron hasFullBg hasGifBg bigTitle" id="cover" data-bg="projects/amplifiedself/thumb2.jpg" data-gif="projects/amplifiedself/gifSmall2.gif">
@@ -71,7 +88,7 @@
           </div>
 
 
-          <a href="eyes.html" class="projNavLink">
+          <a href="eyes.html" class="projNavLink hidden">
             <div class="navArrow leftArrow text-left">
               <span class="fa fa-caret-left leftArrowIcon pointerWhite"></span></span>
               <span class="arrowText hidden pointerWhite">Previous Project</span>
@@ -79,7 +96,7 @@
           </a>
 
           <a href="#" class="projNavLink">
-            <div class="navArrow rightArrow text-right">
+            <div class="navArrow rightArrow text-right hidden">
               <span class="fa fa-caret-right rightArrowIcon pointerWhite"></span></span>
               <span class="arrowText hidden pointerWhite">Next Project</span>
             </div>
@@ -106,7 +123,7 @@
       <div class="row emptyRow"></div>
 
       <div class="row">
-        <div class="col-md-6 col-md-offset-1 col-xs-offset-0 text-justify">
+        <div class="col-md-6 col-md-offset-1 col-xs-offset-1 text-justify">
           <p>
             Creative Direction by Ivaylo Getov<br/>
             Software by Luxloop
@@ -116,7 +133,7 @@
             Culturehub Refest 2014
           </p>
         </div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 text-right">
           <!-- <span class="skillIcon fa fa-pencil-square-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Story Development"></span> -->
           <span class="skillIcon fa fa-ticket fa-2x" data-toggle="tooltip" data-placement="bottom" title="Live Experience Design"></span>
           <!-- <span class="skillIcon fa fa-laptop fa-2x" data-toggle="tooltip" data-placement="bottom" title="Transmedia Integration"></span> -->
@@ -146,9 +163,9 @@
           <div id="projectCarousel" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#projectCarousel" data-slide-to="1"></li>
+              <li data-target="#projectCarousel" data-slide-to="2"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -213,15 +230,15 @@
               <p>
                 <!-- New way to encode contact info. Make sure to include encode.js -Ivaylo -->
                 <script type="text/javascript">
-                    var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.839.1837 (YN)<oe /><oe /></c>';
+                    var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.839.1837 (YN)</c>';
                     document.write(rot13rot5Encode(noRobots));
                     //console.log(rot13rot5Encode(noRobots));
                 </script>
               </p>
               <p>
-                <a href="http://instagram.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-instagram fa-2x"></span></a>
-                <a href="http://luxloop.tumblr.com" target="_blank" class="socialIcon"><span class="fa fa-tumblr-square fa-2x"></span></a>
-                <a href="http://twitter.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-twitter-square fa-2x"></span></a>
+                <a href="http://instagram.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-instagram fa-lg"></span></a>
+                <a href="http://luxloop.tumblr.com" target="_blank" class="socialIcon"><span class="fa fa-tumblr-square fa-lg"></span></a>
+                <a href="http://twitter.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-twitter-square fa-lg"></span></a>
               </p>
             </div>
 
