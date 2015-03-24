@@ -3,7 +3,6 @@
 
 var isMobile = false;
 var parallaxOn = true;
-var numHallwayPics = 29;
 
 /*
  * TO DO:
@@ -85,14 +84,25 @@ $( window ).load(function() {
     resizeCarousel();
 
     if (!isMobile) {
-        var promises = [];
-        for (var i = 1; i <= numHallwayPics; i++) {
-            preloadHallway("img/bgseq/"+i+".jpg", promises[i] = $.Deferred());
-        }
-        $.when.apply($, promises).done(function() {
+
+        ///////////////
+        // preload animations
+        ///////////////
+        var preloader = [];
+        $.when.apply($, preloader).done(function() {
             // console.log("preloaded");    
-            $(".hallway").addClass("moveHallway");
+            $(".animation").addClass("animationGo");
         });
+
+        $(".animation").each(function(){ 
+            var src = $(this).attr("data-anim");
+            var frames = $(this).attr("data-frames");
+
+            for (var i = 1; i <= frames; i++) {
+                preloadAnimations("img/" + src + "/"+i+".jpg", preloader[i] = $.Deferred());
+            }            
+        });
+        ///////////////
     };
 });
 
@@ -183,7 +193,7 @@ function resizeClientLogos(){
 }
 
 
-function preloadHallway(url, promise) {
+function preloadAnimations(url, promise) {
     var img = new Image();
     img.onload = function() {
       promise.resolve();
@@ -201,8 +211,8 @@ function parallaxIt(section,scrollPos,winHeight){
     if (scrollPos > sectionBegin && scrollPos < sectionEnd) {
         var parallaxShift = 100 - (100*scrollProportion);
         // console.log(scrollProportion);
-        if (section.hasClass("hallway")) {
-            scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
+        if (section.hasClass("animationGo")) {
+            scrollAnimate(section,scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
         };
         section.css("background-position","center " + parallaxShift +"px");
     } else {
@@ -210,19 +220,41 @@ function parallaxIt(section,scrollPos,winHeight){
     };
 }
 
-function scrollHallway(scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight) {
+function scrollAnimate(animationFrame,scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight) {
     var scrollProportion = Math.abs(sectionBegin - scrollPos) / (sectionLength + winHeight);
+
     //console.log(scrollProportion);
-    var value = scrollProportion * numHallwayPics;
+    var directory = animationFrame.attr("data-anim");
+    var frames = animationFrame.attr("data-frames");
+    var value = scrollProportion * frames;
     if (Math.ceil(value) <= 0) {
         whichImg = 1;
-    } else if (Math.ceil(value) > 0 && Math.ceil(value) <= numHallwayPics){
+    } else if (Math.ceil(value) > 0 && Math.ceil(value) <= frames){
         whichImg = Math.ceil(value);
     } else {
-        whichImg = numHallwayPics;
+        whichImg = frames;
     }
-    // console.log(whichImg);
-    $(".moveHallway").css("background","url(img/bgseq/" + whichImg + ".jpg)")
+    //console.log(whichImg);
+    // console.log(animationFrame.attr("data-frames"));
+
+    var currentImg =  animationFrame.css("background").split(directory + "/")[1].split(".jpg")[0];
+    if (whichImg != currentImg) {
+        //console.log(currentImg);
+        /*
+        var img = new Image();
+        img.onload = function() {
+            // console.log(img.src);
+            animationFrame.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
+            //animationFrame.css("background","url(" + img.src + ")");
+        };
+        img.onerror = function() {
+            console.log("ERROR");
+        };
+        img.src = "img/" + directory + "/" + whichImg + ".jpg";
+        */
+        animationFrame.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
+    };
+    //animationFrame.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
 }
 
 function toggleFullScreenMenu() {

@@ -380,7 +380,7 @@ footer p {
 
 
 .firstQuote {
-  background: url(../img/bgseq/1.jpg);
+  background: url(../img/hallway/1.jpg);
 }
 
 .secondQuote {
@@ -443,6 +443,7 @@ footer p {
 #workCarousel.carousel {
   max-height: 100%;
   /*margin-top: 6em;*/
+  margin-bottom: 6em;
 }
 
 #workCarousel.carousel a.projCaption {
