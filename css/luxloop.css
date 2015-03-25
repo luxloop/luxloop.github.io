@@ -1125,6 +1125,22 @@ footer p {
     width: 25%;
   }
 
+  .carousel-control .icon-next, .carousel-control .fa-angle-right {
+    right: 0%;
+    margin-right: 0px;
+    -webkit-transform: translateX(150%);
+        -ms-transform: translateX(150%);
+            transform: translateX(150%);  
+  }
+
+  .carousel-control .icon-prev, .carousel-control .fa-angle-left {
+    left: 0%;
+    margin-left: 0px;
+    -webkit-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+            transform: translateX(-150%); 
+  }
+
 }
 
 /* HD devices (very large desktops and TVs, 1920px and up) */
