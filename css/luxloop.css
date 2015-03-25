@@ -387,6 +387,10 @@ footer p {
   background: url(../img/mandycloud.jpg);
 }
 
+.thirdQuote {
+  background: url(../img/eyesweep/1.jpg);
+}
+
 #videoBg {
   position: absolute;
   bottom: 50%; 
@@ -402,6 +406,11 @@ footer p {
 
 .hasVidBg {
   overflow:hidden;
+}
+
+.isMobile .mouseEffect {
+  display: none;
+  visibility: hidden;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */

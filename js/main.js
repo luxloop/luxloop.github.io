@@ -183,6 +183,10 @@ $(".samePageLink").click(function(e){
     }, Math.abs(speed));
 });
 
+$(".mouseEffect").mousemove(function(e){
+    mouseAnimate($(this),e.pageX,e.pageY);
+});
+
 
 ////////////////////////
 // CUSTOM FUNCTIONS
@@ -211,7 +215,7 @@ function parallaxIt(section,scrollPos,winHeight){
     if (scrollPos > sectionBegin && scrollPos < sectionEnd) {
         var parallaxShift = 100 - (100*scrollProportion);
         // console.log(scrollProportion);
-        if (section.hasClass("animationGo")) {
+        if (section.hasClass("animationGo") && !section.hasClass("mouseEffect")) {
             scrollAnimate(section,scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
         };
         section.css("background-position","center " + parallaxShift +"px");
@@ -255,6 +259,35 @@ function scrollAnimate(animationFrame,scrollPos,sectionBegin,sectionEnd,sectionL
         animationFrame.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
     };
     //animationFrame.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
+}
+
+function mouseAnimate(section,mX,mY){
+    if (section.hasClass("mouseX") && section.hasClass("animationGo")) {
+        var percentAcross = mX/window.innerWidth;
+        //console.log(percentAcross);
+
+        var directory = section.attr("data-anim");
+        var frames = section.attr("data-frames");
+        var value = percentAcross * frames;
+        var whichImg;
+
+        if (Math.ceil(value) <= 0) {
+            whichImg = 1;
+        } else if (Math.ceil(value) > 0 && Math.ceil(value) <= frames){
+            whichImg = Math.ceil(value);
+        } else {
+            whichImg = frames;
+        }
+        //console.log(whichImg);
+        // console.log(animationFrame.attr("data-frames"));
+
+        var currentImg =  section.css("background").split(directory + "/")[1].split(".jpg")[0];
+        if (whichImg != currentImg) {
+            //console.log(currentImg);
+            section.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
+        };
+        
+    };
 }
 
 function toggleFullScreenMenu() {
