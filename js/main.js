@@ -48,8 +48,11 @@ $(document).ready(function() {
         $(".vidHolder").fitVids();  
     };
 
-    $(".carousel").carousel();
+    $(".carousel").carousel({
+      interval: 5000
+    })
     $(".carousel").carousel('pause');
+    $("#workCarousel").carousel('cycle');
 
 
 

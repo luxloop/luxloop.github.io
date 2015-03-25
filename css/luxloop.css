@@ -396,6 +396,10 @@ footer p {
   background: url(../img/eyesweep/1.jpg);
 }
 
+.aboutQuote {
+  background: url(../img/sheep/1.jpg);
+}
+
 #videoBg {
   position: absolute;
   bottom: 50%; 
