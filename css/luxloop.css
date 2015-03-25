@@ -157,6 +157,11 @@ hr {
   background-attachment: fixed !important;
 }
 
+.isNotMobile .bigQuote.noParallax {
+  background-attachment: scroll !important;
+  background-position: center center !important;
+}
+
 .info {
   padding-top: 6em;
   padding-bottom: 6em;

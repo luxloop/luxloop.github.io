@@ -4,6 +4,11 @@
 var isMobile = false;
 var parallaxOn = true;
 
+var xMousePos = 0;
+var yMousePos = 0;
+var lastScrolledLeft = 0;
+var lastScrolledTop = 0;
+
 /*
  * TO DO:
  * redo parallax behavior
@@ -128,12 +133,25 @@ on_resize(function() {
     }, 450);
 })();
 
+
 //Normal on-resize handler
 $( window ).resize(function() {
 });
 
 $(window).scroll(function(e) {
     if ($("body").hasClass("isNotMobile")) {
+
+        // if(lastScrolledLeft != $(document).scrollLeft()){
+        //     xMousePos -= lastScrolledLeft;
+        //     lastScrolledLeft = $(document).scrollLeft();
+        //     xMousePos += lastScrolledLeft;
+        // }
+        // if(lastScrolledTop != $(document).scrollTop()){
+        //     yMousePos -= lastScrolledTop;
+        //     lastScrolledTop = $(document).scrollTop();
+        //     yMousePos += lastScrolledTop;
+        // }
+
         var scrollTop = $(window).scrollTop();
         
         $(".parallaxPossible").each(function(){
@@ -184,7 +202,11 @@ $(".samePageLink").click(function(e){
 });
 
 $(".mouseEffect").mousemove(function(e){
-    mouseAnimate($(this),e.pageX,e.pageY);
+// $(document).mousemove(function(e){
+    xMousePos = e.pageX;
+    yMousePos = e.pageY;
+    // console.log("x = " + xMousePos + " y = " + yMousePos);
+    mouseAnimate($(".mouseEffect"),e.pageX,e.pageY);
 });
 
 
@@ -217,6 +239,8 @@ function parallaxIt(section,scrollPos,winHeight){
         // console.log(scrollProportion);
         if (section.hasClass("animationGo") && !section.hasClass("mouseEffect")) {
             scrollAnimate(section,scrollPos,sectionBegin,sectionEnd,sectionLength,winHeight);
+        } else if (section.hasClass("animationGo") && section.hasClass("mouseEffect")) {
+            mouseAnimate(section,xMousePos,yMousePos);
         };
         section.css("background-position","center " + parallaxShift +"px");
     } else {
