@@ -72,6 +72,7 @@ $(document).ready(function() {
             $(this).removeClass("parallaxOff").addClass("parallaxOn").css("background-position","center " + 100 +"px");
         });
     };
+    $(".coverVid").removeClass("readyFade");
 });
 
 ////////////////////////
@@ -90,6 +91,7 @@ $( window ).load(function() {
     }, 450);
 
     resizeCarousel();
+    resizeCoverVid();
 
     if (!isMobile) {
 
@@ -134,6 +136,7 @@ on_resize(function() {
     setTimeout(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
     }, 450);
+    resizeCoverVid();
 })();
 
 
@@ -339,37 +342,6 @@ function resizeCarousel(){
     } else {
         $(".carousel").height(carHeight);
     };
-
-    // $(".carousel-inner div.item").each(function(){
-    //     var thisHeight = $(this).height();
-    //     if (thisHeight > carHeight) {
-    //         var offset = -1 * Math.floor((thisHeight - carHeight)/2);
-    //         $(this).css("top",offset + "px");
-    //         //console.log("set: " + offset);
-    //     };
-    // });
-
-    // 1.77777777777778
-    // // var maxHeight = 800;
-    // var maxHeight = window.innerHeight;
-    // $(".carousel-inner div.item").each(function(){
-    //     var thisHeight = $(this).height();
-    //     // console.log($(this).height());
-    //     if (thisHeight < maxHeight) {
-    //         maxHeight = thisHeight;
-    //     };
-    // });
-
-    // $(".carousel-inner").css("max-height",maxHeight + "px");
-
-    // $(".carousel-inner div.item").each(function(){
-    //     var thisHeight = $(this).height();
-    //     if (thisHeight > maxHeight) {
-    //         var offset = -1 * Math.floor((thisHeight - maxHeight)/2);
-    //         $(this).css("top",offset + "px");
-    //         //console.log("set: " + offset);
-    //     };
-    // });
  };
 
  function projectTitle() {
@@ -412,6 +384,20 @@ function resizeNavMenu(windowHeight,steps){
     }
 }
 
+function resizeCoverVid(){
+    coverVid = $(".coverVid");
+    coverVid.removeAttr("style");
+    var vidWidth = coverVid.width();
+    var vidHeight = vidWidth / 1.7777777778;
+
+    if (vidHeight > window.innerHeight * 0.95) {
+        vidHeight = window.innerHeight * 0.95;
+        vidWidth = vidHeight * 1.7777777778;
+        coverVid.width(vidWidth);
+        coverVid.height(vidHeight);
+    };
+    coverVid.height(vidHeight + "px");
+}
 
 ////////////////////////
 // UTILITIES

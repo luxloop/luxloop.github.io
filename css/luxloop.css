@@ -294,6 +294,27 @@ footer p {
           transform: translateY(-50%);  
 }
 
+.coverVid {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  /*height: 200px;*/
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  background: #333;
+  background: rgba(0,0,0,0.3);
+  opacity: 1.0;
+  -webkit-transition: opacity 4s linear;
+          transition: opacity 4s linear;
+}
+
+.opacity.csstransitions .coverVid.readyFade {
+  opacity: 0.0;
+}
+
 .fixedArrows {
   position: fixed;
   top: 0%;
@@ -1117,6 +1138,10 @@ footer p {
     width: 30%;
   }
 
+  .coverVid {
+    width: 80%;
+  }
+
   .project a {
     font-size: 3em;
   }
@@ -1152,6 +1177,10 @@ footer p {
 
   .bigLogo {
     width: 25%;
+  }
+
+  .coverVid {
+    width: 70%;
   }
 
   .bigQuote p, .bigTitle p {
