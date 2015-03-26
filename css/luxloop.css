@@ -301,14 +301,16 @@ footer p {
   left: 50%;
   width: 90%;
   /*height: 200px;*/
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-55%);
+      -ms-transform: translate(-50%,-55%);
+          transform: translate(-50%,-55%);
   background: #333;
   background: rgba(0,0,0,0.3);
   opacity: 1.0;
   -webkit-transition: opacity 4s linear;
           transition: opacity 4s linear;
+  z-index: 10;
+  border: solid 2px #000;
 }
 
 .opacity.csstransitions .coverVid.readyFade {
@@ -355,9 +357,9 @@ footer p {
   position: absolute;
   left: 50%;
   bottom: 0%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -0%);
+      -ms-transform: translate(-50%, -0%);
+          transform: translate(-50%, -0%);
   cursor: default;
 }
 
