@@ -388,11 +388,11 @@ function resizeCoverVid(){
     coverVid = $(".coverVid");
     coverVid.removeAttr("style");
     var vidWidth = coverVid.width();
-    var vidHeight = vidWidth / 1.7777777778;
+    var vidHeight = vidWidth / 1.777778;
 
-    if (vidHeight > window.innerHeight * 0.95) {
-        vidHeight = window.innerHeight * 0.95;
-        vidWidth = vidHeight * 1.7777777778;
+    if (vidHeight > window.innerHeight * 0.85) {
+        vidHeight = window.innerHeight * 0.85;
+        vidWidth = vidHeight * 1.777778;
         coverVid.width(vidWidth);
         coverVid.height(vidHeight);
     };
