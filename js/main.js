@@ -194,7 +194,7 @@ $(document).keyup(function(e) {
         } else if ($(".coverScreen").hasClass("showIt")) {
             $(".coverScreen").removeClass("showIt");
             reelControl("pause");
-            reelControl("seekTo",0);
+            reelControl("seekTo",0.0);
         };
     } 
 });
@@ -228,7 +228,7 @@ $(".showReel").click(function(e){
     resizeCoverVid();
     $(".coverScreen").addClass("showIt");
     reelControl("play");
-    reelControl("seekTo",0);
+    reelControl("seekTo",0.0);
 });
 
 $(".reelClose").click(function(e){
