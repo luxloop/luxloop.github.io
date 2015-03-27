@@ -189,8 +189,10 @@ $(document).keyup(function(e) {
             setTimeout(function() {
                 $('body').removeClass('hide-nav');
             }, 500);
-        }
-    }
+        } else if ($(".coverScreen").hasClass("showIt")) {
+            $(".coverScreen").removeClass("showIt");
+        };
+    } 
 });
 
 $(".project").click(function(e){
@@ -215,6 +217,18 @@ $(".mouseEffect").mousemove(function(e){
     yMousePos = e.pageY;
     // console.log("x = " + xMousePos + " y = " + yMousePos);
     mouseAnimate($(".mouseEffect"),e.pageX,e.pageY);
+});
+
+$(".showReel").click(function(e){
+    e.preventDefault();
+    resizeCoverVid();
+    $(".coverScreen").addClass("showIt");
+
+});
+
+$(".reelClose").click(function(e){
+    e.preventDefault();
+    $(".coverScreen").removeClass("showIt");
 });
 
 
