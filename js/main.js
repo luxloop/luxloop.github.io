@@ -193,6 +193,7 @@ $(document).keyup(function(e) {
             }, 500);
         } else if ($(".coverScreen").hasClass("showIt")) {
             $(".coverScreen").removeClass("showIt");
+            reelControl("pause");
         };
     } 
 });
@@ -225,16 +226,13 @@ $(".showReel").click(function(e){
     e.preventDefault();
     resizeCoverVid();
     $(".coverScreen").addClass("showIt");
-    var player = $('#reelFrame');
-    var url = window.location.protocol + player.attr('src').split('?')[0];
-    var data = {method: "play"};
-    var message = JSON.stringify(data);
-    player[0].contentWindow.postMessage(data, url);
+    reelControl("play");
 });
 
 $(".reelClose").click(function(e){
     e.preventDefault();
     $(".coverScreen").removeClass("showIt");
+    reelControl("pause");
 });
 
 
@@ -429,6 +427,14 @@ function reelLink() {
         $(".playLink").css("margin-top",pos + "px");
     };
     //margin-top: 50vh;
+}
+
+function reelControl(method) {
+    var player = $('#reelFrame');
+    var url = window.location.protocol + player.attr('src').split('?')[0];
+    var data = {method: method};
+    var message = JSON.stringify(data);
+    player[0].contentWindow.postMessage(data, url);
 }
 
 ////////////////////////
