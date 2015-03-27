@@ -85,6 +85,7 @@ $( window ).load(function() {
     } else {
         $("body").addClass("isNotMobile");
     };
+    reelLink();
 
     setTimeout(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
@@ -137,6 +138,7 @@ on_resize(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
     }, 450);
     resizeCoverVid();
+    reelLink();
 })();
 
 
@@ -397,6 +399,16 @@ function resizeCoverVid(){
         coverVid.height(vidHeight);
     };
     coverVid.height(vidHeight + "px");
+}
+
+function reelLink() {
+    if (false) {
+    // if ($(".playLink").length) {
+        console.log("yes");
+        var pos = $(".bigLogo").offset().top + $(".bigLogo").height() * 2; 
+        $(".playLink").css("margin-top",pos + "px");
+    };
+    //margin-top: 50vh;
 }
 
 ////////////////////////
