@@ -25,6 +25,8 @@ $(document).ready(function() {
 
     // Build backgrounds
 
+    //console.log(window.$f);
+
     $(".hasFullBg").each(function(){
         var cover = $(this);
         var coverSrc = cover.attr("data-bg");
@@ -223,7 +225,11 @@ $(".showReel").click(function(e){
     e.preventDefault();
     resizeCoverVid();
     $(".coverScreen").addClass("showIt");
-
+    var player = $('#reelFrame');
+    var url = window.location.protocol + player.attr('src').split('?')[0];
+    var data = {method: "play"};
+    var message = JSON.stringify(data);
+    player[0].contentWindow.postMessage(data, url);
 });
 
 $(".reelClose").click(function(e){

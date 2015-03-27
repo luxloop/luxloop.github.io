@@ -506,7 +506,7 @@ footer p {
   /*margin-top: 50%;*/
   margin-top: 50vh;
   font-size: 3em;
-  z-index: 10;
+  z-index: 2;
   padding-bottom: 1em;
 }
 
