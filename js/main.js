@@ -194,6 +194,7 @@ $(document).keyup(function(e) {
         } else if ($(".coverScreen").hasClass("showIt")) {
             $(".coverScreen").removeClass("showIt");
             reelControl("pause");
+            reelControl("seekTo",0);
         };
     } 
 });
@@ -227,6 +228,7 @@ $(".showReel").click(function(e){
     resizeCoverVid();
     $(".coverScreen").addClass("showIt");
     reelControl("play");
+    reelControl("seekTo",0);
 });
 
 $(".reelClose").click(function(e){
@@ -429,10 +431,15 @@ function reelLink() {
     //margin-top: 50vh;
 }
 
-function reelControl(method) {
+function reelControl(method,value) {
     var player = $('#reelFrame');
     var url = window.location.protocol + player.attr('src').split('?')[0];
     var data = {method: method};
+        
+    if (value) {
+        data.value = value;
+    }
+
     var message = JSON.stringify(data);
     player[0].contentWindow.postMessage(data, url);
 }
