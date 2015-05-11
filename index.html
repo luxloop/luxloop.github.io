@@ -53,7 +53,13 @@
     </button>
 
     <!-- Cover -->
-    <div class="jumbotron hasFullBg" id="cover" data-bg="img/cover2.jpg">
+    <!-- <div class="jumbotron hasFullBg hasGifBg" id="cover" data-bg="projects/amplifiedself/gifSmall2.gif" data-gif="projects/amplifiedself/gifSmall2.gif"> -->
+    <div class="jumbotron hasFullBg hasVidBg" id="cover" data-bg="projects/amplifiedself/vidThumb.jpg" data-gif="">
+      <video id="videoBg" preload="auto" width="100%" autoplay loop poster="projects/amplifiedself/vidThumb.jpg">
+        <source src="projects/amplifiedself/ampself.webm" type="video/webm">
+        <source src="projects/amplifiedself/ampself.mp4" type="video/mp4">
+        <!-- Your browser does not support video. -->
+      </video>
       <div class="container">
         <div class="bigLogo logoTopSlide bigLogoFrontPage text-center">
             <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logoMed.png'" id="coverLogoSvg">
