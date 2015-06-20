@@ -9,7 +9,7 @@ var yMousePos = 0;
 var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
-var projects = [
+var projectsList = [
     {"name":"If The Walls Had Eyes",
         "desc":"Interactive Video Installation",
         "thumb":"projects/eyes/thumb.jpg",
@@ -485,17 +485,34 @@ function reelControl(method,value) {
 }
 
 function projNavLinks() {
+    // if($('body').hasClass("singleProject")) {
+    //     var whichProj = location.href.split("/");
+    //     var projName = "";
+    //     for (var i = whichProj.length - 1; i >= 0; i--) {
+    //         if (whichProj[i].indexOf("html") != -1) {
+    //             projName = whichProj[i].split(".html")[0] + ".html";
+    //         };
+    //     };
+    //     if (projName != "") {
+    //         console.log(projName);
+    //     };
+    // }
     if($('body').hasClass("singleProject")) {
-        var whichProj = location.href.split("/");
-        var projName = "";
-        for (var i = whichProj.length - 1; i >= 0; i--) {
-            if (whichProj[i].indexOf("html") != -1) {
-                projName = whichProj[i].split(".html")[0] + ".html";
+        var whereAmI = location.href;
+        var projName = '';
+        var projIndex = '';
+        for (var i = projectsList.length - 1; i >= 0; i--) {
+            if (whereAmI.indexOf(projectsList[i]["dest"]) != -1) {
+                projName = projectsList[i]["name"];
+                projIndex = i;
             };
         };
+
         if (projName != "") {
             console.log(projName);
+            console.log(projIndex);
         };
+
     }
 }
 
