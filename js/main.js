@@ -485,18 +485,6 @@ function reelControl(method,value) {
 }
 
 function projNavLinks() {
-    // if($('body').hasClass("singleProject")) {
-    //     var whichProj = location.href.split("/");
-    //     var projName = "";
-    //     for (var i = whichProj.length - 1; i >= 0; i--) {
-    //         if (whichProj[i].indexOf("html") != -1) {
-    //             projName = whichProj[i].split(".html")[0] + ".html";
-    //         };
-    //     };
-    //     if (projName != "") {
-    //         console.log(projName);
-    //     };
-    // }
     if($('body').hasClass("singleProject")) {
         var whereAmI = location.href;
         var projName = '';
@@ -511,8 +499,30 @@ function projNavLinks() {
         if (projName != "") {
             console.log(projName);
             console.log(projIndex);
-        };
 
+            switch (projIndex){
+                case 0:
+                    $(".fixedArrowsL .projNavLink").addClass("hidden");
+                    $(".fixedArrowsR .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsR .projNavLink").attr("href",projectsList[projIndex+1]["dest"]);
+                    break;
+
+                case projectsList.length-1:
+                    $(".fixedArrowsR .projNavLink").addClass("hidden");
+                    $(".fixedArrowsL .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsL .projNavLink").attr("href",projectsList[projIndex-1]["dest"]);
+                    break;
+
+                default:
+                    $(".fixedArrowsL .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsL .projNavLink").attr("href",projectsList[projIndex-1]["dest"]);
+                    $(".fixedArrowsR .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsR .projNavLink").attr("href",projectsList[projIndex+1]["dest"]);
+                    break;
+            }
+
+
+        };
     }
 }
 
