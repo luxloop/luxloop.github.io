@@ -67,7 +67,13 @@
     </div>
 
     <!-- Cover -->
-    <div class="jumbotron hasFullBg bigTitle" id="cover" data-bg="projects/bluebutterfly/thumb.jpg">
+    <!-- <div class="jumbotron hasFullBg bigTitle" id="cover" data-bg="projects/bluebutterfly/thumb.jpg"> -->
+    <div class="jumbotron hasFullBg hasVidBg bigTitle" id="cover" data-bg="projects/socialsound/vidThumb.jpg" data-gif="">
+      <video id="videoBg" preload="auto" width="100%" autoplay loop poster="projects/socialsound/vidThumb.jpg">
+        <source src="projects/socialsound/socialsoundBg.webm" type="video/webm">
+        <source src="projects/socialsound/socialsoundBg.mp4" type="video/mp4">
+        <!-- Your browser does not support video. -->
+      </video>
       <div class="container">
         <div class="imgOverlay" style="background: rgba(24,24,24,0.1)"></div>
         <div class="row text-center">
@@ -140,18 +146,22 @@
               <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#projectCarousel" data-slide-to="1"></li>
               <li data-target="#projectCarousel" data-slide-to="2"></li>
+              <li data-target="#projectCarousel" data-slide-to="3"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="projects/bluebutterfly/1.jpg">
+              <div class="item active vidHolder">
+                <iframe src="http://player.vimeo.com/video/131315580?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
               <div class="item">
-                <img src="projects/bluebutterfly/2.jpg">
+                <img src="projects/socialsound/3.jpg">
               </div>
               <div class="item">
-                <img src="projects/bluebutterfly/3.jpg">
+                <img src="projects/socialsound/2.jpg">
+              </div>
+              <div class="item">
+                <img src="projects/socialsound/1.jpg">
               </div>
             </div>
 
