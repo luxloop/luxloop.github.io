@@ -9,6 +9,44 @@ var yMousePos = 0;
 var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
+var projects = [
+    {"name":"If The Walls Had Eyes",
+        "desc":"Interactive Video Installation",
+        "thumb":"projects/eyes/thumb.jpg",
+        "dest":"eyes.html"},
+    {"name":"Amplified Self",
+        "desc":"Interactive Video Installation",
+        "thumb":"projects/amplifiedself/thumb2.jpg",
+        "dest":"amplifiedself.html"},
+    {"name":"Axion",
+        "desc":"Interactive Documentary",
+        "thumb":"projects/axion/thumb.jpg",
+        "dest":"axion.html"},
+    {"name":"Motion",
+        "desc":"Custom Inertial Motion Capture Hardware",
+        "thumb":"projects/dancemotion/1.png",
+        "dest":"motion.html"},
+    {"name":"Cloud Control",
+        "desc":"Mobile App and Programmable Cloud for VFX",
+        "thumb":"projects/cloudcontrol/thumb.jpg",
+        "dest":"cloudcontrol.html"},
+    {"name":"Screen Motion",
+        "desc":"Experiments in Spatial Interactivity, Video, and Filmmaking",
+        "thumb":"projects/screen/thumb.jpg",
+        "dest":"screenmotion.html"},
+    {"name":"OBEM",
+        "desc":"Short Dance Film Using Motion Capture Hardware",
+        "thumb":"projects/obem/03.png",
+        "dest":"obem.html"},
+    {"name":"Blue Butterfly",
+        "desc":"Projection-mapped Theatrical Design",
+        "thumb":"",
+        "dest":"bluebutterfly.html"},
+    {"name":"Social Sound",
+        "desc":"",
+        "thumb":"",
+        "dest":"socialsound.html"}
+]
 /*
  * TO DO:
  * redo parallax behavior
@@ -75,6 +113,8 @@ $(document).ready(function() {
         });
     };
     $(".coverVid").removeClass("readyFade");
+
+    projNavLinks();
 });
 
 ////////////////////////
@@ -442,6 +482,21 @@ function reelControl(method,value) {
 
     var message = JSON.stringify(data);
     player[0].contentWindow.postMessage(data, url);
+}
+
+function projNavLinks() {
+    if($('body').hasClass("singleProject")) {
+        var whichProj = location.href.split("/");
+        var projName = "";
+        for (var i = whichProj.length - 1; i >= 0; i--) {
+            if (whichProj[i].indexOf("html") != -1) {
+                projName = whichProj[i].split(".html")[0] + ".html";
+            };
+        };
+        if (projName != "") {
+            console.log(projName);
+        };
+    }
 }
 
 ////////////////////////
