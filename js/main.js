@@ -40,11 +40,11 @@ var projectsList = [
         "dest":"obem.html"},
     {"name":"Blue Butterfly",
         "desc":"Projection-mapped Theatrical Design",
-        "thumb":"",
+        "thumb":"projects/bluebutterfly/thumb.jpg",
         "dest":"bluebutterfly.html"},
     {"name":"Social Sound",
-        "desc":"",
-        "thumb":"",
+        "desc":"A Tool for Live Performance of the Social Sphere",
+        "thumb":"projects/socialsound/thumb.jpg",
         "dest":"socialsound.html"}
 ]
 /*
@@ -72,10 +72,10 @@ $(document).ready(function() {
             var img = new Image();
             img.onload = function() {
               cover.backstretch(coverSrc, {fade: 3000});
-              gifBg(cover);
+              if (!isMobile && !$('body').hasClass('touch')) {gifBg(cover)};
             };
             img.onerror = function() {
-              gifBg(cover);
+              if (!isMobile && !$('body').hasClass('touch')) {gifBg(cover)};
             };
             img.src = coverSrc;
         };
