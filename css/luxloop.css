@@ -294,29 +294,6 @@ footer p {
           transform: translateY(-50%);  
 }
 
-.coverVid {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  /*height: 200px;*/
-  -webkit-transform: translate(-50%,-55%);
-      -ms-transform: translate(-50%,-55%);
-          transform: translate(-50%,-55%);
-  background: #333;
-  background: rgba(0,0,0,0.3);
-  opacity: 1.0;
-  -webkit-transition: opacity 4s linear;
-          transition: opacity 4s linear;
-  z-index: 10;
-  border: solid 2px #000;
-}
-
-.opacity.csstransitions .coverVid.readyFade {
-  opacity: 0.0;
-}
-
 .fixedArrows {
   position: fixed;
   top: 0%;
@@ -462,6 +439,91 @@ footer p {
 #cover {
   min-height: 100%;
   margin: 0px !important;
+}
+
+.bigLogoFrontPage {
+  top: 40vh;
+}
+
+.coverVid {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  /*height: 200px;*/
+  -webkit-transform: translate(-50%,-55%);
+      -ms-transform: translate(-50%,-55%);
+          transform: translate(-50%,-55%);
+  background: #333;
+  background: rgba(0,0,0,0.3);
+  /*opacity: 1.0;
+  -webkit-transition: opacity 4s linear;
+          transition: opacity 4s linear;*/
+  z-index: 10;
+  border: solid 2px #000;
+}
+
+/*.opacity.csstransitions .coverVid.readyFade {
+  opacity: 0.0;
+}*/
+
+.coverScreen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*display: none;*/
+  visibility: hidden;
+}
+
+.opacity.csstransitions .coverScreen {
+  -webkit-transition: opacity 0.5s linear;
+          transition: opacity 0.5s linear;
+  opacity: 0.0;
+  visibility: visible;
+}
+
+.opacity .coverScreen.showIt {
+  opacity: 1.0;
+}
+
+.reelClose {
+  position: absolute;
+  color: #fff !important;
+  top: 0px;
+  right: 8px;
+  z-index: 10;
+  font-size: 3em;
+  text-decoration: none !important;
+  line-height: 1em;
+}
+
+.playLink {
+  position: relative;
+  width: 100%;
+  /*margin-top: 50%;*/
+  margin-top: 50vh;
+  font-size: 3em;
+  z-index: 2;
+  padding-bottom: 1em;
+}
+
+.showReel {
+  color: #fff !important;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.no-touch .showReel:hover, .no-touch .reelClose:hover  {
+  color: #666 !important;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.touch .showReel:hover {
+  color: #fff;
 }
 
 .clientLogo {
@@ -1065,6 +1127,10 @@ footer p {
     font-size: 4em;
   }
 
+  .playLink {
+    font-size: 4em;
+  }
+
   .carousel-control .fa-angle-left, .carousel-control .fa-angle-right {
     width: 30px;
     height: 30px;
@@ -1142,6 +1208,10 @@ footer p {
 
   .coverVid {
     width: 80%;
+  }
+
+  .playLink {
+    font-size: 4em;
   }
 
   .project a {

@@ -53,15 +53,28 @@
     </button>
 
     <!-- Cover -->
-    <div class="jumbotron hasFullBg" id="cover" data-bg="img/cover2.jpg">
+    <!-- <div class="jumbotron hasFullBg hasGifBg" id="cover" data-bg="projects/amplifiedself/gifSmall2.gif" data-gif="projects/amplifiedself/gifSmall2.gif"> -->
+    <div class="jumbotron hasFullBg hasVidBg" id="cover" data-bg="projects/amplifiedself/vidThumb.jpg" data-gif="">
+      <video id="videoBg" preload="auto" width="100%" autoplay loop poster="projects/amplifiedself/vidThumb.jpg">
+        <source src="projects/amplifiedself/ampself.webm" type="video/webm">
+        <source src="projects/amplifiedself/ampself.mp4" type="video/mp4">
+        <!-- Your browser does not support video. -->
+      </video>
       <div class="container">
-        <!-- <div class="bigLogo logoTopSlide">
+        <div class="bigLogo logoTopSlide bigLogoFrontPage text-center">
             <img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logoMed.png'" id="coverLogoSvg">
-        </div> -->
+        </div>
 
-        
-        <div class="coverVid vidHolder">
-          <iframe src="http://player.vimeo.com/video/123281816?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="playLink text-center">
+          <a href="#" class="showReel"><span class="fa fa-youtube-play fa-lg"></span></a>
+        </div>
+
+        <div class="coverScreen">
+          <div class="imgOverlay" style="background: rgba(0,0,0,0.9)"></div>
+          <div class="coverVid vidHolder">
+            <a href="#" class="reelClose">&times;</a>
+            <iframe id="reelFrame" src="https://player.vimeo.com/video/123281816?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;api=1&amp;player_id=reelFrame" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
         </div>
        
 
@@ -233,6 +246,7 @@
             <li data-target="#workCarousel" data-slide-to="4"></li>
             <li data-target="#workCarousel" data-slide-to="5"></li>
             <li data-target="#workCarousel" data-slide-to="6"></li>
+            <li data-target="#workCarousel" data-slide-to="7"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -317,6 +331,18 @@
                 </a>
                 <p class="projCaption">
                   Short Dance Film Using Motion Capture Hardware
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="projects/bluebutterfly/thumb.jpg">
+              <div class="carousel-caption">
+                <a href="bluebutterfly.html" class="projCaption">
+                  Blue Butterfly
+                </a>
+                <p class="projCaption">
+                  Projection-mapped Theatrical Design
                 </p>
               </div>
             </div>
@@ -512,9 +538,12 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/detectmobile.js"></script>
     <script src="js/vendor/jquery.backstretch.min.js"></script>
-    <script src="js/vendor/jquery.appear.js"></script>
+    <!-- <script src="js/vendor/jquery.appear.js"></script> -->
     <script src="js/vendor/jquery.fitvids.js"></script>
     <!-- <script src="js/vendor/imagesloaded.pkgd.min.js"></script> -->
+
+    <!-- <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script> -->
+    <!-- <script>window.$f || document.write('<script src="js/vendor/froogaloop.min.js"><\/script>')</script> -->
 
     <!-- Mailchimp JS -->
     

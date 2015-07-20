@@ -9,6 +9,44 @@ var yMousePos = 0;
 var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
+var projectsList = [
+    {"name":"If The Walls Had Eyes",
+        "desc":"Interactive Video Installation",
+        "thumb":"projects/eyes/thumb.jpg",
+        "dest":"eyes.html"},
+    {"name":"Amplified Self",
+        "desc":"Interactive Video Installation",
+        "thumb":"projects/amplifiedself/thumb2.jpg",
+        "dest":"amplifiedself.html"},
+    {"name":"Axion",
+        "desc":"Interactive Documentary",
+        "thumb":"projects/axion/thumb.jpg",
+        "dest":"axion.html"},
+    {"name":"Motion",
+        "desc":"Custom Inertial Motion Capture Hardware",
+        "thumb":"projects/dancemotion/1.png",
+        "dest":"motion.html"},
+    {"name":"Cloud Control",
+        "desc":"Mobile App and Programmable Cloud for VFX",
+        "thumb":"projects/cloudcontrol/thumb.jpg",
+        "dest":"cloudcontrol.html"},
+    {"name":"Screen Motion",
+        "desc":"Experiments in Spatial Interactivity, Video, and Filmmaking",
+        "thumb":"projects/screen/thumb.jpg",
+        "dest":"screenmotion.html"},
+    {"name":"OBEM",
+        "desc":"Short Dance Film Using Motion Capture Hardware",
+        "thumb":"projects/obem/03.png",
+        "dest":"obem.html"},
+    {"name":"Blue Butterfly",
+        "desc":"Projection-mapped Theatrical Design",
+        "thumb":"",
+        "dest":"bluebutterfly.html"},
+    {"name":"Social Sound",
+        "desc":"",
+        "thumb":"",
+        "dest":"socialsound.html"}
+]
 /*
  * TO DO:
  * redo parallax behavior
@@ -24,6 +62,8 @@ var lastScrolledTop = 0;
 $(document).ready(function() {
 
     // Build backgrounds
+
+    //console.log(window.$f);
 
     $(".hasFullBg").each(function(){
         var cover = $(this);
@@ -73,6 +113,8 @@ $(document).ready(function() {
         });
     };
     $(".coverVid").removeClass("readyFade");
+
+    projNavLinks();
 });
 
 ////////////////////////
@@ -85,6 +127,7 @@ $( window ).load(function() {
     } else {
         $("body").addClass("isNotMobile");
     };
+    reelLink();
 
     setTimeout(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
@@ -137,6 +180,7 @@ on_resize(function() {
           resizeNavMenu(window.innerHeight*0.9,0);
     }, 450);
     resizeCoverVid();
+    reelLink();
 })();
 
 
@@ -187,8 +231,12 @@ $(document).keyup(function(e) {
             setTimeout(function() {
                 $('body').removeClass('hide-nav');
             }, 500);
-        }
-    }
+        } else if ($(".coverScreen").hasClass("showIt")) {
+            $(".coverScreen").removeClass("showIt");
+            reelControl("pause");
+            reelControl("seekTo",0.0001);
+        };
+    } 
 });
 
 $(".project").click(function(e){
@@ -213,6 +261,20 @@ $(".mouseEffect").mousemove(function(e){
     yMousePos = e.pageY;
     // console.log("x = " + xMousePos + " y = " + yMousePos);
     mouseAnimate($(".mouseEffect"),e.pageX,e.pageY);
+});
+
+$(".showReel").click(function(e){
+    e.preventDefault();
+    resizeCoverVid();
+    $(".coverScreen").addClass("showIt");
+    reelControl("play");
+    reelControl("seekTo",0.0001);
+});
+
+$(".reelClose").click(function(e){
+    e.preventDefault();
+    $(".coverScreen").removeClass("showIt");
+    reelControl("pause");
 });
 
 
@@ -397,6 +459,71 @@ function resizeCoverVid(){
         coverVid.height(vidHeight);
     };
     coverVid.height(vidHeight + "px");
+}
+
+function reelLink() {
+    if (false) {
+    // if ($(".playLink").length) {
+        console.log("yes");
+        var pos = $(".bigLogo").offset().top + $(".bigLogo").height() * 2; 
+        $(".playLink").css("margin-top",pos + "px");
+    };
+    //margin-top: 50vh;
+}
+
+function reelControl(method,value) {
+    var player = $('#reelFrame');
+    var url = window.location.protocol + player.attr('src').split('?')[0];
+    var data = {method: method};
+        
+    if (value) {
+        data.value = value;
+    }
+
+    var message = JSON.stringify(data);
+    player[0].contentWindow.postMessage(data, url);
+}
+
+function projNavLinks() {
+    if($('body').hasClass("singleProject")) {
+        var whereAmI = location.href;
+        var projName = '';
+        var projIndex = '';
+        for (var i = projectsList.length - 1; i >= 0; i--) {
+            if (whereAmI.indexOf(projectsList[i]["dest"]) != -1) {
+                projName = projectsList[i]["name"];
+                projIndex = i;
+            };
+        };
+
+        if (projName != "") {
+            console.log(projName);
+            console.log(projIndex);
+
+            switch (projIndex){
+                case 0:
+                    $(".fixedArrowsL .projNavLink").addClass("hidden");
+                    $(".fixedArrowsR .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsR .projNavLink").attr("href",projectsList[projIndex+1]["dest"]);
+                    break;
+
+                case projectsList.length-1:
+                    $(".fixedArrowsR .projNavLink").addClass("hidden");
+                    $(".fixedArrowsL .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsL .projNavLink").attr("href",projectsList[projIndex-1]["dest"]);
+                    break;
+
+                default:
+                    $(".fixedArrowsL .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsL .projNavLink").attr("href",projectsList[projIndex-1]["dest"]);
+                    $(".fixedArrowsR .projNavLink").removeClass("hidden");
+                    $(".fixedArrowsR .projNavLink").attr("href",projectsList[projIndex+1]["dest"]);
+                    break;
+            }
+
+
+        };
+    }
 }
 
 ////////////////////////

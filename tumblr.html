@@ -1,1061 +1,231 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" id="{block:indexpage}ind{/block:indexpage}{block:permalinkpage}per{/block:permalinkpage}">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
   <head>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    <title>
-      {Title}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}
-    </title>
-        
-<!--  
-==========================================================
-Luxloop Blog
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-A modified version of
-Povouir v.3
-BY YONGJU / YONGJU.CO.KR
-PUBLISHED BY THEMECLOSET 
-==========================================================
+      <title>
+        {Title}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}
+      </title>
 
-jQuery Colorbox v1.4.14 - 2013-04-16
-(c) 2013 Jack Moore - jacklmoore.com/colorbox
-license: http://www.opensource.org/licenses/mit-license.php
+      <meta property=”og:title” content=”{title}”>
+      {block:Description}
+      <meta name="description" content="{MetaDescription}" />
+      {/block:Description}
+      <meta name="viewport" id="viewport" content="user-scalable=0,initial-scale=1.0,maximum-scale=1.0">
+      <link rel="shortcut icon" href="{Favicon}" />
+      <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
-Infinite Scroll
-+ https://github.com/paulirish/infinite-scroll
-+ version 2.0b2.120519
-+ Copyright 2011/12 Paul Irish & Luke Shumard
-+ Licensed under the MIT license
-+ Documentation: http://infinite-scroll.com/
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-jQuery Masonry v2.0.110825 & Imagesloaded.js
-* A dynamic layout plugin for jQuery
-* The flip-side of CSS Floats
-* http://masonry.desandro.com
-* Licensed under the MIT license.
-* Copyright 2011 David DeSandro
+      <!-- HTML5 Shiv -->
+      <!--[if lt IE 9]>
+      <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js">
+      </script>
+      <![endif]-->
 
-Font Credit : http://fontastic.me / Google fonts
-* Font Awesome / MIT License
-+ Entypo / Creative License 3.0
-+ Steadsets / Free for personal and commercial projects
-+ Linetons / Free
-* 80shades / Free
-* Justverctor Free Icons / Free
-+ Open sans & Lato by goolge fonts / Free license
 
-Browser Selectr.js
-* License :http://creativecommons.org/licenses/by/2.5/
-* Original Author: Rafael Lima: http://rafael.adm.br
-* Based on idea by 37signals
-* http://37signals.com/svn/archives2/browser_selectors_in_css.php
+      <link rel="stylesheet" href="//static.tumblr.com/3d2g6dd/FKinlrjfc/bootstrap.min.css">
+      <link rel="stylesheet" href="//static.tumblr.com/3d2g6dd/FKinlrjfc/bootstrap.min.css">
+      <link rel="stylesheet" href="//static.tumblr.com/3d2g6dd/H1knlrj7n/tumblr.css">
 
-Html shiv.js
-* Dual licensed under the MIT or GPL Version 2 licenses
-* https://code.google.com/p/html5shiv/
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+      <!--<link rel="stylesheet" href="//static.tumblr.com/3d2g6dd/jLKnlrkkw/font-awesomet.css">-->
 
-Css reset
-* http://meyerweb.com/eric/tools/css/reset/ 
-* v2.0 | 20110126
-* License: none (public domain)
-==========================================================
--->
-    
-    
-    <meta property=”og:title” content=”{title}”>
-    {block:Description}
-    <meta name="description" content="{MetaDescription}" />
-    {/block:Description}
-    <meta name="viewport" id="viewport" content="user-scalable=0,initial-scale=1.0,maximum-scale=1.0">
-    <link rel="shortcut icon" href="{Favicon}" />
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    
-    
-    <meta name="image:logo" content=""/>
-    <meta name="image:Background" content=""/>
-    <meta name="image:Header1" content="https://secure.static.tumblr.com/6f71690772b9140bf9ade630a8fb0469/kvwx9r7/QPfnc80ew/tumblr_static_ayuz6cqhy6wc0gkss0kwo8o4k.jpg"/>
-    <meta name="image:Header2" content="https://secure.static.tumblr.com/66746970dfa759afb865bed4883bc999/kvwx9r7/2qqnc7tp2/tumblr_static_15a7yeae7ny80owkcwocso4gc.jpg"/>
-    <meta name="image:Header3" content=""/>
+      <script src="//static.tumblr.com/3d2g6dd/AvMnlrjli/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+      <script src="//static.tumblr.com/3d2g6dd/Xcznlrjm1/encode.js"></script>
 
-    <meta name="text:Google analytics Web Property ID" content="">
-    <meta name="if:Hide Tags" content="1" />
-    
-    
-    <meta name="select:Post Title Size" content="10pt" title="10pt">
-    <meta name="select:Post Title Size" content="12pt" title="12pt">
-    <meta name="select:Post Title Size" content="14pt" title="14pt">
-    <meta name="select:Post Title Size" content="16pt" title="16pt">
-    <meta name="select:Post Title Size" content="18pt" title="18pt">
-    <meta name="select:Post Title Size" content="20pt" title="20pt">
-    <meta name="select:Post Title Size" content="22pt" title="22pt">
-    <meta name="select:Post Title Size" content="24pt" title="24pt">
+      <script src="//use.typekit.net/pga1gsl.js"></script>
+      <script>try{Typekit.load();}catch(e){}</script>
 
-    <meta name="select:Post Text Size" content="8pt" title="8pt">
-    <meta name="select:Post Text Size" content="9pt" title="9pt">
-    <meta name="select:Post Text Size" content="10pt" title="10pt">
-    <meta name="select:Post Text Size" content="11pt" title="11pt">
-    <meta name="select:Post Text Size" content="12pt" title="12pt">
-    <meta name="select:Post Text Size" content="14pt" title="14pt">
-    <meta name="select:Post Text Size" content="16pt" title="16pt">
-    <meta name="select:Post Text Size" content="18pt" title="18pt">
-    
-    <meta name="color:Select Color" content="#ffd2a5" /> 
-    <meta name="color:Blockquote Color" content="#ff0000" /> 
-    <meta name="color:Menus Color" content="#ffffff" /> 
-    <meta name="color:Link Color" content="#9c9c9c" /> 
-    <meta name="color:Link Hover Color" content="#ffd2a5" />
-    <meta name="color:Background Color" content="#efefef" /> 
-    <meta name="color:Post Background Color" content="#ffffff" /> 
-    <meta name="color:Post Title Color" content="#000000" /> 
-    <meta name="color:Post Content Color" content="#cccccc" />  
-    <meta name="color:Ask Post Content Color" content="#545454" />
-    <meta name="color:Title Color" content="#ffffff" />  
-    <meta name="color:Icons Color" content="#ffffff" />  
-    <meta name="color:Description Color" content="#ffffff" />  
-    <meta name="color:Post Note Texts Color" content="#aeaeae" />
-    <meta name="color:Sup Menu Search Icon color" content="#000000" />
+      <script src="//use.typekit.net/pga1gsl.js"></script>
+      <script>try{Typekit.load();}catch(e){}</script>
+  </head>
 
-    <meta name="text:Custom tag 1" content="" />
-    <meta name="text:Custom tag 1 title" content="" />
-
-    <meta name="text:Custom tag 2" content="" />
-    <meta name="text:Custom tag 2 title" content="" />
-
-    <meta name="text:Custom tag 3" content="" />
-    <meta name="text:Custom tag 3 title" content="" />
-
-    <meta name="text:Custom link 1 URL" content="" />
-    <meta name="text:Custom link 1 title" content="" />
-    
-    <meta name="text:Custom link 2 URL" content="" />
-    <meta name="text:Custom link 2 title" content="" />
-    
-    <meta name="text:Custom link 3 URL" content="" />
-    <meta name="text:Custom link 3 title" content="" />
-    
-    <meta name="text:Personal Site URL" content="" />
-
-    <script src="//use.typekit.net/pga1gsl.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    
-  
-    <!--[if IE 7]>
-    <style>
-    body{
-    display:none}
-    </style>
-    <script>
-    var url="http://themecloset.me/support/ie8";$(location).attr('href',url);
-    </script>
+  <body class="newsPage">
+    <!--[if lt IE 8]>
+       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="www.outdatedbrowser.com">upgrade your browser</a> to improve your experience: www.outdatedbrowser.com</p>
     <![endif]-->
     
-    <!--[if IE 8]>
-    <style>
-    body{
-    display:none}
-    </style>
-    <script>
-    var url="http://themecloset.me/support/ie8";$(location).attr('href',url);
-    </script>
-    <![endif]-->
-    
-    
-    
-    <!-- HTML5 Shiv -->
-    <!--[if lt IE 9]>
-    <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js">
-    </script>
-    <![endif]-->
-         
-    {block:IfGoogleAnalyticsWebPropertyID}
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', '{text:Google Analytics ID}', 'tumblr.com');
-          ga('send', 'pageview');
-        </script>
-    {/block:IfGoogleAnalyticsWebPropertyID}
-    <script>
-      (function(doc) {
-        var viewport = document.getElementById('viewport');
-        if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-          doc.getElementById("viewport").setAttribute("content", "width=684");
-        }
-        else if ( navigator.userAgent.match(/iPad/i) ) {
-          doc.getElementById("viewport").setAttribute("content", "width=1067");
-        }
-      }
-      (document));
-    </script>
+    <nav id="body-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li> 
+            <li><a href="index.html#recentWork">Work</a></li>
+            <li><a href="http://luxloop.tumblr.com">News</a></li>
+            <li><a href="#contact" class="samePageLink">Contact</a></li>
+            <li class="iconsRow">
+              <a href="http://instagram.com/luxloop" target="_blank" class="menuIcon"><span class="fa fa-instagram"></span></a>
+              <a href="http://luxloop.tumblr.com" target="_blank" class="menuIcon"><span class="fa fa-tumblr-square"></span></a>
+              <a href="http://twitter.com/luxloop" target="_blank" class="menuIcon"><span class="fa fa-twitter-square"></span></a>
+            </li>
+        </ul>
+    </nav>
+    <button class="menuLines">
+      <span>toggle menu</span>
+    </button>
 
-    
-    <link href='http://static.tumblr.com/kvwx9r7/4hkndbfhi/structure.css' rel='stylesheet' type='text/css'>
-    
-    
-
-    <style>
-
-    .linkBox {
-      background: #eee;
-      padding: 0.5em;
-      height: 125px;
-    }
-
-    .linkBox:hover {
-      background-color: rgb(255, 100, 100);
-    }
-
-    .linkBox p {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: "rooney-sans", "helvetica", sans-serif;
-      font-weight: 300;
-    }
-
-    p.linkDest {
-      margin-top: 35px;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-    p.linkHost {
-      font-size: 0.8em;
-    }
-    
-      
-    </style>
-    
-  <body onunload="">
-
-  <div class="header">
-   
-    <div class = "menubar">
-      <div class="menus">
-        {block:ifCustomtag1title}
-        <span>
-          <a href="tagged/{text:Custom tag 1}">
-            {text:Custom tag 1 title}
-          </a>
-        </span>
-        {/block:ifCustomtag1title}
-        
-        {block:ifCustomtag2title}
-        <span>
-          <a href="tagged/{text:Custom tag 2}">
-            {text:Custom tag 2 title}
-          </a>
-        </span>
-        {/block:ifCustomtag2title}
-
-        {block:ifCustomtag3title}
-        <span>
-          <a href="tagged/{text:Custom tag 3}">
-            {text:Custom tag 3 title}
-          </a>
-        </span>
-        {/block:ifCustomtag3title}
-
-        {block:ifCustomlink1title}
-        <span>
-          <a href="{text:Custom link 1 URL}">
-            {text:Custom link 1 title}
-          </a>
-        </span>
-        {/block:ifCustomlink1title}
-
-        {block:ifCustomlink2title}
-        <span>
-          <a href="{text:Custom link 2 URL}">
-            {text:Custom link 2 title}
-          </a>
-        </span>
-        {/block:ifCustomlink2title}
-
-        {block:ifCustomlink3title}
-        <span>
-          <a href="{text:Custom link 3 URL}">
-            {text:Custom link 3 title}
-          </a>
-        </span>
-        {/block:ifCustomlink3title}
-        
-        {block:HasPages}
-            {block:Pages}
-            <span>
-                <a href="{URL}" class="page">{Label}</a>
-            </span>
-            {/block:Pages}
-        {/block:HasPages}    
-      </div>
-
-      <div class="menuright">
-        {block:ifpersonalsiteurl}
-        <span>
-            <a href="{text:personal site url}" class="page">home</a>
-        </span>
-        {/block:ifpersonalsiteurl}
-
-        <span>
-            <a href="#" class="page" id="contactLink">contact</a>
-        </span>
-
-        <span>
-            <a href="/archive" class="page">archive</a>
-        </span>
-
-        <!--
-        <form action="/search" method="get" class="search">
-          <input type="text" name="q" value=""/>
-          <button type="submit" data-icon="c"></button>
-        </form>
-        -->
-        
+    <!-- Cover -->
+    <div class="jumbotron hasFullBg" id="coverHalf" data-bg="//static.tumblr.com/3d2g6dd/yBMnlrjwq/cover6.jpg">
+      <div class="container">
+        <div class="bigLogo logoTopSlide">
+            <img src="//static.tumblr.com/3d2g6dd/jrgnlrjv8/logo.svg" onerror="this.onerror=null; this.src='//static.tumblr.com/3d2g6dd/ltDnlrjw6/logomed.png'" id="coverLogoSvg">
+        </div>
       </div>
     </div>
-        
-    <div class="contain-content">
-      <div class="table">
-        <div class="table-cell">
-          <div class="content-title">
-            <a href="/">
-              {block:ifnotlogoimage}{title}{/block:ifnotlogoimage}
-              {block:iflogoimage}<img src="{image:logo}" width="400px">{/block:iflogoimage}
-            </a>
+
+
+
+
+    <div class="container info resizeButtons">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+          <h6>Hi, We're <span class="bolder r">Luxloop</span>.</h6>
+          <p>
+            We are a creative technology studio, focused on finding new ways to captivate, inspire and interact with our fellow humans. If you’re interested in creating <span class="b">high-impact</span>, interactive <span class="b">experiences</span> that challenge what you believe is possible, let’s collaborate!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+          <a class="btn btn-lg luxButton" href="http://luxloop.com/index.html#recentWork">Our Work</a>
+          <a class="btn btn-lg luxButton" href="http://luxloop.com/about.html">More About Us</a>
+        </div>
+      </div>
+
+      <div class="row emptyRow">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+          <hr>
+        </div>
+      </div>
+
+      <div class="row emptyRowTall"></div>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+
+        </div>
+      </div>
+
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer id="contact">
+    <div class="container info footer">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
+          <h6>GET IN TOUCH</h6>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-left">
+          <div class="row">
+            <div class="col-md-4">
+              <p>
+                Have a problem?<br />
+                We’ve got a creative way to fix it!
+              </p>
+              <p>
+                Or just say hi. We’re always looking for new collaborators, projects, and connections.
+              </p>
+              <p>
+                <!-- New way to encode contact info. Make sure to include encode.js -Ivaylo -->
+                <script type="text/javascript">
+                    var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.839.1837 (YN)</c>';
+                    document.write(rot13rot5Encode(noRobots));
+                    //console.log(rot13rot5Encode(noRobots));
+                </script>
+              </p>
+              <p>
+                <a href="http://instagram.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-instagram fa-lg"></span></a>
+                <a href="http://luxloop.tumblr.com" target="_blank" class="socialIcon"><span class="fa fa-tumblr-square fa-lg"></span></a>
+                <a href="http://twitter.com/luxloop" target="_blank" class="socialIcon"><span class="fa fa-twitter-square fa-lg"></span></a>
+              </p>
+            </div>
+
+            <div class="col-md-4 text-right">
+            </div>
+
+            <div class="col-md-4 text-right">
+              <p>
+                We send out email announcements any time we have a public installation, or every once in a while when we feel like sharing.
+              </p>
+              <p>
+                We won't spam you - we promise.
+              </p>
+              <div id="mc_embed_signup">
+                <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-horizontal" target="_blank" novalidate>
+
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
+
+                  <div class="input-group input-group-sm">
+                    <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="Want to receive updates?">
+                    <span class="input-group-btn">
+                      <!-- <button class="btn btn-default" type="button">Sign Up!</button> -->
+                      <input type="submit" value="Sign Up!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default">
+                    </span>
+                  </div>
+                </form>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div> 
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-    
-  <div class="scrollup"></div>
+    </footer>
 
-
-  <div id="container">
-    <div class="descrip"><center><hr>{description}<hr></center></div>
-    <div id="content">
-      {block:Posts}
-        <div class="post infscr {block:chat}chat-post{/block:chat} {block:quote}quote-post{/block:quote} {block:text}text-post{/block:text} {block:photoset}caption-post{/block:photoset} {block:audio}caption-post{/block:audio} {block:photo}caption-post{/block:photo} {block:video}caption-post{/block:video} {block:link}link-post{/block:link} {block:Answer}text-post{/block:Answer}" id="{postID}">
-                    
-        <div class="inner_container">
-             
-          {block:Text}
-          <li class="text">
-              {block:Title}
-                  <h3 class="title"><a href="{Permalink}">{Title}</a></h3>
-              {/block:Title}
-              <div class="text-body">{Body}</div>
-              <!-- Navi -->
-              {block:date}
-              <div class="note-count"><a href="{permalink}" target="_blank">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-
-                  <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                  <span>{Reblogbutton size="14"}</span>
-                      <span data-icon="A" class="icon-a">
-                
-                          <div class="locker_container">
-                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                               <div class="locker-element2">
-                                   <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                   <div class="locker2"><a href="https://twitter.com/home?status={title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                   <div class="locker3">
-                                       <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                   </div>
-                                   
-                               </div>
-                                  <div class="rotate-tooltip"></div>
-                          </div>
-                      </span>
-                   
-                  </div>
-              </div>
-              {/block:date}
-              <!-- Navi -->  
-          </li>
-          {/block:Text}
-
-          {block:Answer}
-                    
-            <div class="Answer">
-              <div class="question">
-                <div style="width:30px;height:30px;position:realtive;" class="questions">
-                  <div class="hide-it-end">
-                    <div class="aks_container" style="background-image:url('{AskerPortraitURL-24}');"></div>
-                    <div class="askker">{Asker}
-                      <div class="rotat"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="real-qeustion real-question">{question}
-                  <div class="radius"></div>
-                </div>
-              </div>
-              <div class="answer">
-                <img src="{favicon}" class="answers">
-                <div class="real-answer">
-                  {Answer}
-                  <div class="radius2"></div>
-                </div>
-              </div>
-              <!-- Navi -->
-              {block:date}
-                <div class="note-count"><a href="{permalink}" target="_blank">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                    <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                    <span>{Reblogbutton size="14"}</span>
-                    <span data-icon="A" class="icon-a">
-                      <div class="locker_container">
-                        <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                        <div class="locker-element2">
-                          <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                          <div class="locker2"><a href="https://twitter.com/home?status={question}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                          <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
-                        </div> 
-                        <div class="rotate-tooltip"></div>
-                      </div>
-                    </span>
-                  </div>
-                </div>
-              {/block:date}
-              <!-- Navi -->
-            </div>
-          {/block:Answer}
-
-
-          {block:Photo}
-            <!-- Lightbox -->
-            <div style="display:none">
-              <center>
-                <div id="inline_{postID}" class="lightbox">
-                  <div style="background-image:url('{PhotoURL-Highres}');width:{PhotoWidth-500};height:{PhotoHeight-500};" class="imagebuilder">
-                    <img src="{PhotoURL-100}" class="small" >
-                  </div>
-                </div>
-              </center>
-            </div>
-            <!-- Lightbox -->
-      
-            <li>
-              <a href="#inline_{postID}" class="inline">
-                <div style="background-image:url('{PhotoURL-500}')" width="{PhotoWidth-500}" height="{PhotoHeight-500}" class="imagebuilder">
-                  <img src="{PhotoURL-100}" >
-                </div>
-              </a>
-                          
-              {block:Caption}
-              <div class="caption"><div class="caption_inner">
-              {Caption}                    
-                <!-- Navi -->
-                <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                    <div style="text-align:right;margin-top:-17px;" class="shareit">
-                      <span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                      <span data-icon="A" class="icon-a">
-                          <div class="locker_container">
-                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                              <div class="locker-element2">
-                                <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                <!--
-                                <div class="locker3" style="background-color:#C92228">
-                                   <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" target="_blank"><span data-icon="j"></span></a>
-                                </div>
-                                -->
-                                <div class="locker3"><a href="{permalink}" target="_blank"><span data-icon="c"></span></a></div>
-                              </div>
-                              <div class="rotate-tooltip"></div>
-                          </div>
-                      </span>
-                    </div>
-                </div> 
-                <!-- Navi -->
-              </div></div>
-              {/block:Caption}           
-            </li>
-          {/block:Photo}
-
-          {block:Panorama}
-            <li>
-                {LinkOpenTag}
-                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
-                {LinkCloseTag}{block:Caption}
-                    <div class="caption"><div class="caption_inner">{Caption}</div></div>
-                {/block:Caption}
-            </li>
-          {/block:Panorama}
-
-          {block:Photoset}
-            <li>
-              <div class="photosets">{block:indexpage}{Photoset-500}{/block:indexpage}
-                {block:permalinkpage}{Photoset-500}{/block:permalinkpage}</div>
-
-                {block:Caption}
-                  <div class="caption">
-                    <div class="caption_inner">{Caption}
-                      <!-- Navi -->
-                      <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                        {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                          <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                          <span>{Reblogbutton size="14"}</span>
-                              <span data-icon="A" class="icon-a">
-                                  <div class="locker_container">
-                                      <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                       <div class="locker-element2">
-                                           <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                           <div class="locker2"><a href="https://twitter.com/home?status={ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                           <div class="locker3">
-                                               <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                           </div>
-                                           
-                                       </div>
-                                          <div class="rotate-tooltip"></div>
-                                  </div>
-                              </span>
-                          </div>
-                      </div>
-                      <!-- Navi -->
-                    </div>
-                  </div>
-                {/block:Caption}
-            </li>
-          {/block:Photoset}
-
-          {block:Quote}
-            <li>          
-              {block:Source}
-                  <div class="source">{Source}</div>
-              {/block:Source}
-              <li class="quote">"{Quote}"</li>    
-              <!-- Navi -->
-              <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                  <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                  <span>{Reblogbutton size="14"}</span>
-                      <span data-icon="A" class="icon-a">
-                
-                          <div class="locker_container">
-                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                               <div class="locker-element2">
-                                   <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                   <div class="locker2"><a href="https://twitter.com/home?status={Quote}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                   <div class="locker3">
-                                        <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                   </div>
-                                   
-                               </div>
-                                  <div class="rotate-tooltip"></div>
-                          </div>
-                      </span>
-                  </div>
-              </div>
-              <!-- Navi -->
-            </li>
-          {/block:Quote}
-
-          {block:Link}
-            <li class="link">
-              <div class="link-name">
-                <a href="{URL}" class="link" {Target}>
-                  <div class="linkBox">
-                  <p class="linkDest">{Name}</p>
-                  {block:Host} <p class="linkHost">{Host}</p> {/block:Host}
-                  </div>
-                </a>
-              </div>
-
-              {block:Description}
-                  <div class="description">{Description}</div>
-              {/block:Description}        
-              <!-- Navi -->
-              <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                  <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                  <span>{Reblogbutton size="14"}</span>
-                      <span data-icon="A" class="icon-a">
-                
-                          <div class="locker_container">
-                              <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                               <div class="locker-element2">
-                                   <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
-    {PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                   <div class="locker2"><a href="https://twitter.com/home?status={Description}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                   <div class="locker3">
-                                         <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                   </div>
-                                   
-                               </div>
-                                  <div class="rotate-tooltip"></div>
-                          </div>
-                      </span>
-                   
-                  </div>
-              </div>
-              <!-- Navi -->
-            </li>
-          {/block:Link}
-
-          {block:Chat}
-            <li class="chat"> 
-                {block:Title}
-                    <h3><a href="{Permalink}">{Title}</a></h3>
-                {/block:Title}
-
-                <ul class="chat">
-                    {block:Lines}
-                        <li class="{Alt} user_{UserNumber}">
-                            {block:Label}
-                                <span class="label">{Label}</span>
-                            {/block:Label}{Line}
-                        </li>
-                    {/block:Lines}
-                </ul>          
-                
-                <!-- Navi -->
-                <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                  {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                    <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                    <span>{Reblogbutton size="14"}</span>
-                        <span data-icon="A" class="icon-a">
-                  
-                            <div class="locker_container">
-                                <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                 <div class="locker-element2">
-                                     <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}
-    {PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                     <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                     <div class="locker3">
-                                         <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                     </div>
-                                     
-                                 </div>
-                                    <div class="rotate-tooltip"></div>
-                            </div>
-                        </span>
-                     
-                    </div>
-                </div>
-                <!-- Navi -->
-            </li>
-          {/block:Chat}
-
-          {block:Video}
-            <li class="video">
-              <div class="video_inner"> 
-                <div class="video2"> 
-                  {block:indexpage} 
-                    {Video-500}
-                  {/block:indexpage}
-                  {block:permalinkpage}
-                    {Video-500}
-                  {/block:permalinkpage}
-                </div>
-              </div>
-              {block:Caption}
-                <div class="caption"><div class="caption_inner">{Caption}        
-                  <!-- Navi -->
-                  <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                    {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                          <span data-icon="A" class="icon-a">
-                    
-                              <div class="locker_container">
-                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                   <div class="locker-element2">
-                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                       <div class="locker3">
-                                           <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                       </div>
-                                       
-                                   </div>
-                                      <div class="rotate-tooltip"></div>
-                              </div>
-                          </span>
-                       
-                      </div>
-                  </div>
-                  <!-- Navi -->
-                </div></div>
-
-                {/block:Caption}
-              </li>
-          {/block:Video}
-
-          {block:Audio}
-              <li class="audio">
-                  <div class="audio_embed">
-                       {block:indexpage}{AudioEmbed-500}{/block:indexpage}
-                       {block:permalinkpage}{AudioEmbed-500}{/block:permalinkpage}
-                  </div>{block:Caption}
-                      <div class="caption"><div class="caption_inner" style="padding-top:12px;">{Caption}
-                          
-                          
-                                 <!-- Navi -->
-                  <div class="note-count"><a href="{permalink}">{Month} {DayOfMonth}{block:NoteCount} – {notecount} Notes {/block:NoteCount}</a>
-                    {block:ifnothidetags}{block:HasTags}{block:tags}<br><a href="{TagURL}" class="tags_URL">#{tag}</a> {/block:tags}{/block:HasTags}{/block:ifnothidetags}
-                      <div style="text-align:right;margin-top:-17px;" class="shareit"><span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                          <span data-icon="A" class="icon-a">
-                    
-                              <div class="locker_container">
-                                  <div class="locker-element1"><input onClick="this.select();" value="{ShortURL}"></div>
-                                   <div class="locker-element2">
-                                       <div class="locker1"><a href="https://www.facebook.com/sharer/sharer.php?u={block:PostSummary}{PostSummary}{/block:PostSummary}-{ShortURL}" target="_blank"><span data-icon="a"></span></a></div>
-                                       <div class="locker2"><a href="https://twitter.com/home?status={Title}-{ShortURL}" target="_blank"><span data-icon="g"></span></a></div>
-                                       <div class="locker3">
-                                           <a href="{permalink}" target="_blank"><span data-icon="c"></span></a>
-                                       </div>
-                                       
-                                   </div>
-                                      <div class="rotate-tooltip"></div>
-                              </div>
-                          </span>
-                       
-                      </div>
-                  </div>
-                  <!-- Navi -->
-                          
-                      </div>
-                       
-                      </div>
-                  {/block:Caption}           
-              </li>
-          {/block:Audio}
-
-        </div></div>
-      {/block:Posts}
-                      
-      {block:permalinkpage}
-        {block:PostNotes} 
-        <div class="post">
-          <div class="inner_container" style="padding:10px;">
-            <div class="postnotes">  
-              {block:Posts}
-              <!--
-              <script>
-                                 $(document).ready(function (){
-              {block:photo}$('.post-disqus').fadeIn(1500);{/block:photo}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Answer}$('.post-disqus').fadeIn(1500);{/block:Answer}{block:quote}$('.post-disqus').fadeIn(1500);{/block:quote}{block:text}$('.post-disqus').fadeIn(1500);{/block:text}{block:Panorama}$('.post-disqus').fadeIn(1500);{/block:Panorama}{block:link}$('.post-disqus').fadeIn(1500);{/block:link}{block:video}$('.post-disqus').fadeIn(1500);{/block:video}{block:chat}$('.post-disqus').fadeIn(1500);{/block:chat}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Photoset}$('.post-disqus').fadeIn(1500);{/block:Photoset}
-              });</script>
-              -->
-                <div class="post-padding"><div class="post-padding2">{PostNotes-16}</div></div> 
-              {/block:Posts}
-            </div>
-          </div>
-        </div>    
-        {/block:PostNotes}
-        <!--
-        {block:IfDisqusShortname}
-      
-                <div class="post post-disqus" style="color:#000000 !important;"><div class="inner_container" style="padding:20px;padding-left:30px;padding-right:30px;">
-                <div >
-              <div id="disqus_thread">
-              </div>
-              <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = '{text:Disqus Shortname}';
-                // Required - Replace <example> with your forum shortname
-                
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-              </script></div></div></div>
-        {/block:IfDisqusShortname}
-        -->
-      {/block:permalinkpage}
+    <div id="preloadCache">
     </div>
+
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//static.tumblr.com/3d2g6dd/UJknlrjpo/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Vendor JS -->
+    <script src="//static.tumblr.com/3d2g6dd/L0inlrjqh/bootstrap.min.js"></script>
+    <script src="//static.tumblr.com/3d2g6dd/BYmnlrjr7/detectmobile.js"></script>
+    <script src="//static.tumblr.com/3d2g6dd/yoqnlrjrv/jquery.backstretch.min.js"></script>
+    <!-- <script src="js/vendor/imagesloaded.pkgd.min.js"></script> -->
+
+    <!-- Mailchimp JS -->
     
-    <!--
-    <div id="pagination">
-      <li>
-      {block:Pagination}
-        {block:PreviousPage}<a href="{PreviousPage}"></a>{/block:PreviousPage}
-        {block:NextPage}<a{block:ifnotusepagination} href="{NextPage}"{/block:ifnotusepagination} class="pagination_nextlink"></a>{/block:NextPage}
-      {/block:Pagination}
-      </li>
-    </div>
-    -->
-
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script>window.mc || document.write('<script src="//static.tumblr.com/3d2g6dd/TUdnlrjsp/mc-validate.js"><\/script>')</script>
     
-    <div class="pagination">
-      {block:Pagination}
-        {block:PreviousPage}
-          <a href="{PreviousPage}" class="prev">Previous</a>
-        {/block:PreviousPage}
 
-        {block:JumpPagination length="5"}
-          {block:CurrentPage}
-            <span class="current_page">{PageNumber}</span>
-          {/block:CurrentPage}
+    <!-- Luxloop JS -->
+    <script src="//static.tumblr.com/3d2g6dd/Tinnlrk5q/luxloopblog.js"></script>
 
-          {block:JumpPage}
-            <div class="current-container">
-              <a class="jump_page" href="{URL}">{PageNumber}</a>
-            </div>
-          {/block:JumpPage}
-        {/block:JumpPagination}
-
-        {block:NextPage}
-          <a href="{NextPage}" class="next">Next</a>
-        {/block:NextPage}
-      {/block:Pagination}
-    </div>  
-    
-    
-    <div id="section">
-                <div id="footLeft">
-                    <h1>
-                        Get in touch
-                    </h1>
-                    <p>
-                        We are excited by new ideas and new challenges. Let us know if you think we can work together.<br /><br />
-                        Or if you just want to say hi. 
-                    </p>
-                    <p>
-                        </script><a href="mailto:hello@lux-loop.com">hello@lux-loop.com</a><br>
-                        646.484.8306 (NY)<br>
-                        310.384.6382 (LA)<br><br>
-
-                    </p>
-
-                    <h1 id="beOurFriend">
-                        Be our friend
-                    </h1>
-                    <p>
-                        <a href="#" class="socLink hidden" target="_blank">
-                        <img src="http://static.tumblr.com/3d2g6dd/OSGnfxm3c/s_fb.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/TnYnfxm3c/s_fb.png'" class="social" id="soc_fb" style="display:none">
-                        </a>
-                        <a href="https://twitter.com/luxloop" class="socLink" target="_blank">
-                        <img src="http://static.tumblr.com/3d2g6dd/NN4nfxm3f/s_twitter.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/9Sznfxm3e/s_twitter.png'" class="social" id="soc_tw">
-                        </a>
-                        <a href="https://luxloop.tumblr.com/" class="socLink" target="_blank">
-                        <img src="http://static.tumblr.com/3d2g6dd/uF3nfxm3d/s_tumblr.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/FTBnfxm3d/s_tumblr.png'" class="social" id="soc_tw" style="display:none">
-                        </a>
-                        <a href="http://instagram.com/luxloop" class="socLink" target="_blank">
-                        <img src="http://static.tumblr.com/3d2g6dd/mlKnfxm3d/s_insta.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/BZjnfxm3c/s_insta.png'" class="social" id="soc_ig">
-                        </a>
-                        <a href="https://vimeo.com/luxloop" class="socLink hidden" target="_blank">
-                        <img src="http://static.tumblr.com/3d2g6dd/2zMnfxm3f/s_vimeo.svg" onerror="this.onerror=null; this.src='http://static.tumblr.com/3d2g6dd/7eCnfxm3f/s_vimeo.png'" class="social" id="soc_vm">
-                        </a>
-                    </p>
-                    <span id="emailSignUpMobile">
-                        <h1>
-                            Sign up
-                        </h1>
-                        <p>
-                            Want to receive updates? Click sign up <span id="mobileChimpShower">here</span>.
-                        </p>
-                    </span>
-
-                </div>
-                <div id="footRight">
-                    <h1>
-                        Mailing List
-                    </h1>
-                    <p>
-                        Want to receive updates about our work?
-                    </p>
-                    <p>
-                        <!-- Begin MailChimp Signup Form -->
-                        <div id="mc_embed_signup">
-                            <form action="//lux-loop.us9.list-manage.com/subscribe/post?u=932da86c44803a133780827a6&amp;id=82cf60a90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div class="mc-field-group">
-                                        <label for="mce-EMAIL">Email Address </label>
-                                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="(required)">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-FNAME">First Name </label>
-                                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-LNAME">Last Name </label>
-                                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-                                    </div>
-                                    <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_932da86c44803a133780827a6_82cf60a90d" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                        <!--End mc_embed_signup-->
-                    </p>
-                </div>
-            </div>
-    
-      
-    </div>
-    
-    
-    <script type="text/javascript" src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/nx9ubj4/AxRn3ly80/masonry.pkgd.min.js"></script>
-    <script src="http://static.tumblr.com/glziqhp/dTTlsbw8e/jquery.infinitescroll.min.js"></script>
-    <script src="http://static.tumblr.com/3d2g6dd/D9xnfziiw/colorbox.js"></script>
-    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
-    <script src="http://static.tumblr.com/kvwx9r7/Abfnc7qdv/jquery.backstretch.min.js"></script>
-
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      var gotMargin = false;
-      
-      $(window).load(function() {
-          //alert("woo");
-          var e = $("#content");
-          e.fadeIn(500);
-          e.masonry({
-              itemSelector: ".post",
-              isFitWidth: true
-          });
-          /*
-          e.infinitescroll({
-              navSelector: "#pagination",
-              nextSelector: "#pagination li a.pagination_nextlink",
-              itemSelector: ".post",
-              isFitWidth: true
-          }, function(t) {
-              var n = $(t).css({
-                  opacity: 0
-              });
-              var r = n.map(function() {
-                  return this.id
-              }).get();
-              n.imagesLoaded(function() {
-                  n.animate({
-                      opacity: 1
-                  });
-                  e.masonry("appended", n, true);
-                  $(".inline").colorbox({
-                      width: "630px",
-                      innerHeight: "auto",
-                      inline: true,
-                      fixed: true
-                  });
-                  $(".lightbox").colorbox({
-                      inline: true,
-                      width: "30%"
-                  });
-                  Tumblr.LikeButton.get_status_by_post_ids(r)
-              })
-          });
-          */
-
-          $("#content").fadeIn(0)
-          $("#dvLoading").fadeOut(0)
-
-          fixMargins();
-          $(".pagination").fadeIn();
-          $("#section").fadeIn();
-          //alert("woo");
-      });
-
-      $(document).ready(function() {
-        jQuery('.reblog_button').attr('target', '_blank');
-
-        $(".iframe").colorbox({
-            iframe: true,
-            width: "500px",
-            height: "210px"
-        });
-        $(".inline").colorbox({
-            width: "630px",
-            innerHeight: "auto",
-            inline: true,
-            fixed: true
-        });
-
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
-                $(".scrollup").fadeIn()
-            } else {
-                $(".scrollup").fadeOut()
-            }
-        });
-        $(".scrollup").click(function() {
-            $("html, body").animate({
-                scrollTop: 0
-            }, 900);
-            return false
-        });
-        
-        $("#contactLink").click(function() {
-            event.preventDefault();
-            var dest = $("#section").offset().top;
-            $("html, body").animate({
-              scrollTop: dest
-            }, 900);
-            return false
-        });
-
-
-        {block:permalinkpage}
-        $("#container").css({'height': '100%'});
-        {/block:permalinkpage};
-
-        $(".header").backstretch([{block:ifheader1image}"{image:header1}"{/block:ifheader1image}
-                     {block:ifheader2image},"{image:header2}"{block:ifheader2image} 
-                     {block:ifheader3image},"{image:header3}"{block:ifheader3image}
-                    ], {duration: 3000, fade: 750});
-                    
-        $("#section").fadeIn();
-        $(".pagination").fadeIn();
-        fixMargins();
-
-
-        // var container = document.querySelector('#content');
-        // var msnry = Masonry.data( container );
-        // console.log(msnry);
-      });
-      
-      $(document).keyup(function(e) {
-          if (e.keyCode == 27) {            // ESC
-              event.preventDefault();
-              if ($("#mc_embed_signup").css("display") == "none") {
-                $("#mc_embed_signup").css("display","inline-block");
-              };
-          }   
-      });
-
-      $( window ).resize(function() {
-        fixMargins();
-      });
-
-      function fixMargins(){
-        var margin;
-        if (!gotMargin) {
-          var intervalID = setInterval(function(){
-            margin = $(".inner_container:first").offset();
-            
-            if (margin.left !== 0) {
-              clearInterval(intervalID);
-              //alert("done");
-              gotMargin = true;
-              //console.log(margin.left);
-              $(".menus").css("margin-left",margin.left+"px");
-              $(".menuright").css("margin-right",margin.left+"px");
-            } else {
-              //console.log(margin.left);
-            };
-          }, 300);
-        } else {
-          margin = $(".inner_container:first").offset();
-          //console.log(margin.left);
-          $(".menus").css("margin-left",margin.left+"px");
-          $(".menuright").css("margin-right",margin.left+"px");
-        };
-      };
-
-      document.writeln(" <style>html{display:inline !important}</style> ");
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-55385432-1','auto');ga('send','pageview');
     </script>
-    
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
