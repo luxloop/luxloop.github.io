@@ -10,6 +10,10 @@ var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
 var projectsList = [
+    {"name":"Social Sound",
+        "desc":"A Tool for Live Performance of the Social Sphere",
+        "thumb":"projects/socialsound/thumb.jpg",
+        "dest":"socialsound.html"},
     {"name":"If The Walls Had Eyes",
         "desc":"Interactive Video Installation",
         "thumb":"projects/eyes/thumb.jpg",
@@ -18,6 +22,14 @@ var projectsList = [
         "desc":"Interactive Video Installation",
         "thumb":"projects/amplifiedself/thumb2.jpg",
         "dest":"amplifiedself.html"},
+    {"name":"Hot Mess",
+        "desc":"Multiplayer Physical Game",
+        "thumb":"projects/hotmess/thumb.jpg",
+        "dest":"hotmess.html"},
+    {"name":"Blue Butterfly",
+        "desc":"Projection-mapped Theatrical Design",
+        "thumb":"projects/bluebutterfly/thumb.jpg",
+        "dest":"bluebutterfly.html"},
     {"name":"Axion",
         "desc":"Interactive Documentary",
         "thumb":"projects/axion/thumb.jpg",
@@ -36,16 +48,8 @@ var projectsList = [
         "dest":"screenmotion.html"},
     {"name":"OBEM",
         "desc":"Short Dance Film Using Motion Capture Hardware",
-        "thumb":"projects/obem/03.png",
-        "dest":"obem.html"},
-    {"name":"Blue Butterfly",
-        "desc":"Projection-mapped Theatrical Design",
-        "thumb":"projects/bluebutterfly/thumb.jpg",
-        "dest":"bluebutterfly.html"},
-    {"name":"Social Sound",
-        "desc":"A Tool for Live Performance of the Social Sphere",
-        "thumb":"projects/socialsound/thumb.jpg",
-        "dest":"socialsound.html"}
+        "thumb":"projects/obem/03crop.png",
+        "dest":"obem.html"}
 ]
 /*
  * TO DO:
@@ -97,9 +101,11 @@ $(document).ready(function() {
 
 
     $('[data-toggle="tooltip"]').tooltip();
-    
 
     // resize and reposition things
+
+    createProjGrid();
+
 
     var buttWidth = $(".resizeButtons .row:nth-of-type(2) a").eq(1).outerWidth();
     $(".resizeButtons .row:nth-of-type(2) a").eq(0).css("width",buttWidth +"px");
@@ -181,6 +187,7 @@ on_resize(function() {
     }, 450);
     resizeCoverVid();
     reelLink();
+    resizeGrid();
 })();
 
 
@@ -482,6 +489,28 @@ function reelControl(method,value) {
 
     var message = JSON.stringify(data);
     player[0].contentWindow.postMessage(data, url);
+}
+
+function createProjGrid(){
+    var grid = $("#projectGrid");
+
+    for (var i = 0; i < projectsList.length; i++) {
+        var proj = projectsList[i];
+        var item = '<div class="projBox"><img src="' + proj.thumb + '"><div class="carousel-caption"><a href="' + proj.dest + '" class="projCaption">' + proj.name + '</a><p class="projCaption">' + proj.desc + '</p></div></div>'
+        grid.append(item);
+    };    
+
+    resizeGrid();
+}
+
+function resizeGrid(){
+    var w = $(".projBox").width();
+    var h = (w*9)/16;
+    // console.log(h);
+    $(".projBox").each(function(){
+        $(this).css("height", h + "px");
+        // $(this).css("background", "#f00");
+    })
 }
 
 function projNavLinks() {

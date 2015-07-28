@@ -548,29 +548,45 @@ footer p {
   height: auto;
 }
 
+
+.projBox {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  overflow: hidden;
+}
+
+.projBox img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+
 #workCarousel.carousel {
   max-height: 100%;
   /*margin-top: 6em;*/
   margin-bottom: 6em;
 }
 
-#workCarousel.carousel a.projCaption {
+#workCarousel.carousel a.projCaption, .projBox a.projCaption {
   font-weight: 500;
   color: #fff;
   -webkit-transition: 0.5s;
           transition: 0.5s;
 }
 
-.no-touch #workCarousel.carousel a.projCaption:hover {
+.no-touch #workCarousel.carousel a.projCaption:hover, .no-touch .projBox a.projCaption:hover {
   text-decoration: none;
   color: #f00;
 }
 
-#workCarousel.carousel a.projCaption {
+#workCarousel.carousel a.projCaption, .projBox a.projCaption {
   font-size: 1em;
 }
 
-#workCarousel.carousel p.projCaption {
+#workCarousel.carousel p.projCaption, .projBox p.projCaption {
   font-size: 0.5em;
 }
 
@@ -1171,11 +1187,11 @@ footer p {
     display: block;
   }
 
-  #workCarousel.carousel a.projCaption {
+  #workCarousel.carousel a.projCaption, .projBox a.projCaption {
     font-size: 2em;
   }
 
-  #workCarousel.carousel p.projCaption {
+  #workCarousel.carousel p.projCaption, .projBox p.projCaption {
     font-size: 1em;
   }
 }
