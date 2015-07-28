@@ -518,7 +518,7 @@ function projNavLinks() {
         var whereAmI = location.href;
         var projName = '';
         var projIndex = '';
-        for (var i = projectsList.length - 1; i >= 0; i--) {
+        for (var i = 0; i < projectsList.length; i++) {
             if (whereAmI.indexOf(projectsList[i]["dest"]) != -1) {
                 projName = projectsList[i]["name"];
                 projIndex = i;
