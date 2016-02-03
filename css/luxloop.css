@@ -884,10 +884,15 @@ footer p {
 }
 
 .specialCover .emphasis {
+  color: #8AA6E6;
+  font-family: "fatfrank", "camingodos-web", "Fira Sans", "arial", sans-serif;
+  font-weight: 500;
   border: none;
+  font-size: 5rem;
 }
 
 .specialCover .desc {
+  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
   font-size: 1.25rem;
   margin-top: 5rem;
 }
@@ -895,6 +900,9 @@ footer p {
 .specialCover .phoneNum {
   margin-top: 2rem;
   font-size: 2rem;
+  color: #1C4FC6;
+  font-family: "fatfrank", "camingodos-web", "Fira Sans", "arial", sans-serif;
+  font-weight: 500;
 }
 
 .specialCover .backstretch img {
