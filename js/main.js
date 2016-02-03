@@ -9,11 +9,14 @@ var yMousePos = 0;
 var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
-var projectsList = [
+var externalProjects = [
     {"name":"Overheard",
         "desc":"Immersive Narrative Installation at <br> the Minneapolis Institute of Arts",
         "thumb":"projects/overheard/thumb.jpg",
-        "dest":"overheard.html"},
+        "dest":"http://overheard.luxloop.com"}
+];
+
+var projectsList = [
     {"name":"Social Sound",
         "desc":"A Tool for Live Performance of the Social Sphere",
         "thumb":"projects/socialsound/thumb.jpg",
@@ -497,6 +500,12 @@ function reelControl(method,value) {
 
 function createProjGrid(){
     var grid = $("#projectGrid");
+
+    for (var i = 0; i < externalProjects.length; i++) {
+        var proj = externalProjects[i];
+        var item = '<div class="projBox"><img src="' + proj.thumb + '"><div class="carousel-caption"><a href="' + proj.dest + '" target="_blank" class="projCaption">' + proj.name + '</a><p class="projCaption">' + proj.desc + '</p></div></div>'
+        grid.append(item);
+    };
 
     for (var i = 0; i < projectsList.length; i++) {
         var proj = projectsList[i];
