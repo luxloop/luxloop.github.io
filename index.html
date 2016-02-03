@@ -24,8 +24,37 @@
       <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
       <script src="js/vendor/encode.js"></script>
 
-      <script src="//use.typekit.net/pga1gsl.js"></script>
+      <!-- // <script src="//use.typekit.net/pga1gsl.js"></script> -->
       <script>try{Typekit.load();}catch(e){}</script>
+
+      <script>
+        (function(d) {
+          var timedOut = function(){
+              // console.log("timed out");
+              var fallBackFont = document.createElement('link');
+              fallBackFont.rel = "stylesheet";
+              fallBackFont.href = "fonts/firaSans.min.css";
+              document.head.appendChild(fallBackFont);
+          }
+          //nsg2nrd
+          var config = {
+            kitId: 'pga1gsl',
+            scriptTimeout: 3000,
+            async: true,
+            loading: function() {
+              // console.log("loading");
+            },
+            active: function() {
+              // console.log("loaded");
+            },
+            inactive: function() {
+              // console.log("no-dice");
+              timedOut();
+            }
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";timedOut()},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){console.log()}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
   </head>
 
   <body style="overflow-x: hidden">
@@ -35,8 +64,8 @@
 
     <nav id="body-nav">
         <ul>
-            <li><a href="index.html">Home</a></li> 
-            <li><a href="about.html">About</a></li> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#recentWork" class="samePageLink">Work</a></li>
             <li><a href="http://luxloop.tumblr.com">News</a></li>
             <li><a href="#contact" class="samePageLink">Contact</a></li>
@@ -44,7 +73,7 @@
               <a href="http://instagram.com/luxloop" target="_blank" class="menuIcon"><span class="fa fa-instagram"></span></a>
               <a href="http://luxloop.tumblr.com" target="_blank" class="menuIcon"><span class="fa fa-tumblr-square"></span></a>
               <a href="http://twitter.com/luxloop" target="_blank" class="menuIcon"><span class="fa fa-twitter-square"></span></a>
-            </li> 
+            </li>
         </ul>
     </nav>
 
@@ -76,7 +105,7 @@
             <iframe id="reelFrame" src="https://player.vimeo.com/video/123281816?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;api=1&amp;player_id=reelFrame" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
         </div>
-       
+
 
         <div class="navArrows">
           <div class="navArrow downArrow text-center">
@@ -164,11 +193,11 @@
           <!-- <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />&nbsp;
           </p> -->
-          
+
           <p style="margin-bottom: 0em">
             Our work has been featured in:
           </p>
-          
+
         </div>
       </div>
 
@@ -349,13 +378,13 @@
             <span id="skill4" class="skillIcon fa fa-gears fa-2x"></span> <br /> Physical Computing
           </p>
         </div>
-        
+
         <div class="col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-0  text-center">
           <p>
             <span id="skill6" class="skillIcon fa fa-code fa-2x"></span> <br /> Creative Coding
           </p>
         </div>
-        
+
       </div>
     </div>
 
@@ -421,7 +450,7 @@
                 <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
@@ -449,10 +478,10 @@
     <!-- <script>window.$f || document.write('<script src="js/vendor/froogaloop.min.js"><\/script>')</script> -->
 
     <!-- Mailchimp JS -->
-    
+
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script>window.mc || document.write('<script src="js/vendor/mc-validate.js"><\/script>')</script>
-    
+
 
     <!-- Luxloop JS -->
     <script src="js/main.js"></script>
