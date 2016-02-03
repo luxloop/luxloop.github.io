@@ -518,13 +518,13 @@ function resizeGrid(){
 }
 
 function projNavLinks() {
-    console.log('>>>');
+    //console.log('>>>');
     if($('body').hasClass("singleProject")) {
         var whereAmI = location.href;
         if (whereAmI.indexOf('.html') === -1) {
             whereAmI+='.html';
         };
-        console.log(whereAmI);
+        //console.log(whereAmI);
         var projName = '';
         var projIndex = '';
         for (var i = 0; i < projectsList.length; i++) {
