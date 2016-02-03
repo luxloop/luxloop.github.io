@@ -518,6 +518,7 @@ function resizeGrid(){
 }
 
 function projNavLinks() {
+    console.log('>>>');
     if($('body').hasClass("singleProject")) {
         var whereAmI = location.href;
         var projName = '';
