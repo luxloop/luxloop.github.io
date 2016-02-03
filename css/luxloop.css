@@ -875,39 +875,6 @@ footer p {
   border: 1px solid #333;
 }
 
-.specialCover {
-  padding: 6rem !important;
-  min-height: 100% !important;
-  height: auto !important;
-  background-position: left bottom !important;
-  /*font-family: "camingodos-web", sans-serif;*/
-}
-
-.specialCover .emphasis {
-  color: #8AA6E6;
-  margin-left: -1.7rem;
-  font-family: "bookmania", serif;
-  font-weight: 700;
-  border: none;
-  font-size: 5rem;
-}
-
-.specialCover .desc {
-  font-family: "camingodos-web", "fira-sans", "Fira Sans", "arial", sans-serif;
-  font-size: 1.25rem;
-  margin-top: 5rem;
-}
-
-.specialCover .phoneNum {
-  margin-top: 2rem;
-  font-size: 2rem;
-  /*color: #1C4FC6;
-}
-
-.specialCover .backstretch img {
-  opacity: 0.5;
-}
-
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * */
