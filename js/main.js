@@ -10,6 +10,10 @@ var lastScrolledLeft = 0;
 var lastScrolledTop = 0;
 
 var projectsList = [
+    {"name":"Overheard",
+        "desc":"Immersive Narrative Installation at <br> the Minneapolis Institute of Arts",
+        "thumb":"projects/overheard/thumb.jpg",
+        "dest":"overheard.html"},
     {"name":"Social Sound",
         "desc":"A Tool for Live Performance of the Social Sphere",
         "thumb":"projects/socialsound/thumb.jpg",
@@ -58,7 +62,7 @@ var projectsList = [
  * Add load/resize function for parralax
  */
 
-//////////////////////////////////////// 
+////////////////////////////////////////
 
 ////////////////////////
 // SETUP ON READY
@@ -89,7 +93,7 @@ $(document).ready(function() {
     // Initialize plugins
 
     if ($(".vidHolder").length) {
-        $(".vidHolder").fitVids();  
+        $(".vidHolder").fitVids();
     };
 
     $(".carousel").carousel({
@@ -149,17 +153,17 @@ $( window ).load(function() {
         ///////////////
         var preloader = [];
         $.when.apply($, preloader).done(function() {
-            // console.log("preloaded");    
+            // console.log("preloaded");
             $(".animation").addClass("animationGo");
         });
 
-        $(".animation").each(function(){ 
+        $(".animation").each(function(){
             var src = $(this).attr("data-anim");
             var frames = $(this).attr("data-frames");
 
             for (var i = 1; i <= frames; i++) {
                 preloadAnimations("img/" + src + "/"+i+".jpg", preloader[i] = $.Deferred());
-            }            
+            }
         });
         ///////////////
     };
@@ -210,7 +214,7 @@ $(window).scroll(function(e) {
         // }
 
         var scrollTop = $(window).scrollTop();
-        
+
         $(".parallaxPossible").each(function(){
             parallaxIt($(this),scrollTop,window.innerHeight);
         })
@@ -243,7 +247,7 @@ $(document).keyup(function(e) {
             reelControl("pause");
             reelControl("seekTo",0.0001);
         };
-    } 
+    }
 });
 
 $(".project").click(function(e){
@@ -385,7 +389,7 @@ function mouseAnimate(section,mX,mY){
             //console.log(currentImg);
             section.css("background","url(img/" + directory + "/" + whichImg + ".jpg)");
         };
-        
+
     };
 }
 
@@ -437,16 +441,16 @@ function resizeCarousel(){
 function resizeNavMenu(windowHeight,steps){
     var nav = $("#body-nav ul");
     var navLink = $("#body-nav ul li a");
-    
+
     if (nav.outerHeight() > windowHeight && steps < 10) {
         var adjust = navLink.outerHeight() * 0.9;
-        navLink.height(adjust).css("line-height",adjust+"px");  
+        navLink.height(adjust).css("line-height",adjust+"px");
         setTimeout(function() {
               resizeNavMenu(windowHeight,steps++);
         }, 150);
     } else if(nav.outerHeight() < windowHeight*0.75 && steps < 10) {
         var adjust = navLink.outerHeight() * 1.1;
-        navLink.height(adjust).css("line-height",adjust+"px");  
+        navLink.height(adjust).css("line-height",adjust+"px");
         setTimeout(function() {
               resizeNavMenu(windowHeight,steps++);
         }, 150);
@@ -472,7 +476,7 @@ function reelLink() {
     if (false) {
     // if ($(".playLink").length) {
         console.log("yes");
-        var pos = $(".bigLogo").offset().top + $(".bigLogo").height() * 2; 
+        var pos = $(".bigLogo").offset().top + $(".bigLogo").height() * 2;
         $(".playLink").css("margin-top",pos + "px");
     };
     //margin-top: 50vh;
@@ -482,7 +486,7 @@ function reelControl(method,value) {
     var player = $('#reelFrame');
     var url = window.location.protocol + player.attr('src').split('?')[0];
     var data = {method: method};
-        
+
     if (value) {
         data.value = value;
     }
@@ -498,7 +502,7 @@ function createProjGrid(){
         var proj = projectsList[i];
         var item = '<div class="projBox"><img src="' + proj.thumb + '"><div class="carousel-caption"><a href="' + proj.dest + '" class="projCaption">' + proj.name + '</a><p class="projCaption">' + proj.desc + '</p></div></div>'
         grid.append(item);
-    };    
+    };
 
     resizeGrid();
 }
@@ -588,7 +592,7 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)}
 
 // Mailchimp validate
 (function($) {
-    window.fnames = new Array(); 
+    window.fnames = new Array();
     window.ftypes = new Array();
     fnames[0]='EMAIL';ftypes[0]='email';
     fnames[1]='FNAME';ftypes[1]='text';
@@ -637,7 +641,7 @@ $(document.body).on('disappear', '.checkVisible', function(e, $affected) {
 //     if (maxWidth > $(window).width() * 0.9) { maxWidth = $(window).width() * 0.9};
 //     var margin = $("#projectMenuBar").height();
 //     var elemHeight = $(window).height() - margin - (margin * 1.25);
-    
+
 
 //     $(".vidBox").each(function(){
 //         var ratio = 16/9;

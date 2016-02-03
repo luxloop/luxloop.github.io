@@ -36,7 +36,7 @@ a:hover {text-decoration: underline; color: #999;}
   text-transform: uppercase;
   display: inline-block;
   font-size: 1.0em;
-  font-weight: 500; 
+  font-weight: 500;
   letter-spacing: 0.09em;
   margin-bottom: 0.4em;
 }
@@ -186,8 +186,8 @@ hr {
   background: #666;
   border: solid 1px white;
   text-decoration: none;
-  margin: 0em 2em 2em 2em; 
-  
+  margin: 0em 2em 2em 2em;
+
   box-shadow:
      2px 2px #ff0000,
      4px 4px #00ff00,
@@ -283,7 +283,7 @@ footer p {
   height: 20px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
-          transform: translateX(-50%);  
+          transform: translateX(-50%);
 }
 
 .bigLogo img {
@@ -291,7 +291,7 @@ footer p {
   height: auto;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%);  
+          transform: translateY(-50%);
 }
 
 .fixedArrows {
@@ -321,12 +321,14 @@ footer p {
   /*background: rgba(255,0,0,0.3);*/
   font-size: 3em;
   color: black;
+  pointer-events: none;
 }
 
 .navArrow span {
   z-index: 5;
   min-width: 150px;
   min-height: 50px;
+  pointer-events: auto;
 }
 
 .downArrow .downArrowIcon, .downArrow .arrowText {
@@ -402,20 +404,20 @@ footer p {
 
 #videoBg {
   position: absolute;
-  bottom: 50%; 
+  bottom: 50%;
   right: 50%;
   -webkit-transform: translate(50%,50%);
       -ms-transform: translate(50%,50%);
-          transform: translate(50%,50%); 
-  min-width: 100%; 
-  min-height: 100%; 
-  width: auto; 
+          transform: translate(50%,50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
 }
 
 .isMobile #videoBg {
   display: none;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 .hasVidBg {
@@ -589,6 +591,25 @@ footer p {
 #workCarousel.carousel p.projCaption, .projBox p.projCaption {
   font-size: 0.5em;
 }
+
+/*.no-touch .projBox {
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+  opacity: 0.8;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.no-touch .projBox:hover {
+  -webkit-filter: grayscale(0);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1.0;
+}*/
 
 
 .opacity #workCarousel.carousel .carousel-inner .item img {
@@ -799,16 +820,20 @@ footer p {
 .carousel-caption {
   /*background: #333;*/
   /*background: rgba(0,0,0,0.1);*/
-  top: 50%;
+  top: auto;
   left: auto;
   right: auto;
-  bottom: auto;
+  bottom: 0%;
   z-index: 5;
   width: 100%;
-  /*padding: 1em 0em;*/
-  -webkit-transform: translateY(-30%);
+  height: 50%;
+  padding: 1em 0em;
+
+  /*-webkit-transform: translateY(-30%);
       -ms-transform: translateY(-30%);
-          transform: translateY(-30%); 
+          transform: translateY(-30%);*/
+  background: black;
+  background: rgba(0,0,0,0.75);
 }
 
 .carousel-inner .item {
@@ -822,7 +847,7 @@ footer p {
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); 
+          transform: translateY(-50%);
   min-height: 100%;
   min-width: 100%;
   height: auto;
@@ -850,7 +875,31 @@ footer p {
   border: 1px solid #333;
 }
 
+.specialCover {
+  padding: 6rem !important;
+  min-height: 100% !important;
+  height: auto !important;
+  background-position: left bottom !important;
+  /*font-family: "camingodos-web", sans-serif;*/
+}
 
+.specialCover .emphasis {
+  border: none;
+}
+
+.specialCover .desc {
+  font-size: 1.25rem;
+  margin-top: 5rem;
+}
+
+.specialCover .phoneNum {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.specialCover .backstretch img {
+  opacity: 0.5;
+}
 
 
 
@@ -988,7 +1037,7 @@ footer p {
 .no-touch #body-nav ul li a:hover {
   color: #999;
   background: #000;
-} 
+}
 
 .show-nav #body-nav ul li a {
   opacity: 1;
@@ -1268,7 +1317,7 @@ footer p {
     margin-right: 0px;
     -webkit-transform: translateX(150%);
         -ms-transform: translateX(150%);
-            transform: translateX(150%);  
+            transform: translateX(150%);
   }
 
   .carousel-control .icon-prev, .carousel-control .fa-angle-left {
@@ -1276,7 +1325,7 @@ footer p {
     margin-left: 0px;
     -webkit-transform: translateX(-150%);
         -ms-transform: translateX(-150%);
-            transform: translateX(-150%); 
+            transform: translateX(-150%);
   }
 
 }
@@ -1379,7 +1428,7 @@ footer p {
   height: 30px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%);  
+          transform: translateY(-50%);
   font-size: 3em;
   color: black;
   z-index: 5;
