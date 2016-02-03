@@ -524,6 +524,7 @@ function projNavLinks() {
         if (whereAmI.indexOf('.html') === -1) {
             whereAmI+='.html';
         };
+        console.log(whereAmI);
         var projName = '';
         var projIndex = '';
         for (var i = 0; i < projectsList.length; i++) {
