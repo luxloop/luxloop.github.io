@@ -2,7 +2,7 @@ var lKeyDown = false;;
 var rKeyDown = false;
 
 $(document).ready(function() {
-
+//console.log("ready");
 });
 
 $(document).keydown(function(e) {
@@ -24,7 +24,7 @@ $(document).keydown(function(e) {
             $("#vidWindow video").addClass("shift2");
             break;
         default:
-            console.log(e.keyCode);
+            //console.log(e.keyCode);
             break;
     }
 });
