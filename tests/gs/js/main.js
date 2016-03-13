@@ -12,7 +12,7 @@ $(document).keydown(function(e) {
             //console.log("on");
             //LEFT KEY
             lKeyDown = true;
-            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift");
             break;
         case 39:
@@ -20,7 +20,7 @@ $(document).keydown(function(e) {
             //console.log("on");
             //LEFT KEY
             rKeyDown = true;
-            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift2");
             break;
         default:
@@ -44,7 +44,8 @@ $(document).keyup(function(e) {
             //console.log("on");
             //LEFT KEY
             lKeyDown = false;
-            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
+            $("#vidWindow video").removeClass("shift")
             /*
             if (rkeyDown === true) {
               $("#vidWindow video").addClass("shift2");
@@ -56,7 +57,8 @@ $(document).keyup(function(e) {
             //console.log("on");
             //RIGHT KEY
             rKeyDown = false;
-            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
+            $("#vidWindow video").removeClass("shift2")
             /*
             if (lkeyDown === true) {
               $("#vidWindow video").addClass("shift");
