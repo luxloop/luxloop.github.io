@@ -1,21 +1,30 @@
+var lKeyDown = false;;
+var rKeyDown = false;
+
 $(document).ready(function() {
 
 });
 
 $(document).keydown(function(e) {
     switch (e.keyCode) {
-        case 71:
+        case 37:
             e.preventDefault();
             //console.log("on");
+            //LEFT KEY
+            lKeyDown = true;
+            $("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift");
             break;
-        case 83:
+        case 39:
             e.preventDefault();
             //console.log("on");
+            //LEFT KEY
+            rKeyDown = true;
+            $("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift2");
             break;
         default:
-            //console.log(e.keyCode);
+            console.log(e.keyCode);
             break;
     }
 });
@@ -30,15 +39,25 @@ $("#imgCover").click(function(e) {
 
 $(document).keyup(function(e) {
     switch (e.keyCode) {
-        case 71:
+        case 37:
             e.preventDefault();
             //console.log("on");
-            $("#vidWindow video").removeClass("shift");
+            //LEFT KEY
+            lKeyDown = false;
+            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            if (rkeyDown === true) {
+              $("#vidWindow video").addClass("shift2");
+            }
             break;
         case 83:
             e.preventDefault();
             //console.log("on");
-            $("#vidWindow video").removeClass("shift2");
+            //RIGHT KEY
+            rKeyDown = false;
+            $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            if (lkeyDown === true) {
+              $("#vidWindow video").addClass("shift");
+            }
             break;
         default:
             //console.log(e.keyCode);
