@@ -45,9 +45,11 @@ $(document).keyup(function(e) {
             //LEFT KEY
             lKeyDown = false;
             $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            /*
             if (rkeyDown === true) {
               $("#vidWindow video").addClass("shift2");
             }
+            */
             break;
         case 39:
             e.preventDefault();
@@ -55,9 +57,11 @@ $(document).keyup(function(e) {
             //RIGHT KEY
             rKeyDown = false;
             $("#vidWindow video").removeClass("shift").removeClass("shift2");
+            /*
             if (lkeyDown === true) {
               $("#vidWindow video").addClass("shift");
             }
+            */
             break;
         default:
             //console.log(e.keyCode);
