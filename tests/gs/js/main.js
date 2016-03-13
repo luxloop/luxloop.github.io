@@ -49,7 +49,7 @@ $(document).keyup(function(e) {
               $("#vidWindow video").addClass("shift2");
             }
             break;
-        case 83:
+        case 39:
             e.preventDefault();
             //console.log("on");
             //RIGHT KEY
