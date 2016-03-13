@@ -1,5 +1,5 @@
-var lKeyDown = false;;
-var rKeyDown = false;
+//var lKeyDown = false;;
+//var rKeyDown = false;
 
 $(document).ready(function() {
 //console.log("ready");
@@ -11,7 +11,7 @@ $(document).keydown(function(e) {
             e.preventDefault();
             //console.log("on");
             //LEFT KEY
-            lKeyDown = true;
+            //lKeyDown = true;
             //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift");
             break;
@@ -19,7 +19,7 @@ $(document).keydown(function(e) {
             e.preventDefault();
             //console.log("on");
             //LEFT KEY
-            rKeyDown = true;
+            //rKeyDown = true;
             //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift2");
             break;
@@ -43,7 +43,7 @@ $(document).keyup(function(e) {
             e.preventDefault();
             //console.log("on");
             //LEFT KEY
-            lKeyDown = false;
+            //lKeyDown = false;
             //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").removeClass("shift")
             /*
@@ -56,7 +56,7 @@ $(document).keyup(function(e) {
             e.preventDefault();
             //console.log("on");
             //RIGHT KEY
-            rKeyDown = false;
+            //rKeyDown = false;
             //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").removeClass("shift2")
             /*
