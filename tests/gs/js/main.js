@@ -1,6 +1,3 @@
-//var lKeyDown = false;;
-//var rKeyDown = false;
-
 $(document).ready(function() {
 //console.log("ready");
 });
@@ -9,22 +6,14 @@ $(document).keydown(function(e) {
     switch (e.keyCode) {
         case 37:
             e.preventDefault();
-            //console.log("on");
-            //LEFT KEY
-            //lKeyDown = true;
-            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift");
             break;
         case 39:
             e.preventDefault();
-            //console.log("on");
-            //LEFT KEY
-            //rKeyDown = true;
-            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
             $("#vidWindow video").addClass("shift2");
             break;
         default:
-            //console.log(e.keyCode);
+            console.log(e.keyCode);
             break;
     }
 });
@@ -41,32 +30,14 @@ $(document).keyup(function(e) {
     switch (e.keyCode) {
         case 37:
             e.preventDefault();
-            //console.log("on");
-            //LEFT KEY
-            //lKeyDown = false;
-            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
-            $("#vidWindow video").removeClass("shift")
-            /*
-            if (rkeyDown === true) {
-              $("#vidWindow video").addClass("shift2");
-            }
-            */
+            $("#vidWindow video").removeClass("shift");
             break;
         case 39:
             e.preventDefault();
-            //console.log("on");
-            //RIGHT KEY
-            //rKeyDown = false;
-            //$("#vidWindow video").removeClass("shift").removeClass("shift2");
-            $("#vidWindow video").removeClass("shift2")
-            /*
-            if (lkeyDown === true) {
-              $("#vidWindow video").addClass("shift");
-            }
-            */
+            $("#vidWindow video").removeClass("shift2");
             break;
         default:
-            //console.log(e.keyCode);
+            console.log(e.keyCode);
             break;
     }
 });
