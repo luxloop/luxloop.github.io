@@ -31,7 +31,7 @@ $defaultWeight: 100;
 
 body, html {
 	font-size: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
@@ -124,16 +124,18 @@ a {
   position: absolute;
   background: $cardBgColor;
   min-height: 600px;
-  @include transition(opacity 1.0s linear 0s, left 1.0s linear 0s, top 1.0s linear 0s);
+  @include transition(opacity 1.0s linear 0s);
   opacity: 0.0;
 
   .csstransforms.csstransitions.opacity & {
     &.slideOut {
+      @include transition(left 2.0s linear 0s, opacity 0.5s linear 0s);
       left: -100%;
       opacity: 0.0;
     }
 
     &.slideUp {
+      @include transition(left 1.0s linear 0s, top 1.0s linear 0s);
       left: 2rem;
       top: 2rem;
     }

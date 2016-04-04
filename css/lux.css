@@ -64,7 +64,6 @@ textarea {
 /* ========================================================================== */
 body, html {
   font-size: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -218,18 +217,24 @@ a {
   position: absolute;
   background: #000;
   min-height: 600px;
-  -webkit-transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
-  -moz-transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
-  transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
+  -webkit-transition: opacity 1s linear 0s;
+  -moz-transition: opacity 1s linear 0s;
+  transition: opacity 1s linear 0s;
   opacity: 0.0;
 }
 
 .csstransforms.csstransitions.opacity .card.slideOut {
+  -webkit-transition: left 2s linear 0s, opacity 0.5s linear 0s;
+  -moz-transition: left 2s linear 0s, opacity 0.5s linear 0s;
+  transition: left 2s linear 0s, opacity 0.5s linear 0s;
   left: -100%;
   opacity: 0.0;
 }
 
 .csstransforms.csstransitions.opacity .card.slideUp {
+  -webkit-transition: left 1s linear 0s, top 1s linear 0s;
+  -moz-transition: left 1s linear 0s, top 1s linear 0s;
+  transition: left 1s linear 0s, top 1s linear 0s;
   left: 2rem;
   top: 2rem;
 }

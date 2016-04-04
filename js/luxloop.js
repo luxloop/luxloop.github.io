@@ -1,6 +1,7 @@
 ////////////////////////
 // GLOBAL VARS
 
+var topId = 0;
 
 ////////////////////////////////////////
 
@@ -32,15 +33,7 @@ $( window ).resize(function() {
 $('.card').click(function(){
   var el = $(this);
   if (el.hasClass('cardTop')) {
-    var id = el.attr('id').substring(4);
-    var idNext = "#card" + (parseInt(id)+1)%2;
-    console.log(idNext);
-    el.addClass("slideOut");
-    $(idNext).addClass("slideUp");
-    setTimeout(function() {
-      el.removeClass('slideOut cardTop').addClass('cardBottom');
-      $(idNext).removeClass('slideUp cardBottom').addClass('cardTop');
-    },1000)
+    switchPage(el);
   }
 });
 
@@ -61,15 +54,22 @@ $('.card').click(function(){
 ////////////////////////
 // CUSTOM FUNCTIONS
 
+function switchPage(card) {
+  var id = card.attr('id').substring(4);
+  topId = (parseInt(id)+1)%2
+  var idNext = "#card" + topId;
+  console.log(idNext);
+  card.addClass("slideOut");
+  $(idNext).addClass("slideUp");
+  setTimeout(function() {
+    $(idNext).removeClass('slideUp cardBottom').addClass('cardTop');
+    fillCard(card,0)
+  },1000)
+}
 
-// function preloadAnimations(url, promise) {
-//     var img = new Image();
-//     img.onload = function() {
-//       promise.resolve();
-//     };
-//     img.src = url;
-//     $("#preloadCache").append('<img src="' + img.src + '">')
-// }
+function fillCard(card,contentIndex) {
+  card.removeClass('slideOut cardTop').addClass('cardBottom');
+}
 
 ////////////////////////
 // UTILITIES
