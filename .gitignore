@@ -10,3 +10,6 @@ profile
 ._*
 
 /unused/*
+
+node_modules/
+
