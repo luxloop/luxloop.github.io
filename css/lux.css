@@ -67,7 +67,7 @@ body, html {
 }
 
 body {
-  color: #000;
+  color: #fff;
   background: #000;
   font-family: 'SourceCodePro-Light', sans-serif;
   font-size: 1.75rem;
@@ -166,7 +166,7 @@ h2 {
 
 a {
   position: relative;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -189,7 +189,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #fff;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -217,10 +217,14 @@ a {
   position: absolute;
   background: #000;
   min-height: 600px;
+  min-width: 600px;
+  max-width: 1400px;
+  max-height: 1200px;
   -webkit-transition: opacity 1s linear 0s;
   -moz-transition: opacity 1s linear 0s;
   transition: opacity 1s linear 0s;
   opacity: 0.0;
+  font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
 }
 
 .csstransforms.csstransitions.opacity .card.slideOut {
@@ -237,6 +241,40 @@ a {
   transition: left 1s linear 0s, top 1s linear 0s;
   left: 2rem;
   top: 2rem;
+}
+
+.card .cool {
+  color: #fff;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  margin: 0rem;
+  font-size: 2.5rem;
+}
+
+.card .cool:after {
+  content: "\00A0\2014";
+}
+
+.card .projInfo {
+  position: absolute;
+  bottom: 0rem;
+  right: 0.5rem;
+  color: #fff;
+  text-align: right;
+}
+
+.card .projInfo .coolHeading {
+  font-size: 1.8rem;
+}
+
+.card .projInfo .coolHeading:before {
+  content: "\2014\00A0";
+}
+
+.card .projInfo .projName {
+  font-size: 1rem;
+  font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
 }
 
 .cardTop {

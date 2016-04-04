@@ -18,11 +18,12 @@ $mobile:	rem(500);
 
 $bgColor: #000;
 $cardBgColor: #000;
-$textColor: #000;
+$textColor: #fff;
 $selectColor: #b3d4fc;
 
-//$fontStack1:	"fira-sans", "FiraSansUL", "helveticaLight", sans-serif;
-//$fontStack2:	"fira-sans", "FiraSansB", "helveticaRegular", sans-serif;
+$fontStack1:  "FiraSans-Book", "helveticaRegular", sans-serif;
+$fontStack2:  "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
+
 $defaultWeight: 100;
 
 
@@ -124,8 +125,12 @@ a {
   position: absolute;
   background: $cardBgColor;
   min-height: 600px;
+  min-width: 600px;
+  max-width: 1400px;
+  max-height: 1200px;
   @include transition(opacity 1.0s linear 0s);
   opacity: 0.0;
+  font-family: $fontStack2;
 
   .csstransforms.csstransitions.opacity & {
     &.slideOut {
@@ -139,6 +144,42 @@ a {
       left: 2rem;
       top: 2rem;
     }
+  }
+
+  .cool {
+    color: $textColor;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    margin:0rem;
+    font-size: 2.5rem;
+    &:after {
+      content: "\00A0\2014";
+    }
+  }
+
+  .projInfo {
+    position: absolute;
+    bottom: 0rem;
+    right: 0.5rem;
+    color: $textColor;
+    text-align: right;
+
+    .coolHeading {
+      font-size: 1.8rem;
+
+      &:before {
+        content: "\2014\00A0";
+      }
+    }
+    .projName {
+      font-size: 1rem;
+      font-family: $fontStack1;
+    }
+    // .projSub {
+    //   max-width: 400px;
+    //   font-size: 0.8rem;
+    // }
   }
 }
 
