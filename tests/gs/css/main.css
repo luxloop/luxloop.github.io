@@ -1,3 +1,33 @@
+@font-face {
+    font-family:'NFSfont-Regular';
+    src: url('../fonts/NFSfont_gdi.eot');
+    src: url('../fonts/NFSfont_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NFSfont_gdi.woff') format('woff'),
+        url('../fonts/NFSfont_gdi.ttf') format('truetype'),
+        url('../fonts/NFSfont_gdi.otf') format('opentype'),
+        url('../fonts/NFSfont_gdi.svg#NFSfont-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-201D;
+}
+
+@font-face {
+  font-family:'BrushScriptStd-Regular';
+  src: url('../fonts/BrushScriptStd_gdi.eot');
+  src: url('../fonts/BrushScriptStd_gdi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BrushScriptStd_gdi.woff') format('woff'),
+    url('../fonts/BrushScriptStd_gdi.ttf') format('truetype'),
+    url('../fonts/BrushScriptStd_gdi.otf') format('opentype'),
+    url('../fonts/BrushScriptStd_gdi.svg#BrushScriptStd-Regular') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -10,7 +40,7 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 100%;
     line-height: 1.4;
 }
 
@@ -101,8 +131,19 @@ html, body {
     height: 100%;
     background-color: #000;
 }
+body.ownPage {
+    background: url(../img/gtvsmall10.png);
+    background-attachment: fixed;
+    background-position: center center;
+    height: auto;
+}
 
-#vidWindow {
+body.embedded {
+    overflow: hidden
+}
+
+
+body.ownPage #vidWindow {
     width: 720px;
     height: 400px;
     margin: 0 auto;
@@ -112,12 +153,24 @@ html, body {
     position: relative;
 }
 
+body.embedded #vidWindow {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+    background: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+
 #imgCover {
     position: relative;
     top: 0px;
     left:0px;
-    width: 720px;
-    height: 407px;
+    width: 100%;
+    height: auto;
     background: black;
 }
 
@@ -137,11 +190,40 @@ html, body {
 }
 
 #theVideo.shift {
-    top: -407px;
+    /*top: -407px;*/
+    top: -334979424%;
 }
 
 #theVideo.shift2 {
-    top: -813px;
+    /*top: -813px;*/
+    top: -669135802%;
+}
+
+
+
+
+#credits {
+    margin: 0 auto;
+    margin-top: 6rem;
+    text-align: center
+}
+
+#credits h1 {
+    font-size: 2rem;
+    font-family: 'NFSfont-Regular', sans-serif;
+    margin: 0rem;
+}
+
+#credits p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+    font-family: 'BrushScriptStd-Regular', sans-serif
+}
+
+#credits p.connect {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 

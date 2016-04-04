@@ -1,9 +1,12 @@
 var leftDown = false;
 var rightDown = false;
 var mostRecent = ""
+var top1 = 406;
+var top2 = 808;
 
 $(document).ready(function() {
   //console.log("ready");
+  resizeEmbedded()
   animate()
 });
 
@@ -74,18 +77,34 @@ theVid.onended = function() {
 function animate() {
   if (mostRecent !== "") {
     if (mostRecent == "l") {
-      $("#vidWindow").scrollTop(406);
+      $("#vidWindow").scrollTop(top1);
     } else if (mostRecent == "r") {
-      $("#vidWindow").scrollTop(808);
+      $("#vidWindow").scrollTop(top2);
     }
   } else if (leftDown) {
-    $("#vidWindow").scrollTop(406);
+    $("#vidWindow").scrollTop(top1);
   } else if (rightDown) {
-    $("#vidWindow").scrollTop(808);
+    $("#vidWindow").scrollTop(top2);
   } else {
     $("#vidWindow").scrollTop(1);
   }
   requestAnimationFrame(animate);
+}
+
+//Throttled on-resize handler
+on_resize(function() {
+    resizeEmbedded()
+})();
+
+function resizeEmbedded() {
+    console.log("fooo")
+    var scale = 0.555555556
+    var scale3up = 1.6875
+    var width = window.innerWidth;
+    $("body.embedded #vidWindow").css({"width":width,"height":width*scale})
+    $("body.embedded #theVideo").css({"width":width,"height":width*scale3up})
+    top1 = width * 0.563888889;
+    top2 = width * 1.122222222;
 }
 
 
@@ -111,6 +130,9 @@ function animate() {
         }
     }
 }());
+
+// debulked onresize handler
+function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
 
 // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
