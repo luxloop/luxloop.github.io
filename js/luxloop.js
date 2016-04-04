@@ -29,6 +29,21 @@ $( window ).resize(function() {
   //
 });
 
+$('.card').click(function(){
+  var el = $(this);
+  if (el.hasClass('cardTop')) {
+    var id = el.attr('id').substring(4);
+    var idNext = "#card" + (parseInt(id)+1)%2;
+    console.log(idNext);
+    el.addClass("slideOut");
+    $(idNext).addClass("slideUp");
+    setTimeout(function() {
+      el.removeClass('slideOut cardTop').addClass('cardBottom');
+      $(idNext).removeClass('slideUp cardBottom').addClass('cardTop');
+    },1000)
+  }
+});
+
 // $(window).scroll(function(e) {
 // });
 

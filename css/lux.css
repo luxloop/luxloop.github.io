@@ -211,6 +211,43 @@ a {
   transform: scaleX(1);
 }
 
+.card {
+  border: white solid 2px;
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  background: #000;
+  min-height: 600px;
+  -webkit-transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
+  -moz-transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
+  transition: opacity 1s linear 0s, left 1s linear 0s, top 1s linear 0s;
+  opacity: 0.0;
+}
+
+.csstransforms.csstransitions.opacity .card.slideOut {
+  left: -100%;
+  opacity: 0.0;
+}
+
+.csstransforms.csstransitions.opacity .card.slideUp {
+  left: 2rem;
+  top: 2rem;
+}
+
+.cardTop {
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  opacity: 1.0;
+}
+
+.cardBottom {
+  top: 4rem;
+  left: 4rem;
+  z-index: 5;
+  opacity: 1.0;
+}
+
 /* ========================================================================== */
 /* HTML5 Helper classes */
 /* ========================================================================== */

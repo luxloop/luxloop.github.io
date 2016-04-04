@@ -17,6 +17,7 @@ $mobile:	rem(500);
 }
 
 $bgColor: #000;
+$cardBgColor: #000;
 $textColor: #000;
 $selectColor: #b3d4fc;
 
@@ -115,6 +116,43 @@ a {
   @include transform(scaleX(1));
 }
 //////
+
+.card {
+  border: white solid 2px;
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  background: $cardBgColor;
+  min-height: 600px;
+  @include transition(opacity 1.0s linear 0s, left 1.0s linear 0s, top 1.0s linear 0s);
+  opacity: 0.0;
+
+  .csstransforms.csstransitions.opacity & {
+    &.slideOut {
+      left: -100%;
+      opacity: 0.0;
+    }
+
+    &.slideUp {
+      left: 2rem;
+      top: 2rem;
+    }
+  }
+}
+
+.cardTop {
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  opacity: 1.0;
+}
+
+.cardBottom {
+  top: 4rem;
+  left: 4rem;
+  z-index: 5;
+  opacity: 1.0;
+}
 
 // ==================
 
