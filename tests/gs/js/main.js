@@ -42,18 +42,21 @@ $(document).keyup(function(e) {
     mostRecent = "";
     // console.log(e.keyCode);
     switch (e.keyCode) {
-        case 37:
-            e.preventDefault();
-            //$("#vidWindow video").removeClass("shift");
-            leftDown = false;
-            break;
-        case 39:
-            e.preventDefault();
-            //$("#vidWindow video").removeClass("shift2");
-            rightDown = false;
-            break;
-        default:
-            break;
+      case 37:
+        e.preventDefault();
+        //$("#vidWindow video").removeClass("shift");
+        leftDown = false;
+        break;
+      case 39:
+        e.preventDefault();
+        //$("#vidWindow video").removeClass("shift2");
+        rightDown = false;
+        break;
+      case 38: case 40:
+        e.preventDefault();
+        break;
+      default:
+        break;
     }
 });
 
@@ -121,7 +124,6 @@ function resizeContainer() {
       $("body #theVideo").css({"width":width,"height":width*scale3up})
       top2 = width * 0.563888889;
       top1 = width * 1.122222222;
-      console.log(width, winWidth)
     }
 }
 
