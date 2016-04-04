@@ -1,12 +1,12 @@
 var leftDown = false;
 var rightDown = false;
-var mostRecent = ""
-var top1 = 406;
-var top2 = 808;
+var mostRecent = "";
+var top1 = 808;
+var top2 = 406;
 
 $(document).ready(function() {
   //console.log("ready");
-  resizeEmbedded()
+  resizeContainer()
   animate()
 });
 
@@ -93,18 +93,36 @@ function animate() {
 
 //Throttled on-resize handler
 on_resize(function() {
-    resizeEmbedded()
-})();
+    resizeContainer()
+});
 
-function resizeEmbedded() {
-    console.log("fooo")
-    var scale = 0.555555556
-    var scale3up = 1.6875
-    var width = window.innerWidth;
-    $("body.embedded #vidWindow").css({"width":width,"height":width*scale})
-    $("body.embedded #theVideo").css({"width":width,"height":width*scale3up})
-    top1 = width * 0.563888889;
-    top2 = width * 1.122222222;
+function resizeContainer() {
+  var scale = 0.555555556;
+  var scale3up = 1.6875
+  var winWidth = window.innerWidth;
+  var width;
+    if ($('body').hasClass("embedded")) {
+      width = winWidth;
+    } else if ($('body').hasClass("ownPage")) {
+
+      if (winWidth > 1700) {
+        width = winWidth * 0.6;
+      } else if (winWidth > 1400) {
+        width = winWidth * 0.7;
+      } else if (winWidth > 600) {
+        width = winWidth * 0.8;
+      } else {
+        width = winWidth * 0.9;
+      }
+    }
+
+    if (width !== undefined) {
+      $("body #vidWindow").css({"width":width,"height":width*scale})
+      $("body #theVideo").css({"width":width,"height":width*scale3up})
+      top2 = width * 0.563888889;
+      top1 = width * 1.122222222;
+      console.log(width, winWidth)
+    }
 }
 
 

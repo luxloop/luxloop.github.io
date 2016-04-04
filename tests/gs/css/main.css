@@ -147,7 +147,7 @@ body.ownPage #vidWindow {
     width: 720px;
     height: 400px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 2rem;
     overflow: hidden;
     background: black;
     position: relative;
@@ -199,6 +199,15 @@ body.embedded #vidWindow {
     top: -669135802%;
 }
 
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ccc;
+}
+
 
 
 
@@ -215,7 +224,7 @@ body.embedded #vidWindow {
 }
 
 #credits p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 3rem;
     margin-bottom: 0.3rem;
     font-family: 'BrushScriptStd-Regular', sans-serif
