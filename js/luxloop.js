@@ -5,7 +5,7 @@ var topId = 0;
 var pageIndex = 0;
 var deBounceLux = false;
 var deBounceProj = false;
-var intervalID;
+var intervalID = null;
 var intervalLength = 8000;
 
 var projectData = [
@@ -27,6 +27,13 @@ var projectData = [
   bgImage:"projects/overheard/360_2.JPG",
   description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null},
+
+  {title:"Social Sound",
+  blurb:"you could hear a social network?",
+  mobileBg:"projects/socialsound/1.jpg",
+  bgImage:"projects/socialsound/ss1.gif",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  target:'socialsound.luxloop.com'},
 
   {title:"Amplified Self",
   blurb:"you could shout your reflection?",
@@ -60,7 +67,7 @@ $(document).ready(function() {
 // EVENTS
 
 $( window ).load(function() {
-  var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz" pynff="yvaxNavz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.711.0192 (YN)</c>';
+  var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz" pynff="haqreyvar">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.711.0192 (YN)</c>';
   $(".encodedContactInfo").html(rot13rot5Encode(noRobots))
 });
 
@@ -86,38 +93,63 @@ $('.card').click(function(){
 
 $('a.coolHeading').hover(
   function() {
-    clearPageInterval();
+    if ($(this).parents('.cardTop').length) {
+      clearPageInterval();
+    }
   }, function() {
-    if (deBounceProj) {
-      deBounceProj = false;
-    } else {
-      setPageInterval();
+    if ($(this).parents('.cardTop').length) {
+      if (deBounceProj) {
+        deBounceProj = false;
+      } else {
+        setPageInterval();
+      }
     }
   }
 ).click(function(e){
   e.preventDefault();
-  deBounceProj = true;
-  clearPageInterval();
-  $('.cardTop').addClass('showProjInfo');
+  if ($(this).parents('.cardTop').length) {
+    deBounceProj = true;
+    clearPageInterval();
+    $('.cardTop').addClass('showProjInfo');
+  }
+});
+
+$(document).on('click', '.closeBox', function() {
+  // if ($(this).parents('.showProjInfo').length) {
+  //   setPageInterval();
+  //   $('.cardTop').removeClass('showProjInfo');
+  // } else if ($(this).parents('.showInfo').length) {
+  //   setPageInterval();
+  //   switchPage();
+  // }
+  setPageInterval();
+  switchPage();
 });
 
 $(".luxLink").hover(
   function() {
-    clearPageInterval();
-    $(".card").addClass('fadeInfo');
+    if ($(this).parents('.cardTop').length) {
+      clearPageInterval();
+      $(".card").addClass('fadeInfo');
+    }
+
   }, function() {
-    if (deBounceLux) {
-      deBounceLux = false;
-    } else {
-      setPageInterval();
-      $(".card").removeClass('fadeInfo');
+    if ($(this).parents('.cardTop').length) {
+      if (deBounceLux) {
+        deBounceLux = false;
+      } else {
+        setPageInterval();
+        $(".card").removeClass('fadeInfo');
+      }
     }
   }
 ).click(function(e){
   e.preventDefault();
-  deBounceLux = true;
-  clearPageInterval();
-  showInfo();
+  if ($(this).parents('.cardTop').length) {
+    deBounceLux = true;
+    clearPageInterval();
+    showInfo();
+  }
 });
 
 // $(window).scroll(function(e) {
@@ -138,14 +170,23 @@ $(".luxLink").hover(
 // CUSTOM FUNCTIONS
 
 function setPageInterval() {
+  console.log("set")
   clearInterval();
-  intervalID = window.setInterval(function(){
-    switchPage();
-  }, intervalLength);
+  if (intervalID == null) {
+    intervalID = window.setInterval(function(){
+      switchPage();
+    }, intervalLength);
+  }
 }
 
 function clearPageInterval() {
-  window.clearInterval(intervalID);
+  if (intervalID !== null) {
+    console.log("clear")
+    window.clearInterval(intervalID);
+    intervalID = null;
+  } else {
+    intervalID = null;
+  }
 }
 
 function createCards() {
@@ -204,12 +245,13 @@ function switchPage() {
   card.addClass("slideOut");
   $(idNext).addClass("slideUp");
   setTimeout(function() {
-    $(idNext).removeClass('slideUp cardBottom fadeInfo').addClass('cardTop');
+    $(idNext).removeClass('slideUp cardBottom fadeInfo showProjInfo').addClass('cardTop');
     fillCard(card,pageIndex);
   },1000)
 }
 
 function fillCard(card,contentIndex,top) {
+  card.find('.projDescription').html($(".boxPrototype").html());
   sourceElement = $(".projCard").eq(contentIndex);
   var bgSource = sourceElement.find('.bgHolder').attr('data-fullBg');
   if (typeof bgSource !== typeof undefined && bgSource !== false) {
@@ -217,11 +259,9 @@ function fillCard(card,contentIndex,top) {
                                    "background-size": "cover",
                                    "background-position": "center center",
                                    "background-repeat": "no-repeat"});
-    console.log("foo");
   } else {
     card.find(".mediaHolder").attr('style',sourceElement.find('.bgHolder').attr('style'));
     // console.log();
-    console.log("bar");
   }
 
   card.find(".coolHeading").html(sourceElement.find(".coolHeading").html());
@@ -230,7 +270,7 @@ function fillCard(card,contentIndex,top) {
   card.find(".projLink").html(sourceElement.find(".projLink").html());
   // console.log(pData)
   if (top === undefined || top === false) {
-    card.removeClass('slideOut cardTop showInfo').addClass('cardBottom');
+    card.removeClass('slideOut cardTop showInfo showProjInfo').addClass('cardBottom');
   }
   incrementIndex();
 }
