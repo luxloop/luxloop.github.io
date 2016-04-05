@@ -3,6 +3,10 @@
 
 var topId = 0;
 var pageIndex = 0;
+var deBounceLux = false;
+var deBounceProj = false;
+var intervalID;
+var intervalLength = 8000;
 
 var projectData = [
   {title:"Pigments",
@@ -10,7 +14,7 @@ var projectData = [
   bgImage:"projects/pigments/pigments.gif",
   mobileBg:"projects/pigments/bg.jpg",
   description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
-  target:null},
+  target:"icantmakeuloveu.com"},
 
   {title:"If the Walls Had Eyes",
   blurb:"the walls were watching?",
@@ -19,7 +23,7 @@ var projectData = [
   target:null},
 
   {title:"Overheard",
-  blurb:"a museum opened it's stories up to you?",
+  blurb:"a museum revealed its hidden stories?",
   bgImage:"projects/overheard/360_2.JPG",
   description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null},
@@ -48,6 +52,8 @@ $(document).ready(function() {
   fillCard($(".cardTop"),0,true);
   fillCard($(".cardBottom"),1);
 
+  setPageInterval();
+
 });
 
 ////////////////////////
@@ -55,7 +61,7 @@ $(document).ready(function() {
 
 $( window ).load(function() {
   var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz" pynff="yvaxNavz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.711.0192 (YN)</c>';
-  $(".luxInfo").append(rot13rot5Encode(noRobots))
+  $(".encodedContactInfo").html(rot13rot5Encode(noRobots))
 });
 
 
@@ -71,18 +77,48 @@ $( window ).resize(function() {
 
 $('.card').click(function(){
   var el = $(this);
-  if (el.hasClass('cardTop')) {
+  if (el.hasClass('cardBottom')) {
+    clearPageInterval();
     switchPage();
+    setPageInterval();
   }
+});
+
+$('a.coolHeading').hover(
+  function() {
+    clearPageInterval();
+  }, function() {
+    if (deBounceProj) {
+      deBounceProj = false;
+    } else {
+      setPageInterval();
+    }
+  }
+).click(function(e){
+  e.preventDefault();
+  deBounceProj = true;
+  clearPageInterval();
+  $('.cardTop').addClass('showProjInfo');
 });
 
 $(".luxLink").hover(
   function() {
+    clearPageInterval();
     $(".card").addClass('fadeInfo');
   }, function() {
-    $(".card").removeClass('fadeInfo');
+    if (deBounceLux) {
+      deBounceLux = false;
+    } else {
+      setPageInterval();
+      $(".card").removeClass('fadeInfo');
+    }
   }
-);
+).click(function(e){
+  e.preventDefault();
+  deBounceLux = true;
+  clearPageInterval();
+  showInfo();
+});
 
 // $(window).scroll(function(e) {
 // });
@@ -100,6 +136,17 @@ $(".luxLink").hover(
 
 ////////////////////////
 // CUSTOM FUNCTIONS
+
+function setPageInterval() {
+  clearInterval();
+  intervalID = window.setInterval(function(){
+    switchPage();
+  }, intervalLength);
+}
+
+function clearPageInterval() {
+  window.clearInterval(intervalID);
+}
 
 function createCards() {
   for (var i=0, l=projectData.length; i<l; i++) {
@@ -127,7 +174,7 @@ function createCards() {
     p.text(projectData[i].blurb);
     textDiv.append(p);
 
-    p = $("<p>", {class: "projName hidden"});
+    p = $("<p>", {class: "projName title hidden"});
     p.text(projectData[i].title);
     textDiv.append(p);
 
@@ -136,8 +183,10 @@ function createCards() {
     textDiv.append(p);
 
     if (projectData[i].target) {
-      p = $("<p>", {class: "projLink hidden"});
-      p.text(projectData[i].target);
+      p = $("<p>", {class: "projLink description hidden"});
+      a = $("<a>", {class: "linkAnim"});
+      a.attr({'href':'http://'+projectData[i].target,'target':'_blank'}).text(projectData[i].target)
+      p.append(a)
       textDiv.append(p);
     }
     div.append(textDiv);
@@ -155,7 +204,7 @@ function switchPage() {
   card.addClass("slideOut");
   $(idNext).addClass("slideUp");
   setTimeout(function() {
-    $(idNext).removeClass('slideUp cardBottom').addClass('cardTop');
+    $(idNext).removeClass('slideUp cardBottom fadeInfo').addClass('cardTop');
     fillCard(card,pageIndex);
   },1000)
 }
@@ -177,6 +226,8 @@ function fillCard(card,contentIndex,top) {
 
   card.find(".coolHeading").html(sourceElement.find(".coolHeading").html());
   card.find(".projName").html(sourceElement.find(".projName").html());
+  card.find(".projDesc").html(sourceElement.find(".projDesc").html());
+  card.find(".projLink").html(sourceElement.find(".projLink").html());
   // console.log(pData)
   if (top === undefined || top === false) {
     card.removeClass('slideOut cardTop showInfo').addClass('cardBottom');
@@ -185,6 +236,7 @@ function fillCard(card,contentIndex,top) {
 }
 
 function showInfo() {
+  clearPageInterval();
   $(".cardBottom .projDescription").html($(".luxInfo").html());
   $(".cardBottom").addClass("showInfo");
   switchPage();

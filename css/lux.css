@@ -73,13 +73,7 @@ body {
   font-size: 1.75rem;
 }
 
-@media screen and (max-width: 120rem) {
-  body {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 46.875rem) {
   body {
     font-size: 1.2rem;
   }
@@ -285,6 +279,10 @@ a {
   content: "\00A0\2014";
 }
 
+#mobileDisplay .luxInfo {
+  text-align: justify;
+}
+
 @media screen and (min-width: 37.5rem) {
   #mobileDisplay {
     visibility: hidden;
@@ -427,18 +425,54 @@ a {
 }
 
 .projDescription {
-  -webkit-transition: opacity 0.5s ease-in 0s;
-  -moz-transition: opacity 0.5s ease-in 0s;
-  transition: opacity 0.5s ease-in 0s;
+  height: 0rem;
+  -webkit-transition: opacity 0.5s ease-in 0s, height 0.5s ease-in 0s;
+  -moz-transition: opacity 0.5s ease-in 0s, height 0.5s ease-in 0s;
+  transition: opacity 0.5s ease-in 0s, height 0.5s ease-in 0s;
   padding: 1rem;
   padding-right: 20%;
   font-size: 1.2rem;
   opacity: 0.0;
+  overflow: scroll;
+  background: black;
+}
+
+@media screen and (max-width: 75rem) {
+  .projDescription {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 46.875rem) {
+  .projDescription {
+    font-size: 0.9rem;
+  }
 }
 
 .showInfo > .projDescription {
-  background: black;
+  height: 100%;
   opacity: 1.0;
+}
+
+.showProjInfo > .projDescription {
+  height: 100%;
+  padding: 1rem;
+  padding-right: 40%;
+  padding-top: 3rem;
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+
+.projDescription .projDesc, .projDescription .projLink {
+  font-size: 1rem;
+}
+
+.socialIcon img {
+  width: 1.5rem;
+}
+
+.socialIcon:hover {
+  opacity: 0.6;
 }
 
 /* ========================================================================== */

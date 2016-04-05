@@ -42,13 +42,9 @@ body {
   // font-family: 'SourceCodePro-Light', sans-serif;
   font-family: $fontStack1;
 	font-size: 1.75rem;
-
-	@include media (max-width $max-width * 1.2) {
-		font-size: 1.5rem;
-	}
-	@include media (max-width $tablet) {
-		font-size: 1.2rem;
-	}
+  @include media (max-width $mobile * 1.5) {
+    font-size: 1.2rem;
+  }
 }
 
 .underlined {text-decoration: underline;}
@@ -198,6 +194,10 @@ a {
     }
   }
 
+  .luxInfo {
+    text-align: justify;
+  }
+
   @include media (min-width $mobile * 1.2) {
     visibility: hidden;
     display: none;
@@ -335,15 +335,47 @@ a {
 
 .projDescription {
   @extend .fillBox;
-  @include transition(opacity 0.5s ease-in 0s);
+  height: 0rem;
+  @include transition(opacity 0.5s ease-in 0s, height 0.5s ease-in 0s);
   padding: 1rem;
   padding-right: 20%;
   font-size: 1.2rem;
+  @include media (max-width $tablet * 1.5) {
+    font-size: 1rem;
+  }
+  @include media (max-width $mobile * 1.5) {
+    font-size: 0.9rem;
+  }
   opacity: 0.0;
+  overflow: scroll;
+  background: black;
 
   .showInfo > & {
-    background: black;
-    opacity: 1.0
+    height: 100%;
+    opacity: 1.0;
+  }
+
+  .showProjInfo > & {
+    height: 100%;
+    padding: 1rem;
+    padding-right: 40%;
+    padding-top: 3rem;
+    opacity: 0.8;
+    font-size: 1.5rem;
+  }
+
+  .projDesc, .projLink {
+    font-size: 1rem;
+  }
+
+}
+
+.socialIcon {
+  img {
+    width: 1.5rem;
+  }
+  &:hover {
+    opacity: 0.6;
   }
 }
 
