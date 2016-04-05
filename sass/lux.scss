@@ -177,6 +177,7 @@ a {
     background-repeat: no-repeat;
 
     .opacity & {
+      @include transition(opacity 1.0s ease-in 0s);
       opacity: 0.5;
     }
   }
@@ -197,6 +198,7 @@ a {
     text-align: right;
 
     .separate {
+      @include transition(opacity 1.0s ease-in 0s);
       &:before {
         content: "\2014\00A0";
       }
@@ -243,6 +245,15 @@ a {
   opacity: 0.8;
 
   .projInfo {
+    opacity: 0.0;
+  }
+}
+
+.no-touch .fadeInfo {
+  .mediaHolder {
+    opacity: 0.0 !important;
+  }
+  .separate {
     opacity: 0.0;
   }
 }

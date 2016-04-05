@@ -274,6 +274,9 @@ a {
 }
 
 .opacity .card .mediaHolder {
+  -webkit-transition: opacity 1s ease-in 0s;
+  -moz-transition: opacity 1s ease-in 0s;
+  transition: opacity 1s ease-in 0s;
   opacity: 0.5;
 }
 
@@ -291,6 +294,12 @@ a {
   right: 0.5rem;
   color: #fff;
   text-align: right;
+}
+
+.card .projInfo .separate {
+  -webkit-transition: opacity 1s ease-in 0s;
+  -moz-transition: opacity 1s ease-in 0s;
+  transition: opacity 1s ease-in 0s;
 }
 
 .card .projInfo .separate:before {
@@ -332,6 +341,14 @@ a {
 }
 
 .cardBottom .projInfo {
+  opacity: 0.0;
+}
+
+.no-touch .fadeInfo .mediaHolder {
+  opacity: 0.0 !important;
+}
+
+.no-touch .fadeInfo .separate {
   opacity: 0.0;
 }
 

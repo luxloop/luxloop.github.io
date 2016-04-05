@@ -11,7 +11,7 @@ var projectData = [
   target:null},
 
   {title:"If the Walls Had Eyes",
-  blurb:"the walls were watching",
+  blurb:"the walls were watching?",
   bgImage:"projects/eyes/1.jpg",
   target:null},
 
@@ -65,6 +65,14 @@ $('.card').click(function(){
     switchPage(el);
   }
 });
+
+$(".luxLink").hover(
+  function() {
+    $(".card").addClass('fadeInfo');
+  }, function() {
+    $(".card").removeClass('fadeInfo');
+  }
+);
 
 // $(window).scroll(function(e) {
 // });
