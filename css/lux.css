@@ -156,6 +156,14 @@ body {
   }
 }
 
+.fillBox, .card .mediaHolder, .card .projDescription {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
   font-size: 1.3em;
 }
@@ -182,11 +190,15 @@ a {
   text-decoration: none;
 }
 
+.inlineDiv {
+  display: inline-block;
+}
+
 .csstransforms.csstransitions a.linkAnim:before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #fff;
@@ -220,25 +232,24 @@ a {
   min-width: 600px;
   max-width: 1400px;
   max-height: 1200px;
-  -webkit-transition: opacity 1s linear 0s;
-  -moz-transition: opacity 1s linear 0s;
-  transition: opacity 1s linear 0s;
+  -webkit-transition: opacity 1s ease-in 0s;
+  -moz-transition: opacity 1s ease-in 0s;
+  transition: opacity 1s ease-in 0s;
   opacity: 0.0;
   font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
 }
 
 .csstransforms.csstransitions.opacity .card.slideOut {
-  -webkit-transition: left 2s linear 0s, opacity 0.5s linear 0s;
-  -moz-transition: left 2s linear 0s, opacity 0.5s linear 0s;
-  transition: left 2s linear 0s, opacity 0.5s linear 0s;
-  left: -100%;
+  -webkit-transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
+  -moz-transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
+  transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
   opacity: 0.0;
 }
 
 .csstransforms.csstransitions.opacity .card.slideUp {
-  -webkit-transition: left 1s linear 0s, top 1s linear 0s;
-  -moz-transition: left 1s linear 0s, top 1s linear 0s;
-  transition: left 1s linear 0s, top 1s linear 0s;
+  -webkit-transition: left 1s ease-in 0s, top 1s ease-in 0s;
+  -moz-transition: left 1s ease-in 0s, top 1s ease-in 0s;
+  transition: left 1s ease-in 0s, top 1s ease-in 0s;
   left: 2rem;
   top: 2rem;
 }
@@ -247,34 +258,56 @@ a {
   color: #fff;
   position: absolute;
   top: 0.5rem;
-  left: 0.5rem;
+  left: 0.75rem;
   margin: 0rem;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 .card .cool:after {
   content: "\00A0\2014";
 }
 
-.card .projInfo {
+.card .mediaHolder {
   position: absolute;
-  bottom: 0rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.opacity .card .mediaHolder {
+  opacity: 0.5;
+}
+
+.card .luxLogo {
+  width: 10rem;
+  padding-bottom: 0.45rem;
+  margin-right: 0.5rem;
+  margin-left: 0.8rem;
+}
+
+.card .projInfo {
+  opacity: 0.0;
+  position: absolute;
+  bottom: 0.4rem;
   right: 0.5rem;
   color: #fff;
   text-align: right;
+}
+
+.card .projInfo .separate:before {
+  content: "\2014\00A0";
 }
 
 .card .projInfo .coolHeading {
   font-size: 1.8rem;
 }
 
-.card .projInfo .coolHeading:before {
-  content: "\2014\00A0";
-}
-
 .card .projInfo .projName {
   font-size: 1rem;
   font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
+}
+
+.card .projDescription {
+  visibility: hidden;
 }
 
 .cardTop {
@@ -284,11 +317,22 @@ a {
   opacity: 1.0;
 }
 
+.cardTop .projInfo {
+  -webkit-transition: opacity 1s ease-in 0s;
+  -moz-transition: opacity 1s ease-in 0s;
+  transition: opacity 1s ease-in 0s;
+  opacity: 1.0;
+}
+
 .cardBottom {
   top: 4rem;
   left: 4rem;
   z-index: 5;
-  opacity: 1.0;
+  opacity: 0.8;
+}
+
+.cardBottom .projInfo {
+  opacity: 0.0;
 }
 
 /* ========================================================================== */
