@@ -161,13 +161,22 @@ function switchPage() {
 }
 
 function fillCard(card,contentIndex,top) {
-  pData = projectData[contentIndex];
-  card.find(".mediaHolder").css({"background":"url('"+ pData.bgImage +"')",
-                                 "background-size": "cover",
-                                 "background-position": "center center",
-                                 "background-repeat": "no-repeat"});
-  card.find(".coolHeading").text(pData.blurb);
-  card.find(".projName").text(pData.title);
+  sourceElement = $(".projCard").eq(contentIndex);
+  var bgSource = sourceElement.find('.bgHolder').attr('data-fullBg');
+  if (typeof bgSource !== typeof undefined && bgSource !== false) {
+    card.find(".mediaHolder").css({"background":"url('"+ bgSource +"')",
+                                   "background-size": "cover",
+                                   "background-position": "center center",
+                                   "background-repeat": "no-repeat"});
+    console.log("foo");
+  } else {
+    card.find(".mediaHolder").attr('style',sourceElement.find('.bgHolder').attr('style'));
+    // console.log();
+    console.log("bar");
+  }
+
+  card.find(".coolHeading").html(sourceElement.find(".coolHeading").html());
+  card.find(".projName").html(sourceElement.find(".projName").html());
   // console.log(pData)
   if (top === undefined || top === false) {
     card.removeClass('slideOut cardTop showInfo').addClass('cardBottom');
@@ -183,7 +192,7 @@ function showInfo() {
 
 function incrementIndex() {
   pageIndex++;
-  if (pageIndex > projectData.length-1) {
+  if (pageIndex > $(".projCard").length-1) {
     pageIndex = 0;
   }
 }
