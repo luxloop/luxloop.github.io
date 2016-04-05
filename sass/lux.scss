@@ -33,7 +33,8 @@ $defaultWeight: 100;
 
 body, html {
 	font-size: 100%;
-  // overflow: hidden;
+  background: $bgColor;
+  overflow: hidden;
 }
 
 body {
@@ -48,6 +49,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
   @include media (max-width $mobile * 1.5) {
     font-size: 1.2rem;
   }

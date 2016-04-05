@@ -64,6 +64,8 @@ textarea {
 /* ========================================================================== */
 body, html {
   font-size: 100%;
+  background: #000;
+  overflow: hidden;
 }
 
 body {
@@ -77,6 +79,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
 }
 
 @media screen and (max-width: 46.875rem) {
