@@ -8,25 +8,33 @@ var projectData = [
   {title:"Pigments",
   blurb:"Lorem ipsum Anim aliqua ea incididunt ea?",
   bgImage:"projects/pigments/pigments.gif",
+  mobileBg:"projects/pigments/bg.jpg",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null},
 
   {title:"If the Walls Had Eyes",
   blurb:"the walls were watching?",
   bgImage:"projects/eyes/1.jpg",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null},
 
   {title:"Overheard",
   blurb:"a museum opened it's stories up to you?",
   bgImage:"projects/overheard/360_2.JPG",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null},
 
   {title:"Amplified Self",
   blurb:"you could shout your reflection?",
-  bgImage:"projects/amplifiedself/gifSmall2.gif"},
+  bgImage:"projects/amplifiedself/gifSmall2.gif",
+  mobileBg:"projects/amplifiedself/thumb.jpg",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  target:null},
 
   {title:"Gypsy Sport Spring/Summer 2016",
   blurb:"Lorem ipsum Anim aliqua ea incididunt ea?",
   bgImage:"projects/gypsysport/cover.jpg",
+  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
   target:null}
 ]
 
@@ -36,6 +44,7 @@ var projectData = [
 // SETUP ON READY
 
 $(document).ready(function() {
+  createCards();
   fillCard($(".cardTop"),0,true);
   fillCard($(".cardBottom"),1);
 
@@ -45,7 +54,8 @@ $(document).ready(function() {
 // EVENTS
 
 $( window ).load(function() {
-  //
+  var noRobots = '<c><n uers="znvygb:uryyb@yhkybbc.pbz" pynff="yvaxNavz">uryyb@yhkybbc.pbz</n><oe />191.939.3851 (AL)<oe />865.711.0192 (YN)</c>';
+  $(".luxInfo").append(rot13rot5Encode(noRobots))
 });
 
 
@@ -62,7 +72,7 @@ $( window ).resize(function() {
 $('.card').click(function(){
   var el = $(this);
   if (el.hasClass('cardTop')) {
-    switchPage(el);
+    switchPage();
   }
 });
 
@@ -91,7 +101,54 @@ $(".luxLink").hover(
 ////////////////////////
 // CUSTOM FUNCTIONS
 
-function switchPage(card) {
+function createCards() {
+  for (var i=0, l=projectData.length; i<l; i++) {
+    projectData[i];
+
+    var div = $("<div>", {id: "projCard"+i, class: "smallCard hasBox projCard"});
+
+    var bgDiv = $("<div>", {class: "bgHolder"});
+    if (projectData[i].mobileBg) {
+      bgDiv.css({"background":"url('"+ projectData[i].mobileBg +"')",
+                                 "background-size": "cover",
+                                 "background-position": "center center",
+                                 "background-repeat": "no-repeat"}).attr('data-fullBg',projectData[i].bgImage);
+    } else {
+      bgDiv.css({"background":"url('"+ projectData[i].bgImage +"')",
+                                 "background-size": "cover",
+                                 "background-position": "center center",
+                                 "background-repeat": "no-repeat"});
+    }
+    div.append(bgDiv);
+
+    var textDiv = $("<div>", {class: "textHolder"});
+
+    var p = $("<p>", {class: "coolHeading"});
+    p.text(projectData[i].blurb);
+    textDiv.append(p);
+
+    p = $("<p>", {class: "projName hidden"});
+    p.text(projectData[i].title);
+    textDiv.append(p);
+
+    p = $("<p>", {class: "projDesc hidden"});
+    p.text(projectData[i].description);
+    textDiv.append(p);
+
+    if (projectData[i].target) {
+      p = $("<p>", {class: "projLink hidden"});
+      p.text(projectData[i].target);
+      textDiv.append(p);
+    }
+    div.append(textDiv);
+
+    // $div.click(function(){ /* ... */ });
+    $("#projectCards").append(div);
+  }
+}
+
+function switchPage() {
+  var card = $(".cardTop");
   var id = card.attr('id').substring(4);
   topId = (parseInt(id)+1)%2
   var idNext = "#card" + topId;
@@ -105,14 +162,23 @@ function switchPage(card) {
 
 function fillCard(card,contentIndex,top) {
   pData = projectData[contentIndex];
-  card.find(".mediaHolder").css({"background":"url('"+ pData.bgImage +"')","background-size": "cover"});
+  card.find(".mediaHolder").css({"background":"url('"+ pData.bgImage +"')",
+                                 "background-size": "cover",
+                                 "background-position": "center center",
+                                 "background-repeat": "no-repeat"});
   card.find(".coolHeading").text(pData.blurb);
   card.find(".projName").text(pData.title);
-  console.log(pData)
+  // console.log(pData)
   if (top === undefined || top === false) {
-    card.removeClass('slideOut cardTop').addClass('cardBottom');
+    card.removeClass('slideOut cardTop showInfo').addClass('cardBottom');
   }
   incrementIndex();
+}
+
+function showInfo() {
+  $(".cardBottom .projDescription").html($(".luxInfo").html());
+  $(".cardBottom").addClass("showInfo");
+  switchPage();
 }
 
 function incrementIndex() {

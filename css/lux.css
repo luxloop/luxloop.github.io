@@ -69,7 +69,7 @@ body, html {
 body {
   color: #fff;
   background: #000;
-  font-family: 'SourceCodePro-Light', sans-serif;
+  font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
   font-size: 1.75rem;
 }
 
@@ -156,7 +156,7 @@ body {
   }
 }
 
-.fillBox, .card .mediaHolder, .card .projDescription {
+.fillBox, #mobileDisplay .smallCard .bgHolder, .card .mediaHolder, .projDescription {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -222,19 +222,89 @@ a {
   transform: scaleX(1);
 }
 
+.luxLogoInText {
+  width: 10rem;
+}
+
+#mobileDisplay {
+  font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
+}
+
+#mobileDisplay .smallCard {
+  margin: 1rem 3rem 4rem 1rem;
+  padding: 1rem;
+  border: solid 1px #fff;
+  position: relative;
+}
+
+#mobileDisplay .smallCard.firstCard img {
+  margin-bottom: 5rem;
+}
+
+#mobileDisplay .smallCard.projCard {
+  height: 80vh;
+  min-height: 300px;
+}
+
+#mobileDisplay .smallCard.hasBox {
+  box-shadow: 8px 8px #000, 8px 8px 0px 1px #fff;
+}
+
+#mobileDisplay .smallCard .bgHolder {
+  opacity: 1.0;
+}
+
+#mobileDisplay .smallCard .textHolder {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  padding: 0.5rem;
+  padding-left: 15%;
+  text-align: right;
+  opacity: 1.0;
+  width: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#mobileDisplay .smallCard .textHolder .coolHeading {
+  font-size: 1.3rem;
+}
+
+#mobileDisplay .smallCard .textHolder .coolHeading:before {
+  content: "\2014\00A0";
+}
+
+#mobileDisplay .smallCard .cool {
+  color: #fff;
+  margin: 0rem;
+  font-size: 2rem;
+}
+
+#mobileDisplay .smallCard .cool:after {
+  content: "\00A0\2014";
+}
+
+@media screen and (min-width: 37.5rem) {
+  #mobileDisplay {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .card {
   border: white solid 2px;
-  width: 85%;
-  height: 85%;
+  width: 80%;
+  height: 70%;
   position: absolute;
   background: #000;
-  min-height: 600px;
-  min-width: 600px;
+  min-height: 400px;
+  min-width: 31.25rem;
   max-width: 1400px;
   max-height: 1200px;
-  -webkit-transition: opacity 1s ease-in 0s;
-  -moz-transition: opacity 1s ease-in 0s;
-  transition: opacity 1s ease-in 0s;
+  -webkit-transition: opacity 0.5s ease-in 0s;
+  -moz-transition: opacity 0.5s ease-in 0s;
+  transition: opacity 0.5s ease-in 0s;
   opacity: 0.0;
   font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
 }
@@ -271,12 +341,13 @@ a {
   position: absolute;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .opacity .card .mediaHolder {
-  -webkit-transition: opacity 1s ease-in 0s;
-  -moz-transition: opacity 1s ease-in 0s;
-  transition: opacity 1s ease-in 0s;
+  -webkit-transition: opacity 0.5s ease-in 0s;
+  -moz-transition: opacity 0.5s ease-in 0s;
+  transition: opacity 0.5s ease-in 0s;
   opacity: 0.5;
 }
 
@@ -307,7 +378,7 @@ a {
 }
 
 .card .projInfo .coolHeading {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .card .projInfo .projName {
@@ -315,8 +386,11 @@ a {
   font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
 }
 
-.card .projDescription {
-  visibility: hidden;
+@media screen and (max-width: 37.5rem) {
+  .card {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .cardTop {
@@ -350,6 +424,21 @@ a {
 
 .no-touch .fadeInfo .separate {
   opacity: 0.0;
+}
+
+.projDescription {
+  -webkit-transition: opacity 0.5s ease-in 0s;
+  -moz-transition: opacity 0.5s ease-in 0s;
+  transition: opacity 0.5s ease-in 0s;
+  padding: 1rem;
+  padding-right: 20%;
+  font-size: 1.2rem;
+  opacity: 0.0;
+}
+
+.showInfo > .projDescription {
+  background: black;
+  opacity: 1.0;
 }
 
 /* ========================================================================== */

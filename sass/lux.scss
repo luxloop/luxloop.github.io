@@ -18,6 +18,7 @@ $mobile:	rem(500);
 
 $bgColor: #000;
 $cardBgColor: #000;
+$cardBorderColor: #fff;
 $textColor: #fff;
 $selectColor: #b3d4fc;
 
@@ -38,7 +39,8 @@ body, html {
 body {
 	color: $textColor;
   background: $bgColor;
-  font-family: 'SourceCodePro-Light', sans-serif;
+  // font-family: 'SourceCodePro-Light', sans-serif;
+  font-family: $fontStack1;
 	font-size: 1.75rem;
 
 	@include media (max-width $max-width * 1.2) {
@@ -130,17 +132,89 @@ a {
 }
 //////
 
+.luxLogoInText {
+  width: 10rem;
+  // vertical-align: sub;
+  // margin-bottom: -0.4rem;
+}
+
+#mobileDisplay {
+  font-family: $fontStack2;
+  .smallCard {
+    margin: 1rem 3rem 4rem 1rem;
+    padding: 1rem;
+    border: solid 1px $cardBorderColor;
+    position: relative;
+
+    &.firstCard {
+      img {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &.projCard {
+      height: 80vh;
+      min-height: 300px;
+    }
+
+    &.hasBox {
+      box-shadow:
+         8px 8px #000,
+         8px 8px 0px 1px $cardBorderColor;
+    }
+
+    .bgHolder {
+      @extend .fillBox;
+      opacity: 1.0
+    }
+
+    .textHolder {
+      position: absolute;
+      right: 0rem;
+      bottom: 0rem;
+      padding: 0.5rem;
+      padding-left: 15%;
+      text-align: right;
+      opacity: 1.0;
+      width: 100%;
+      background: black;
+      background: rgba(0,0,0,0.5);
+
+      .coolHeading {
+        font-size: 1.3rem;
+        &:before {
+          content: "\2014\00A0";
+        }
+      }
+    }
+
+    .cool {
+      color: $textColor;
+      margin:0rem;
+      font-size: 2rem;
+      &:after {
+        content: "\00A0\2014";
+      }
+    }
+  }
+
+  @include media (min-width $mobile * 1.2) {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .card {
   border: white solid 2px;
-  width: 85%;
-  height: 85%;
+  width: 80%;
+  height: 70%;
   position: absolute;
   background: $cardBgColor;
-  min-height: 600px;
-  min-width: 600px;
+  min-height: 400px;
+  min-width: $mobile;
   max-width: 1400px;
   max-height: 1200px;
-  @include transition(opacity 1.0s ease-in 0s);
+  @include transition(opacity 0.5s ease-in 0s);
   opacity: 0.0;
   font-family: $fontStack2;
 
@@ -175,9 +249,10 @@ a {
     @extend .fillBox;
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
 
     .opacity & {
-      @include transition(opacity 1.0s ease-in 0s);
+      @include transition(opacity 0.5s ease-in 0s);
       opacity: 0.5;
     }
   }
@@ -208,7 +283,7 @@ a {
     }
 
     .coolHeading {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
     .projName {
       font-size: 1rem;
@@ -220,9 +295,9 @@ a {
     // }
   }
 
-  .projDescription {
-    @extend .fillBox;
+  @include media (max-width $mobile * 1.2) {
     visibility: hidden;
+    display: none;
   }
 }
 
@@ -255,6 +330,20 @@ a {
   }
   .separate {
     opacity: 0.0;
+  }
+}
+
+.projDescription {
+  @extend .fillBox;
+  @include transition(opacity 0.5s ease-in 0s);
+  padding: 1rem;
+  padding-right: 20%;
+  font-size: 1.2rem;
+  opacity: 0.0;
+
+  .showInfo > & {
+    background: black;
+    opacity: 1.0
   }
 }
 
