@@ -26,7 +26,7 @@ var projectData = [
   blurb:"a museum revealed its hidden stories?",
   bgImage:"projects/overheard/360_2.JPG",
   description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
-  target:null},
+  target:'overheard.luxloop.com'},
 
   {title:"Social Sound",
   blurb:"you could hear a social network?",
@@ -46,7 +46,7 @@ var projectData = [
   blurb:"Lorem ipsum Anim aliqua ea incididunt ea?",
   bgImage:"projects/gypsysport/cover.jpg",
   description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
-  target:null}
+  target:'gypsysport.tv'}
 ]
 
 ////////////////////////////////////////
