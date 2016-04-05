@@ -1,8 +1,33 @@
 {
+  "build_systems":
+  [
+    {
+      "cmd":
+      [
+        "gulp",
+        "sass"
+      ],
+      "name": "GulpSass",
+      "selector": "source.sass"
+    },
+    {
+      "cmd":
+      [
+        "gulp",
+        "compressjs"
+      ],
+      "name": "GulpCompressJS",
+      "selector": "source.js"
+    }
+  ],
 	"folders":
 	[
 		{
 			"path": "."
 		}
-	]
+	],
+  "settings":
+  {
+    "build_on_save": 1
+  }
 }

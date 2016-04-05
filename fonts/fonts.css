@@ -1,0 +1,108 @@
+@font-face {
+  font-family:'Bookmania-Light';
+  src: url('Bookmania-Light_gdi.eot');
+  src: url('Bookmania-Light_gdi.eot?#iefix') format('embedded-opentype'),
+    url('Bookmania-Light_gdi.woff') format('woff'),
+    url('Bookmania-Light_gdi.ttf') format('truetype'),
+    url('Bookmania-Light_gdi.otf') format('opentype'),
+    url('Bookmania-Light_gdi.svg#Bookmania-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Bookmania-Regular';
+  src: url('Bookmania-Regular_gdi.eot');
+  src: url('Bookmania-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+    url('Bookmania-Regular_gdi.woff') format('woff'),
+    url('Bookmania-Regular_gdi.ttf') format('truetype'),
+    url('Bookmania-Regular_gdi.otf') format('opentype'),
+    url('Bookmania-Regular_gdi.svg#Bookmania-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family:'Bookmania-Bold';
+  src: url('Bookmania-Bold_gdi.eot');
+  src: url('Bookmania-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+    url('Bookmania-Bold_gdi.woff') format('woff'),
+    url('Bookmania-Bold_gdi.ttf') format('truetype'),
+    url('Bookmania-Bold_gdi.otf') format('opentype'),
+    url('Bookmania-Bold_gdi.svg#Bookmania-Bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+
+@font-face {
+  font-family:'FiraSans-Book';
+  src: url('FiraSans-Book_gdi.eot');
+  src: url('FiraSans-Book_gdi.eot?#iefix') format('embedded-opentype'),
+    url('FiraSans-Book_gdi.woff') format('woff'),
+    url('FiraSans-Book_gdi.ttf') format('truetype'),
+    url('FiraSans-Book_gdi.otf') format('opentype'),
+    url('FiraSans-Book_gdi.svg#FiraSans-Book') format('svg');
+  font-weight: 350;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+
+@font-face {
+  font-family:'FiraSans-Thin';
+  src: url('FiraSans-Thin_gdi.eot');
+  src: url('FiraSans-Thin_gdi.eot?#iefix') format('embedded-opentype'),
+    url('FiraSans-Thin_gdi.woff') format('woff'),
+    url('FiraSans-Thin_gdi.ttf') format('truetype'),
+    url('FiraSans-Thin_gdi.otf') format('opentype'),
+    url('FiraSans-Thin_gdi.svg#FiraSans-Thin') format('svg');
+  font-weight: 150;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family: 'MiaGrotesk-Bold';
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Bold.eot');
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Bold.woff') format('woff'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Bold.svg#svgMiaGrotesk-Bold') format('svg');
+}
+
+/*
+@font-face {
+  font-family: 'MiaGrotesk-Light';
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Light.eot');
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Light.eot?#iefix') format('embedded-opentype'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Light.woff') format('woff'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Light.svg#svgMiaGrotesk-Light') format('svg');
+}
+*/
+
+/*
+@font-face {
+  font-family: 'MiaGrotesk-Regular';
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Regular.eot');
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Regular.woff') format('woff'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Regular.svg#svgMiaGrotesk-Regular') format('svg');
+}*/
+
+/*
+@font-face {
+  font-family: 'MiaGrotesk-Black';
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Black.eot');
+  src: url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Black.eot?#iefix') format('embedded-opentype'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Black.woff') format('woff'),
+       url('https://mia-grotesk.s3.amazonaws.com/MiaGrotesk-Black.svg#svgMiaGrotesk-Regular') format('svg');
+}
+*/
