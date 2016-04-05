@@ -170,7 +170,7 @@ $(".luxLink").hover(
 // CUSTOM FUNCTIONS
 
 function setPageInterval() {
-  console.log("set")
+  // console.log("set")
   clearInterval();
   if (intervalID == null) {
     intervalID = window.setInterval(function(){
@@ -181,7 +181,7 @@ function setPageInterval() {
 
 function clearPageInterval() {
   if (intervalID !== null) {
-    console.log("clear")
+    // console.log("clear")
     window.clearInterval(intervalID);
     intervalID = null;
   } else {

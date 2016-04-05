@@ -71,6 +71,12 @@ body {
   background: #000;
   font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
   font-size: 1.75rem;
+  position: relative;
+  height: 100vh;
+  background: url("../img/luxStaticBack.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (max-width: 46.875rem) {
@@ -172,7 +178,7 @@ a {
   text-decoration: none;
 }
 
-.no-touch a.underline {
+a.underline {
   text-decoration: underline;
 }
 
@@ -305,8 +311,8 @@ a {
 
 .card {
   border: white solid 2px;
-  width: 80%;
-  height: 70%;
+  width: 85%;
+  height: 80%;
   position: absolute;
   background: #000;
   min-height: 400px;
@@ -321,16 +327,16 @@ a {
 }
 
 .csstransforms.csstransitions.opacity .card.slideOut {
-  -webkit-transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
-  -moz-transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
-  transition: left 2s ease-in 0s, opacity 0.5s ease-in 0s;
+  -webkit-transition: left 2s ease 0s, opacity 0.5s ease 0s;
+  -moz-transition: left 2s ease 0s, opacity 0.5s ease 0s;
+  transition: left 2s ease 0s, opacity 0.5s ease 0s;
   opacity: 0.0;
 }
 
 .csstransforms.csstransitions.opacity .card.slideUp {
-  -webkit-transition: left 1s ease-in 0s, top 1s ease-in 0s;
-  -moz-transition: left 1s ease-in 0s, top 1s ease-in 0s;
-  transition: left 1s ease-in 0s, top 1s ease-in 0s;
+  -webkit-transition: left 1s ease 0s, top 1s ease 0s;
+  -moz-transition: left 1s ease 0s, top 1s ease 0s;
+  transition: left 1s ease 0s, top 1s ease 0s;
   left: 2rem;
   top: 2rem;
 }
@@ -437,11 +443,15 @@ a {
   top: 4rem;
   left: 4rem;
   z-index: 5;
-  opacity: 0.8;
+  opacity: 1.0;
 }
 
 .cardBottom .projInfo {
   opacity: 0.0;
+}
+
+.cardBottom .mediaHolder {
+  opacity: 0.4 !important;
 }
 
 .no-touch .fadeInfo .mediaHolder {

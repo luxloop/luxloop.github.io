@@ -42,6 +42,12 @@ body {
   // font-family: 'SourceCodePro-Light', sans-serif;
   font-family: $fontStack1;
 	font-size: 1.75rem;
+  position: relative;
+  height: 100vh;
+  background: url('../img/luxStaticBack.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @include media (max-width $mobile * 1.5) {
     font-size: 1.2rem;
   }
@@ -93,12 +99,13 @@ a {
 	text-decoration: none;
 }
 
-.no-touch a.underline {
+a.underline {
   text-decoration: underline;
-  &:hover {
+}
+
+.no-touch a.underline:hover {
     opacity: 0.6
   }
-}
 
 //From http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 .no-touch a.linkAnim:hover {
@@ -219,8 +226,8 @@ a {
 
 .card {
   border: white solid 2px;
-  width: 80%;
-  height: 70%;
+  width: 85%;
+  height: 80%;
   position: absolute;
   background: $cardBgColor;
   min-height: 400px;
@@ -233,13 +240,13 @@ a {
 
   .csstransforms.csstransitions.opacity & {
     &.slideOut {
-      @include transition(left 2.0s ease-in 0s, opacity 0.5s ease-in 0s);
+      @include transition(left 2.0s ease 0s, opacity 0.5s ease 0s);
       // left: -100%;
       opacity: 0.0;
     }
 
     &.slideUp {
-      @include transition(left 1.0s ease-in 0s, top 1.0s ease-in 0s);
+      @include transition(left 1.0s ease 0s, top 1.0s ease 0s);
       left: 2rem;
       top: 2rem;
     }
@@ -260,9 +267,9 @@ a {
   .mediaHolder {
     position: absolute;
     @extend .fillBox;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
     .opacity & {
       @include transition(opacity 0.5s ease-in 0s);
@@ -345,10 +352,14 @@ a {
   top: 4rem;
   left: 4rem;
   z-index: 5;
-  opacity: 0.8;
+  opacity: 1.0;
 
   .projInfo {
     opacity: 0.0;
+  }
+
+  .mediaHolder {
+    opacity: 0.4 !important;
   }
 }
 
