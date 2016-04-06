@@ -122,7 +122,8 @@ $('a.coolHeading').hover(
   }
 });
 
-$(document).on('click', '.closeBox', function() {
+$(document).on('click', '.closeBox', function(e) {
+  e.preventDefault();
   // if ($(this).parents('.showProjInfo').length) {
   //   setPageInterval();
   //   $('.cardTop').removeClass('showProjInfo');
