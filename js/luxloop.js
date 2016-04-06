@@ -10,44 +10,52 @@ var intervalLength = 8000;
 
 var projectData = [
   {title:"Pigments",
-  blurb:"Lorem ipsum Anim aliqua ea incididunt ea?",
+  blurb:"a music video responded to your touch?",
   bgImage:"projects/pigments/pigments.gif",
   mobileBg:"projects/pigments/bg.jpg",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"Luxloop developed an interactive music video that asks users actively keep it alive by tapping a heartbeat on their mobile device. Their interactions change the pigments within the piece.",
   target:"icantmakeuloveu.com"},
 
   {title:"If the Walls Had Eyes",
-  blurb:"the walls were watching?",
+  blurb:"your walls became a bit more human?",
   bgImage:"projects/eyes/1.jpg",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"Part inspired by an attention-starved roommate, and part by a dream, If The Walls Had Eyes is a projection installation that watches and follows the viewer as they pass by.",
   target:null},
 
   {title:"Overheard",
-  blurb:"a museum revealed its hidden stories?",
+  blurb:"you could eavesdrop on fictional characters in a museum?",
   bgImage:"projects/overheard/360_2.JPG",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"Coming this June, Overheard is an immersive, site-specific audio narrative woven into the Minneapolis Institute of Art. Using a custom mobile app, visitors will be able to eavesdrop on the conversations of a group of fictional characters and follow their stories through the museum.",
   target:'overheard.luxloop.com'},
 
   {title:"Social Sound",
-  blurb:"you could hear a social network?",
+  blurb:"you could hear the sound of Twitter?",
   mobileBg:"projects/socialsound/1.jpg",
   bgImage:"projects/socialsound/ss1.gif",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"Social Sound is a performance tool designed to aggregate the flow of real time social activity into a rush of sound in the real world, providing a unique portrait of the social sphere at a given moment in time.",
   target:'socialsound.luxloop.com'},
 
   {title:"Amplified Self",
-  blurb:"you could shout your reflection?",
+  blurb:"you could see yourself in sound?",
   bgImage:"projects/amplifiedself/gifSmall2.gif",
   mobileBg:"projects/amplifiedself/thumb.jpg",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"An interactive video mirror in which viewers can only see their own reflection by yelling or making noise - the louder the noise, the clearer the image.",
   target:null},
 
-  {title:"Gypsy Sport Spring/Summer 2016",
+  {title:"Axion",
+  blurb:"a documentary edited itself to your thoughts?",
+  bgImage:"projects/axion/altthumb.jpg",
+  description:"A meditative exploration of the scientific method and human nature, Axion changes itself based on the level of focus and relaxation detected in a user's EEG brain data. By allowing a player the freedom to navigate and discover an evolving virtual environment, the project suggests a connection between the process of scientific discovery and the personal drive for curious exploration.",
+  target:'axion.is'}
+]
+
+/*
+{title:"Gypsy Sport Spring/Summer 2016",
   blurb:"Lorem ipsum Anim aliqua ea incididunt ea?",
   bgImage:"projects/gypsysport/cover.jpg",
-  description:"Lorem ipsum Aliqua do consectetur exercitation eiusmod deserunt enim officia ad deserunt nisi.",
+  description:"Luxloop collaborated with Gypsy Sport and Greg Luna to create an interactive piece to showcase their Spring/Summer 2016 collection",
   target:'gypsysport.tv'}
-]
+ */
 
 ////////////////////////////////////////
 
