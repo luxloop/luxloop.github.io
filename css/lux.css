@@ -506,6 +506,8 @@ a.underline {
 
 .projDescription .projDesc, .projDescription .projLink {
   font-size: 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .socialIcon img {
