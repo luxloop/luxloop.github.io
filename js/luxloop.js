@@ -13,7 +13,7 @@ var projectData = [
   blurb:"a music video responded to your touch?",
   bgImage:"projects/pigments/pigments.gif",
   mobileBg:"projects/pigments/bg.jpg",
-  description:"Luxloop developed an interactive music video that asks users actively keep it alive by tapping a heartbeat on their mobile device. Their interactions change the pigments within the piece.",
+  description:"Luxloop developed an interactive music video for LA-based artist Elohim that asks users actively keep it alive by tapping a heartbeat on their mobile device. Their interactions change the pigments within the piece.",
   target:"icantmakeuloveu.com"},
 
   {title:"If the Walls Had Eyes",
