@@ -1,11 +1,18 @@
+// Gypsy Sport - Al La Do - Interactive Teaser
+// (c) 2016 Luxloop
 var leftDown = false;
 var rightDown = false;
 var mostRecent = "";
 var top1 = 808;
 var top2 = 406;
+var hasLoaded = false;
+var timeOut;
 
 $(document).ready(function() {
   //console.log("ready");
+  // timeout = setTimeout(setReadyToPlay, 10000);
+  $("#theVideo").on('canplaythrough', canPlayThrough);
+  $("#theVideo").attr('src','vid/gs.mp4');
   resizeContainer()
   animate()
 });
@@ -32,10 +39,12 @@ $(document).keydown(function(e) {
 
 $("#imgCover").click(function(e) {
     e.preventDefault();
-    $(this).addClass("hidden");
-    //$(this).fadeOut(2000);
-    var vid = document.getElementById("theVideo");
-    vid.play();
+    if (hasLoaded) {
+      $(this).addClass("hidden");
+      //$(this).fadeOut(2000);
+      var vid = document.getElementById("theVideo");
+      vid.play();
+    }
 });
 
 $(document).keyup(function(e) {
@@ -98,6 +107,18 @@ function animate() {
 on_resize(function() {
     resizeContainer()
 });
+
+function canPlayThrough() {
+  console.log("video can play")
+  clearTimeout(timeOut)
+  setReadyToPlay()
+}
+
+function setReadyToPlay() {
+  $("#imgCover").removeClass('loading')
+  $("#imgCover").addClass('loaded')
+  hasLoaded = true;
+}
 
 function resizeContainer() {
   var scale = 0.555555556;

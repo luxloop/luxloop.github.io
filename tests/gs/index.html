@@ -17,15 +17,14 @@
     </head>
     <body class="ownPage">
         <div id="vidWindow">
-          <div id="imgCover">
+          <div id="imgCover" class="loading">
             <a href="#">
-              <img src="img/cover.jpg">
+              <img class="coverImg" src="img/cover.jpg">
             </a>
-            <img class="playButton" src="playButon.png" alt="">
+            <img class="loadSpinner" src="img/loading.gif" alt="">
+            <img class="playButton" src="img/playButton.png" alt="">
           </div>
-          <video id="theVideo" preload="auto" width="720" height="1215">
-            <source src="vid/gs.mp4" type="video/mp4">
-          </video>
+          <video id="theVideo" preload="auto" width="720" height="1215" type="video/mp4"></video>
         </div>
 
         <div id="credits">

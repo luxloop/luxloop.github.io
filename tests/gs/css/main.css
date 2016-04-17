@@ -1,3 +1,7 @@
+/*
+ * Gypsy Sport - Al La Do - Interactive Teaser
+ * (c) 2016 Luxloop
+ */
 @font-face {
   font-family: 'NFSfont-Regular';
   src: url("../fonts/NFSfont_gdi.eot");
@@ -152,13 +156,49 @@ body.embedded #vidWindow {
   background: black;
 }
 
-#imgCover img {
+#imgCover img.coverImg {
   width: 100%;
   height: auto;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 10;
+}
+
+#imgCover img.coverImg:hover {
+  cursor: default;
+}
+
+#imgCover img.playButton, #imgCover img.loadSpinner {
+  width: 6%;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 12;
+  padding-top: 25%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.opacity #imgCover img.playButton {
+  opacity: 1.0;
+}
+
+.opacity #imgCover img.playButton:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.loading .playButton {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.loaded .loadSpinner {
+  visibility: hidden !important;
+  display: none !important;
 }
 
 #theVideo {
