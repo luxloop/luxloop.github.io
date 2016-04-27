@@ -13,8 +13,24 @@ $(document).ready(function() {
   // timeout = setTimeout(setReadyToPlay, 10000);
   $("#theVideo").on('canplaythrough', canPlayThrough);
   $("#theVideo").attr('src','vid/gs.mp4');
+  document.getElementById('theVideo').volume = 0.0;
+
+  var div = document.createElement("div");
+  div.style.position = "absolute";
+  div.style.top = "0px";
+  div.style.left = "0px";
+  div.style.width = "100%";
+  div.style.zIndex = "22";
+  div.style.textAlign = "center";
+  div.style.fontSize = "1.5rem";
+  div.style.background = "rgba(0,0,0,0.5)";
+  div.innerHTML = "Music removed at the request of Westbrook Entertainment";
+
+  $("#vidWindow").append(div)
+
   resizeContainer()
   animate()
+
 });
 
 $(document).keydown(function(e) {
