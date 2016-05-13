@@ -13,7 +13,13 @@ $(document).ready(function() {
   // timeout = setTimeout(setReadyToPlay, 10000);
   $("#theVideo").on('canplaythrough', canPlayThrough);
   $("#theVideo").attr('src','vid/gs.mp4');
-  document.getElementById('theVideo').volume = 0.0;
+
+  var whereAmI = window.location.href;
+  if (whereAmI.indexOf("luxloop") > -1 ) {
+    console.log("Demo - keep the Volume up")
+  } else {
+    document.getElementById('theVideo').volume = 0.0;
+  }
 
   var div = document.createElement("div");
   div.style.position = "absolute";
