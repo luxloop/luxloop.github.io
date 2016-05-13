@@ -19,20 +19,20 @@ $(document).ready(function() {
     console.log("Demo - keep the Volume up")
   } else {
     document.getElementById('theVideo').volume = 0.0;
+
+    var div = document.createElement("div");
+    div.style.position = "absolute";
+    div.style.top = "0px";
+    div.style.left = "0px";
+    div.style.width = "100%";
+    div.style.zIndex = "22";
+    div.style.textAlign = "center";
+    div.style.fontSize = "1.5rem";
+    div.style.background = "rgba(0,0,0,0.5)";
+    div.innerHTML = "Music removed at the request of Westbrook Entertainment";
+
+    $("#vidWindow").append(div)
   }
-
-  var div = document.createElement("div");
-  div.style.position = "absolute";
-  div.style.top = "0px";
-  div.style.left = "0px";
-  div.style.width = "100%";
-  div.style.zIndex = "22";
-  div.style.textAlign = "center";
-  div.style.fontSize = "1.5rem";
-  div.style.background = "rgba(0,0,0,0.5)";
-  div.innerHTML = "Music removed at the request of Westbrook Entertainment";
-
-  $("#vidWindow").append(div)
 
   resizeContainer()
   animate()
