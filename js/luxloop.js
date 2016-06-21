@@ -24,8 +24,8 @@ var projectData = [
 
   {title:"Overheard",
   blurb:"you could eavesdrop on fictional characters in a museum?",
-  bgImage:"projects/overheard/360_2.JPG",
-  description:"Coming this June, Overheard is an immersive, site-specific audio narrative woven into the Minneapolis Institute of Art. Using a custom mobile app, visitors will be able to eavesdrop on the conversations of a group of fictional characters and follow their stories through the museum.",
+  bgImage:"projects/overheard/lux2.png",
+  description:"Overheard is an immersive, site-specific audio narrative woven into the Minneapolis Institute of Art. Using a custom mobile app, visitors are able to eavesdrop on the conversations of a group of fictional characters and follow their stories through the museum.",
   target:'overheard.luxloop.com'},
 
   {title:"Social Sound",
