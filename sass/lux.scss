@@ -333,7 +333,7 @@ a.underline {
     visibility: visible;
   }
 
-  @include media (max-width $mobile * 1.2) {
+  @include media (max-width $mobile * 1.5) {
     visibility: hidden;
     display: none;
   }

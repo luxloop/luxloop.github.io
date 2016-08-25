@@ -422,7 +422,7 @@ a.underline {
   visibility: visible;
 }
 
-@media screen and (max-width: 37.5rem) {
+@media screen and (max-width: 46.875rem) {
   .card {
     visibility: hidden;
     display: none;
