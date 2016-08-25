@@ -163,6 +163,8 @@ a.underline {
     padding: 1rem;
     border: solid 1px $cardBorderColor;
     position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
     &.firstCard {
       img {
