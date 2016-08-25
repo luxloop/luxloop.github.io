@@ -85,8 +85,6 @@ body {
 @media screen and (max-width: 46.875rem) {
   body {
     font-size: 1.2rem;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -254,7 +252,8 @@ a.underline {
   border: solid 1px #fff;
   position: relative;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch !important;
 }
 
 #mobileDisplay .smallCard.firstCard img {
