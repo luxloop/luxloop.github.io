@@ -164,8 +164,6 @@ a.underline {
     padding: 1rem;
     border: solid 1px $cardBorderColor;
     position: relative;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch !important;
 
     &.firstCard {
       img {
@@ -223,7 +221,7 @@ a.underline {
     text-align: justify;
   }
 
-  @include media (min-width $mobile * 1.2) {
+  @include media (min-width $mobile * 1.5) {
     visibility: hidden;
     display: none;
   }
