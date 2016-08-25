@@ -52,6 +52,8 @@ body {
   overflow: scroll;
   @include media (max-width $mobile * 1.5) {
     font-size: 1.2rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

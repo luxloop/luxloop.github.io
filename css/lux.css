@@ -85,6 +85,8 @@ body {
 @media screen and (max-width: 46.875rem) {
   body {
     font-size: 1.2rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
