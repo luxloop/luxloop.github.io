@@ -50,6 +50,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch !important;
   @include media (max-width $mobile * 1.5) {
     font-size: 1.2rem;
   }

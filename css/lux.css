@@ -80,6 +80,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 @media screen and (max-width: 46.875rem) {
