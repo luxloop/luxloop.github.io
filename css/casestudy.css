@@ -65,7 +65,6 @@ textarea {
 /* ========================================================================== */
 body, html {
   font-size: 100%;
-  background: #000;
   overflow: hidden;
 }
 
@@ -678,20 +677,103 @@ body {
   opacity: 1.0;
 }
 
+.background {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000;
+  background: url("../img/luxStaticBack.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.header, .footer {
+  margin: 3rem auto;
+  position: relative;
+}
+
+.header {
+  margin: 3rem auto;
+  position: relative;
+}
+
+.header .luxLogo {
+  width: 6rem;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.footer {
+  margin: 3rem auto;
+  position: relative;
+}
+
+.footer .luxLogo {
+  width: 8rem;
+  margin: 0 auto;
+}
+
 .caseCard {
   background: black;
   position: relative;
   opacity: 1.0;
-  margin: 2rem auto;
+  margin: 4rem auto;
   font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
   overflow: hidden;
 }
 
-.caseCard .imgHolder {
+.caseCard .projectInfo, .caseCard .imgHolder {
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
+}
+
+.caseCard .projectInfo div {
+  text-align: center;
+  width: 68vw;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.caseCard .projectInfo .backGradient {
+  width: 85vw;
+  height: 47.8125vw;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to top,transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.caseCard .projectInfo .title {
+  top: 25%;
+  font-size: 7rem;
+  line-height: 3rem;
+  font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
+}
+
+.caseCard .projectInfo .title .subTitle {
+  display: inline-block;
+  font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
+  font-size: 1.5rem;
+}
+
+.caseCard .projectInfo .logo {
+  bottom: 1rem;
+}
+
+.caseCard .projectInfo .logo .luxLogo {
+  width: 12rem;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .caseCard .imgHolder video {
@@ -744,4 +826,75 @@ body {
 
 .main .quote .source::before {
   content: "— ";
+}
+
+.main .press h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.no-touch a.linkAnim:hover {
+  text-decoration: underline;
+}
+
+.csstransforms.csstransitions a.linkAnim {
+  text-decoration: none;
+}
+
+.csstransforms.csstransitions a.linkAnim:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px !important;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.csstransforms.csstransitions.no-touch a.linkAnim:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.no-touch.opacity.csstransforms.csstransitions a.linkAnim:before {
+  background-color: white;
+}
+
+.no-touch.opacity.csstransforms.csstransitions .socialLink {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.no-touch.opacity.csstransforms.csstransitions .socialLink:hover {
+  opacity: 1.0;
+}
+
+body.lightTheme {
+  background: #fff;
+  color: #000;
+}
+
+body.lightTheme .stackedCards {
+  border: black solid 2px;
+  box-shadow: 10px 10px 0px 0px white, 10px 10px 0px 1px black, 20px 20px 0px 0px white, 20px 20px 0px 1px black;
+}
+
+body.lightTheme .main .quote {
+  background: white;
+  color: black;
 }

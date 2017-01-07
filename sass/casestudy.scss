@@ -43,22 +43,107 @@ body {
   opacity: 1.0;
 }
 
+.background {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000;
+  background: url('../img/luxStaticBack.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.header,.footer {
+  margin: 3rem auto;
+  position: relative;
+}
+
+.header, {
+  margin: 3rem auto;
+  position: relative;
+  .luxLogo {
+    width: 6rem;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.footer {
+  margin: 3rem auto;
+  position: relative;
+  .luxLogo {
+    width: 8rem;
+    margin: 0 auto;
+  }
+}
+
 .caseCard {
   background: black;
   position: relative;
   opacity: 1.0;
-  margin: 2rem auto;
+  margin: 4rem auto;
+  //margin-top: 4rem;
   //width: $bodyWidth;
   //height: 47.8vw;
   font-family: $fontStack2;
   overflow: hidden;
 
-
-  .imgHolder {
+  .projectInfo, .imgHolder {
     position: absolute;
     top: 0px;
     left: 0px;
     overflow: hidden;
+  }
+
+  .projectInfo {
+    //background: rgba(255,0,0,0.5)
+    div {
+      text-align: center;
+      width: $bodyWidth * 0.8;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+    }
+
+    .backGradient {
+      width: $bodyWidth;
+      height: $boxHeight;
+      @include linear-gradient(to top, transparent, rgba(0,0,0,0.1), rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    }
+
+    .title {
+      top: 25%;
+      font-size: 7rem;
+      line-height: 3rem;
+      font-family: $fontStack1;
+
+      .subTitle {
+        display: inline-block;
+        font-family: $fontStack2;
+        font-size: 1.5rem;
+      }
+    }
+
+    .logo {
+      bottom: 1rem;
+      .luxLogo {
+        width: 12rem;
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+    }
+
+  }
+
+  .imgHolder {
 
 
     video {
@@ -115,116 +200,73 @@ body {
       }
     }
   }
+
+  .press {
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
 }
 
-// .card {
-//   border: white solid 2px;
-//   width: 85%;
-//   height: 80%;
-//   position: absolute;
-//   background: $cardBgColor;
-//   min-height: 400px;
-//   min-width: $mobile;
-//   max-width: 1400px;
-//   max-height: 1200px;
-//   @include transition(opacity 0.5s ease-in 0s);
-//   opacity: 0.0;
-//   font-family: $fontStack2;
+//From http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+.no-touch a.linkAnim:hover {
+  text-decoration: underline;
+}
+.csstransforms.csstransitions a.linkAnim {
+  text-decoration: none;
+}
 
-//   .csstransforms.csstransitions.opacity & {
-//     &.slideOut {
-//       @include transition(left 2.0s ease 0s, opacity 0.5s ease 0s);
-//       // left: -100%;
-//       opacity: 0.0;
-//     }
+.csstransforms.csstransitions a.linkAnim:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px !important;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  @include transform(scaleX(0));
+  @include transition(all 0.3s ease-out 0s);
+}
 
-//     &.slideUp {
-//       @include transition(left 1.0s ease 0s, top 1.0s ease 0s);
-//       left: 2rem;
-//       top: 2rem;
-//     }
-//   }
+.csstransforms.csstransitions.no-touch a.linkAnim:hover:before {
+  visibility: visible;
+  @include transform(scaleX(1));
+}
+//////
 
-//   .cool {
-//     color: $textColor;
-//     position: absolute;
-//     top: 0.5rem;
-//     left: 0.75rem;
-//     margin:0rem;
-//     font-size: 2.6rem;
-//     &:after {
-//       content: "\00A0\2014";
-//     }
-//   }
+.no-touch.opacity.csstransforms.csstransitions {
+    a.linkAnim:before {
+        background-color: white;
+    }
 
-//   .mediaHolder {
-//     position: absolute;
-//     @extend .fillBox;
-//       background-position: center center;
-//       background-repeat: no-repeat;
-//       background-size: cover;
+    .socialLink {
+        opacity: 0.6;
+        @include transition(opacity 0.5s linear);
 
-//     .opacity & {
-//       @include transition(opacity 0.5s ease-in 0s);
-//       opacity: 0.7;
-//     }
-//   }
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+}
 
-//   .luxLogo {
-//     width: 10rem;
-//     padding-bottom: 0.45rem;
-//     margin-right: 0.5rem;
-//     margin-left: 0.8rem;
-//   }
+body.lightTheme {
+  background: #fff;
+  color: #000;
 
-//   .projInfo {
-//     opacity: 0.0;
-//     position: absolute;
-//     bottom: 0.4rem;
-//     right: 0.5rem;
-//     color: $textColor;
-//     text-align: right;
+  .stackedCards {
+    border: black solid 2px;
+    box-shadow: 10px 10px 0px 0px rgba(255,255,255,1),
+                10px 10px 0px 1px rgba(0,0,0,1),
+                20px 20px 0px 0px rgba(255,255,255,1),
+                20px 20px 0px 1px rgba(0,0,0,1);
+  }
 
-//     .separate {
-//       @include transition(opacity 1.0s ease-in 0s);
-//       &:before {
-//         content: "\2014\00A0";
-//       }
-//       // &:after {
-//       //   content: "\00A0\007C\00A0\00A0"; //\23B8\00A0
-//       // }
-//     }
-
-//     .coolHeading {
-//       font-size: 1.5rem;
-//     }
-//     .projName {
-//       font-size: 1rem;
-//       font-family: $fontStack1;
-//     }
-//     // .projSub {
-//     //   max-width: 400px;
-//     //   font-size: 0.8rem;
-//     // }
-//   }
-
-//   .closeBox {
-//     visibility: hidden;
-//     position: absolute;
-//     top: 0rem;
-//     right: 0rem;
-//     font-size: 3rem;
-//     font-family: $fontStack1;
-//     margin-right: 1rem;
-//     margin-top: -0.5rem;
-//   }
-
-//   &.showInfo .closeBox, &.showProjInfo .closeBox, {
-//     visibility: visible;
-//   }
-
-//   @include media (max-width $mobile * 1.5) {
-//     visibility: hidden;
-//     display: none;
-//   }
-// }
+  .main {
+    .quote {
+      background: white;
+      color: black;
+    }
+  }
+}
