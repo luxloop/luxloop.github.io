@@ -777,6 +777,14 @@ body {
   left: 0px;
 }
 
+.caseCard .imgHolder.pigmentsBg {
+  background: #000;
+  background: url("../casestudies/pigments/assets/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .caseCard .imgHolder video {
   position: absolute;
   top: 0%;
@@ -801,9 +809,17 @@ body {
   text-align: center;
 }
 
-.main .inline img {
+.main .inline.inlineVid, .main .inline img {
   max-width: 90%;
   margin: 3rem auto;
+}
+
+.main .inline img.twoUp {
+  width: 44%;
+  margin: 3rem;
+  margin-left: 1%;
+  margin-right: 1%;
+  display: inline;
 }
 
 .main .quote {
@@ -915,7 +931,7 @@ body.lightTheme .main .quote {
   .caseCard .projectInfo .logo .luxLogo {
     width: 7rem;
   }
-  .main .inline img {
+  .main .inline.inlineVid, .main .inline img, .main .inline img.twoUp {
     max-width: 100%;
     width: 100%;
     margin: 2rem auto;
@@ -949,7 +965,7 @@ body.lightTheme .main .quote {
   .caseCard .projectInfo .backGradient {
     height: 60vh;
   }
-  .main .inline img {
+  .main .inline.inlineVid, .main .inline img, .main .inline img.twoUp {
     max-width: 100%;
     width: 100%;
     margin: 1.5rem auto;

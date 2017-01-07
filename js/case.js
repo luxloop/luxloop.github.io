@@ -4,15 +4,21 @@ $(document).ready(function() {
   fadeElements(0);
 
   /////////////////////////////
-  // Overheard
+  //Overheard
   var video1 = document.getElementById('bgVid1');
-  video1.src = 'assets/bgVid1.mp4';
-  video1.addEventListener('canplaythrough', function() {
-    video1.play();
-  }, false);
-  video1.load();
+  if (video1) {
+    video1.src = 'assets/bgVid1.mp4';
+    video1.addEventListener('canplaythrough', function() {
+      video1.play();
+    }, false);
+    video1.load();
+  }
 
   /////////////////////////////
+
+  $(".inlineVid").each(function(){
+    $(this).fitVids();
+  });
 });
 
 $(window).scroll(function() {
