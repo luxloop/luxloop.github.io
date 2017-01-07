@@ -2,6 +2,7 @@
 
 $bodyWidth: 85vw;
 $boxHeight: $bodyWidth * (9/16);
+$boxHeightNarrow: 60vh;
 
 .bolder {font-family: $fontStack1, sans-serif;}
 .italic {font-style: italic}
@@ -128,6 +129,7 @@ body {
         display: inline-block;
         font-family: $fontStack2;
         font-size: 1.5rem;
+        line-height: 1.5rem;;
       }
     }
 
@@ -206,6 +208,11 @@ body {
       font-size: 2rem;
       font-weight: 300;
     }
+
+    a {
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
   }
 }
 
@@ -270,3 +277,93 @@ body.lightTheme {
     }
   }
 }
+
+
+// Small Screens
+
+@include media (max-width $tablet * 1.5) {
+.caseCard {
+    .projectInfo {
+      .title {
+        font-size: 4.5rem;
+        .subTitle {
+          font-size: 1rem;
+        }
+      }
+      .logo {
+        .luxLogo {
+          width: 7rem;
+        }
+      }
+    }
+  }
+
+  .main {
+    .inline {
+      img {
+        max-width: 100%;
+        width: 100%;
+        margin: 2rem auto;
+      }
+    }
+
+    .quote {
+      margin: 4rem 0;
+    }
+  }
+}
+
+
+
+
+@include media (max-width $mobile * 1.5) {
+  .box169 {
+    height: $boxHeightNarrow;
+  }
+
+  .caseCard {
+
+    .imgHolder {
+      height: $boxHeightNarrow;
+      width: $boxHeightNarrow * (16/9);
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+    }
+
+    .projectInfo {
+      .title {
+        font-size: 4.5rem;
+        .subTitle {
+          font-size: 1rem;
+        }
+      }
+      .logo {
+        .luxLogo {
+          width: 7rem;
+        }
+      }
+      .backGradient {
+        height: $boxHeightNarrow;
+      }
+    }
+  }
+
+  .main {
+    .inline {
+      img {
+        max-width: 100%;
+        width: 100%;
+        margin: 1.5rem auto;
+      }
+    }
+
+    .quote {
+      margin: 3rem 0;
+    }
+  }
+}
+
+
+

@@ -763,6 +763,7 @@ body {
   display: inline-block;
   font-family: "FiraSans-Thin", "fira-sans", "helveticaLight", sans-serif;
   font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .caseCard .projectInfo .logo {
@@ -833,6 +834,11 @@ body {
   font-weight: 300;
 }
 
+.main .press a {
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
 .no-touch a.linkAnim:hover {
   text-decoration: underline;
 }
@@ -897,4 +903,58 @@ body.lightTheme .stackedCards {
 body.lightTheme .main .quote {
   background: white;
   color: black;
+}
+
+@media screen and (max-width: 75rem) {
+  .caseCard .projectInfo .title {
+    font-size: 4.5rem;
+  }
+  .caseCard .projectInfo .title .subTitle {
+    font-size: 1rem;
+  }
+  .caseCard .projectInfo .logo .luxLogo {
+    width: 7rem;
+  }
+  .main .inline img {
+    max-width: 100%;
+    width: 100%;
+    margin: 2rem auto;
+  }
+  .main .quote {
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 46.875rem) {
+  .box169 {
+    height: 60vh;
+  }
+  .caseCard .imgHolder {
+    height: 60vh;
+    width: 106.66667vh;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .caseCard .projectInfo .title {
+    font-size: 4.5rem;
+  }
+  .caseCard .projectInfo .title .subTitle {
+    font-size: 1rem;
+  }
+  .caseCard .projectInfo .logo .luxLogo {
+    width: 7rem;
+  }
+  .caseCard .projectInfo .backGradient {
+    height: 60vh;
+  }
+  .main .inline img {
+    max-width: 100%;
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+  .main .quote {
+    margin: 3rem 0;
+  }
 }
