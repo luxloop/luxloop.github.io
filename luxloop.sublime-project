@@ -19,15 +19,15 @@
       "name": "GulpCSS",
       "selector": "source.css"
     },
-    {
-      "cmd":
-      [
-        "gulp",
-        "compressjs"
-      ],
-      "name": "GulpCompressJS",
-      "selector": "source.js"
-    }
+    // {
+    //   "cmd":
+    //   [
+    //     "gulp",
+    //     "compressjs"
+    //   ],
+    //   "name": "GulpCompressJS",
+    //   "selector": "source.js"
+    // }
   ],
 	"folders":
 	[

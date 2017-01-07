@@ -1,0 +1,230 @@
+@import "lux";
+
+$bodyWidth: 85vw;
+$boxHeight: $bodyWidth * (9/16);
+
+.bolder {font-family: $fontStack1, sans-serif;}
+.italic {font-style: italic}
+
+body, html {
+  overflow: visible;
+}
+
+body {
+  height: auto;
+  background: #000;
+}
+
+.insideMargin {
+  width: $bodyWidth
+}
+
+.box169 {
+  height: $boxHeight;
+}
+
+.stackedCards {
+  border: white solid 2px;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,1),
+              10px 10px 0px 1px rgba(255,255,255,1),
+              20px 20px 0px 0px rgba(0,0,0,1),
+              20px 20px 0px 1px rgba(255,255,255,1);
+}
+
+.fadeInElement {
+  @include transition(all 0.4s ease-in-out);
+}
+
+.fadeInElement.hideElement {
+  opacity: 0.0;
+}
+
+.fadeInElement.showElement {
+  opacity: 1.0;
+}
+
+.caseCard {
+  background: black;
+  position: relative;
+  opacity: 1.0;
+  margin: 2rem auto;
+  //width: $bodyWidth;
+  //height: 47.8vw;
+  font-family: $fontStack2;
+  overflow: hidden;
+
+
+  .imgHolder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+
+
+    video {
+      position: absolute;
+      top:0%;
+      height: 100%;
+      width: 100%;
+      left: 0%;
+      // -webkit-transform: translate(-50%, -50%);
+      //     transform: translate(-50%, -50%);
+      overflow: hidden;
+      background: #000;
+    }
+  }
+}
+
+.main {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  // background: blue;
+  font-family: $fontStack2;
+  font-weight: $defaultWeight;
+  font-size: 1.2rem;
+
+  .inline {
+    width: 100%;
+    text-align: center;
+    img {
+      max-width: 90%;
+      margin: 3rem auto;
+    }
+  }
+
+  .quote {
+    margin: 6rem 0;
+    position: relative;
+    border-left: none;
+    background: black;
+    padding: 2rem;
+    padding-left: 7.5vw;
+    left: -7.5vw;
+
+    font-family: $fontStack1;
+    font-size: 1.5rem;
+    font-style: italic;
+
+    .source {
+      font-size: 1.2rem;
+      display: block;
+      margin-top: 1rem;
+      &::before {
+        content: "— "
+      }
+    }
+  }
+}
+
+// .card {
+//   border: white solid 2px;
+//   width: 85%;
+//   height: 80%;
+//   position: absolute;
+//   background: $cardBgColor;
+//   min-height: 400px;
+//   min-width: $mobile;
+//   max-width: 1400px;
+//   max-height: 1200px;
+//   @include transition(opacity 0.5s ease-in 0s);
+//   opacity: 0.0;
+//   font-family: $fontStack2;
+
+//   .csstransforms.csstransitions.opacity & {
+//     &.slideOut {
+//       @include transition(left 2.0s ease 0s, opacity 0.5s ease 0s);
+//       // left: -100%;
+//       opacity: 0.0;
+//     }
+
+//     &.slideUp {
+//       @include transition(left 1.0s ease 0s, top 1.0s ease 0s);
+//       left: 2rem;
+//       top: 2rem;
+//     }
+//   }
+
+//   .cool {
+//     color: $textColor;
+//     position: absolute;
+//     top: 0.5rem;
+//     left: 0.75rem;
+//     margin:0rem;
+//     font-size: 2.6rem;
+//     &:after {
+//       content: "\00A0\2014";
+//     }
+//   }
+
+//   .mediaHolder {
+//     position: absolute;
+//     @extend .fillBox;
+//       background-position: center center;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+
+//     .opacity & {
+//       @include transition(opacity 0.5s ease-in 0s);
+//       opacity: 0.7;
+//     }
+//   }
+
+//   .luxLogo {
+//     width: 10rem;
+//     padding-bottom: 0.45rem;
+//     margin-right: 0.5rem;
+//     margin-left: 0.8rem;
+//   }
+
+//   .projInfo {
+//     opacity: 0.0;
+//     position: absolute;
+//     bottom: 0.4rem;
+//     right: 0.5rem;
+//     color: $textColor;
+//     text-align: right;
+
+//     .separate {
+//       @include transition(opacity 1.0s ease-in 0s);
+//       &:before {
+//         content: "\2014\00A0";
+//       }
+//       // &:after {
+//       //   content: "\00A0\007C\00A0\00A0"; //\23B8\00A0
+//       // }
+//     }
+
+//     .coolHeading {
+//       font-size: 1.5rem;
+//     }
+//     .projName {
+//       font-size: 1rem;
+//       font-family: $fontStack1;
+//     }
+//     // .projSub {
+//     //   max-width: 400px;
+//     //   font-size: 0.8rem;
+//     // }
+//   }
+
+//   .closeBox {
+//     visibility: hidden;
+//     position: absolute;
+//     top: 0rem;
+//     right: 0rem;
+//     font-size: 3rem;
+//     font-family: $fontStack1;
+//     margin-right: 1rem;
+//     margin-top: -0.5rem;
+//   }
+
+//   &.showInfo .closeBox, &.showProjInfo .closeBox, {
+//     visibility: visible;
+//   }
+
+//   @include media (max-width $mobile * 1.5) {
+//     visibility: hidden;
+//     display: none;
+//   }
+// }

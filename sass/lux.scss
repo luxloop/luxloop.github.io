@@ -54,6 +54,7 @@ body {
   @include media (max-width $mobile * 1.5) {
     font-size: 1.2rem;
   }
+  margin: 0px;
 }
 
 .underlined {text-decoration: underline;}

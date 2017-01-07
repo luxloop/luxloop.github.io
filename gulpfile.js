@@ -36,6 +36,18 @@ gulp.task('compressjs', function() {
     .pipe(gulp.dest('./js/'))
 });
 
+gulp.task('compresscase', function() {
+  return gulp.src(['./js/case.js'])
+    .pipe(uglify({
+      mangle: true,
+      preserveComments: 'license'
+    }))
+    .pipe(rename(function (path) {
+      path.extname = ".min.js"
+    }))
+    .pipe(gulp.dest('./js/'))
+});
+
 // gulp.task('concatjs', function() {
 //   return gulp.src(['./public/js/util.min.js','./public/js/vendor/stats.min.js','./public/js/vendor/detectmobile.min.js','./public/js/vendor/shuffle.min.js'])
 //     .pipe(concat('support.js'))
@@ -45,6 +57,10 @@ gulp.task('compressjs', function() {
 
 gulp.task('watch', function() {
     gulp.watch('./sass/*.scss', ['sass']);
+});
+
+gulp.task('watchCase', function() {
+    gulp.watch('./js/case.js', ['compresscase']);
 });
 
 gulp.task('default', ['sass']);
