@@ -785,6 +785,14 @@ body {
   background-size: cover;
 }
 
+.caseCard .imgHolder.blackCloakBg {
+  background: #000;
+  background: url("../casestudies/blackcloak/assets/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .caseCard .imgHolder video {
   position: absolute;
   top: 0%;
