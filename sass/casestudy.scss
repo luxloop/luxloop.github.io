@@ -25,11 +25,11 @@ body {
 }
 
 .stackedCards {
-  border: white solid 2px;
+  border: white solid 1px;
   box-shadow: 10px 10px 0px 0px rgba(0,0,0,1),
-              10px 10px 0px 1px rgba(255,255,255,1),
+              10px 10px 0px 1.5px rgba(255,255,255,1),
               20px 20px 0px 0px rgba(0,0,0,1),
-              20px 20px 0px 1px rgba(255,255,255,1);
+              20px 20px 0px 1.5px rgba(255,255,255,1);
 }
 
 .fadeInElement {
