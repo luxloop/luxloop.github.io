@@ -818,7 +818,6 @@ body {
 }
 
 .main .inline.inlineVid, .main .inline img {
-  max-width: 90%;
   margin: 3rem auto;
 }
 
