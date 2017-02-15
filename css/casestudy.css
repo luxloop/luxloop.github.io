@@ -831,13 +831,9 @@ body {
 }
 
 .main .quote {
-  margin: 6rem 0;
-  position: relative;
-  border-left: none;
+  margin: 4rem 0;
   background: black;
   padding: 2rem;
-  padding-left: 7.5vw;
-  left: -7.5vw;
   font-family: "FiraSans-Book", "helveticaRegular", sans-serif;
   font-size: 1.5rem;
   font-style: italic;
