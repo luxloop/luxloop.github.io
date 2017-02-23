@@ -12,4 +12,5 @@ profile
 /unused/*
 node_modules/
 node_modules/.bin/
+/reference/*
 /oldFiles/*

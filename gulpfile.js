@@ -10,7 +10,7 @@ gulp.task('sass', function() {
         .pipe(sass({
             'outputStyle' : 'expanded'
         }))
-        .pipe(gulp.dest('./assets/css/'))
+        .pipe(gulp.dest('./site/assets/css/'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
           aggressiveMerging: false,
@@ -21,21 +21,21 @@ gulp.task('sass', function() {
         .pipe(rename(function (path) {
           path.extname = ".min.css"
         }))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./site/assets/css/'));
 });
 
 gulp.task('compileJs', function() {
   return gulp.src(['./source/js/*.js'])
     .pipe(concat('luxloop.min.js'))
     .pipe(uglify({mangle: true}))
-    .pipe(gulp.dest('./assets/js/'))
+    .pipe(gulp.dest('./site/assets/js/'))
 });
 
 gulp.task('compileLibs', function() {
   return gulp.src(['./source/js/lib/*.js'])
     .pipe(concat('lib.min.js'))
     .pipe(uglify({mangle: true}))
-    .pipe(gulp.dest('./assets/js/'))
+    .pipe(gulp.dest('./site/assets/js/'))
 });
 
 gulp.task('js', ['compileJs','compileLibs']);
