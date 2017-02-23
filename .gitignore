@@ -1,0 +1,15 @@
+_site/
+
+# osx noise
+.DS_Store
+profile
+*.swp
+*~.nib
+
+# Thumbnails
+._*
+
+/unused/*
+node_modules/
+node_modules/.bin/
+/oldFiles/*
