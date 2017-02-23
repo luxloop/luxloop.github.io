@@ -1,0 +1,20 @@
+{
+  "name": "luxloop",
+  "version": "3.0.0",
+  "description": "Luxloop Website",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxloop/luxloop.github.io.git"
+  },
+  "author": "Luxloop LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luxloop/luxloop.github.io/issues"
+  }
+}
