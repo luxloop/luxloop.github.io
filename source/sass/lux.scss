@@ -1,0 +1,57 @@
+@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+
+
+/* ========================================================================== */
+
+$max-width: rem(1600);
+$tablet:	rem(800);
+$mobile:	rem(500);
+
+
+@mixin fullBg {
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+	background-position: center center !important;
+	background-size: cover !important;
+}
+
+$bgColor: #000;
+$textColor: #fff;
+
+@import "partials/bpDefaults";
+/* ========================================================================== */
+
+body, html {
+	font-size: 100%;
+  //background: $bgColor;
+  overflow: hidden;
+}
+
+body {
+	color: $textColor;
+  background: $bgColor;
+}
+
+.underlined {text-decoration: underline;}
+.strike {text-decoration: line-through;}
+.smaller {font-size: 0.85em;}
+.moreSmaller {font-size: 0.7em;}
+.muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
+.centered {text-align: center;}
+
+h1 {
+	@extend .bolder;
+	font-size: 1.3em;
+}
+
+h2 {
+  @extend .bolder;
+  font-size: 1em;
+}
+
+// ==================
+
+/* ========================================================================== */
+@import "partials/helpers";
+@import "partials/print";
