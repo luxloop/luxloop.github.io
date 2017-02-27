@@ -1,7 +1,6 @@
 @import "lib/bourbon/bourbon";
 @import "lib/neat/neat";
 
-
 /* ========================================================================== */
 
 $max-width: rem(1600);
@@ -18,6 +17,10 @@ $mobile:	rem(500);
 
 $bgColor: #000;
 $textColor: #fff;
+$defaultWeight: 100;
+
+$headerFont: 'code_boldregular', sans-serif;
+$bodyFont: 'open_sanslight', sans-serif;
 
 @import "partials/bpDefaults";
 /* ========================================================================== */
@@ -39,6 +42,9 @@ body {
 .moreSmaller {font-size: 0.7em;}
 .muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
 .centered {text-align: center;}
+.bolder {
+  font-weight: $defaultWeight + 100;
+}
 
 h1 {
 	@extend .bolder;

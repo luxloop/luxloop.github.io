@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
+    cleanCSS = require('gulp-clean-css'),
     hb = require('gulp-hb');
 
 gulp.task('html', function () {
@@ -36,6 +37,11 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./docs/assets/css/'));
 });
 
+gulp.task('moveCss', function() {
+  return gulp.src(['./source/_css/*.css'])
+    .pipe(gulp.dest('./docs/assets/css/'))
+});
+
 gulp.task('compileJs', function() {
   return gulp.src(['./source/_js/*.js'])
     .pipe(concat('luxloop.min.js'))
@@ -43,16 +49,23 @@ gulp.task('compileJs', function() {
     .pipe(gulp.dest('./docs/assets/js/'))
 });
 
-gulp.task('compileLibs', function() {
-  return gulp.src(['./source/_js/lib/*.js'])
-    .pipe(concat('lib.min.js'))
-    .pipe(uglify({mangle: true}))
-    .pipe(gulp.dest('./docs/assets/js/'))
+// gulp.task('compileTools', function() {
+//   return gulp.src(['./source/_js/lib/*.js'])
+//     .pipe(concat('lib.min.js'))
+//     .pipe(uglify({mangle: true}))
+//     .pipe(gulp.dest('./docs/assets/js/'))
+// });
+
+gulp.task('moveJs', function() {
+  return gulp.src(['./source/_js/vendor/*.js'])
+    .pipe(gulp.dest('./docs/assets/js/vendor'))
 });
 
-gulp.task('js', ['compileJs','compileLibs']);
 
-gulp.task('build', ['docs','js','sass']);
+gulp.task('style', ['sass','moveCss']);
+gulp.task('js', ['compileJs','moveJs']);
+
+gulp.task('build', ['html','js','style']);
 
 gulp.task('watchhtml', function() {
     gulp.watch(['./source/{,!(_*)/}*.html','./source/_partials/*.hbs'], ['html']);
