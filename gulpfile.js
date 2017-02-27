@@ -13,7 +13,7 @@ gulp.task('html', function () {
       helpers: './source/_helpers/*.js',
       data: './source/_data/*.{js,json}'
     }))
-    .pipe(gulp.dest('./site'));
+    .pipe(gulp.dest('./docs'));
 });
 
 
@@ -22,7 +22,7 @@ gulp.task('sass', function() {
         .pipe(sass({
             'outputStyle' : 'expanded'
         }))
-        .pipe(gulp.dest('./site/assets/css/'))
+        .pipe(gulp.dest('./docs/assets/css/'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
           aggressiveMerging: false,
@@ -33,26 +33,26 @@ gulp.task('sass', function() {
         .pipe(rename(function (path) {
           path.extname = ".min.css"
         }))
-        .pipe(gulp.dest('./site/assets/css/'));
+        .pipe(gulp.dest('./docs/assets/css/'));
 });
 
 gulp.task('compileJs', function() {
   return gulp.src(['./source/_js/*.js'])
     .pipe(concat('luxloop.min.js'))
     .pipe(uglify({mangle: true}))
-    .pipe(gulp.dest('./site/assets/js/'))
+    .pipe(gulp.dest('./docs/assets/js/'))
 });
 
 gulp.task('compileLibs', function() {
   return gulp.src(['./source/_js/lib/*.js'])
     .pipe(concat('lib.min.js'))
     .pipe(uglify({mangle: true}))
-    .pipe(gulp.dest('./site/assets/js/'))
+    .pipe(gulp.dest('./docs/assets/js/'))
 });
 
 gulp.task('js', ['compileJs','compileLibs']);
 
-gulp.task('build', ['site','js','sass']);
+gulp.task('build', ['docs','js','sass']);
 
 gulp.task('watchhtml', function() {
     gulp.watch(['./source/{,!(_*)/}*.html','./source/_partials/*.hbs'], ['html']);
