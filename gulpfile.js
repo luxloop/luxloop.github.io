@@ -61,7 +61,6 @@ gulp.task('moveJs', function() {
     .pipe(gulp.dest('./docs/assets/js/vendor'))
 });
 
-
 gulp.task('style', ['sass','moveCss']);
 gulp.task('js', ['compileJs','moveJs']);
 
@@ -79,9 +78,6 @@ gulp.task('watchjs', function() {
     gulp.watch('./source/_js/*.js', ['compileJs']);
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./source/_sass/*.scss', ['sass']);
-    gulp.watch('./source/_js/*.js', ['compileJs']);
-});
+gulp.task('watch', ['watchhtml','watchcss','watchjs']);
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['build']);
