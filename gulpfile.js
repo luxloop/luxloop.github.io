@@ -49,12 +49,12 @@ gulp.task('compileJs', function() {
     .pipe(gulp.dest('./docs/assets/js/'))
 });
 
-// gulp.task('compileTools', function() {
-//   return gulp.src(['./source/_js/lib/*.js'])
-//     .pipe(concat('lib.min.js'))
-//     .pipe(uglify({mangle: true}))
-//     .pipe(gulp.dest('./docs/assets/js/'))
-// });
+gulp.task('compileTools', function() {
+  return gulp.src(['./source/_js/lib/*.js'])
+    .pipe(concat('tools.min.js'))
+    .pipe(uglify({mangle: true}))
+    .pipe(gulp.dest('./docs/assets/js/'))
+});
 
 gulp.task('moveJs', function() {
   return gulp.src(['./source/_js/vendor/*.js'])
@@ -62,7 +62,7 @@ gulp.task('moveJs', function() {
 });
 
 gulp.task('style', ['sass','moveCss']);
-gulp.task('js', ['compileJs','moveJs']);
+gulp.task('js', ['compileJs','compileTools','moveJs']);
 
 gulp.task('build', ['html','js','style']);
 

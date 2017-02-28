@@ -4,6 +4,8 @@
 @import "lib/neat/neat";
 @import "partials/font";
 
+@import "partials/bpDefaults";
+
 /* ========================================================================== */
 
 $max-width: rem(1600);
@@ -14,10 +16,19 @@ $pageMargin: 3rem;
 
 $frontPageColor: rgb(59,109,255);
 
+$bgColor: #fff;
+$textColor: #000;
+$defaultWeight: 100;
+
+$headerFont: 'code_boldregular', sans-serif;
+$bodyFont: 'open_sanslight', sans-serif;
+$blurbFont: 'open_sanslight_italic', sans-serif;
+$logoFont: 'mark_my_wordsregular';
+
 
 @mixin fullBg {
 	background-repeat: no-repeat !important;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	background-position: center center !important;
 	background-size: cover !important;
 }
@@ -28,15 +39,15 @@ $frontPageColor: rgb(59,109,255);
   left: 0px;
 }
 
-$bgColor: #fff;
-$textColor: #000;
-$defaultWeight: 100;
+@mixin absTopRight {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
 
-$headerFont: 'code_boldregular', sans-serif;
-$bodyFont: 'open_sanslight', sans-serif;
-$logoFont: 'mark_my_wordsregular';
 
-@import "partials/bpDefaults";
+
+
 /* ========================================================================== */
 
 body, html {
@@ -58,6 +69,40 @@ body {
 .centered {text-align: center;}
 .bolder {
   font-weight: $defaultWeight + 100;
+}
+
+.floatLeft {@include absTopLeft;}
+.floatRight {@include absTopRight;}
+
+.quarter {width: 25vw;}
+.three-quarter {width: 75vw;}
+.half {width: 50vw;}
+
+.blockButton {
+  border: solid black 2px;
+  background: white;
+  box-shadow: 10px 10px 0px 0px $frontPageColor;
+}
+
+.bigBlockButton {
+  @extend .blockButton;
+  width: 30vw;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.buttonTextBR {
+  text-align: right;
+  margin: 4rem 0.5rem 0.5rem 2rem;
+}
+
+.buttonTextTL {
+  margin: 4rem 2rem 0.5rem 0.5rem;
+}
+
+.buttonTextBR, .buttonTextTL {
+  font-family: $headerFont;
+  font-size: 2rem;
 }
 
 h1 {
@@ -87,6 +132,7 @@ h2 {
 
 #pageCover {
   @include absTopLeft;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background: white;
@@ -97,20 +143,29 @@ h2 {
     width: 100vw;
     height: 100%;
     background-image: url('/assets/img/overheard.jpg');
+    background-attachment: fixed;
     @include fullBg;
   }
 
-  .topBar {
+  .topBar,.bottomBar {
+    position: absolute;
+    width: 100vw;
+    height: $pageMargin * 1.5;
+    background: white;
+  }
 
+  .topBar {
+    top: 0px;
+    opacity: 0.0;
   }
 
   .bottomBar {
-
+    bottom: 0px;
   }
 
   .bigLuxLogoBox {
     position: absolute;
-    top: 50vh;
+    top: 40vh;
     left: 50vw;
     @include transform(translate(-50%,-50%));
     background: none;
@@ -163,6 +218,105 @@ h2 {
 
   }
 
+}
+
+#blurb {
+  @include absTopLeft;
+  position: relative;
+  // top: 100vh;
+  // height: 100vh;
+  width: 100vw;
+  margin-top: $pageMargin * 2;
+
+  .blurbImage {
+    background-image: url('/assets/img/bluebutterfly.jpg');
+    @include fullBg;
+    background-position: 85% center !important;
+    height: 30vw;
+  }
+
+  .theBlurb {
+    position: relative;
+    right: initial;
+    left: 25vw;
+    width: 75vw;
+    min-height: 25vw;
+
+    p {
+      font-family: $blurbFont;
+      padding: $pageMargin;
+      font-size: 2.5rem;
+      margin: 0 0;
+    }
+  }
+
+  .bigBlockButton {
+    position: relative;
+    // height: 300px;
+    margin: 0 $pageMargin;
+  }
+}
+
+#recentProjects {
+  position: relative;
+  height: 104.5vw;
+  margin-top: 2 * $pageMargin;
+  .showcaseImage {
+    @include fullBg;
+    position:relative;
+  }
+
+  .showcaseImage:nth-of-type(1) {
+    background-image: url('/assets/img/cover.png');
+    width: 50vw;
+    height: 37.5vw;
+    left: 50vw;
+    z-index: 3;
+  }
+
+  .showcaseImage:nth-of-type(2) {
+    background-image: url('/assets/img/socialsound.jpg');
+    width: 75vw;
+    height: 42vw;
+    top: -15vw;
+    z-index: 2;
+  }
+
+  .showcaseImage:nth-of-type(3) {
+    background-image: url('/assets/img/city.png');
+    width: 100vw;
+    height: 40vw;
+    top: -20vw;
+    left: $pageMargin;
+    z-index: 1;
+  }
+}
+
+#footer {
+  min-height: 15vh;
+  width: 100vw;
+  background: white;
+  text-align: center;
+  font-family: 'open_sansregular';
+
+  .contactInfo {
+    display: inline-block;
+    margin: 0;
+    width: 33vw;
+  }
+
+  .socialInfo {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
 }
 
 /* ========================================================================== */
