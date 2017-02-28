@@ -130,6 +130,101 @@ h2 {
   }
 }
 
+#cornerMenu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 100% 100%;
+
+
+  width: 5vh;
+  height: 5vh;
+  z-index: 10;
+  background: none;
+  overflow: hidden;
+  -webkit-transition: width 1s ease-in-out, height 1s ease-in-out;
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+
+  .menuBg, .menuBg:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-bottom-left-radius: 100% 100%;
+  }
+
+  .menuBg {
+    width: 100vh;
+    height: 100vh;
+    background: rgba(0,0,0,1);
+    //background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+    //background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+  }
+
+  &.show {
+    width: 100vh;
+    height: 100vh;
+
+    .menuBg {
+      opacity: 0.7;
+    }
+  }
+
+  .menuToggle {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    font-family: $headerFont;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    -webkit-transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:after, &:before {
+      -webkit-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+      background-color: white;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      top: 0rem;
+      height: 1.5rem;
+      width: 0.2rem;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      left: 0rem;
+      width: 1.5rem;
+      height: 0.2rem;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+
+     &.on {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+
+    &.on:after, &.on:before {
+      background-color: red;
+    }
+  }
+
+}
+
+
 #pageCover {
   @include absTopLeft;
   position: relative;
