@@ -1,13 +1,29 @@
-$(document).ready(function() {
-  printContactInfo();
-});
+
+///////////////////////
+// Globals
+var parallaxDivs = [];
 
 ///////////////////////
 // Events
 
+$(document).ready(function() {
+  initParallax();
+  printContactInfo();
+});
+
 $(".menuToggle").click(function(){
   toggleMenu()
 });
+
+$(window).on('scroll', function() {
+  window.requestAnimationFrame(updateParallax);
+});
+
+// TO-DO:
+// $(window).on('resize', function() {
+//   // Code to update parallax element values
+// });
+
 
 ///////////////////////
 // Custom Functions
@@ -22,47 +38,36 @@ function printContactInfo() {
   $(".hiddenPhoneNY").html(rot13rot5Encode('<n uers="gry:+61919393851" pynff="yvaxNavz">191.939.3851 (AL)</n>'));
 }
 
-// 1. Make an array that can hold the parallax image objects
-var parallaxDivs = [];
+function initParallax() {
+  $('.parallax').each(function(index) {
+    var parallaxDiv = {};
 
-$('.parallax').each(function(index) {
-  var parallaxDiv = {};
+    parallaxDiv.element = $(this);
+    parallaxDiv.height = parallaxDiv.element.height();
+    parallaxDiv.posTop = parseInt(parallaxDiv.element.css("top"));
+    parallaxDiv.pageTop = parallaxDiv.element.offset().top;
+    parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
 
-  parallaxDiv.element = $(this);
-  parallaxDiv.height = parallaxDiv.element.height();
-  parallaxDiv.posTop = parseInt(parallaxDiv.element.css("top"));
-  parallaxDiv.pageTop = parallaxDiv.element.offset().top;
-  parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
-
-  parallaxDiv.isShown = function(windowPos, windowHeight) {
-    if (windowPos + windowHeight > parallaxDiv.pageTop && windowPos < parallaxDiv.pageTop + parallaxDiv.height) {
-      return true;
+    parallaxDiv.isShown = function(windowPos, windowHeight) {
+      if (windowPos + windowHeight > parallaxDiv.pageTop && windowPos < parallaxDiv.pageTop + parallaxDiv.height) {
+        return true;
+      }
+      return false;
     }
-    return false;
-  }
 
-  parallaxDiv.getOffset = function(windowPos, windowHeight) {
-    var amount = (windowPos + windowHeight - parallaxDiv.pageTop)/(parallaxDiv.pageTop + parallaxDiv.height);
-    return Math.floor(parallaxDiv.offset * amount);
-  }
+    parallaxDiv.getOffset = function(windowPos, windowHeight) {
+      var amount = (windowPos + windowHeight - parallaxDiv.pageTop)/(parallaxDiv.pageTop + parallaxDiv.height);
+      return Math.floor(parallaxDiv.offset * amount);
+    }
 
-  parallaxDiv.setPos = function(newOffset) {
-    // console.log(parallaxDiv.posTop + newOffset);
-    parallaxDiv.element.css("top",parallaxDiv.posTop + newOffset);
-  }
+    parallaxDiv.setPos = function(newOffset) {
+      // console.log(parallaxDiv.posTop + newOffset);
+      parallaxDiv.element.css("top",parallaxDiv.posTop + newOffset);
+    }
 
-  parallaxDivs.push(parallaxDiv);
-});
-
-// 5. Move both event listeners outside the `$('.parallax-bg').each` loop
-
-// $(window).on('resize', function() {
-//   // Code to update element values...
-// });
-
-$(window).on('scroll', function() {
-  window.requestAnimationFrame(updateParallax);
-});
+    parallaxDivs.push(parallaxDiv);
+  });
+}
 
 function updateParallax() {
   var windowPos = $(window).scrollTop();
