@@ -4,6 +4,10 @@ $(document).ready(function() {
   $(".hiddenPhoneNY").html(rot13rot5Encode('<n uers="gry:+61919393851" pynff="yvaxNavz">191.939.3851 (AL)</n>'));
 });
 
-function toggle() {
+function toggleMenu() {
   $('#cornerMenu').toggleClass('show');
-}
+};
+
+$(".menuToggle").click(function(){
+  toggleMenu()
+});

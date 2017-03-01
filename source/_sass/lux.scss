@@ -137,13 +137,13 @@ h2 {
   border-bottom-left-radius: 100% 100%;
 
 
-  width: 5vh;
-  height: 5vh;
+  width: 5rem;
+  height: 5rem;
   z-index: 10;
   background: none;
   overflow: hidden;
-  -webkit-transition: width 1s ease-in-out, height 1s ease-in-out;
-  transition: width 1s ease-in-out, height 1s ease-in-out;
+  -webkit-transition: width 400ms ease-in-out, height 400ms ease-in-out;
+  transition: width 400ms ease-in-out, height 400ms ease-in-out;
 
   .menuBg, .menuBg:after {
     position: absolute;
@@ -155,30 +155,26 @@ h2 {
   .menuBg {
     width: 100vh;
     height: 100vh;
-    background: rgba(0,0,0,1);
-    //background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
-    //background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+    -webkit-transition: background-color 300ms linear;
+            transition: background-color 300ms linear;
+    background-color: white;
+    // background: rgba(0,0,0,1);
+    // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+    // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
   }
 
-  &.show {
-    width: 100vh;
-    height: 100vh;
-
-    .menuBg {
-      opacity: 0.7;
-    }
-  }
+  $menuToggleSize: 1.5rem;
 
   .menuToggle {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: $menuToggleSize;
+    height: $menuToggleSize;
     color: white;
     font-family: $headerFont;
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    -webkit-transition: transform 200ms ease-in-out;
-    transition: transform 200ms ease-in-out;
+    top: 1rem;
+    right: 1rem;
+    -webkit-transition: transform 200ms linear;
+    transition: transform 200ms linear;
 
     &:hover {
       cursor: pointer;
@@ -186,17 +182,17 @@ h2 {
 
     &:after, &:before {
       -webkit-transition: background-color 200ms linear;
-      transition: background-color 200ms linear;
-      background-color: white;
+              transition: background-color 200ms linear;
+      background-color: black;
     }
 
     &:before {
       content: "";
       position: absolute;
-      left: 0.75rem;
+      left: $menuToggleSize/2;
       top: 0rem;
-      height: 1.5rem;
-      width: 0.2rem;
+      height: $menuToggleSize;
+      width: $menuToggleSize/7;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
     }
@@ -204,26 +200,36 @@ h2 {
     &:after {
       content: "";
       position: absolute;
-      top: 0.75rem;
+      top: $menuToggleSize/2;
       left: 0rem;
-      width: 1.5rem;
-      height: 0.2rem;
+      width: $menuToggleSize;
+      height: $menuToggleSize/7;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
     }
-
-     &.on {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-
-    &.on:after, &.on:before {
-      background-color: red;
-    }
   }
 
-}
+  &.show {
+    width: 100vh;
+    height: 100vh;
 
+    .menuBg {
+      background-color: $frontPageColor;
+      // background-color: black;
+      // opacity: 0.7;
+    }
+
+    .menuToggle {
+      //background-color: blue;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+
+      &:after, &:before {
+        background-color: white;
+      }
+    }
+  }
+}
 
 #pageCover {
   @include absTopLeft;
@@ -380,9 +386,10 @@ h2 {
   .showcaseImage:nth-of-type(3) {
     background-image: url('/assets/img/city.png');
     width: 100vw;
+    width: auto;
     height: 40vw;
     top: -20vw;
-    left: $pageMargin;
+    // left: $pageMargin;
     z-index: 1;
   }
 }
