@@ -361,10 +361,11 @@ h2 {
 #recentProjects {
   position: relative;
   height: 104.5vw;
+  overflow: hidden;
   margin-top: 2 * $pageMargin;
   .showcaseImage {
     @include fullBg;
-    position:relative;
+    position:absolute;
   }
 
   .showcaseImage:nth-of-type(1) {
@@ -379,17 +380,17 @@ h2 {
     background-image: url('/assets/img/socialsound.jpg');
     width: 75vw;
     height: 42vw;
-    top: -15vw;
+    top: 22.5vw;
     z-index: 2;
+    // border-bottom-right-radius: 42vw 42vw;
   }
 
   .showcaseImage:nth-of-type(3) {
     background-image: url('/assets/img/city.png');
     width: 100vw;
-    width: auto;
     height: 40vw;
-    top: -20vw;
-    // left: $pageMargin;
+    top: 54.5vw;
+    left: $pageMargin;
     z-index: 1;
   }
 }
