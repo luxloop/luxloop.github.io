@@ -2,6 +2,7 @@
 ///////////////////////
 // Globals
 var parallaxDivs = [];
+var scrollLimit;
 
 ///////////////////////
 // Events
@@ -33,6 +34,15 @@ $(".expandButton").bind('oanimationend animationend webkitAnimationEnd', functio
 // $(window).on('resize', function() {
 //   // Code to update parallax element values
 // });
+//
+
+//Throttled on-resize handler
+on_resize(function() {
+  scrollLimit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+  //parallaxDivs = [];
+  //initParallax();
+  //updateParallax();
+})();
 
 
 ///////////////////////
@@ -56,7 +66,13 @@ function initParallax() {
     parallaxDiv.height = parallaxDiv.element.height();
     parallaxDiv.posTop = parseInt(parallaxDiv.element.css("top"));
     parallaxDiv.pageTop = parallaxDiv.element.offset().top;
-    parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
+
+    if (parallaxDiv.element.attr("data-offset")==="max") {
+      parallaxDiv.offset = -1 * Math.floor(scrollLimit - parallaxDiv.height + window.innerHeight);
+    } else {
+      parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
+    }
+    console.log(parallaxDiv.offset)
 
     parallaxDiv.isShown = function(windowPos, windowHeight) {
       if (windowPos + windowHeight > parallaxDiv.pageTop && windowPos < parallaxDiv.pageTop + parallaxDiv.height) {
