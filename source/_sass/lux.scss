@@ -15,6 +15,7 @@ $mobile:	rem(500);
 $pageMargin: 3rem;
 
 $frontPageColor: rgb(59,109,255);
+$boxLinkTransitionTime: 700ms;
 
 $bgColor: #fff;
 $textColor: #000;
@@ -24,6 +25,8 @@ $headerFont: 'code_boldregular', sans-serif;
 $bodyFont: 'open_sanslight', sans-serif;
 $blurbFont: 'open_sanslight_italic', sans-serif;
 $logoFont: 'mark_my_wordsregular';
+
+@import "partials/animations";
 
 
 @mixin fullBg {
@@ -79,30 +82,95 @@ body {
 .half {width: 50vw;}
 
 .blockButton {
+  display: block;
+  text-decoration: none;
+  color: black;
   border: solid black 2px;
-  background: white;
-  box-shadow: 10px 10px 0px 0px $frontPageColor;
+  background-color: white;
+  box-shadow: 12px 11px 0px 0px $frontPageColor;
+  transform: scale(1.0);
+  z-index: 20;
+
+  -webkit-transition: background-color $boxLinkTransitionTime ease-in-out;
+          transition: background-color $boxLinkTransitionTime ease-in-out;
+
+  // -webkit-transition-delay: $boxLinkTransitionTime * 0.35;
+  //         transition-delay: $boxLinkTransitionTime * 0.35;
+
+  // -webkit-transition: transform $boxLinkTransitionTime ease-in-out,
+  //                     background-color $boxLinkTransitionTime linear,
+  //                     box-shadow $boxLinkTransitionTime/2 linear,
+  //                     border-color $boxLinkTransitionTime/2 linear,
+  //                     border-radius $boxLinkTransitionTime/4 ease-in-out;
+  //         transition: transform $boxLinkTransitionTime ease-in-out,
+  //                     background-color $boxLinkTransitionTime linear,
+  //                     box-shadow $boxLinkTransitionTime/2 linear,
+  //                     border-color $boxLinkTransitionTime/2 linear,
+  //                     border-radius $boxLinkTransitionTime/4 ease-in-out;
+
+  border-radius: 0%;
+
+
+  .buttonTextBR {
+    text-align: right;
+    margin: 4rem 0.5rem 0.5rem 2rem;
+  }
+
+  .buttonTextTL {
+    margin: 4rem 2rem 0.5rem 0.5rem;
+  }
+
+  .buttonTextBR, .buttonTextTL {
+    font-family: $headerFont;
+    font-size: 2rem;
+    opacity: 1.0;
+    -webkit-transition: opacity $boxLinkTransitionTime/4 ease-in-out;
+            transition: opacity $boxLinkTransitionTime/4 ease-in-out;
+  }
+
+  &:hover {
+    left: 3px;
+    top: 3px;
+    box-shadow: 9px 8px 0px 0px $frontPageColor;
+  }
+
+  &.expandButton.expand {
+    // -webkit-transition: transform $boxLinkTransitionTime ease-in-out,
+    //                   background-color $boxLinkTransitionTime linear,
+    //                   box-shadow $boxLinkTransitionTime/2 linear,
+    //                   border-color $boxLinkTransitionTime/2 linear,
+    //                   border-radius $boxLinkTransitionTime/4 ease-in-out;
+    //       transition: transform $boxLinkTransitionTime ease-in-out,
+    //                   background-color $boxLinkTransitionTime linear,
+    //                   box-shadow $boxLinkTransitionTime/2 linear,
+    //                   border-color $boxLinkTransitionTime/2 linear,
+    //                   border-radius $boxLinkTransitionTime/4 ease-in-out;
+
+
+    // border-radius: 50%;
+    // transform: scale(8.0,15.0);
+    // background-color: #FF3531;
+    // border-color: rgba(255,255,255,0);
+    // box-shadow: 0px 0px 0px 0px $frontPageColor;
+
+    -webkit-animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
+            animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
+
+    background-color: #FF3531;
+
+
+    .buttonTextBR, .buttonTextTL {
+      opacity: 0.0;
+    }
+  }
 }
+
 
 .bigBlockButton {
   @extend .blockButton;
   width: 30vw;
   min-width: 250px;
   max-width: 400px;
-}
-
-.buttonTextBR {
-  text-align: right;
-  margin: 4rem 0.5rem 0.5rem 2rem;
-}
-
-.buttonTextTL {
-  margin: 4rem 2rem 0.5rem 0.5rem;
-}
-
-.buttonTextBR, .buttonTextTL {
-  font-family: $headerFont;
-  font-size: 2rem;
 }
 
 h1 {
@@ -143,7 +211,7 @@ h2 {
   background: none;
   overflow: hidden;
   -webkit-transition: width 400ms ease-in-out, height 400ms ease-in-out;
-  transition: width 400ms ease-in-out, height 400ms ease-in-out;
+          transition: width 400ms ease-in-out, height 400ms ease-in-out;
 
   .menuBg, .menuBg:after {
     position: absolute;

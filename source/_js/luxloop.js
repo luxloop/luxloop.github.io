@@ -19,6 +19,12 @@ $(window).on('scroll', function() {
   window.requestAnimationFrame(updateParallax);
 });
 
+$('.expandButton').on('click',function(e) {
+  e.preventDefault();
+  //$(this).css("height",$(this).width()).addClass('expand');
+  $(this).addClass('expand');
+});
+
 // TO-DO:
 // $(window).on('resize', function() {
 //   // Code to update parallax element values

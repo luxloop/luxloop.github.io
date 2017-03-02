@@ -1,0 +1,26 @@
+@include keyframes(bounceSpread) {
+  0% {
+    border-radius: 0%;
+    @include transform(scale(1));
+  }
+
+  15% {
+    border-radius: 0%;
+    @include transform(scale(1.2));
+    box-shadow: 0px 0px 0px 0px $frontPageColor;
+  }
+
+  30%, 35% {
+    border-radius: 0%;
+    @include transform(scale(1));
+    border-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 0px 0px $frontPageColor;
+  }
+
+  100% {
+    border-radius: 50%;
+    @include transform(scale(8.0,15.0));
+    border-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 0px 0px $frontPageColor;
+  }
+}
