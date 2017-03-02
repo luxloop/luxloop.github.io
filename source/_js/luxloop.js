@@ -25,6 +25,10 @@ $('.expandButton').on('click',function(e) {
   $(this).addClass('expand');
 });
 
+$(".expandButton").bind('oanimationend animationend webkitAnimationEnd', function() {
+   console.log("go to next page")
+});
+
 // TO-DO:
 // $(window).on('resize', function() {
 //   // Code to update parallax element values
