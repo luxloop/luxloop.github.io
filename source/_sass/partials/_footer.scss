@@ -1,0 +1,28 @@
+#footer {
+  min-height: 15vh;
+  width: 100vw;
+  position:relative;
+  background: white;
+  text-align: center;
+  font-family: 'open_sansregular';
+  padding-top: 3rem;
+
+  .contactInfo {
+    display: inline-block;
+    margin: 0;
+    width: 33vw;
+  }
+
+  .socialInfo {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+}

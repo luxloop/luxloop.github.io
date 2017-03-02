@@ -1,0 +1,150 @@
+$menuToggleSize: 1.5rem;
+$menuExpandTime: 400ms;
+$linkFanTime: 300ms;
+
+#cornerMenu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 100% 100%;
+
+
+  width: 5rem;
+  height: 5rem;
+  max-height: 700px;
+  max-width: 700px;
+  z-index: 30;
+  background: none;
+  overflow: hidden;
+  @include transition(width $menuExpandTime ease-in-out, height $menuExpandTime ease-in-out);
+
+  .menuBg, .menuBg:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-bottom-left-radius: 100% 100%;
+  }
+
+  .menuBg {
+    width: 100vh;
+    height: 100vh;
+    @include transition(background-color $menuExpandTime linear);
+    background-color: white;
+    // background: rgba(0,0,0,1);
+    // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+    // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+
+
+    .linkBox {
+      display: block;
+      padding-right: 10rem;
+      @include absTopRight;
+      top: 1rem + $menuToggleSize/2;
+      right: 1rem + $menuToggleSize/2;
+      @include transform-origin(center right);
+      @include transition(transform $linkFanTime ease-in-out, opacity $linkFanTime linear);
+      @include transform(translateY(-50%) rotate(-120deg));
+      opacity: 0.0;
+      //background-color: red;
+      //
+      a {
+        color: #ffffff;
+        font-family: $headerFont;
+        text-decoration: none;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .menuToggle {
+    width: $menuToggleSize;
+    height: $menuToggleSize;
+    color: white;
+    font-family: $headerFont;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    -webkit-transition: transform $menuExpandTime/2 linear;
+    transition: transform $menuExpandTime/2 linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:after, &:before {
+      @include transition(background-color $menuExpandTime/2 linear);
+      background-color: black;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: $menuToggleSize/2;
+      top: 0rem;
+      height: $menuToggleSize;
+      width: $menuToggleSize/7;
+      @include transform(translateX(-50%));
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: $menuToggleSize/2;
+      left: 0rem;
+      width: $menuToggleSize;
+      height: $menuToggleSize/7;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  &.show {
+    width: 100vh;
+    height: 100vh;
+
+    .menuBg {
+      background-color: $frontPageColor;
+      // background-color: black;
+      // opacity: 0.7;
+
+      .linkBox {
+        opacity: 1.0;
+      }
+
+      .linkBox:nth-of-type(1) {
+        @include transform(translateY(-50%) rotate(-5deg));
+        @include transition-delay($menuExpandTime*0.75);
+      }
+      .linkBox:nth-of-type(2) {
+        @include transform(translateY(-50%) rotate(-35deg));
+        @include transition-delay($menuExpandTime*0.75 + $linkFanTime/2);
+      }
+      .linkBox:nth-of-type(3) {
+        @include transform(translateY(-50%) rotate(-65deg));
+        @include transition-delay($menuExpandTime*0.75 + $linkFanTime);
+      }
+    }
+
+    .menuToggle {
+      //background-color: blue;
+      @include transform(rotate(45deg));
+
+      &:after, &:before {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.no-touch {
+  .menuBg {
+    .linkBox {
+      a {
+        @include transition(color 100ms linear);
+      }
+
+      a:hover {
+        color: #dddddd !important;
+      }
+    }
+  }
+}
