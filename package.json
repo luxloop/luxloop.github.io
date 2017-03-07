@@ -9,9 +9,12 @@
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
     "gulp-hb": "^6.0.2",
+    "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.1"
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "node-notifier": "^5.0.2"
   },
   "scripts": {
     "build": "gulp build"
