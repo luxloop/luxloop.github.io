@@ -19,6 +19,7 @@ gulp.task('html', function () {
       helpers: './source/_helpers/*.js',
       data: './source/_data/*.{js,json}'
     }))
+    .on('error', onError)
     .pipe(gulp.dest('./docs'));
 });
 
@@ -52,6 +53,7 @@ gulp.task('compileJs', function() {
   return gulp.src(['./source/_js/*.js'])
     .pipe(concat('luxloop.min.js'))
     .pipe(uglify({mangle: true}))
+    .on('error', onError)
     .pipe(gulp.dest('./docs/assets/js/'))
 });
 
@@ -59,6 +61,7 @@ gulp.task('compileTools', function() {
   return gulp.src(['./source/_js/lib/*.js'])
     .pipe(concat('tools.min.js'))
     .pipe(uglify({mangle: true}))
+    .on('error', onError)
     .pipe(gulp.dest('./docs/assets/js/'))
 });
 
