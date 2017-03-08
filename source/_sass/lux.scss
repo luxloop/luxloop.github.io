@@ -14,9 +14,6 @@ $mobile:	rem(500);
 
 $pageMargin: 3rem;
 
-$frontPageColor: rgb(59,109,255);
-$boxLinkTransitionTime: 700ms;
-
 $bgColor: #fff;
 $textColor: #000;
 $defaultWeight: 100;
@@ -25,6 +22,16 @@ $headerFont: 'code_boldregular', sans-serif;
 $bodyFont: 'open_sanslight', sans-serif;
 $blurbFont: 'open_sanslight_italic', sans-serif;
 $logoFont: 'mark_my_wordsregular';
+
+$boxLinkTransitionTime: 700ms;
+
+// Front Page Vars
+$frontPageColor: rgb(59,109,255);
+
+// Projects Page Vars
+$projImageWidth: 70vw;
+$projLabelOffset: $projImageWidth - 10;
+
 
 @mixin fullBg {
 	background-repeat: no-repeat !important;
@@ -81,6 +88,7 @@ body {
 .half {width: 50vw;}
 
 .blockButton {
+  position: relative;
   display: block;
   text-decoration: none;
   color: black;
@@ -97,7 +105,11 @@ body {
 
   .buttonTextBR {
     text-align: right;
-    margin: 4rem 0.5rem 0.5rem 2rem;
+    //margin: 4rem 0.5rem 0.5rem 2rem;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 0rem 0.5rem 0.4rem 0rem;
   }
 
   .buttonTextTL {
@@ -289,8 +301,10 @@ h2 {
   }
 
   .bigBlockButton {
-    position: relative;
-    // height: 300px;
+    //position: relative;
+    //height: 300px;
+    height: 10vw;
+    min-height: 2rem;
     margin: 0 $pageMargin;
   }
 }
@@ -329,6 +343,69 @@ h2 {
     top: 54.5vw;
     left: $pageMargin;
     z-index: 1;
+  }
+}
+
+
+#projects {
+  #pageCover {
+    height: 60vh;
+    background: initial;
+  }
+
+  .projectEntry {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 10vh;
+    // background: #ccc;
+
+    .projectImage {
+      width: $projImageWidth;
+      //height: 50vw;
+      //background: red;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .projLink {
+      position: absolute;
+      left: $projLabelOffset;
+      bottom: -2vh;
+
+      .projectBlockButton {
+        width: 25vw;
+        height: 15vw;
+      }
+
+      .projTitle {
+        text-align: right;
+        font-size: 1.5rem;
+
+        p {
+          margin: 0px;
+        }
+
+        p:nth-of-type(2) {
+          font-size: 1rem;
+          font-family: $bodyFont;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      .projectImage {
+        margin-left: 100 - $projImageWidth;
+      }
+
+      .projLink {
+        left: initial;
+        right: $projLabelOffset;
+      }
+    }
   }
 }
 
