@@ -18,40 +18,45 @@
 
   {{> menu}}
 
-  <div id="linesBg">
-    <!-- <img src="/assets/img/linesBg.png" alt="" class="parallax" data-offset="max"> -->
-    <img src="/assets/img/linesBg.png" alt="">
+  <div class="pageContainer">
+
+    <div id="linesBg">
+      <!-- <img src="/assets/img/linesBg.png" alt="" class="parallax" data-offset="max"> -->
+      <img src="/assets/img/linesBg.png" alt="">
+    </div>
+
+    <section id="pageCover">
+      <div class="coverImage"></div>
+      <div class="bigLuxLogoBox">
+        <h1>luxloop</h1>
+        <div class="topline"></div>
+      </div>
+      <div class="topBar"></div>
+      <div class="bottomBar"></div>
+    </section>
+
+    <section id="blurb">
+      <div class="floatLeft quarter blurbImage"></div>
+
+      <div class="floatRight three-quarter theBlurb">
+        <p>Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds.</p>
+      </div>
+
+      <a href="#" class="bigBlockButton expandButton">
+        <p class="buttonTextBR">What We Do</p>
+      </a>
+    </section>
+
+    <section id="recentProjects">
+      <div class="showcaseImage parallax" data-offset="-100"></div>
+      <div class="showcaseImage"></div>
+      <div class="showcaseImage parallax" data-offset="-200"></div>
+    </section>
+
+    {{> footer}}
+
+
   </div>
-
-  <section id="pageCover">
-    <div class="coverImage"></div>
-    <div class="bigLuxLogoBox">
-      <h1>luxloop</h1>
-      <div class="topline"></div>
-    </div>
-    <div class="topBar"></div>
-    <div class="bottomBar"></div>
-  </section>
-
-  <section id="blurb">
-    <div class="floatLeft quarter blurbImage"></div>
-
-    <div class="floatRight three-quarter theBlurb">
-      <p>Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds.</p>
-    </div>
-
-    <a href="#" class="bigBlockButton expandButton">
-      <p class="buttonTextBR">What We Do</p>
-    </a>
-  </section>
-
-  <section id="recentProjects">
-    <div class="showcaseImage parallax" data-offset="-100"></div>
-    <div class="showcaseImage"></div>
-    <div class="showcaseImage parallax" data-offset="-200"></div>
-  </section>
-
-  {{> footer}}
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>

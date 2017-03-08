@@ -8,7 +8,7 @@
 
 /* ========================================================================== */
 
-$max-width: rem(1600);
+$max-width: rem(900);
 $tablet:	rem(800);
 $mobile:	rem(500);
 
@@ -29,7 +29,7 @@ $boxLinkTransitionTime: 700ms;
 $frontPageColor: rgb(59,109,255);
 
 // Projects Page Vars
-$projImageWidth: 70vw;
+$projImageWidth: 70%;
 $projLabelOffset: $projImageWidth - 10;
 
 
@@ -83,9 +83,9 @@ body {
 .floatLeft {@include absTopLeft;}
 .floatRight {@include absTopRight;}
 
-.quarter {width: 25vw;}
-.three-quarter {width: 75vw;}
-.half {width: 50vw;}
+.quarter {width: 25%;}
+.three-quarter {width: 75%;}
+.half {width: 50%;}
 
 .blockButton {
   position: relative;
@@ -163,12 +163,22 @@ h2 {
 
 // ==================
 
+.pageContainer {
+  position: relative;
+  width: 100vw;
+  max-width: $max-width;
+  margin: 0 auto;
+  background: #ccc
+}
+
 #linesBg {
   z-index: 0;
   position: fixed;
   top: 0px;
-  left: 0px;
+  left: 50vw;
   width: 100vw;
+  max-width: $max-width;
+  @include transform(translateX(-50%))
   height: 100vh;
   overflow: hidden;
   // background: red;
@@ -183,14 +193,15 @@ h2 {
 #pageCover {
   @include absTopLeft;
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  //max-height: $max-width * (3/16);
   background: white;
 
   .coverImage {
     @include absTopLeft;
     //top: -$pageMargin * 1.5;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-image: url('/assets/img/overheard.jpg');
     background-attachment: fixed;
@@ -199,7 +210,7 @@ h2 {
 
   .topBar,.bottomBar {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: $pageMargin * 1.5;
     background: white;
   }
@@ -215,8 +226,8 @@ h2 {
 
   .bigLuxLogoBox {
     position: absolute;
-    top: 40vh;
-    left: 50vw;
+    top: 40%;
+    left: 50%;
     @include transform(translate(-50%,-50%));
     background: none;
 
@@ -275,7 +286,7 @@ h2 {
   position: relative;
   // top: 100vh;
   // height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin-top: $pageMargin * 2;
 
   .blurbImage {
@@ -288,8 +299,8 @@ h2 {
   .theBlurb {
     position: relative;
     right: initial;
-    left: 25vw;
-    width: 75vw;
+    left: 25%;
+    width: 75%;
     min-height: 25vw;
 
     p {
@@ -321,15 +332,15 @@ h2 {
 
   .showcaseImage:nth-of-type(1) {
     background-image: url('/assets/img/cover.png');
-    width: 50vw;
+    width: 50%;
     height: 37.5vw;
-    left: 50vw;
+    left: 50%;
     z-index: 3;
   }
 
   .showcaseImage:nth-of-type(2) {
     background-image: url('/assets/img/socialsound.jpg');
-    width: 75vw;
+    width: 75%;
     height: 42vw;
     top: 22.5vw;
     z-index: 2;
@@ -338,7 +349,7 @@ h2 {
 
   .showcaseImage:nth-of-type(3) {
     background-image: url('/assets/img/city.png');
-    width: 100vw;
+    width: 100%;
     height: 40vw;
     top: 54.5vw;
     left: $pageMargin;
@@ -355,7 +366,7 @@ h2 {
 
   .projectEntry {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin-bottom: 10vh;
     // background: #ccc;
@@ -377,7 +388,7 @@ h2 {
       bottom: -2vh;
 
       .projectBlockButton {
-        width: 25vw;
+        width: 25%;
         height: 15vw;
       }
 

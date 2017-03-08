@@ -1,6 +1,6 @@
 #footer {
   min-height: 15vh;
-  width: 100vw;
+  width: 100%;
   position:relative;
   background: white;
   text-align: center;
@@ -10,7 +10,7 @@
   .contactInfo {
     display: inline-block;
     margin: 0;
-    width: 33vw;
+    width: 33%;
   }
 
   .socialInfo {
