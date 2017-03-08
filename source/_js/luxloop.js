@@ -10,6 +10,7 @@ var scrollLimit;
 $(document).ready(function() {
   initParallax();
   printContactInfo();
+  scrollHandler();
 });
 
 $(".menuToggle").click(function(){
@@ -17,7 +18,7 @@ $(".menuToggle").click(function(){
 });
 
 $(window).on('scroll', function() {
-  window.requestAnimationFrame(updateParallax);
+  window.requestAnimationFrame(scrollHandler);
 });
 
 $('.expandButton').on('click',function(e) {
@@ -51,6 +52,18 @@ on_resize(function() {
 function toggleMenu() {
   $('#cornerMenu').toggleClass('show');
 };
+
+function toggleMenuVisible(windowPos,windowHeight) {
+  var menu = $('#cornerMenu');
+  if (menu.hasClass('transitioning') === false && menu.hasClass('noHide') === false) {
+    var showThresh = windowHeight * .5;
+    if (windowPos > showThresh && menu.css('display') === 'none') {
+      menu.removeClass('show').addClass('transitioning').fadeIn(function(){menu.removeClass('transitioning')});
+    } else if (windowPos <= showThresh && menu.css('display') !== 'none') {
+      menu.removeClass('show').addClass('transitioning').fadeOut(function(){menu.removeClass('transitioning')});
+    }
+  }
+}
 
 function printContactInfo() {
   $(".hiddenEmail").html(rot13rot5Encode('<n uers="znvygb:uryyb@yhkybbc.pbz">uryyb@yhkybbc.pbz</n>'));
@@ -95,9 +108,15 @@ function initParallax() {
   });
 }
 
-function updateParallax() {
+function scrollHandler() {
   var windowPos = $(window).scrollTop();
   var windowHeight = window.innerHeight;
+
+  //toggleMenuVisible(windowPos,windowHeight);
+  updateParallax(windowPos,windowHeight);
+}
+
+function updateParallax(windowPos,windowHeight) {
   $.each(parallaxDivs, function(index, parallaxDiv) {
     if (parallaxDiv.isShown(windowPos,windowHeight)) {
       //console.log(parallaxDiv.getOffset(windowPos, windowHeight));

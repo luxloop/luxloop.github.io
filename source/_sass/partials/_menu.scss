@@ -29,7 +29,7 @@ $linkFanTime: 300ms;
     width: 100vh;
     height: 100vh;
     @include transition(background-color $menuExpandTime linear);
-    background-color: white;
+    background-color: rgb(255,255,255);
     // background: rgba(0,0,0,1);
     // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
     // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
