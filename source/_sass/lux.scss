@@ -402,9 +402,17 @@ h2 {
       //height: 50vw;
       //background: red;
 
+      .aspectContent {
+        overflow: hidden;
+        padding:0px;
+      }
+
       img {
-        width: 100%;
+        width: 130%;
         height: auto;
+        position: relative;
+        left: 50%;
+        @include transform(translateX(-50%))
       }
     }
 

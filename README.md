@@ -24,3 +24,4 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] Footer styles and new icons
 * [ ] Project Crawl
 * [ ] Fixed images in project crawl
+* [ ] Check and adjust image sizes in projects page
