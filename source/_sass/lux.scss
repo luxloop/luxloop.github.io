@@ -8,7 +8,7 @@
 
 /* ========================================================================== */
 
-$max-width: rem(900);
+$max-width: rem(1300);
 $tablet:	rem(800);
 $mobile:	rem(500);
 
@@ -87,6 +87,31 @@ body {
 .three-quarter {width: 75%;}
 .half {width: 50%;}
 
+.aspect {
+  position: relative;
+  width: 100%;
+  &.ratio-1-1 { padding-bottom: 100% }
+  &.ratio-1-2 { padding-bottom: 50% }
+  &.ratio-2-1 { padding-bottom: 200% }
+  &.ratio-1-3 { padding-bottom: 33.333% }
+  &.ratio-3-1 { padding-bottom: 300% }
+  &.ratio-3-4 { padding-bottom: 75% }
+  &.ratio-4-3 { padding-bottom: 133.333% }
+  &.ratio-2-3 { padding-bottom: 66.666% }
+  &.ratio-3-2 { padding-bottom: 150% }
+  &.ratio-9-16 { padding-bottom: 56.25% }
+  &.ratio-16-9 { padding-bottom: 177.777% }
+}
+
+.relative { position: relative }
+.absolute { position: absolute }
+
+.aspectContent {
+  position: absolute;
+  top: 0;  bottom: 0;  left: 0;  right: 0;
+  padding: 0 24px; /* Optional padding for content area */
+}
+
 .blockButton {
   position: relative;
   display: block;
@@ -146,6 +171,7 @@ body {
 
 .bigBlockButton {
   @extend .blockButton;
+  height: 10vw;
   width: 30vw;
   min-width: 250px;
   max-width: 400px;
@@ -195,7 +221,7 @@ h2 {
   position: relative;
   width: 100%;
   height: 100vh;
-  //max-height: $max-width * (3/16);
+  max-height: $max-width * (2/3);
   background: white;
 
   .coverImage {
@@ -204,7 +230,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-image: url('/assets/img/overheard.jpg');
-    background-attachment: fixed;
+    // background-attachment: fixed;
     @include fullBg;
   }
 
@@ -284,8 +310,6 @@ h2 {
 #blurb {
   @include absTopLeft;
   position: relative;
-  // top: 100vh;
-  // height: 100vh;
   width: 100%;
   margin-top: $pageMargin * 2;
 
@@ -293,11 +317,10 @@ h2 {
     background-image: url('/assets/img/bluebutterfly.jpg');
     @include fullBg;
     background-position: 85% center !important;
-    height: 30vw;
   }
 
   .theBlurb {
-    position: relative;
+    position: absolute;
     right: initial;
     left: 25%;
     width: 75%;
@@ -311,49 +334,52 @@ h2 {
     }
   }
 
-  .bigBlockButton {
-    //position: relative;
-    //height: 300px;
-    height: 10vw;
-    min-height: 2rem;
+  .buttonHolder {
+    position: relative;
+    top: -4rem;
     margin: 0 $pageMargin;
   }
 }
 
 #recentProjects {
   position: relative;
-  height: 104.5vw;
+  // height: 100vw;
   overflow: hidden;
-  margin-top: 2 * $pageMargin;
+  //margin-top: 2 * $pageMargin;
+  margin-bottom: -25vh;
   .showcaseImage {
-    @include fullBg;
-    position:absolute;
+    position:relative;
+    .aspectContent {
+      @include fullBg;
+    }
   }
 
   .showcaseImage:nth-of-type(1) {
-    background-image: url('/assets/img/cover.png');
     width: 50%;
-    height: 37.5vw;
     left: 50%;
     z-index: 3;
+    .aspectContent {
+      background-image: url('/assets/img/cover.png');
+    }
   }
 
   .showcaseImage:nth-of-type(2) {
-    background-image: url('/assets/img/socialsound.jpg');
     width: 75%;
-    height: 42vw;
-    top: 22.5vw;
+    top: -20vh;
     z-index: 2;
-    // border-bottom-right-radius: 42vw 42vw;
+    .aspectContent {
+      background-image: url('/assets/img/socialsound.jpg');
+    }
   }
 
   .showcaseImage:nth-of-type(3) {
-    background-image: url('/assets/img/city.png');
     width: 100%;
-    height: 40vw;
-    top: 54.5vw;
+    top: -25vh;
     left: $pageMargin;
     z-index: 1;
+    .aspectContent {
+      background-image: url('/assets/img/city.png');
+    }
   }
 }
 
@@ -382,7 +408,7 @@ h2 {
       }
     }
 
-    .projLink {
+    .buttonHolder {
       position: absolute;
       left: $projLabelOffset;
       bottom: -2vh;

@@ -36,21 +36,41 @@
     </section>
 
     <section id="blurb">
-      <div class="floatLeft quarter blurbImage"></div>
+      <div class="relative floatLeft quarter">
+        <div class="aspect ratio-3-2">
+          <div class="aspectContent blurbImage"></div>
+        </div>
+      </div>
 
       <div class="floatRight three-quarter theBlurb">
         <p>Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds.</p>
       </div>
-
-      <a href="#" class="bigBlockButton expandButton">
-        <p class="buttonTextBR">What We Do</p>
-      </a>
+      <div class="buttonHolder">
+        <a href="#" class="bigBlockButton expandButton">
+          <p class="buttonTextBR">What We Do</p>
+        </a>
+      </div>
     </section>
 
     <section id="recentProjects">
-      <div class="showcaseImage parallax" data-offset="-100"></div>
-      <div class="showcaseImage"></div>
-      <div class="showcaseImage parallax" data-offset="-200"></div>
+      <div class="showcaseImage parallax" data-offset="-100">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent"></div>
+        </div>
+      </div>
+
+      <div class="showcaseImage">
+        <div class="aspect ratio-2-3">
+          <div class="aspectContent"></div>
+        </div>
+      </div>
+
+      <div class="showcaseImage parallax" data-offset="-200">
+        <div class="aspect ratio-1-3">
+          <div class="aspectContent"></div>
+        </div>
+      </div>
+
     </section>
 
     {{> footer}}
