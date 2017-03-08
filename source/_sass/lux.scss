@@ -194,7 +194,7 @@ h2 {
   width: 100vw;
   max-width: $max-width;
   margin: 0 auto;
-  background: #ccc
+  // background: #ccc
 }
 
 #linesBg {
@@ -212,7 +212,7 @@ h2 {
   img {
     @include absTopLeft;
     width: 100%;
-    opacity: 0.2;
+    opacity: 0.1;
   }
 }
 
@@ -438,7 +438,7 @@ h2 {
         margin-left: 100 - $projImageWidth;
       }
 
-      .projLink {
+      .buttonHolder {
         left: initial;
         right: $projLabelOffset;
       }
