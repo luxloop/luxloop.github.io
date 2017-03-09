@@ -1,9 +1,10 @@
 @import "partials/normalize";
 
-@import "lib/bourbon/bourbon";
-@import "lib/neat/neat";
-@import "partials/font";
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon";
+@import "neat";
 
+@import "partials/font";
 @import "partials/bpDefaults";
 
 /* ========================================================================== */
@@ -74,7 +75,7 @@ body {
 .strike {text-decoration: line-through;}
 .smaller {font-size: 0.85em;}
 .moreSmaller {font-size: 0.7em;}
-.muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
+//.muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
 .centered {text-align: center;}
 .bolder {
   font-weight: $defaultWeight + 100;

@@ -27,7 +27,11 @@ gulp.task('html', function () {
 gulp.task('sass', function() {
     return gulp.src('./source/_sass/*.scss')
         .pipe(sass({
-            'outputStyle' : 'expanded'
+            'outputStyle' : 'expanded',
+            'includePaths': [
+              require("bourbon-neat").includePaths,
+              require("bourbon").includePaths
+            ]
         }))
         .on('error', onError)
         .pipe(gulp.dest('./docs/assets/css/'))

@@ -5,6 +5,8 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
+    "bourbon": "^4.3.3",
+    "bourbon-neat": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
@@ -19,7 +21,6 @@
   "scripts": {
     "build": "gulp build",
     "local": "python ./scripts/localserver.py"
-
   },
   "repository": {
     "type": "git",
