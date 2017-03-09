@@ -30,7 +30,8 @@ gulp.task('sass', function() {
             'outputStyle' : 'expanded',
             'includePaths': [
               require("bourbon-neat").includePaths,
-              require("bourbon").includePaths
+              require("bourbon").includePaths,
+              "./node_modules/normalize-scss/sass"
             ]
         }))
         .on('error', onError)
