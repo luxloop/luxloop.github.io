@@ -85,17 +85,25 @@ function initParallax() {
     } else {
       parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
     }
-    console.log(parallaxDiv.offset)
+    //console.log(parallaxDiv.offset)
+
+    parallaxDiv.start = parallaxDiv.element.offset().top + parallaxDiv.posTop;
+
+    if (parallaxDiv.element.hasClass('cropped')) {
+      parallaxDiv.end = parallaxDiv.start + parallaxDiv.element.parent().innerHeight();
+    } else {
+      parallaxDiv.end = parallaxDiv.start + parallaxDiv.element.height();
+    }
 
     parallaxDiv.isShown = function(windowPos, windowHeight) {
-      if (windowPos + windowHeight > parallaxDiv.pageTop && windowPos < parallaxDiv.pageTop + parallaxDiv.height) {
+      if (windowPos + windowHeight > parallaxDiv.start && windowPos < parallaxDiv.end) {
         return true;
       }
       return false;
     }
 
     parallaxDiv.getOffset = function(windowPos, windowHeight) {
-      var amount = (windowPos + windowHeight - parallaxDiv.pageTop)/(parallaxDiv.pageTop + parallaxDiv.height);
+      var amount = (windowPos + windowHeight - parallaxDiv.start)/parallaxDiv.end;
       return Math.floor(parallaxDiv.offset * amount);
     }
 
@@ -103,7 +111,7 @@ function initParallax() {
       // console.log(parallaxDiv.posTop + newOffset);
       parallaxDiv.element.css("top",parallaxDiv.posTop + newOffset);
     }
-
+    console.log(parallaxDiv);
     parallaxDivs.push(parallaxDiv);
   });
 }
@@ -111,6 +119,8 @@ function initParallax() {
 function scrollHandler() {
   var windowPos = $(window).scrollTop();
   var windowHeight = window.innerHeight;
+
+  // console.log(windowPos)
 
   //toggleMenuVisible(windowPos,windowHeight);
   updateParallax(windowPos,windowHeight);
