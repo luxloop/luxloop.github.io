@@ -455,6 +455,31 @@ h2 {
   }
 }
 
+#projectPage {
+  #pageCover {
+    height: 70vh;
+  }
+
+  #projectInfo {
+    position: relative;
+    .column {
+      display: table;
+    }
+    .description {
+      display: table-cell;
+      width: 70%;
+      background: blue;
+      height: 400px;
+    }
+    .details {
+      display: table-cell;
+      // width: 30%;
+      background: red;
+      height: 400px;
+    }
+  }
+}
+
 /* ========================================================================== */
 @import "partials/helpers";
 @import "partials/print";

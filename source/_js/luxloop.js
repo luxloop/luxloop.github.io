@@ -23,7 +23,6 @@ $(window).on('scroll', function() {
 
 $('.expandButton').on('click',function(e) {
   e.preventDefault();
-  //$(this).css("height",$(this).width()).addClass('expand');
   $(this).addClass('expand');
 });
 
@@ -78,21 +77,19 @@ function initParallax() {
     parallaxDiv.element = $(this);
     parallaxDiv.height = parallaxDiv.element.height();
     parallaxDiv.posTop = parseInt(parallaxDiv.element.css("top"));
-    parallaxDiv.pageTop = parallaxDiv.element.offset().top;
 
     if (parallaxDiv.element.attr("data-offset")==="max") {
       parallaxDiv.offset = -1 * Math.floor(scrollLimit - parallaxDiv.height + window.innerHeight);
     } else {
       parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
     }
-    //console.log(parallaxDiv.offset)
 
     parallaxDiv.start = parallaxDiv.element.offset().top + parallaxDiv.posTop;
 
     if (parallaxDiv.element.hasClass('cropped')) {
       parallaxDiv.end = parallaxDiv.start + parallaxDiv.element.parent().innerHeight();
     } else {
-      parallaxDiv.end = parallaxDiv.start + parallaxDiv.element.height();
+      parallaxDiv.end = parallaxDiv.start + parallaxDiv.height;
     }
 
     parallaxDiv.isShown = function(windowPos, windowHeight) {
@@ -108,10 +105,11 @@ function initParallax() {
     }
 
     parallaxDiv.setPos = function(newOffset) {
-      // console.log(parallaxDiv.posTop + newOffset);
       parallaxDiv.element.css("top",parallaxDiv.posTop + newOffset);
     }
-    console.log(parallaxDiv);
+
+    //console.log(parallaxDiv);
+
     parallaxDivs.push(parallaxDiv);
   });
 }
@@ -120,8 +118,6 @@ function scrollHandler() {
   var windowPos = $(window).scrollTop();
   var windowHeight = window.innerHeight;
 
-  // console.log(windowPos)
-
   //toggleMenuVisible(windowPos,windowHeight);
   updateParallax(windowPos,windowHeight);
 }
@@ -129,7 +125,6 @@ function scrollHandler() {
 function updateParallax(windowPos,windowHeight) {
   $.each(parallaxDivs, function(index, parallaxDiv) {
     if (parallaxDiv.isShown(windowPos,windowHeight)) {
-      //console.log(parallaxDiv.getOffset(windowPos, windowHeight));
       parallaxDiv.setPos(parallaxDiv.getOffset(windowPos, windowHeight));
     }
   });
