@@ -9,9 +9,11 @@ $output-bourbon-deprecation-warnings: false;
 
 /* ========================================================================== */
 
-$max-width: rem(1300);
-$tablet:	rem(800);
-$mobile:	rem(500);
+///////////////////////
+// Global Vars
+$max-width: 1300px;
+$tablet:	800px;
+$mobile:	500px;
 
 $pageMargin: 3rem;
 
@@ -33,12 +35,54 @@ $frontPageColor: rgb(59,109,255);
 $projImageWidth: 70%;
 $projLabelOffset: $projImageWidth - 10;
 
+///////////////////////
+// Grid
+
+$neat-grid: (
+  gutter: 0px
+);
+
+$mediumGrid: (
+  gutter: $pageMargin/2,
+  media: $mobile,
+);
+
+$largeGrid: (
+  gutter: $pageMargin,
+  media: $tablet,
+);
+
+.gridContainer {@include grid-container;}
+.column {
+  @include grid-column;
+}
+
+.column9 {
+  @include grid-media($mediumGrid){
+    @include grid-column(12);
+  }
+  @include grid-media($largeGrid){
+    @include grid-column(9);
+  }
+}
+
+.column3 {
+  @include grid-media($mediumGrid){
+    @include grid-column(12);
+  }
+  @include grid-media($largeGrid){
+    @include grid-column(3);
+  }
+}
+
+///////////////////////
+// Globa Helpers
 
 @mixin fullBg {
-	background-repeat: no-repeat !important;
-	// background-attachment: fixed;
-	background-position: center center !important;
-	background-size: cover !important;
+  background-repeat: no-repeat !important;
+  // background-attachment: fixed;
+  background-position: center center !important;
+  background-size: cover !important;
 }
 
 @mixin absTopLeft {
@@ -53,24 +97,6 @@ $projLabelOffset: $projImageWidth - 10;
   right: 0px;
 }
 
-@import "partials/animations";
-@import "partials/menu";
-@import "partials/footer";
-
-
-/* ========================================================================== */
-
-body, html {
-	font-size: 100%;
-  background: $bgColor;
-}
-
-body {
-	color: $textColor;
-  background: $bgColor;
-  font-family: $bodyFont;
-}
-
 .underlined {text-decoration: underline;}
 .strike {text-decoration: line-through;}
 .smaller {font-size: 0.85em;}
@@ -81,8 +107,20 @@ body {
   font-weight: $defaultWeight + 100;
 }
 
+h1 {
+  @extend .bolder;
+  font-size: 1.3em;
+}
+
+h2 {
+  @extend .bolder;
+  font-size: 1em;
+}
+
 .floatLeft {@include absTopLeft;}
 .floatRight {@include absTopRight;}
+.relative { position: relative }
+.absolute { position: absolute }
 
 .quarter {width: 25%;}
 .three-quarter {width: 75%;}
@@ -104,13 +142,37 @@ body {
   &.ratio-16-9 { padding-bottom: 177.777% }
 }
 
-.relative { position: relative }
-.absolute { position: absolute }
-
 .aspectContent {
   position: absolute;
   top: 0;  bottom: 0;  left: 0;  right: 0;
   padding: 0 24px; /* Optional padding for content area */
+}
+
+///////////////////////
+// Partial Styles
+
+@import "partials/animations";
+@import "partials/menu";
+@import "partials/footer";
+@import "partials/helpers";
+@import "partials/print";
+
+/* ========================================================================== */
+
+
+
+///////////////////////
+// Default Luxloop Styles
+
+body, html {
+  font-size: 100%;
+  background: $bgColor;
+}
+
+body {
+  color: $textColor;
+  background: $bgColor;
+  font-family: $bodyFont;
 }
 
 .blockButton {
@@ -177,18 +239,6 @@ body {
   min-width: 250px;
   max-width: 400px;
 }
-
-h1 {
-	@extend .bolder;
-	font-size: 1.3em;
-}
-
-h2 {
-  @extend .bolder;
-  font-size: 1em;
-}
-
-// ==================
 
 .pageContainer {
   position: relative;
@@ -384,7 +434,8 @@ h2 {
   }
 }
 
-
+///////////////////////
+// Projects Page Styles
 #projects {
   #pageCover {
     height: 60vh;
@@ -456,6 +507,9 @@ h2 {
   }
 }
 
+///////////////////////
+// Sinle Project Page Styles
+
 #projectPage {
   #pageCover {
     height: 70vh;
@@ -463,18 +517,12 @@ h2 {
 
   #projectInfo {
     position: relative;
-    .column {
-      display: table;
-    }
+
     .description {
-      display: table-cell;
-      width: 70%;
       background: blue;
       height: 400px;
     }
     .details {
-      display: table-cell;
-      // width: 30%;
       background: red;
       height: 400px;
     }
@@ -482,5 +530,4 @@ h2 {
 }
 
 /* ========================================================================== */
-@import "partials/helpers";
-@import "partials/print";
+
