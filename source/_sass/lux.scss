@@ -401,7 +401,7 @@ body {
   }
 }
 
-#recentProjects {
+#alternatingImages {
   position: relative;
   // height: 100vw;
   overflow: hidden;
@@ -409,36 +409,51 @@ body {
   margin-bottom: -25vh;
   .showcaseImage {
     position:relative;
+    background: #999;
     .aspectContent {
       @include fullBg;
     }
   }
 
-  .showcaseImage:nth-of-type(1) {
-    width: 50%;
-    left: 50%;
-    z-index: 3;
-    .aspectContent {
-      background-image: url('/assets/img/cover.png');
+  &, &.v1 {
+    .showcaseImage:nth-of-type(1) {
+      width: 50%;
+      left: 50%;
+      z-index: 3;
+    }
+
+    .showcaseImage:nth-of-type(2) {
+      width: 75%;
+      top: -20vh;
+      z-index: 2;
+    }
+
+    .showcaseImage:nth-of-type(3) {
+      width: 100%;
+      top: -25vh;
+      left: $pageMargin;
+      z-index: 1;
     }
   }
 
-  .showcaseImage:nth-of-type(2) {
-    width: 75%;
-    top: -20vh;
-    z-index: 2;
-    .aspectContent {
-      background-image: url('/assets/img/socialsound.jpg');
+  &.v2 {
+    .showcaseImage:nth-of-type(1) {
+      width: 50%;
+      left: 0%;
+      z-index: 3;
     }
-  }
 
-  .showcaseImage:nth-of-type(3) {
-    width: 100%;
-    top: -25vh;
-    left: $pageMargin;
-    z-index: 1;
-    .aspectContent {
-      background-image: url('/assets/img/city.png');
+    .showcaseImage:nth-of-type(2) {
+      width: 75%;
+      top: -20vh;
+      z-index: 2;
+    }
+
+    .showcaseImage:nth-of-type(3) {
+      width: 100%;
+      top: -25vh;
+      left: $pageMargin;
+      z-index: 1;
     }
   }
 }
@@ -523,6 +538,10 @@ body {
   #pageCover {
     height: 80vh;
 
+    .coverImage {
+      background-image: url('/assets/projects/overheard/cover.png');
+    }
+
     .cornerLogo {
       font-family: $logoFont;
       font-size: 3.5rem;
@@ -559,7 +578,6 @@ body {
 
   #projectInfo {
     position: relative;
-    margin-top: 2rem;
     margin: 2rem $pageMargin;
 
     h1 {
@@ -639,7 +657,7 @@ body {
 
     #projectInfo {
       margin: inherit;
-      margin-top: 2rem;
+      @include margin(2rem null);
     }
   }
 }

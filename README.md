@@ -26,3 +26,4 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] Fixed images in project crawl
 * [ ] Check and adjust image sizes in projects page
 * [ ] fade parallax images in to avoid jump on load
+* [ ] add 'tests' and 'demo' folders back to site (subdomain?)
