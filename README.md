@@ -27,3 +27,7 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] Check and adjust image sizes in projects page
 * [ ] fade parallax images in to avoid jump on load
 * [ ] add 'tests' and 'demo' folders back to site (subdomain?)
+* [ ] corner logo transitions (fade out)
+* [ ] page transitions fade in
+* [ ] allow for up to 5 images in parallax showcase view
+* [ ] fade cover elements on load

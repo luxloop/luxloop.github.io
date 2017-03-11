@@ -10,6 +10,7 @@ var scrollLimit;
 $(document).ready(function() {
   initParallax();
   printContactInfo();
+  initVideos();
   scrollHandler();
 });
 
@@ -129,3 +130,29 @@ function updateParallax(windowPos,windowHeight) {
     }
   });
 }
+
+function initVideos() {
+
+  $(".fitVid").fitVids();
+
+  $('.bgVid').each(function() {
+    var video = $(this);
+    var vidElement = video.get(0);
+    var vidFile = $(this).attr('data-file');
+    vidElement.src = vidFile;
+    vidElement.addEventListener('canplaythrough', function() {
+      vidElement.play();
+      video.removeClass('fadeOut');
+      //vidElement.currentTime = video1Pos;
+      //video1Dur = vidElement.duration;
+    }, false);
+    vidElement.addEventListener('error', function() {
+      console.log(vidElement.error);
+      video.removeClass('fadeOut');
+    }, false);
+    vidElement.load();
+  });
+
+}
+
+
