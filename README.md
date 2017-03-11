@@ -31,3 +31,4 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] page transitions fade in
 * [ ] allow for up to 5 images in parallax showcase view
 * [ ] fade cover elements on load
+* [ ] menu outline and show/hide
