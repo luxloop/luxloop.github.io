@@ -39,6 +39,7 @@ $(".expandButton").bind('oanimationend animationend webkitAnimationEnd', functio
 
 //Throttled on-resize handler
 on_resize(function() {
+  sizeCover();
   scrollLimit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
   //parallaxDivs = [];
   //initParallax();
@@ -152,7 +153,15 @@ function initVideos() {
     }, false);
     vidElement.load();
   });
+}
 
+function sizeCover() {
+  var coverImage = $('#pageCover .coverImage')
+  var media = $('#pageCover .coverImage video').length > 0 ? $('#pageCover .coverImage video') : $('#pageCover .coverImage img');
+
+  if (media.innerWidth() < coverImage.innerWidth()) {
+    media.css({'width':'100%','height':'auto'});
+  }
 }
 
 
