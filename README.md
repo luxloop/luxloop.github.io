@@ -32,11 +32,12 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] page transitions fade in
 * [ ] allow for up to 5 images in parallax showcase view
 * [ ] fade cover elements on load
-* [ ] menu outline and show/hide
+* [x] menu outline and show/hide
 * [ ] redo cover sizing with `min-width` and `min-height`
 * [ ] remake shadow buttons without `position:aboslute` text so that they scale better
     * [ ] style project title box with :before and :after instead of nested divs?
     * [ ] Also look at bottom-to-top writing-mode for button/block divs?
+* menu click animation
 
 
 ## To-Do (Optimizations/Cleanup)
@@ -44,3 +45,4 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] fade parallax images in to avoid jump on load
 * [ ] tweak meta tag (remove `width` param?)
 * [ ] update to newest Modernizr
+* [ ] extend menu up to account for overscroll

@@ -1,6 +1,10 @@
 $menuToggleSize: 1.5rem;
 $menuExpandTime: 400ms;
 $linkFanTime: 300ms;
+$menuBackgroundOff: white;
+$menuBackgroundOn: $frontPageColor;
+$borderOutlineColor: #eee;
+$borderOutlineThickness: 2px;
 
 #cornerMenu {
   position: fixed;
@@ -8,6 +12,8 @@ $linkFanTime: 300ms;
   right: 0px;
   border-bottom-left-radius: 100% 100%;
 
+  border-left: solid $borderOutlineColor $borderOutlineThickness;
+  border-bottom: solid $borderOutlineColor $borderOutlineThickness;
 
   width: 5rem;
   height: 5rem;
@@ -16,7 +22,12 @@ $linkFanTime: 300ms;
   z-index: 30;
   background: none;
   overflow: hidden;
-  transition: width $menuExpandTime ease-in-out, height $menuExpandTime ease-in-out;
+  transition: width $menuExpandTime ease-in-out,
+              height $menuExpandTime ease-in-out,
+              border-color $menuExpandTime linear,
+              opacity $menuExpandTime linear;
+
+  &.noHide {opacity: 1.0 !important}
 
 
   .menuBg, .menuBg:after {
@@ -30,7 +41,7 @@ $linkFanTime: 300ms;
     width: 100vh;
     height: 100vh;
     transition: background-color $menuExpandTime linear;
-    background-color: rgb(255,255,255);
+    background-color: $menuBackgroundOff;
     // background: rgba(0,0,0,1);
     // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
     // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
@@ -101,9 +112,11 @@ $linkFanTime: 300ms;
   &.show {
     width: 100vh;
     height: 100vh;
+    border-color: white;
+    border-color: rgba(255,255,255,0.0);
 
     .menuBg {
-      background-color: $frontPageColor;
+      background-color: $menuBackgroundOn;
       // background-color: black;
       // opacity: 0.7;
 
@@ -133,6 +146,14 @@ $linkFanTime: 300ms;
       }
     }
   }
+}
+
+[scroll-intent="down"] #cornerMenu {
+  opacity: 0.0;
+}
+
+.top #cornerMenu {
+  opacity: 1.0;
 }
 
 .no-touch {

@@ -2,12 +2,12 @@
 ///////////////////////
 // Globals
 var parallaxDivs = [];
-var scrollLimit;
 
 ///////////////////////
 // Events
 
 $(document).ready(function() {
+  $(window).scrollIntent();
   initParallax();
   printContactInfo();
   initVideos();
@@ -37,10 +37,12 @@ $(".expandButton").bind('oanimationend animationend webkitAnimationEnd', functio
 // });
 //
 
+// $(window).resize(function(){
+// })
+
 //Throttled on-resize handler
 on_resize(function() {
   sizeCover();
-  scrollLimit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
   //parallaxDivs = [];
   //initParallax();
   //updateParallax();
@@ -54,16 +56,27 @@ function toggleMenu() {
   $('#cornerMenu').toggleClass('show');
 };
 
-function toggleMenuVisible(windowPos,windowHeight) {
-  var menu = $('#cornerMenu');
-  if (menu.hasClass('transitioning') === false && menu.hasClass('noHide') === false) {
-    var showThresh = windowHeight * .5;
-    if (windowPos > showThresh && menu.css('display') === 'none') {
-      menu.removeClass('show').addClass('transitioning').fadeIn(function(){menu.removeClass('transitioning')});
-    } else if (windowPos <= showThresh && menu.css('display') !== 'none') {
-      menu.removeClass('show').addClass('transitioning').fadeOut(function(){menu.removeClass('transitioning')});
-    }
-  }
+function scrollShowHideThreshold(windowPos,windowHeight) {
+  // var menu = $('#cornerMenu');
+  // var transitioning = menu.hasClass('transitioning');
+  // var noHide = menu.hasClass('noHide');
+  // var threshold = menu.hasClass('threshold');
+
+  // if (!transitioning && !noHide) {
+  //   var display = menu.css('display');
+  //   var showThresh = windowHeight * .5;
+  //   var mode = 1; // Temporary
+
+  //   if (display === 'none') {
+  //     if ((threshold && windowPos > showThresh) || (!threshold && scrollDir === -1))  {
+  //       menu.removeClass('show').addClass('transitioning').fadeIn(function(){menu.removeClass('transitioning')});
+  //     }
+  //   } else {
+  //     if ((threshold && windowPos <= showThresh) || (!threshold && scrollDir === 1))  {
+  //       menu.removeClass('show').addClass('transitioning').fadeOut(function(){menu.removeClass('transitioning')});
+  //     }
+  //   }
+  // }
 }
 
 function printContactInfo() {
@@ -79,13 +92,7 @@ function initParallax() {
     parallaxDiv.element = $(this);
     parallaxDiv.height = parallaxDiv.element.height();
     parallaxDiv.posTop = parseInt(parallaxDiv.element.css("top"));
-
-    if (parallaxDiv.element.attr("data-offset")==="max") {
-      parallaxDiv.offset = -1 * Math.floor(scrollLimit - parallaxDiv.height + window.innerHeight);
-    } else {
-      parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
-    }
-
+    parallaxDiv.offset = parallaxDiv.element.attr("data-offset");
     parallaxDiv.start = parallaxDiv.element.offset().top + parallaxDiv.posTop;
 
     if (parallaxDiv.element.hasClass('cropped')) {
@@ -120,7 +127,13 @@ function scrollHandler() {
   var windowPos = $(window).scrollTop();
   var windowHeight = window.innerHeight;
 
-  //toggleMenuVisible(windowPos,windowHeight);
+  if (windowPos === 0) {
+    $('body').addClass('top')
+  } else {
+    $('body').removeClass('top')
+  }
+
+  //scrollShowHideThreshold(windowPos,windowHeight);
   updateParallax(windowPos,windowHeight);
 }
 
@@ -156,14 +169,15 @@ function initVideos() {
 }
 
 function sizeCover() {
-  var coverImage = $('#pageCover .coverImage')
-  var media = $('#pageCover .coverImage video').length > 0 ? $('#pageCover .coverImage video') : $('#pageCover .coverImage img');
+  var container = $('#pageCover .coverImage');
+  var media = $('#pageCover .coverImage video').length > 0 ? $('#pageCover .coverImage video').first() : $('#pageCover .coverImage img').first();
 
-  if (media.innerWidth() < coverImage.innerWidth()) {
-    media.css({'width':'100%','height':'auto'});
+  var cRatio = container.innerWidth()/container.innerHeight();
+  var mRatio = media.innerWidth()/media.innerHeight();
+
+  if (cRatio > mRatio) {
+    media.addClass('stretchWide');
   } else {
-    media.attr('style','');
+    media.removeClass('stretchWide');
   }
 }
-
-
