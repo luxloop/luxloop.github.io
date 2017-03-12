@@ -1,3 +1,7 @@
+$socialLinkOffColor: rgb(59,109,255);
+$socialLinkOnColor: rgb(33,166,255);
+$socialLinkSize: 2.5em;
+
 #footer {
   min-height: 15vh;
   width: 100%;
@@ -61,22 +65,38 @@
     margin-top: 3rem;
 
     .iconCircle {
-      background-color: grey;
-      @include size(2em);
-      font-size: 1.2rem;
-      display: inline-block;
+      @include size($socialLinkSize);
       @include margin(null 1em);
+      display: inline-block;
       position: relative;
+      border-radius: 50%;
+      background-color: $socialLinkOffColor;
+      text-decoration: none;
+      font-size: 1.2rem;
 
-      a {
-        text-decoration: none;
+      p {
+        margin: 0px;
         @include position(absolute, 50% null null 50%);
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
+        color: white;
       }
     }
 
     img {
       width: 30px;
+    }
+  }
+}
+
+.no-touch #footer {
+  .iconCircle {
+    // transform: scale(1);
+    transition: transform 200ms ease-in-out,
+                background-color 200ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: $socialLinkOnColor;
     }
   }
 }
