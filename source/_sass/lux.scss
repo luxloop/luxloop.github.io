@@ -87,6 +87,46 @@ $largeGrid: (
 }
 
 
+$blurbGrid: (
+  gutter: 0px,
+);
+
+$largeBlurbGrid: (
+  gutter: 0px,
+  media: $tablet,
+);
+
+.blurbGridContainer {@include grid-container($blurbGrid);}
+.blurbColumn {
+  @include grid-column(12,$blurbGrid);
+  // height: 400px;
+}
+
+.blurbCol3 {
+  @include grid-media($largeBlurbGrid){
+    @include grid-column(3);
+  }
+}
+
+.blurbCol4 {
+  @include grid-media($largeBlurbGrid){
+    @include grid-column(4);
+  }
+}
+
+.blurbCol8 {
+  @include grid-media($largeBlurbGrid){
+    @include grid-column(8);
+  }
+}
+
+.blurbCol9 {
+  @include grid-media($largeBlurbGrid){
+    @include grid-column(9);
+  }
+}
+
+
 ///////////////////////
 // Global Helpers
 
@@ -191,13 +231,13 @@ a {
   left: 0;
   background-color: #000;
   visibility: hidden;
-  @include transform(scaleX(0));
-  @include transition(all 0.3s ease-out 0s);
+  transform: scaleX(0);
+  transition: all 0.3s ease-out 0s;
 }
 
 .csstransforms.csstransitions.no-touch a.linkAnim:hover:before {
   visibility: visible;
-  @include transform(scaleX(1));
+  transform: scaleX(1);
 }
 //////
 
@@ -402,20 +442,20 @@ body {
   @include absTopLeft;
   position: relative;
   width: 100%;
-  margin-top: $pageMargin * 2;
+  //margin-top: $pageMargin * 2;
 
   .blurbImage {
-    background-image: url('/assets/img/bluebutterfly.jpg');
-    @include fullBg;
-    background-position: 85% center !important;
+    .aspectContent {
+      @include fullBg;
+    }
   }
 
-  .theBlurb {
-    position: absolute;
-    right: initial;
-    left: 25%;
-    width: 75%;
-    min-height: 25vw;
+  .blurbCopy {
+    // position: absolute;
+    // right: initial;
+    // left: 25%;
+    // width: 75%;
+    // min-height: 25vw;
 
     p {
       font-family: $blurbFont;
@@ -621,6 +661,17 @@ body {
       }
     }
   }
+
+  #blurb {
+    margin: $pageMargin 0rem;
+
+    .blurbImage {
+      .aspectContent {
+        background-image: url('/assets/img/bluebutterfly.jpg');
+        background-position: 85% center !important;
+      }
+    }
+  }
 }
 
 ///////////////////////
@@ -807,6 +858,16 @@ body {
 @media (max-width:$smallScreen) {
   #cornerLogo {font-size: 2.5rem;}
 
+  #homePage {
+    #blurb {
+      .blurbCopy {
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
   #projectPage {
     #pageCover {
       .projectTitleBox {
@@ -829,11 +890,11 @@ body {
 }
 
 @media (max-width:$tablet) {
+  .noShowTablet {display: none !important;}
   #cornerLogo {left: $pageMargin/2;}
 
   #alternatingImages {
     overflow: hidden;
-    //margin-top: 2 * $pageMargin;
     margin: 0px;
 
     .showcaseImage {
@@ -849,7 +910,7 @@ body {
     #bigLuxLogoBox {
       h1 {
         font-size: 6rem;
-        margin: 4rem 7rem;
+        margin: 5rem 6.5rem;
       }
     }
   }
@@ -881,6 +942,8 @@ body {
 }
 
 @media (max-width:$mobile) {
+
+  .noShowMobile {display: none !important;}
   #cornerLogo {left: 1rem}
 
   #homePage {
@@ -890,15 +953,19 @@ body {
         margin: 4rem 4rem;
       }
     }
+    #blurb {
+      .blurbCopy {
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
   }
 
   #projectPage {
     #pageCover {
       padding: 0rem 0.5rem;
       .projectTitleBox {
-        // width: 50%;
-        // bottom: 20px;
-        // right: initial;
         bottom: -4rem;
         left: 0.5rem;
         width: 50%;
