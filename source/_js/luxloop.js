@@ -2,6 +2,7 @@
 ///////////////////////
 // Globals
 var parallaxDivs = [];
+var fallbackTimer;
 
 ///////////////////////
 // Events
@@ -26,11 +27,19 @@ $(window).on('scroll', function() {
 
 $('.expandButton').on('click',function(e) {
   e.preventDefault();
+  var dest = e.target.getAttribute("href");
+  fallbackTimer = setTimeout(function(){
+    goTo(dest);
+  }, 3000);
   $(this).addClass('expand');
 });
 
-$(".expandButton").bind('oanimationend animationend webkitAnimationEnd', function() {
-   console.log("go to next page")
+$(".expandButton").bind('oanimationend animationend webkitAnimationEnd', function(e) {
+  var dest = e.target.getAttribute("href")
+  if (dest) {
+    clearTimeout(fallbackTimer);
+    fadeTo(dest)
+  }
 });
 
 // TO-DO:
@@ -186,4 +195,14 @@ function sizeCover(selector) {
       el.removeClass('stretchWide');
     }
   })
+}
+
+function goTo(dest) {
+  window.location.href = dest;
+
+}
+
+function fadeTo(dest) {
+  $('body').removeClass('showBody')
+  setTimeout(function(){goTo(dest)},900);
 }
