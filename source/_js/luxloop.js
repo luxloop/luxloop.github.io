@@ -8,6 +8,7 @@ var parallaxDivs = [];
 
 $(document).ready(function() {
   $(window).scrollIntent();
+  $('body').addClass('showBody')
   initParallax();
   printContactInfo();
   initVideos();

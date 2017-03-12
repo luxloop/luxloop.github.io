@@ -86,7 +86,7 @@ $largeGrid: (
 
 
 ///////////////////////
-// Globa Helpers
+// Global Helpers
 
 @mixin fullBg {
   background-repeat: no-repeat !important;
@@ -171,6 +171,35 @@ a {
   // padding: 0 24px; /* Optional padding for content area */
 }
 
+//From http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+.no-touch a.linkAnim:hover {
+  text-decoration: underline;
+}
+.csstransforms.csstransitions a.linkAnim {
+  text-decoration: none;
+  position: relative;
+}
+
+.csstransforms.csstransitions a.linkAnim:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px !important;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  @include transform(scaleX(0));
+  @include transition(all 0.3s ease-out 0s);
+}
+
+.csstransforms.csstransitions.no-touch a.linkAnim:hover:before {
+  visibility: visible;
+  @include transform(scaleX(1));
+}
+//////
+
+
 ///////////////////////
 // Partial Styles
 
@@ -206,6 +235,16 @@ body {
   color: $textColor;
   background: $bgColor;
   font-family: $bodyFont;
+}
+
+.opacity.js {
+  body.enableFade {
+    opacity: 0.0;
+  }
+
+  body.enableFade.showBody {
+    opacity: 1.0
+  }
 }
 
 .blockContainer {
@@ -673,6 +712,10 @@ body {
         li {
           margin-top: 0.2rem;
         }
+      }
+
+      a {
+        color: $textColor;
       }
 
       .teamEntry {
