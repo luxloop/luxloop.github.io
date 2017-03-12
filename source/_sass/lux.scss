@@ -188,6 +188,16 @@ a {
 ///////////////////////
 // Default Luxloop Styles
 
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
 body, html {
   font-size: 100%;
   background: $bgColor;
@@ -707,6 +717,20 @@ body {
 
 @media (max-width:$tablet) {
   #cornerLogo {left: $pageMargin/2;}
+
+  #alternatingImages {
+    overflow: hidden;
+    //margin-top: 2 * $pageMargin;
+    margin: 0px;
+
+    .showcaseImage {
+      width: 100% !important;
+      top: 0px !important;
+      left: 0px !important;
+      z-index: 3 !important;
+      margin: 1rem 0rem !important;
+    }
+  }
 
   #projectPage {
     #pageCover {

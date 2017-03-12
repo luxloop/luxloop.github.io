@@ -161,6 +161,8 @@ function sizeCover() {
 
   if (media.innerWidth() < coverImage.innerWidth()) {
     media.css({'width':'100%','height':'auto'});
+  } else {
+    media.attr('style','');
   }
 }
 
