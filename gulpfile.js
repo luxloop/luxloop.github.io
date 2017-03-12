@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     hb = require('gulp-hb'),
     gutil = require('gulp-util'),
@@ -34,6 +36,8 @@ gulp.task('sass', function() {
               "./node_modules/normalize-scss/sass"
             ]
         }))
+        .on('error', onError)
+        .pipe(postcss([ autoprefixer() ]))
         .on('error', onError)
         .pipe(gulp.dest('./docs/assets/css/'))
         .pipe(cleanCSS({
