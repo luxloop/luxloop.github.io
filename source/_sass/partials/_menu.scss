@@ -46,9 +46,8 @@ $linkFanTime: 300ms;
       transition: transform $linkFanTime ease-in-out, opacity $linkFanTime linear;
       transform: translateY(-50%) rotate(-120deg);
 
-
       opacity: 0.0;
-      //background-color: red;
+
       a {
         color: #ffffff;
         font-family: $headerFont;
@@ -127,7 +126,6 @@ $linkFanTime: 300ms;
     }
 
     .menuToggle {
-      //background-color: blue;
       transform: rotate(45deg);
 
       &:after, &:before {
