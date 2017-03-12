@@ -4,21 +4,75 @@
   position:relative;
   background: white;
   text-align: center;
-  font-family: 'open_sansregular';
-  padding-top: 3rem;
+  font-family: $headerFont;
+  @include padding(3rem null 4rem)
+  font-size: 1.2em;
+
+  a {
+    color: $textColor;
+  }
 
   .contactInfo {
     display: inline-block;
     margin: 0;
-    width: 33%;
+    width: auto;
+
+    &.narrow {
+      display: none;
+    }
+
+    &.left {
+      text-align: right;
+      padding-right: 1rem;
+    }
+
+    &.center {
+      text-align: center;
+      width: 33%
+    }
+
+    &.right {
+      text-align: left;
+      padding-left: 1rem;
+    }
+
+    @media (max-width:$mobile) {
+      &, &.left, &.center, &.right {
+        width: 100%;
+        text-align: center;
+        padding: initial;
+        padding-bottom: 1rem;
+        //font-size: 1.2em;
+      }
+
+      &.narrow {
+        display: inherit;
+      }
+
+      &.wide {
+        display: none;
+      }
+    }
   }
 
   .socialInfo {
+    font-family: 'socialicons';
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
 
-    a {
-      text-decoration: none;
+    .iconCircle {
+      background-color: grey;
+      @include size(2em);
+      font-size: 1.2rem;
+      display: inline-block;
+      @include margin(null 1em);
+      position: relative;
+
+      a {
+        text-decoration: none;
+        @include position(absolute, 50% null null 50%);
+        transform: translate(-50%, -50%)
+      }
     }
 
     img {
