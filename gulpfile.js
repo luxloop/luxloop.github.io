@@ -10,16 +10,19 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require("gulp-notify");
 
+var sourceDir = "source/"
+var destDir = "docs/"
+
 ////////////////////
 // Tasks
 
 gulp.task('html', function () {
   return gulp
-    .src('./source/{,!(_*)/}*.html')
+    .src(sourceDir + '{,!(_*)/}*.html')
     .pipe(hb({
-      partials: './source/_partials/*.hbs',
-      helpers: './source/_helpers/*.js',
-      data: './source/_data/*.{js,json}'
+      partials: sourceDir + '_partials/*.hbs',
+      helpers: sourceDir + '_helpers/*.js',
+      data: sourceDir + '_data/*.{js,json}'
     }))
     .on('error', onError)
     .pipe(gulp.dest('./docs'));
@@ -27,7 +30,7 @@ gulp.task('html', function () {
 
 
 gulp.task('sass', function() {
-    return gulp.src('./source/_sass/*.scss')
+    return gulp.src(sourceDir + '_sass/*.scss')
         .pipe(sass({
             'outputStyle' : 'expanded',
             'includePaths': [
@@ -39,7 +42,7 @@ gulp.task('sass', function() {
         .on('error', onError)
         .pipe(postcss([ autoprefixer() ]))
         .on('error', onError)
-        .pipe(gulp.dest('./docs/assets/css/'))
+        .pipe(gulp.dest(destDir + 'assets/css/'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
           aggressiveMerging: false,
@@ -50,33 +53,33 @@ gulp.task('sass', function() {
         .pipe(rename(function (path) {
           path.extname = ".min.css"
         }))
-        .pipe(gulp.dest('./docs/assets/css/'));
+        .pipe(gulp.dest(destDir + 'assets/css/'));
 });
 
 gulp.task('moveCss', function() {
-  return gulp.src(['./source/_css/*.css'])
-    .pipe(gulp.dest('./docs/assets/css/'))
+  return gulp.src([sourceDir + '_css/*.css'])
+    .pipe(gulp.dest(destDir + 'assets/css/'))
 });
 
 gulp.task('compileJs', function() {
-  return gulp.src(['./source/_js/*.js'])
+  return gulp.src([sourceDir + '_js/*.js'])
     .pipe(concat('luxloop.min.js'))
     .pipe(uglify({mangle: true}))
     .on('error', onError)
-    .pipe(gulp.dest('./docs/assets/js/'))
+    .pipe(gulp.dest(destDir + 'assets/js/'))
 });
 
 gulp.task('compileTools', function() {
-  return gulp.src(['./source/_js/lib/*.js'])
+  return gulp.src([sourceDir + '_js/lib/*.js'])
     .pipe(concat('tools.min.js'))
     .pipe(uglify({mangle: true}))
     .on('error', onError)
-    .pipe(gulp.dest('./docs/assets/js/'))
+    .pipe(gulp.dest(destDir + 'assets/js/'))
 });
 
 gulp.task('moveJs', function() {
-  return gulp.src(['./source/_js/vendor/*.js'])
-    .pipe(gulp.dest('./docs/assets/js/vendor'))
+  return gulp.src([sourceDir + '_js/vendor/*.js'])
+    .pipe(gulp.dest(destDir + 'assets/js/vendor'))
 });
 
 ////////////////////
@@ -127,15 +130,15 @@ gulp.task('js', ['compileJs','compileTools','moveJs']);
 gulp.task('build', ['html','js','style']);
 
 gulp.task('watchhtml', function() {
-    gulp.watch(['./source/{,!(_*)/}*.html','./source/_partials/*.hbs'], ['html']);
+    gulp.watch([sourceDir + '{,!(_*)/}*.html',sourceDir + '_partials/*.hbs'], ['html']);
 });
 
 gulp.task('watchcss', function() {
-    gulp.watch(['./source/_sass/*.scss','./source/_sass/partials/*.scss'], ['sass']);
+    gulp.watch([sourceDir + '_sass/*.scss',sourceDir + '_sass/partials/*.scss'], ['sass']);
 });
 
 gulp.task('watchjs', function() {
-    gulp.watch('./source/_js/*.js', ['compileJs']);
+    gulp.watch(sourceDir + '_js/*.js', ['compileJs']);
 });
 
 gulp.task('watch', ['watchhtml','watchcss','watchjs']);

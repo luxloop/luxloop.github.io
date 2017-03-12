@@ -2,6 +2,7 @@
 
 Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds.
 
+---
 
 ## Development
 
@@ -18,21 +19,28 @@ In separate terminal sessions:
 
 Make changes in `/source` - The `/docs` directory is the compiled static site. `/docs/assets/` will be saved and commited to this repo. Anything else in `/docs` can and will get overwritten by the build scripts. 
 
-## To-Do
+---
+
+## To-Do (Priority)
 * [ ] Finish responsive styling (including setting a maximum width)
 * [ ] Footer styles and new icons
 * [ ] Project Crawl
 * [ ] Fixed images in project crawl
 * [ ] Check and adjust image sizes in projects page
-* [ ] fade parallax images in to avoid jump on load
 * [ ] add 'tests' and 'demo' folders back to site (subdomain?)
 * [ ] corner logo transitions (fade out)
 * [ ] page transitions fade in
 * [ ] allow for up to 5 images in parallax showcase view
 * [ ] fade cover elements on load
 * [ ] menu outline and show/hide
-* [ ] tweak meta tag (remove `width` param?)
 * [ ] redo cover sizing with `min-width` and `min-height`
 * [ ] remake shadow buttons without `position:aboslute` text so that they scale better
     * [ ] style project title box with :before and :after instead of nested divs?
     * [ ] Also look at bottom-to-top writing-mode for button/block divs?
+
+
+## To-Do (Optimizations/Cleanup)
+* [] Add [flexbug fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)
+* [ ] fade parallax images in to avoid jump on load
+* [ ] tweak meta tag (remove `width` param?)
+* [ ] update to newest Modernizr
