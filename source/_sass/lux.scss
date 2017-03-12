@@ -10,11 +10,11 @@
 
 ///////////////////////
 // Global Vars
-$max-width: 1300px;
-$tablet:	800px;
-$smallScreen: $tablet * 1.25;
-$mobile:	500px;
 $smallMobile:  350px;
+$mobile:  500px;
+$tablet:  800px;
+$smallScreen: $tablet * 1.25;
+$max-width: 1300px;
 
 $pageMargin: 3rem;
 
@@ -351,15 +351,6 @@ body {
   }
 }
 
-
-.bigBlockButton {
-  @extend .blockButton;
-  height: 10vw;
-  width: 30vw;
-  min-width: 250px;
-  max-width: 400px;
-}
-
 .pageContainer {
   position: relative;
   width: 100vw;
@@ -463,12 +454,6 @@ body {
       font-size: 2.5rem;
       margin: 0 0;
     }
-  }
-
-  .buttonHolder {
-    position: relative;
-    top: -4rem;
-    margin: 0 $pageMargin;
   }
 }
 
@@ -622,7 +607,6 @@ body {
       bottom: 5px;
       z-index: 6;
     }
-
   }
 
   #coolIfHolder {
@@ -664,6 +648,7 @@ body {
 
   #blurb {
     margin: $pageMargin 0rem;
+    position: relative;
 
     .blurbImage {
       .aspectContent {
@@ -671,6 +656,20 @@ body {
         background-position: 85% center !important;
       }
     }
+
+    .buttonHolder {
+      position: absolute;
+      top: 90%;
+      margin: 0 $pageMargin*2;
+    }
+  }
+
+  #whatWeDoButton {
+    @extend .blockButton;
+    height: 10vw;
+    width: 30vw;
+    min-width: 250px;
+    max-width: 400px;
   }
 }
 
@@ -913,6 +912,24 @@ body {
         margin: 5rem 6.5rem;
       }
     }
+
+    #blurb {
+
+      margin-bottom: 10rem;
+
+      .buttonHolder {
+        // position: absolute;
+        // top: 100%;
+        left: 50%;
+        margin: 2rem 0rem;
+        transform: translateX(-50%)
+      }
+    }
+
+    #whatWeDoButton {
+      height: 120px;
+      width: 300px;
+    }
   }
 
   #projectPage {
@@ -959,6 +976,11 @@ body {
           font-size: 1.8rem;
         }
       }
+    }
+
+    #whatWeDoButton {
+      height: 100px;
+      width: 40%;
     }
   }
 
