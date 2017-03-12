@@ -14,6 +14,7 @@ $max-width: 1300px;
 $tablet:	800px;
 $smallScreen: $tablet * 1.25;
 $mobile:	500px;
+$smallMobile:  350px;
 
 $pageMargin: 3rem;
 
@@ -23,6 +24,7 @@ $defaultWeight: 100;
 
 $headerFont: 'code_boldregular', sans-serif;
 $bodyFont: 'open_sanslight', sans-serif;
+$bodyFontBold: 'open_sansregular', sans-serif;
 $blurbFont: 'open_sanslight_italic', sans-serif;
 $logoFont: 'mark_my_wordsregular';
 
@@ -382,7 +384,7 @@ body {
   .topBar,.bottomBar {
     position: absolute;
     width: 100%;
-    height: $pageMargin * 1.5;
+    height: $pageMargin * 2;
     background: white;
   }
 
@@ -394,62 +396,6 @@ body {
   .bottomBar {
     bottom: 0px;
   }
-
-  .bigLuxLogoBox {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: none;
-
-    $outLineWidth: 2px;
-
-
-    &::before {
-      content: "";
-      border: black solid $outLineWidth;
-      background: white;
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: 5px;
-      bottom: 5px;
-    }
-
-    &::after {
-      content: "";
-      border: black solid $outLineWidth;
-      background: white;
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: -5px;
-      bottom: -5px;
-    }
-
-    h1 {
-      position: relative;
-      font-family: $logoFont;
-      color: $frontPageColor;
-      font-size: 6rem;
-      margin: 3rem 4rem;
-      z-index: 5;
-    }
-
-    .topline {
-      border-right: black solid $outLineWidth;
-      border-bottom: black solid $outLineWidth;
-      background: none;
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: 5px;
-      bottom: 5px;
-      z-index: 6;
-    }
-
-  }
-
 }
 
 #blurb {
@@ -557,6 +503,122 @@ body {
 
     &:hover {
       color: white;
+    }
+  }
+}
+
+
+///////////////////////
+// Main Page Cover Styles
+
+
+#homePage {
+
+  #pageCover {
+    height: 90vh;
+  }
+
+  #bigLuxLogoBox {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: none;
+
+    $outLineWidth: 2px;
+
+
+    &::before {
+      content: "";
+      border: black solid $outLineWidth;
+      background: white;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: 5px;
+      bottom: 5px;
+    }
+
+    &::after {
+      content: "";
+      border: black solid $outLineWidth;
+      background: white;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: -5px;
+      bottom: -5px;
+    }
+
+    h1 {
+      position: relative;
+      font-family: $logoFont;
+      color: $frontPageColor;
+      font-size: 8rem;
+      margin: 7rem 10rem;
+      z-index: 5;
+
+      @media (min-width: $tablet) {
+        &:after {
+          font-family: $bodyFontBold;
+          font-size: 0.7rem;
+          color: rgba(0,0,0,0.5);
+          content: "An Experience-design and Production Studio";
+          position: absolute;
+          left: 3.3rem;
+          bottom: 1.8rem;
+        }
+      }
+    }
+
+    .topline {
+      border-right: black solid $outLineWidth;
+      border-bottom: black solid $outLineWidth;
+      background: none;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: 5px;
+      bottom: 5px;
+      z-index: 6;
+    }
+
+  }
+
+  #coolIfHolder {
+    width: 100%;
+    height: 100%;
+    @include absTopLeft;
+
+    div {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      font-family: $bodyFont;
+    }
+
+    #coolIfPrompt {
+      width: 30%;
+      // background-color: blue;
+      text-align: right;
+    }
+
+    #coolIfExample {
+      width: 69.5%;
+      // background-color: red;
+      text-align: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 2px !important;
+        bottom: -2px;
+        left: 5%;
+        background-color: #000;
+      }
     }
   }
 }
@@ -716,6 +778,10 @@ body {
 
       a {
         color: $textColor;
+
+        &.linkAnim:before {
+          height: 1px !important;
+        }
       }
 
       .teamEntry {
@@ -779,6 +845,15 @@ body {
     }
   }
 
+  #homePage {
+    #bigLuxLogoBox {
+      h1 {
+        font-size: 6rem;
+        margin: 4rem 7rem;
+      }
+    }
+  }
+
   #projectPage {
     #pageCover {
       .projectTitleBox {
@@ -808,6 +883,15 @@ body {
 @media (max-width:$mobile) {
   #cornerLogo {left: 1rem}
 
+  #homePage {
+    #bigLuxLogoBox {
+      h1 {
+        font-size: 4.8rem;
+        margin: 4rem 4rem;
+      }
+    }
+  }
+
   #projectPage {
     #pageCover {
       padding: 0rem 0.5rem;
@@ -823,6 +907,22 @@ body {
     #projectInfo {
       margin-top: 6rem;
     }
+  }
+}
+
+@media (max-width:$smallMobile) {
+  #cornerLogo {left: 1rem}
+
+  #homePage {
+    #bigLuxLogoBox {
+      h1 {
+        font-size: 3rem;
+        margin: 3rem 4rem;
+      }
+    }
+  }
+
+  #projectPage {
   }
 }
 

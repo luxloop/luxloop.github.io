@@ -27,7 +27,7 @@
   </style>
   <script src="/assets/js/vendor/modernizr.min.js"></script>
 </head>
-<body class="enableFade">
+<body class="enableFade" id="homePage">
 
   {{> menu }}
   <!-- menu noHide=true -->
@@ -42,13 +42,30 @@
     <section id="pageCover">
       <div class="coverImage">
         <img src="/assets/img/overheard.jpg">
+        <img src="/assets/img/pigments.jpg">
       </div>
-      <div class="bigLuxLogoBox">
+
+      <div id="bigLuxLogoBox" class="enableFade">
         <h1>luxloop</h1>
         <div class="topline"></div>
       </div>
-      <div class="topBar"></div>
-      <div class="bottomBar"></div>
+
+      <!-- <div class="topBar"></div> -->
+
+      <div class="bottomBar enableFade fadeOut">
+        <div id="coolIfHolder">
+          <div id="coolIfPrompt">
+            Wouldn't it be cool if:
+          </div>
+          <div id="coolIfExample">
+            <span>Lorem ipsum Ut est in et nostrud nulla</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="cornerLogo" class="enableFade fadeOut">
+        <a href="/">luxloop</a>
+      </div>
     </section>
 
     <section id="blurb">

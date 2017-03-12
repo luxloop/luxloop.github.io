@@ -10,6 +10,7 @@ $(document).ready(function() {
   $(window).scrollIntent();
   $('body').addClass('showBody')
   initParallax();
+  sizeCover();
   printContactInfo();
   initVideos();
   scrollHandler();
@@ -169,16 +170,20 @@ function initVideos() {
   });
 }
 
-function sizeCover() {
+function sizeCover(selector) {
   var container = $('#pageCover .coverImage');
-  var media = $('#pageCover .coverImage video').length > 0 ? $('#pageCover .coverImage video').first() : $('#pageCover .coverImage img').first();
-
+  //var media = $('#pageCover .coverImage video').length > 0 ? $('#pageCover .coverImage video').first() : $('#pageCover .coverImage img').first();
+  var media = selector || $('#pageCover .coverImage video, #pageCover .coverImage img')
   var cRatio = container.innerWidth()/container.innerHeight();
-  var mRatio = media.innerWidth()/media.innerHeight();
 
-  if (cRatio > mRatio) {
-    media.addClass('stretchWide');
-  } else {
-    media.removeClass('stretchWide');
-  }
+  media.each(function(){
+    var el = $(this);
+    var mRatio = el.innerWidth()/el.innerHeight();
+
+    if (cRatio > mRatio) {
+      el.addClass('stretchWide');
+    } else {
+      el.removeClass('stretchWide');
+    }
+  })
 }
