@@ -16,7 +16,8 @@ $linkFanTime: 300ms;
   z-index: 30;
   background: none;
   overflow: hidden;
-  @include transition(width $menuExpandTime ease-in-out, height $menuExpandTime ease-in-out);
+  transition: width $menuExpandTime ease-in-out, height $menuExpandTime ease-in-out;
+
 
   .menuBg, .menuBg:after {
     position: absolute;
@@ -28,7 +29,7 @@ $linkFanTime: 300ms;
   .menuBg {
     width: 100vh;
     height: 100vh;
-    @include transition(background-color $menuExpandTime linear);
+    transition: background-color $menuExpandTime linear;
     background-color: rgb(255,255,255);
     // background: rgba(0,0,0,1);
     // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
@@ -41,12 +42,13 @@ $linkFanTime: 300ms;
       @include absTopRight;
       top: 1rem + $menuToggleSize/2;
       right: 1rem + $menuToggleSize/2;
-      @include transform-origin(center right);
-      @include transition(transform $linkFanTime ease-in-out, opacity $linkFanTime linear);
-      @include transform(translateY(-50%) rotate(-120deg));
+      transform-origin: center right;
+      transition: transform $linkFanTime ease-in-out, opacity $linkFanTime linear;
+      transform: translateY(-50%) rotate(-120deg);
+
+
       opacity: 0.0;
       //background-color: red;
-      //
       a {
         color: #ffffff;
         font-family: $headerFont;
@@ -72,7 +74,7 @@ $linkFanTime: 300ms;
     }
 
     &:after, &:before {
-      @include transition(background-color $menuExpandTime/2 linear);
+      transition: background-color $menuExpandTime/2 linear;
       background-color: black;
     }
 
@@ -83,7 +85,7 @@ $linkFanTime: 300ms;
       top: 0rem;
       height: $menuToggleSize;
       width: $menuToggleSize/7;
-      @include transform(translateX(-50%));
+      transform: translateX(-50%);
     }
 
     &:after {
@@ -93,7 +95,7 @@ $linkFanTime: 300ms;
       left: 0rem;
       width: $menuToggleSize;
       height: $menuToggleSize/7;
-      @include transform(translateY(-50%));
+      transform: translateY(-50%);
     }
   }
 
@@ -111,22 +113,22 @@ $linkFanTime: 300ms;
       }
 
       .linkBox:nth-of-type(1) {
-        @include transform(translateY(-50%) rotate(-5deg));
-        @include transition-delay($menuExpandTime*0.75);
+        transform: translateY(-50%) rotate(-5deg);
+        transition-delay: $menuExpandTime*0.75;
       }
       .linkBox:nth-of-type(2) {
-        @include transform(translateY(-50%) rotate(-35deg));
-        @include transition-delay($menuExpandTime*0.75 + $linkFanTime/2);
+        transform: translateY(-50%) rotate(-35deg);
+        transition-delay: $menuExpandTime*0.75 + $linkFanTime/2;
       }
       .linkBox:nth-of-type(3) {
-        @include transform(translateY(-50%) rotate(-65deg));
-        @include transition-delay($menuExpandTime*0.75 + $linkFanTime);
+        transform: translateY(-50%) rotate(-65deg);
+        transition-delay: $menuExpandTime*0.75 + $linkFanTime;
       }
     }
 
     .menuToggle {
       //background-color: blue;
-      @include transform(rotate(45deg));
+      transform: rotate(45deg);
 
       &:after, &:before {
         background-color: white;
@@ -139,7 +141,7 @@ $linkFanTime: 300ms;
   .menuBg {
     .linkBox {
       a {
-        @include transition(color 100ms linear);
+        transition: color 100ms linear;
       }
 
       a:hover {

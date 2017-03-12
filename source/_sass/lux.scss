@@ -1,6 +1,5 @@
 @import "normalize/import-now";
 
-$output-bourbon-deprecation-warnings: false;
 @import "bourbon";
 @import "neat";
 
@@ -143,7 +142,7 @@ a {
 .half {width: 50%;}
 
 .enableFade {
-  @include transition(opacity 1000ms linear);
+  transition: opacity 1000ms linear;
 }
 .fadeOut {opacity:0.0 !important}
 .fadeIn {opacity:1.0 !important}
@@ -295,7 +294,7 @@ body {
   left: 50vw;
   width: 100vw;
   max-width: $max-width;
-  @include transform(translateX(-50%))
+  transform: translateX(-50%);
   height: 100vh;
   overflow: hidden;
   // background: red;
@@ -331,7 +330,7 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      @include transform(translate(-50%, -50%));
+      transform: translate(-50%, -50%);
       opacity: 1.0;
     }
   }
@@ -356,7 +355,7 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    @include transform(translate(-50%,-50%));
+    transform: translate(-50%,-50%);
     background: none;
 
     $outLineWidth: 2px;
@@ -549,7 +548,7 @@ body {
         height: auto;
         position: relative;
         left: 50%;
-        @include transform(translateX(-50%))
+        transform: translateX(-50%);
       }
     }
 
