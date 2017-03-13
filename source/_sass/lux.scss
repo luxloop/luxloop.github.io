@@ -195,7 +195,7 @@ $largeBlurbGrid: (
 //.muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
 .centered {text-align: center;}
 .bolder {
-  font-weight: $defaultWeight + 100;
+  font-family: $bodyFontBold;
 }
 
 ::selection {
@@ -203,12 +203,12 @@ $largeBlurbGrid: (
 }
 
 h1 {
-  @extend .bolder;
+  //@extend .bolder;
   font-size: 1.3em;
 }
 
 h2 {
-  @extend .bolder;
+  //@extend .bolder;
   font-size: 1em;
 }
 
@@ -1508,6 +1508,12 @@ body {
   }
 
   #projectPage {
+  }
+}
+
+@media (min-width: $tablet) {
+  .noShowLarge {
+    display: none !important;
   }
 }
 
