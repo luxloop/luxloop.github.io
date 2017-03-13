@@ -436,6 +436,8 @@ body {
     left: 1.5rem;
     bottom: 1rem;
     font-size: 3rem;
+    padding-right: 1.5rem;
+    line-height: 3rem;
   }
 
   .subTitle {
@@ -828,7 +830,7 @@ body {
 // Projects Page Styles
 #projects {
   #pageCover {
-    height: 60vh;
+    height: 65vh;
     background: initial;
   }
 
@@ -864,9 +866,10 @@ body {
 
       .bigBlockButton {
         @extend .blockButton;
-        max-height: 200px;
-        height: 10vw;
+        height: 15vw;
         width: 30vw;
+        min-height: 100px;
+        max-height: 200px;
         min-width: 250px;
         max-width: 400px;
       }
@@ -876,22 +879,16 @@ body {
         left: $projLabelOffset;
         bottom: -2vh;
 
-        .projectBlockButton {
-          width: 25%;
-          height: 15vw;
-          min-height: 100px;
-        }
-
         .projTitle {
           text-align: right;
-          font-size: 1.5rem;
+          font-size: 1.8rem;
 
           p {
             margin: 0px;
           }
 
           p:nth-of-type(2) {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: $bodyFont;
           }
         }
@@ -1039,6 +1036,21 @@ body {
     }
     .subTitle {
       font-size: 1.8rem;
+    }
+  }
+
+  #projects {
+    #projectsList {
+      .projectEntry {
+        .buttonHolder {
+          .projTitle {
+            font-size: 1.5rem;
+            p:nth-of-type(2) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 
