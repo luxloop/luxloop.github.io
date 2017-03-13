@@ -22,7 +22,7 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 ---
 
 ## To-Do
-* [ ] fix fadein issue on back button
+* [x] fix fadein issue on back button
 * [ ] Check and adjust image sizes in projects page
 * [ ] corner logo transitions (fade out)
 * [ ] fade cover elements on load

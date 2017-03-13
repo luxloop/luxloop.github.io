@@ -7,28 +7,15 @@
   ///////////////////////
   // Events
 
-  //window.onunload = function(){$('body').addClass('showBody')};
-  //$(window).unload(function(){});
-
-  window.onpageshow = function(event) {
-    if (event.persisted) {
-      window.location.reload()
-    }
-  };
-
   $(document).ready(function() {
-    console.log("ready")
     $(window).scrollIntent();
     $('body').addClass('showBody')
     initParallax();
+    initCover();
     sizeCover();
     printContactInfo();
     initVideos();
     scrollHandler();
-  });
-
-  $(window).on('load', function() {
-    console.log("load")
   });
 
   $(".menuToggle").on('click',function(e) {
@@ -85,6 +72,18 @@
   //   //initParallax();
   //   //updateParallax();
   // })();
+
+
+
+  // Thank you: https://stackoverflow.com/questions/11979156/mobile-safari-back-button
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      window.location.reload()
+    }
+  };
+
+  // This hasn't worked since iOS 5:
+  // window.onunload = function(){};
 
 
   ///////////////////////
@@ -231,6 +230,16 @@
         el.removeClass('stretchWide');
       }
     })
+  }
+
+  function initCover() {
+    //var container = $('#pageCover .coverImage');
+    var image = $('#pageCover .coverImage img');
+    if (image.length) {
+      var dest = image.attr('src');
+      image.parent().css("background-image","url('" + dest + "')");
+      image.remove();
+    }
   }
 
   function goTo(dest) {
