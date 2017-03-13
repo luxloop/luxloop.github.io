@@ -20,6 +20,7 @@ $pageMargin: 3rem;
 
 $bgColor: #fff;
 $textColor: #000;
+$selectColor: #ddd;
 $defaultWeight: 100;
 
 $headerFont: 'code_boldregular', sans-serif;
@@ -197,6 +198,10 @@ $largeBlurbGrid: (
   font-weight: $defaultWeight + 100;
 }
 
+::selection {
+  background: $selectColor;
+}
+
 h1 {
   @extend .bolder;
   font-size: 1.3em;
@@ -353,7 +358,7 @@ body {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  margin: 0rem 0.5rem 0.4rem 0rem;
+  margin: 0rem 1.3rem 1rem 0rem;
 }
 
 .blockTextTL {
@@ -880,6 +885,38 @@ body {
         }
       }
     }
+  }
+
+  #{$all-text-inputs} {
+    border: 1px solid #ccc;
+    font-family: $bodyFont;
+    height: 2rem;
+    width: 80%;
+    max-width: 18rem;
+    text-align: center;
+  }
+
+  #{$all-buttons} {
+    height: 2rem;
+    width: 8rem;
+    font-family: $bodyFont;
+    background: $frontPageColor;
+    color: white;
+    border: none;
+    padding-bottom: 1px;
+    text-align: center;
+  }
+
+
+  #{$all-text-inputs-focus}, #{$all-buttons-focus} {
+    outline: none;
+  }
+}
+
+.no-touch {
+  #{$all-buttons-hover} {
+    opacity: 0.8;
+    cursor: pointer;
   }
 }
 

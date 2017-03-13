@@ -17,7 +17,7 @@ $(document).ready(function() {
   scrollHandler();
 });
 
-$(".menuToggle").click(function(){
+$(".menuToggle").on('click',function(e) {
   toggleMenu()
 });
 
@@ -32,6 +32,18 @@ $('.expandButton').on('click',function(e) {
     goTo(dest);
   }, 3000);
   $(this).addClass('expand');
+});
+
+$('#mcButton').on('click',function(e) {
+  e.preventDefault();
+  emailForm();
+});
+
+$("#mcEmail").on('keyup', function (e) {
+  e.preventDefault();
+  if (e.keyCode == 13) {
+    emailForm()
+  }
 });
 
 $(".expandButton").bind('oanimationend animationend webkitAnimationEnd', function(e) {
@@ -211,4 +223,10 @@ function goTo(dest) {
 function fadeTo(dest) {
   $('body').removeClass('showBody')
   setTimeout(function(){goTo(dest)},900);
+}
+
+function emailForm() {
+  var input=$('#mcEmail').val();
+  var dest = "https://lux-loop.us9.list-manage.com/subscribe?u=932da86c44803a133780827a6&id=85c35a3d5a&MERGE0="+encodeURIComponent(input)
+  window.open(dest)
 }
