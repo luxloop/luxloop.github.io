@@ -21,28 +21,16 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 
 ---
 
-## To-Do (Priority)
-* [x] mobile menu styles
-* [x] add individual projects
-* [x] swap out final images (especially covers)
-* [x] Finish responsive styling (including setting a maximum width)
-* [x] Footer styles and new icons
+## To-Do
+* [ ] fix fadein issue on back button
 * [ ] Check and adjust image sizes in projects page
-* [x] add 'tests' and 'demo' folders back to site (subdomain?)
 * [ ] corner logo transitions (fade out)
-* [x] page transitions fade in
-* [x] allow for up to 5 images in parallax showcase view
 * [ ] fade cover elements on load
-* [x] menu outline and show/hide
-* [x] redo cover sizing
 * [ ] remake shadow buttons without `position:aboslute` text so that they scale better
     * [ ] style project title box with :before and :after instead of nested divs?
     * [ ] Also look at bottom-to-top writing-mode for button/block divs?
 * [ ] menu click expand animation
 * [ ] scale parallax on small windows
-
-
-## To-Do (Optimizations/Cleanup)
 * [ ] Add [flexbug fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)
 * [ ] fade parallax images in to avoid jump on load
 * [ ] tweak meta tag (remove `width` param?)
