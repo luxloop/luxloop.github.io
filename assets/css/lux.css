@@ -725,8 +725,8 @@ textarea {
   text-align: center;
 }
 
-.bolder, h1, h2 {
-  font-weight: 200;
+.bolder {
+  font-family: "open_sansregular", sans-serif;
 }
 
 ::-moz-selection {
@@ -2465,6 +2465,12 @@ body {
   }
   #projects #projectsList .projectEntry .buttonHolder .projTitle p:nth-of-type(2) {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .noShowLarge {
+    display: none !important;
   }
 }
 
