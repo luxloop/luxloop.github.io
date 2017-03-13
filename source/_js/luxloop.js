@@ -178,8 +178,12 @@ function initVideos() {
     var video = $(this);
     var vidElement = video.get(0);
     var vidFile = $(this).attr('data-file');
-    if ($('body').hasClass('touch')) {
-      video.removeClass('fadeOut');
+    if ($('html').hasClass('touch')) {
+      var imgDest = $(this).attr('poster');
+      var parent = video.parent();
+      video.remove();
+      parent.append('<img id="theImg" src="' + imgDest + '" />')
+      console.log("foo")
     } else {
       vidElement.src = vidFile;
       vidElement.addEventListener('canplaythrough', function() {

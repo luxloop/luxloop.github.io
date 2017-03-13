@@ -574,6 +574,19 @@ body {
       left: $pageMargin;
       z-index: 1;
     }
+
+    .showcaseImage:nth-of-type(4) {
+      width: 75%;
+      top: -20vh;
+      z-index: 2;
+    }
+
+    .showcaseImage:nth-of-type(5) {
+      width: 100%;
+      top: -25vh;
+      left: $pageMargin;
+      z-index: 1;
+    }
   }
 
   &.v2 {
@@ -591,6 +604,20 @@ body {
     }
 
     .showcaseImage:nth-of-type(3) {
+      width: 75%;
+      top: -25vh;
+      left: 0px;
+      z-index: 3;
+    }
+
+    .showcaseImage:nth-of-type(4) {
+      width: 50%;
+      left: 50%;
+      top: -20vh;
+      z-index: 2;
+    }
+
+    .showcaseImage:nth-of-type(5) {
       width: 75%;
       top: -25vh;
       left: 0px;
@@ -847,6 +874,10 @@ body {
 // About Page Styles
 
 #aboutPage {
+  #pageCover {
+    height: 65vh;
+  }
+
   #featuredProjects {
     margin-bottom: 8rem;
   }
@@ -1037,6 +1068,7 @@ body {
   #projectInfo {
     position: relative;
     margin: 2rem $pageMargin;
+    margin-top: 6rem;
 
     h1 {
       font-family: $headerFont;

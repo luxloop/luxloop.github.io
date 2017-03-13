@@ -22,13 +22,13 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 ---
 
 ## To-Do (Priority)
-* [ ] mobile menu styles
+* [x] mobile menu styles
 * [ ] add individual projects
 * [ ] swap out final images (especially covers)
-* [ ] Finish responsive styling (including setting a maximum width)
+* [x] Finish responsive styling (including setting a maximum width)
 * [x] Footer styles and new icons
 * [ ] Check and adjust image sizes in projects page
-* [ ] add 'tests' and 'demo' folders back to site (subdomain?)
+* [x] add 'tests' and 'demo' folders back to site (subdomain?)
 * [ ] corner logo transitions (fade out)
 * [x] page transitions fade in
 * [ ] allow for up to 5 images in parallax showcase view
@@ -39,6 +39,7 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
     * [ ] style project title box with :before and :after instead of nested divs?
     * [ ] Also look at bottom-to-top writing-mode for button/block divs?
 * [ ] menu click expand animation
+* [ ] scale parallax on small windows
 
 
 ## To-Do (Optimizations/Cleanup)
