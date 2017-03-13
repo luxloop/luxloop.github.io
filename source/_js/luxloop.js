@@ -7,7 +7,7 @@
   ///////////////////////
   // Events
 
-  window.onunload = function(){console.log('unload')};
+  window.onunload = function(){$('body').addClass('showBody')};
 
   $(document).ready(function() {
     $(window).scrollIntent();
