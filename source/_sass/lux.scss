@@ -681,80 +681,110 @@ body {
     background: initial;
   }
 
-  .projectEntry {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10vh;
-    // background: #ccc;
+  #projectsList {
+    margin-top: 6rem;
 
-    .projectImage {
-      width: $projImageWidth;
-      overflow: hidden;
-      //height: 50vw;
-      //background: red;
+    .projectEntry {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10vh;
+      // background: #ccc;
 
-      .aspectContent {
-        overflow: hidden;
-        padding:0px;
-      }
-
-      img {
-        width: 130%;
-        height: auto;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    .bigBlockButton {
-      @extend .blockButton;
-      max-height: 200px;
-      height: 10vw;
-      width: 30vw;
-      min-width: 250px;
-      max-width: 400px;
-    }
-
-    .buttonHolder {
-      position: absolute;
-      left: $projLabelOffset;
-      bottom: -2vh;
-
-      .projectBlockButton {
-        width: 25%;
-        height: 15vw;
-        min-height: 100px;
-      }
-
-      .projTitle {
-        text-align: right;
-        font-size: 1.5rem;
-
-        p {
-          margin: 0px;
-        }
-
-        p:nth-of-type(2) {
-          font-size: 1rem;
-          font-family: $bodyFont;
-        }
-      }
-    }
-
-    &:nth-of-type(even) {
       .projectImage {
-        margin-left: 100 - $projImageWidth;
+        width: $projImageWidth;
+        overflow: hidden;
+        //height: 50vw;
+        //background: red;
+
+        .aspectContent {
+          overflow: hidden;
+          padding:0px;
+        }
+
+        img {
+          width: 130%;
+          height: auto;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .bigBlockButton {
+        @extend .blockButton;
+        max-height: 200px;
+        height: 10vw;
+        width: 30vw;
+        min-width: 250px;
+        max-width: 400px;
       }
 
       .buttonHolder {
-        left: initial;
-        right: $projLabelOffset;
+        position: absolute;
+        left: $projLabelOffset;
+        bottom: -2vh;
+
+        .projectBlockButton {
+          width: 25%;
+          height: 15vw;
+          min-height: 100px;
+        }
+
+        .projTitle {
+          text-align: right;
+          font-size: 1.5rem;
+
+          p {
+            margin: 0px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 1rem;
+            font-family: $bodyFont;
+          }
+        }
+      }
+
+      &:nth-of-type(even) {
+        .projectImage {
+          margin-left: 100 - $projImageWidth;
+        }
+
+        .buttonHolder {
+          left: initial;
+          right: $projLabelOffset;
+        }
       }
     }
   }
 }
+
+#pageTitleBox {
+  position: absolute;
+  // top: 0px;
+  // left: 0px;
+  width: 30%;
+  bottom: 20px;
+  right: $pageMargin;
+
+  p {
+    margin: 0px;
+  }
+
+  .title {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .subTitle {
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+  }
+}
+
 
 ///////////////////////
 // Single Project Page Styles
@@ -763,30 +793,7 @@ body {
   #pageCover {
     height: 80vh;
 
-    .projectTitleBox {
-      position: absolute;
-      // top: 0px;
-      // left: 0px;
-      width: 30%;
-      bottom: 20px;
-      right: $pageMargin;
 
-      p {
-        margin: 0px;
-      }
-
-      .title {
-        position: absolute;
-        left: 0.5rem;
-        bottom: 0.5rem;
-        font-size: 2.5rem;
-      }
-
-      .subTitle {
-        font-family: $bodyFont;
-        font-size: 1.5rem;
-      }
-    }
   }
 
   #projectInfo {
@@ -877,18 +884,20 @@ body {
     }
   }
 
+  #pageTitleBox {
+    width: 27vw;
+
+    .title {
+      font-size: 2rem;
+    }
+    .subTitle {
+      font-size: 1rem;
+    }
+  }
+
   #projectPage {
     #pageCover {
-      .projectTitleBox {
-        width: 27vw;
 
-        .title {
-          font-size: 2rem;
-        }
-        .subTitle {
-          font-size: 1rem;
-        }
-      }
     }
 
     #projectInfo {
@@ -942,52 +951,56 @@ body {
   }
 
   #projects {
-    .projectEntry {
-      .projectImage {
-        width: 100%;
-      }
-
-      .buttonHolder {
-        left: 2rem;
-        // bottom: -2vh;
-
-        .projTitle {
-          font-size: 1.5rem;
-          p:nth-of-type(2) {
-            font-size: 1rem;
-          }
-        }
-      }
-
-      &:nth-of-type(even) {
+    #projectsList {
+      .projectEntry {
         .projectImage {
-          margin-left: 0px;
+          width: 100%;
         }
 
         .buttonHolder {
-          //left: initial;
-          right: 2rem;
+          left: 2rem;
+          // bottom: -2vh;
+
+          .projTitle {
+            font-size: 1.5rem;
+            p:nth-of-type(2) {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &:nth-of-type(even) {
+          .projectImage {
+            margin-left: 0px;
+          }
+
+          .buttonHolder {
+            //left: initial;
+            right: 2rem;
+          }
         }
       }
     }
   }
 
+  #pageTitleBox {
+    width: 30%;
+    bottom: 20px;
+    right: initial;
+    left: $pageMargin/2 - 0.5rem;
+    min-width: 200px;
+
+    .title {
+      font-size: 1.5rem;
+    }
+    .subTitle {
+      font-size: 1rem;
+    }
+  }
+
   #projectPage {
     #pageCover {
-      .projectTitleBox {
-        width: 30%;
-        bottom: 20px;
-        right: initial;
-        left: $pageMargin/2 - 0.5rem;
-        min-width: 200px;
 
-        .title {
-          font-size: 1.5rem;
-        }
-        .subTitle {
-          font-size: 1rem;
-        }
-      }
     }
 
     #projectInfo {
@@ -1025,47 +1038,52 @@ body {
   }
 
   #projects {
-    .projectEntry {
+    #projectsList {
+      margin-top: 10rem;
 
-      .buttonHolder {
-        left: 5%;
-        width: 90%;
-        // bottom: -2vh;
-
-        .projectBlockButton {
-          width: 100%;
-          min-width: initial;
-        }
-
-        .projTitle {
-          font-size: 1.5rem;
-          p:nth-of-type(2) {
-            font-size: 1rem;
-          }
-        }
-      }
-
-      &:nth-of-type(even) {
-        .projectImage {
-          margin-left: 0px;
-        }
-
+      .projectEntry {
         .buttonHolder {
           left: 5%;
-          right: initial;
+          width: 90%;
+          // bottom: -2vh;
+
+          .projectBlockButton {
+            width: 100%;
+            min-width: initial;
+          }
+
+          .projTitle {
+            font-size: 1.5rem;
+            p:nth-of-type(2) {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &:nth-of-type(even) {
+          .projectImage {
+            margin-left: 0px;
+          }
+
+          .buttonHolder {
+            left: 5%;
+            right: initial;
+          }
         }
       }
     }
   }
 
+  #pageTitleBox {
+    bottom: -4rem;
+    left: 0.5rem;
+    width: 50%;
+  }
+
   #projectPage {
     #pageCover {
       padding: 0rem 0.5rem;
-      .projectTitleBox {
-        bottom: -4rem;
-        left: 0.5rem;
-        width: 50%;
-      }
+
     }
     #projectInfo {
       margin-top: 6rem;
@@ -1086,12 +1104,14 @@ body {
   }
 
   #projects {
-    .projectEntry {
-      .buttonHolder {
-        .projTitle {
-          font-size: 1rem;
-          p:nth-of-type(2) {
-            font-size: 0.8rem;
+    #projectsList {
+      .projectEntry {
+        .buttonHolder {
+          .projTitle {
+            font-size: 1rem;
+            p:nth-of-type(2) {
+              font-size: 0.8rem;
+            }
           }
         }
       }
