@@ -231,6 +231,16 @@ $borderOutlineThickness: 2px;
           padding-right: 1rem;;
           right: 0rem;
           transform: translateX(100%) rotate(0deg);
+
+          &:nth-of-type(1) {
+            top: 10%;
+          }
+          &:nth-of-type(2) {
+            top: 30%;
+          }
+          &:nth-of-type(3) {
+            top: 50%;
+          }
         }
       }
 
@@ -263,15 +273,12 @@ $borderOutlineThickness: 2px;
           background-color: rgba(0,0,0,0.9);
 
           .linkBox:nth-of-type(1) {
-            top: 10%;
             transform: translateX(0%) rotate(0deg);
           }
           .linkBox:nth-of-type(2) {
-            top: 30%;
             transform: translateX(0%) rotate(0deg);
           }
           .linkBox:nth-of-type(3) {
-            top: 50%;
             transform: translateX(0%) rotate(0deg);
           }
         }
