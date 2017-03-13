@@ -270,12 +270,12 @@ a {
 
 body, html {
   font-size: 100%;
-  background: $bgColor;
+  background: rgb(250,250,250);
 }
 
 body {
   color: $textColor;
-  background: $bgColor;
+  background: none;
   font-family: $bodyFont;
 }
 
@@ -369,6 +369,7 @@ body {
   transform: translateX(-50%);
   height: 100vh;
   overflow: hidden;
+  background: $bgColor;
   // background: red;
 
   img {
