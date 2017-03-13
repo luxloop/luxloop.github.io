@@ -74,6 +74,12 @@ $largeGrid: (
   }
 }
 
+.column6 {
+  @include grid-media($mediumGrid){
+    @include grid-column(6);
+  }
+}
+
 .column4 {
   @include grid-media($mediumGrid){
     @include grid-column(12);
@@ -605,7 +611,7 @@ body {
   width: 100%;
   overflow: hidden;
 
-  img {
+  img, video  {
     width: 100%;
     height: auto;
   }
@@ -679,7 +685,6 @@ body {
 
 ///////////////////////
 // Main Page Cover Styles
-
 
 #homePage {
 
@@ -817,6 +822,8 @@ body {
   }
 }
 
+
+
 ///////////////////////
 // About Page Styles
 
@@ -826,8 +833,61 @@ body {
   }
 }
 
+
+
+///////////////////////
+// Contact Page Styles
+
+#contactPage {
+
+  #pageCover {
+    height: 65vh;
+  }
+
+  #contactInfo {
+    position: relative;
+    width: 60%;
+    margin: 6rem auto;
+    text-align: center;
+
+    #footer {
+      background: none;
+      padding: 0rem;
+
+      .contactInfo {
+        display: none;
+        visibility: hidden;
+      }
+
+      .socialInfo {
+        margin: 0;
+      }
+    }
+
+    .column {
+      margin-top: 2rem;
+
+      h1 {
+        font-family: $headerFont;
+        margin: 0;
+      }
+
+      .contactInfo {
+        color: black;
+        margin: 0.1rem 0rem 1.5rem 0rem;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+
+
 ///////////////////////
 // Projects Page Styles
+
 #projects {
   #pageCover {
     height: 65vh;
@@ -907,6 +967,7 @@ body {
     }
   }
 }
+
 
 
 ///////////////////////
@@ -999,6 +1060,10 @@ body {
 }
 
 
+
+///////////////////////
+// Responsive Tweaks
+
 @media (max-width:$smallScreen) {
   // #cornerLogo {font-size: 2.5rem;}
 
@@ -1062,6 +1127,14 @@ body {
     #projectInfo {
       margin: inherit;
       @include margin(2rem null);
+    }
+  }
+
+  #contactPage {
+    #contactInfo {
+      width: 80%;
+      //margin: 6rem auto;
+      text-align: center;
     }
   }
 }
@@ -1164,6 +1237,14 @@ body {
 
   #pageTitleBox {
     left: $pageMargin/2 - 0.5rem;
+  }
+
+  #contactPage {
+    #contactInfo {
+      width: 100%;
+      //margin: 6rem auto;
+      text-align: center;
+    }
   }
 
   #projectPage {
