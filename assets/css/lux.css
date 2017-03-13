@@ -1147,6 +1147,8 @@ a {
     border-radius: initial;
   }
   #menuPos #cornerMenu .menuBg {
+    width: 100vw;
+    height: 100vh;
     background-color: transparent;
   }
   #menuPos #cornerMenu .menuBg .linkBox {
@@ -1185,8 +1187,8 @@ a {
     left: 0.375rem;
   }
   #menuPos #cornerMenu.show {
-    width: 150vh;
-    height: 150vh;
+    width: 155vh;
+    height: 155vh;
   }
   #menuPos #cornerMenu.show .menuBg {
     background-color: black;
@@ -1218,7 +1220,7 @@ a {
   }
 }
 
-@media (max-width: 800px) and (max-width: 350px) {
+@media (max-width: 800px) and (max-width: 380px) {
   #menuPos #cornerMenu .menuBg .linkBox a {
     font-size: 2.5rem;
   }
@@ -1550,7 +1552,7 @@ body {
 .blockButton.expandButton.expand, #homePage .expandButton.expand#whatWeDoButton, #projects #projectsList .projectEntry .expandButton.expand.bigBlockButton {
   -webkit-animation: bounceSpread 700ms ease-in-out forwards;
   animation: bounceSpread 700ms ease-in-out forwards;
-  background-color: #ff5f5e;
+  background-color: #fafafa;
   z-index: 99 !important;
 }
 
@@ -1872,7 +1874,7 @@ body {
 }
 
 .showcaseBoxes .boxesBox .aspect .aspectContent .blockContainer, .showcaseBoxes .boxesBox .aspect .aspectContent .blockButton, .showcaseBoxes .boxesBox .aspect .aspectContent #homePage #whatWeDoButton, #homePage .showcaseBoxes .boxesBox .aspect .aspectContent #whatWeDoButton, .showcaseBoxes .boxesBox .aspect .aspectContent #projects #projectsList .projectEntry .bigBlockButton, #projects #projectsList .projectEntry .showcaseBoxes .boxesBox .aspect .aspectContent .bigBlockButton {
-  background: #ff5f5e;
+  background: #fafafa;
   width: 100%;
   height: 100%;
 }
@@ -2449,7 +2451,7 @@ body {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   #cornerLogo {
     left: 1rem;
   }
