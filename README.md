@@ -22,6 +22,9 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 ---
 
 ## To-Do (Priority)
+* [ ] mobile menu styles
+* [ ] add individual projects
+* [ ] swap out final images (especially covers)
 * [ ] Finish responsive styling (including setting a maximum width)
 * [x] Footer styles and new icons
 * [ ] Check and adjust image sizes in projects page

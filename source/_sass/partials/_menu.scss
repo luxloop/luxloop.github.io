@@ -85,12 +85,7 @@ $borderOutlineThickness: 2px;
       position: absolute;
       top: 1rem;
       right: 1rem;
-      -webkit-transition: transform $menuExpandTime/2 linear;
       transition: transform $menuExpandTime/2 linear;
-
-      &:hover {
-        cursor: pointer;
-      }
 
       &:after, &:before {
         transition: background-color $menuExpandTime/2 linear;
@@ -212,6 +207,79 @@ $borderOutlineThickness: 2px;
 
 @media (max-width: $tablet) {
 
+  #menuPos {
+    #cornerMenu {
+      border: initial;
+      max-height: 150vh;
+      max-width: 150vw;
+
+      opacity: 1.0 !important;
+
+      .menuBg, .menuBg:after {
+        border-radius: initial;
+      }
+
+      .menuBg {
+        background-color: rgba(0,0,0,0.0);
+
+
+        .linkBox {
+          padding-right: 1rem;;
+          right: 0rem;
+          transform: translateX(100%) rotate(0deg);
+        }
+      }
+
+      .menuToggle {
+        background-color: white;
+        border-radius: 50%;
+        width: $menuToggleSize * 1.5;
+        height: $menuToggleSize * 1.5;
+        transition: transform $menuExpandTime/2 linear,
+                    background-color $menuExpandTime/2 linear;
+        transition-delay: $menuExpandTime;
+
+        &:before {
+          left: $menuToggleSize * 1.5 / 2;
+          top: ( ($menuToggleSize * 1.5) - $menuToggleSize ) / 2;
+        }
+
+        &:after {
+          top: $menuToggleSize * 1.5 / 2;
+          left: ( ($menuToggleSize * 1.5) - $menuToggleSize ) / 2;
+        }
+      }
+
+      &.show {
+        width: 150vh;
+        height: 150vh;
+
+        .menuBg {
+          background-color: black;
+          background-color: rgba(0,0,0,0.9);
+
+          .linkBox:nth-of-type(1) {
+            top: 10%;
+            transform: translateX(0%) rotate(0deg);
+          }
+          .linkBox:nth-of-type(2) {
+            top: 30%;
+            transform: translateX(0%) rotate(0deg);
+          }
+          .linkBox:nth-of-type(3) {
+            top: 50%;
+            transform: translateX(0%) rotate(0deg);
+          }
+        }
+
+        .menuToggle {
+          background-color: black;
+          background-color: rgba(0,0,0,0.0);
+          transition-delay: 0ms;
+        }
+      }
+    }
+  }
 }
 
 
@@ -225,15 +293,15 @@ $borderOutlineThickness: 2px;
 }
 
 .no-touch {
-  .menuBg {
-    .linkBox {
-      a {
-        transition: color 100ms linear;
+  #menuPos {
+    #cornerMenu {
+      .menuBg {
+        .linkBox {
+          a {transition: color 100ms linear;}
+          a:hover {color: #000 !important;}
+        }
       }
-
-      a:hover {
-        color: #000 !important;
-      }
+      .menuToggle:hover {cursor: pointer;}
     }
   }
 }
