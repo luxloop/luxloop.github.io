@@ -26,8 +26,8 @@ $borderOutlineThickness: 2px;
 
     width: 5rem;
     height: 5rem;
-    max-height: 700px;
-    max-width: 700px;
+    max-height: $tablet;
+    max-width: $tablet;
     z-index: 30;
     background: none;
     overflow: hidden;
@@ -58,7 +58,7 @@ $borderOutlineThickness: 2px;
 
       .linkBox {
         display: block;
-        padding-right: 10rem;
+        padding-right: 16rem;
         @include absTopRight;
         top: 1rem + $menuToggleSize/2;
         right: 1rem + $menuToggleSize/2;
@@ -72,7 +72,7 @@ $borderOutlineThickness: 2px;
           color: #ffffff;
           font-family: $headerFont;
           text-decoration: none;
-          font-size: 4rem;
+          font-size: 4.8rem;
         }
       }
     }
@@ -134,15 +134,15 @@ $borderOutlineThickness: 2px;
         }
 
         .linkBox:nth-of-type(1) {
-          transform: translateY(-50%) rotate(-5deg);
+          transform: translateY(-50%) rotate(-15deg);
           transition-delay: $menuExpandTime*0.75;
         }
         .linkBox:nth-of-type(2) {
-          transform: translateY(-50%) rotate(-35deg);
+          transform: translateY(-50%) rotate(-45deg);
           transition-delay: $menuExpandTime*0.75 + $linkFanTime/2;
         }
         .linkBox:nth-of-type(3) {
-          transform: translateY(-50%) rotate(-65deg);
+          transform: translateY(-50%) rotate(-75deg);
           transition-delay: $menuExpandTime*0.75 + $linkFanTime;
         }
       }
@@ -158,12 +158,70 @@ $borderOutlineThickness: 2px;
   }
 }
 
-[scroll-intent="down"] #cornerMenu {
+@media (max-height: $tablet) {
+  #menuPos {
+    #cornerMenu {
+      .menuBg {
+        .linkBox {
+          padding-right: 14.5rem;
+          a {
+            font-size: 4.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: $tablet - ( ($tablet - $mobile) * 1/3 ) ) {
+  #menuPos {
+    #cornerMenu {
+      .menuBg {
+        .linkBox {
+          padding-right: 10rem;
+          a {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: $tablet - ( ($tablet - $mobile) * 2/3 ) ) {
+  #menuPos {
+    #cornerMenu {
+      .menuBg {
+        .linkBox {
+          padding-right: 6rem;
+          a {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: $tablet) and (max-height: $mobile) {
+  //Come in from the side
+
+}
+
+@media (max-width: $tablet) {
+
+}
+
+
+
+[scroll-intent="down"] #cornerMenu:not(.show) {
   opacity: 0.0;
 }
 
 .top #cornerMenu {
-  opacity: 1.0;
+  opacity: 1.0 !important;
 }
 
 .no-touch {
@@ -174,8 +232,14 @@ $borderOutlineThickness: 2px;
       }
 
       a:hover {
-        color: #dddddd !important;
+        color: #000 !important;
       }
     }
   }
 }
+
+
+
+
+
+
