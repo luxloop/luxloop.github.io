@@ -48,16 +48,17 @@ $(".expandButton").bind('oanimationend animationend webkitAnimationEnd', functio
 // });
 //
 
-// $(window).resize(function(){
-// })
+$(window).resize(function(){
+  sizeCover();
+})
 
 //Throttled on-resize handler
-on_resize(function() {
-  sizeCover();
-  //parallaxDivs = [];
-  //initParallax();
-  //updateParallax();
-})();
+// on_resize(function() {
+//   //sizeCover();
+//   //parallaxDivs = [];
+//   //initParallax();
+//   //updateParallax();
+// })();
 
 
 ///////////////////////

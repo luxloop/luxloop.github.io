@@ -14,7 +14,7 @@ $smallMobile:  350px;
 $mobile:  500px;
 $tablet:  800px;
 $smallScreen: $tablet * 1.25;
-$max-width: 1300px;
+$max-width: 1700px;
 
 $pageMargin: 3rem;
 
@@ -29,6 +29,7 @@ $blurbFont: 'open_sanslight_italic', sans-serif;
 $logoFont: 'mark_my_wordsregular';
 
 $boxLinkTransitionTime: 700ms;
+$boxTransitionColor: rgb(255,95,94);
 
 // Front Page Vars
 $frontPageColor: rgb(59,109,255);
@@ -372,7 +373,7 @@ body {
     -webkit-animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
             animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
 
-    background-color: #FF3531;
+    background-color: $boxTransitionColor;
     z-index: 99;
 
     .blockTextBR, .blockTextTL, .buttonImg {
@@ -420,8 +421,11 @@ body {
   // top: 0px;
   // left: 0px;
   width: 30%;
-  bottom: 20px;
+  bottom: $pageMargin*2;
   right: $pageMargin;
+  // width: 30%;
+  // bottom: 20px;
+  // right: $pageMargin;
 
   p {
     margin: 0px;
@@ -429,9 +433,9 @@ body {
 
   .title {
     position: absolute;
-    left: 0.5rem;
-    bottom: 0.5rem;
-    font-size: 2.5rem;
+    left: 1.5rem;
+    bottom: 1rem;
+    font-size: 3rem;
   }
 
   .subTitle {
@@ -661,7 +665,7 @@ body {
 
       .aspectContent {
         .blockContainer {
-          background: red;
+          background: $boxTransitionColor;
           width: 100%;
           height: 100%;
         }
@@ -927,9 +931,14 @@ body {
       margin-top: 0px;
     }
 
+    .title, .description {
+      padding-left: 2rem;
+    }
+
     .description {
       font-size: 1rem;
       text-align: justify;
+      margin-bottom: 3rem;
 
       p:first-of-type {
         margin-top: 0rem;
@@ -994,7 +1003,7 @@ body {
 
 
 @media (max-width:$smallScreen) {
-  #cornerLogo {font-size: 2.5rem;}
+  // #cornerLogo {font-size: 2.5rem;}
 
   #homePage {
     #blurb {
@@ -1006,14 +1015,30 @@ body {
     }
   }
 
+  // #pageTitleBox {
+  //   width: 27vw;
+
+  //   .title {
+  //     font-size: 2rem;
+  //   }
+  //   .subTitle {
+  //     font-size: 1rem;
+  //   }
+  // }
+  //
+
   #pageTitleBox {
-    width: 27vw;
+    width: 30%;
+    bottom: $pageMargin;
+    right: initial;
+    left: 4.5rem;
+    min-width: 300px;
 
     .title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .subTitle {
-      font-size: 1rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -1126,18 +1151,7 @@ body {
   }
 
   #pageTitleBox {
-    width: 30%;
-    bottom: 20px;
-    right: initial;
     left: $pageMargin/2 - 0.5rem;
-    min-width: 300px;
-
-    .title {
-      font-size: 2.5rem;
-    }
-    .subTitle {
-      font-size: 1.8rem;
-    }
   }
 
   #projectPage {
@@ -1146,6 +1160,10 @@ body {
     }
 
     #projectInfo {
+      .title, .description {
+        padding-left: initial;
+      }
+
       .description {
         margin-bottom: 4rem;
       }
