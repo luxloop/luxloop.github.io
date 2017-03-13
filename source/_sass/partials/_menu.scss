@@ -208,6 +208,10 @@ $borderOutlineThickness: 2px;
 @media (max-width: $tablet) {
 
   #menuPos {
+    width: 101%;
+    right: -2px;
+    transform: translateX(0%);
+    z-index: 30;
     #cornerMenu {
       border: initial;
       max-height: 150vh;
