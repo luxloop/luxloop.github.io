@@ -28,7 +28,8 @@
   ],
   "scripts": {
     "build": "gulp build",
-    "local": "python ./scripts/localserver.py"
+    "local": "python ./scripts/localserver.py",
+    "publish": ". ./deploy.sh -v"
   },
   "repository": {
     "type": "git",
