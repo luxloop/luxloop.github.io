@@ -164,18 +164,22 @@ function initVideos() {
     var video = $(this);
     var vidElement = video.get(0);
     var vidFile = $(this).attr('data-file');
-    vidElement.src = vidFile;
-    vidElement.addEventListener('canplaythrough', function() {
-      vidElement.play();
+    if ($('body').hasClass('touch')) {
       video.removeClass('fadeOut');
-      //vidElement.currentTime = video1Pos;
-      //video1Dur = vidElement.duration;
-    }, false);
-    vidElement.addEventListener('error', function() {
-      console.log(vidElement.error);
-      video.removeClass('fadeOut');
-    }, false);
-    vidElement.load();
+    } else {
+      vidElement.src = vidFile;
+      vidElement.addEventListener('canplaythrough', function() {
+        vidElement.play();
+        video.removeClass('fadeOut');
+        //vidElement.currentTime = video1Pos;
+        //video1Dur = vidElement.duration;
+      }, false);
+      vidElement.addEventListener('error', function() {
+        console.log(vidElement.error);
+        video.removeClass('fadeOut');
+      }, false);
+      vidElement.load();
+    }
   });
 }
 

@@ -23,13 +23,11 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 
 ## To-Do (Priority)
 * [ ] Finish responsive styling (including setting a maximum width)
-* [ ] Footer styles and new icons
-* [ ] Project Crawl
-* [ ] `position:fixed` images in project crawl
+* [x] Footer styles and new icons
 * [ ] Check and adjust image sizes in projects page
 * [ ] add 'tests' and 'demo' folders back to site (subdomain?)
 * [ ] corner logo transitions (fade out)
-* [ ] page transitions fade in
+* [x] page transitions fade in
 * [ ] allow for up to 5 images in parallax showcase view
 * [ ] fade cover elements on load
 * [x] menu outline and show/hide
@@ -47,3 +45,5 @@ Make changes in `/source` - The `/docs` directory is the compiled static site. `
 * [ ] update to newest Modernizr
 * [ ] extend menu up to account for overscroll
 * [ ] IE <9 fallbacks for animations
+* [ ] Project Crawl
+* [ ] `position:fixed` images in project crawl
