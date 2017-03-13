@@ -224,6 +224,8 @@ $borderOutlineThickness: 2px;
       }
 
       .menuBg {
+        width: 100vw;
+        height: 100vh;
         background-color: rgba(0,0,0,0.0);
 
 
@@ -265,8 +267,8 @@ $borderOutlineThickness: 2px;
       }
 
       &.show {
-        width: 150vh;
-        height: 150vh;
+        width: 155vh;
+        height: 155vh;
 
         .menuBg {
           background-color: black;
