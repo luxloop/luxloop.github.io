@@ -883,7 +883,8 @@ body {
     }
 
     .column {
-      margin-top: 2rem;
+      margin-top: 4rem;
+      font-size: 1.5rem;
 
       h1 {
         font-family: $headerFont;
@@ -907,6 +908,7 @@ body {
     width: 50%;
     max-width: 18rem;
     text-align: center;
+    font-size: 1rem;
   }
 
   #{$all-buttons} {
@@ -918,6 +920,7 @@ body {
     border: none;
     padding-bottom: 1px;
     text-align: center;
+    font-size: 1rem;
   }
 
 
@@ -1185,6 +1188,10 @@ body {
       width: 80%;
       //margin: 6rem auto;
       text-align: center;
+
+      .column {
+        font-size: 1.2rem;
+      }
     }
   }
 }
