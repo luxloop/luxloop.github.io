@@ -55,6 +55,12 @@
     }
   });
 
+  $('.fadeLink').on('click',function(e) {
+    e.preventDefault();
+    var dest = e.target.getAttribute("href");
+    fadeTo(dest);
+  });
+
   // TO-DO:
   // $(window).on('resize', function() {
   //   // Code to update parallax element values
