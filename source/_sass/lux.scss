@@ -332,12 +332,6 @@ body {
             transition: opacity $boxLinkTransitionTime/4 ease-in-out;
   }
 
-  &:hover {
-    left: 3px;
-    top: 3px;
-    box-shadow: 9px 8px 0px 0px $frontPageColor;
-  }
-
   &.expandButton.expand {
     -webkit-animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
             animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
@@ -349,6 +343,12 @@ body {
       opacity: 0.0;
     }
   }
+}
+
+.no-touch .blockButton:hover {
+  left: 3px;
+  top: 3px;
+  box-shadow: 9px 8px 0px 0px $frontPageColor;
 }
 
 .pageContainer {
@@ -708,6 +708,15 @@ body {
       }
     }
 
+    .bigBlockButton {
+      @extend .blockButton;
+      max-height: 200px;
+      height: 10vw;
+      width: 30vw;
+      min-width: 250px;
+      max-width: 400px;
+    }
+
     .buttonHolder {
       position: absolute;
       left: $projLabelOffset;
@@ -716,6 +725,7 @@ body {
       .projectBlockButton {
         width: 25%;
         height: 15vw;
+        min-height: 100px;
       }
 
       .projTitle {
@@ -914,7 +924,6 @@ body {
     }
 
     #blurb {
-
       margin-bottom: 10rem;
 
       .buttonHolder {
@@ -929,6 +938,37 @@ body {
     #whatWeDoButton {
       height: 120px;
       width: 300px;
+    }
+  }
+
+  #projects {
+    .projectEntry {
+      .projectImage {
+        width: 100%;
+      }
+
+      .buttonHolder {
+        left: 2rem;
+        // bottom: -2vh;
+
+        .projTitle {
+          font-size: 1.5rem;
+          p:nth-of-type(2) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &:nth-of-type(even) {
+        .projectImage {
+          margin-left: 0px;
+        }
+
+        .buttonHolder {
+          //left: initial;
+          right: 2rem;
+        }
+      }
     }
   }
 
@@ -984,6 +1024,40 @@ body {
     }
   }
 
+  #projects {
+    .projectEntry {
+
+      .buttonHolder {
+        left: 5%;
+        width: 90%;
+        // bottom: -2vh;
+
+        .projectBlockButton {
+          width: 100%;
+          min-width: initial;
+        }
+
+        .projTitle {
+          font-size: 1.5rem;
+          p:nth-of-type(2) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &:nth-of-type(even) {
+        .projectImage {
+          margin-left: 0px;
+        }
+
+        .buttonHolder {
+          left: 5%;
+          right: initial;
+        }
+      }
+    }
+  }
+
   #projectPage {
     #pageCover {
       padding: 0rem 0.5rem;
@@ -1007,6 +1081,19 @@ body {
       h1 {
         font-size: 3rem;
         margin: 3rem 4rem;
+      }
+    }
+  }
+
+  #projects {
+    .projectEntry {
+      .buttonHolder {
+        .projTitle {
+          font-size: 1rem;
+          p:nth-of-type(2) {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
   }
