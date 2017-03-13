@@ -6,143 +6,153 @@ $menuBackgroundOn: $frontPageColor;
 $borderOutlineColor: #eee;
 $borderOutlineThickness: 2px;
 
-#cornerMenu {
+#menuPos {
   position: fixed;
   top: 0px;
-  right: 0px;
-  border-bottom-left-radius: 100% 100%;
-
-  border-left: solid $borderOutlineColor $borderOutlineThickness;
-  border-bottom: solid $borderOutlineColor $borderOutlineThickness;
-
-  width: 5rem;
-  height: 5rem;
-  max-height: 700px;
-  max-width: 700px;
+  width: 100%;
+  max-width: $max-width;
+  right: 50%;
+  transform: translateX(50%);
   z-index: 30;
-  background: none;
-  overflow: hidden;
-  transition: width $menuExpandTime ease-in-out,
-              height $menuExpandTime ease-in-out,
-              border-color $menuExpandTime linear,
-              opacity $menuExpandTime linear;
 
-  &.noHide {opacity: 1.0 !important}
-
-
-  .menuBg, .menuBg:after {
+  #cornerMenu {
     position: absolute;
     top: 0px;
     right: 0px;
     border-bottom-left-radius: 100% 100%;
-  }
 
-  .menuBg {
-    width: 100vh;
-    height: 100vh;
-    transition: background-color $menuExpandTime linear;
-    background-color: $menuBackgroundOff;
-    // background: rgba(0,0,0,1);
-    // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
-    // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+    border-left: solid $borderOutlineColor $borderOutlineThickness;
+    border-bottom: solid $borderOutlineColor $borderOutlineThickness;
+
+    width: 5rem;
+    height: 5rem;
+    max-height: 700px;
+    max-width: 700px;
+    z-index: 30;
+    background: none;
+    overflow: hidden;
+    transition: width $menuExpandTime ease-in-out,
+                height $menuExpandTime ease-in-out,
+                border-color $menuExpandTime linear,
+                opacity $menuExpandTime linear;
+
+    &.noHide {opacity: 1.0 !important}
 
 
-    .linkBox {
-      display: block;
-      padding-right: 10rem;
-      @include absTopRight;
-      top: 1rem + $menuToggleSize/2;
-      right: 1rem + $menuToggleSize/2;
-      transform-origin: center right;
-      transition: transform $linkFanTime ease-in-out, opacity $linkFanTime linear;
-      transform: translateY(-50%) rotate(-120deg);
-
-      opacity: 0.0;
-
-      a {
-        color: #ffffff;
-        font-family: $headerFont;
-        text-decoration: none;
-        font-size: 4rem;
-      }
-    }
-  }
-
-  .menuToggle {
-    width: $menuToggleSize;
-    height: $menuToggleSize;
-    color: white;
-    font-family: $headerFont;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    -webkit-transition: transform $menuExpandTime/2 linear;
-    transition: transform $menuExpandTime/2 linear;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:after, &:before {
-      transition: background-color $menuExpandTime/2 linear;
-      background-color: black;
-    }
-
-    &:before {
-      content: "";
+    .menuBg, .menuBg:after {
       position: absolute;
-      left: $menuToggleSize/2;
-      top: 0rem;
-      height: $menuToggleSize;
-      width: $menuToggleSize/7;
-      transform: translateX(-50%);
+      top: 0px;
+      right: 0px;
+      border-bottom-left-radius: 100% 100%;
     }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: $menuToggleSize/2;
-      left: 0rem;
-      width: $menuToggleSize;
-      height: $menuToggleSize/7;
-      transform: translateY(-50%);
-    }
-  }
-
-  &.show {
-    width: 100vh;
-    height: 100vh;
-    border-color: white;
-    border-color: rgba(255,255,255,0.0);
 
     .menuBg {
-      background-color: $menuBackgroundOn;
-      // background-color: black;
-      // opacity: 0.7;
+      width: 100vh;
+      height: 100vh;
+      transition: background-color $menuExpandTime linear;
+      background-color: $menuBackgroundOff;
+      // background: rgba(0,0,0,1);
+      // background: -webkit-radial-gradient(top right circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+      // background: radial-gradient(circle at top right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+
 
       .linkBox {
-        opacity: 1.0;
-      }
+        display: block;
+        padding-right: 10rem;
+        @include absTopRight;
+        top: 1rem + $menuToggleSize/2;
+        right: 1rem + $menuToggleSize/2;
+        transform-origin: center right;
+        transition: transform $linkFanTime ease-in-out, opacity $linkFanTime linear;
+        transform: translateY(-50%) rotate(-120deg);
 
-      .linkBox:nth-of-type(1) {
-        transform: translateY(-50%) rotate(-5deg);
-        transition-delay: $menuExpandTime*0.75;
-      }
-      .linkBox:nth-of-type(2) {
-        transform: translateY(-50%) rotate(-35deg);
-        transition-delay: $menuExpandTime*0.75 + $linkFanTime/2;
-      }
-      .linkBox:nth-of-type(3) {
-        transform: translateY(-50%) rotate(-65deg);
-        transition-delay: $menuExpandTime*0.75 + $linkFanTime;
+        opacity: 0.0;
+
+        a {
+          color: #ffffff;
+          font-family: $headerFont;
+          text-decoration: none;
+          font-size: 4rem;
+        }
       }
     }
 
     .menuToggle {
-      transform: rotate(45deg);
+      width: $menuToggleSize;
+      height: $menuToggleSize;
+      color: white;
+      font-family: $headerFont;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      -webkit-transition: transform $menuExpandTime/2 linear;
+      transition: transform $menuExpandTime/2 linear;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       &:after, &:before {
-        background-color: white;
+        transition: background-color $menuExpandTime/2 linear;
+        background-color: black;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: $menuToggleSize/2;
+        top: 0rem;
+        height: $menuToggleSize;
+        width: $menuToggleSize/7;
+        transform: translateX(-50%);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: $menuToggleSize/2;
+        left: 0rem;
+        width: $menuToggleSize;
+        height: $menuToggleSize/7;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.show {
+      width: 100vh;
+      height: 100vh;
+      border-color: white;
+      border-color: rgba(255,255,255,0.0);
+
+      .menuBg {
+        background-color: $menuBackgroundOn;
+        // background-color: black;
+        // opacity: 0.7;
+
+        .linkBox {
+          opacity: 1.0;
+        }
+
+        .linkBox:nth-of-type(1) {
+          transform: translateY(-50%) rotate(-5deg);
+          transition-delay: $menuExpandTime*0.75;
+        }
+        .linkBox:nth-of-type(2) {
+          transform: translateY(-50%) rotate(-35deg);
+          transition-delay: $menuExpandTime*0.75 + $linkFanTime/2;
+        }
+        .linkBox:nth-of-type(3) {
+          transform: translateY(-50%) rotate(-65deg);
+          transition-delay: $menuExpandTime*0.75 + $linkFanTime;
+        }
+      }
+
+      .menuToggle {
+        transform: rotate(45deg);
+
+        &:after, &:before {
+          background-color: white;
+        }
       }
     }
   }
