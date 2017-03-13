@@ -362,7 +362,7 @@ body {
 }
 
 .blockTextTL {
-  margin: 4rem 2rem 0.5rem 0.5rem;
+  margin: 4rem 2rem 1.3rem 1rem;
 }
 
 .blockButton {
@@ -385,7 +385,7 @@ body {
             animation: bounceSpread $boxLinkTransitionTime ease-in-out forwards;
 
     background-color: $boxTransitionColor;
-    z-index: 99;
+    z-index: 99 !important;
 
     .blockTextBR, .blockTextTL, .buttonImg {
       opacity: 0.0;
@@ -449,6 +449,11 @@ body {
     font-size: 3rem;
     padding-right: 1.5rem;
     line-height: 3rem;
+
+    @media (min-width: $smallScreen) {
+      left: 2rem;
+      bottom: 1.5rem;
+    }
   }
 
   .subTitle {
@@ -650,7 +655,7 @@ body {
   }
 
   p {
-    font-family: $blurbFont;
+    font-family: $bodyFont;
     font-size: 1.5rem;
     padding: 1rem 0rem;
   }
@@ -811,19 +816,27 @@ body {
       }
     }
 
+    .blurbCopy {
+      p {
+        font-family: $bodyFont;
+      }
+    }
+
     .buttonHolder {
       position: absolute;
       top: 90%;
-      margin: 0 $pageMargin*2;
+      left: 25%;
+      margin: 0;
     }
   }
 
   #whatWeDoButton {
     @extend .blockButton;
-    height: 10vw;
-    width: 30vw;
-    min-width: 250px;
-    max-width: 400px;
+    width: 500px;
+    height: 200px;
+    .blockText {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -891,7 +904,7 @@ body {
     border: 1px solid #ccc;
     font-family: $bodyFont;
     height: 2rem;
-    width: 80%;
+    width: 50%;
     max-width: 18rem;
     text-align: center;
   }
@@ -1111,21 +1124,21 @@ body {
           font-size: 2rem;
         }
       }
+
+      .buttonHolder {
+        left: 10%;
+      }
     }
+
+    #whatWeDoButton {
+      width: 400px;
+      height: 160px;
+      .blockText {
+        font-size: 2.5rem;
+      }
+    }
+
   }
-
-  // #pageTitleBox {
-  //   width: 27vw;
-
-  //   .title {
-  //     font-size: 2rem;
-  //   }
-  //   .subTitle {
-  //     font-size: 1rem;
-  //   }
-  // }
-  //
-
   #pageTitleBox {
     width: 30%;
     bottom: $pageMargin;
@@ -1180,6 +1193,14 @@ body {
   .noShowTablet {display: none !important;}
   #cornerLogo {left: $pageMargin/2;}
 
+  .blockTextBR {
+    margin: 0rem 0.9rem 0.6rem 0rem;
+  }
+
+  .blockTextTL {
+    margin: 4rem 2rem 0.6rem 0.9rem;
+  }
+
   #alternatingImages {
     overflow: hidden;
     margin: 0px;
@@ -1222,17 +1243,19 @@ body {
       margin-bottom: 10rem;
 
       .buttonHolder {
-        // position: absolute;
-        // top: 100%;
         left: 50%;
         margin: 2rem 0rem;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+        z-index: 5;
       }
     }
 
     #whatWeDoButton {
       height: 120px;
       width: 300px;
+      .blockText {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -1330,8 +1353,11 @@ body {
     }
 
     #whatWeDoButton {
-      height: 100px;
-      width: 40%;
+      height: 80px;
+      width: 200px;
+      .blockText {
+        font-size: 1.5rem;
+      }
     }
   }
 
