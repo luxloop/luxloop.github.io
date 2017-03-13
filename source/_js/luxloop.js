@@ -7,9 +7,17 @@
   ///////////////////////
   // Events
 
-  window.onunload = function(){$('body').addClass('showBody')};
+  //window.onunload = function(){$('body').addClass('showBody')};
+  //$(window).unload(function(){});
+
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      window.location.reload()
+    }
+  };
 
   $(document).ready(function() {
+    console.log("ready")
     $(window).scrollIntent();
     $('body').addClass('showBody')
     initParallax();
@@ -17,6 +25,10 @@
     printContactInfo();
     initVideos();
     scrollHandler();
+  });
+
+  $(window).on('load', function() {
+    console.log("load")
   });
 
   $(".menuToggle").on('click',function(e) {
