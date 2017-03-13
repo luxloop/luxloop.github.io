@@ -989,13 +989,13 @@ body {
     bottom: 20px;
     right: initial;
     left: $pageMargin/2 - 0.5rem;
-    min-width: 200px;
+    min-width: 300px;
 
     .title {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
     .subTitle {
-      font-size: 1rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -1101,6 +1101,17 @@ body {
         font-size: 3rem;
         margin: 3rem 4rem;
       }
+    }
+  }
+
+  #pageTitleBox {
+    min-width: 200px;
+
+    .title {
+      font-size: 2rem;
+    }
+    .subTitle {
+      font-size: 1.5rem;
     }
   }
 
