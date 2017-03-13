@@ -1,0 +1,1102 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"font",
+				"fontStack1"
+			],
+			[
+				"sh",
+				"showInfo"
+			],
+			[
+				"de",
+				"deBounce"
+			],
+			[
+				"clear",
+				"clearPageInterval"
+			],
+			[
+				"cle",
+				"clearInterval"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"cool",
+				"coolHeading"
+			],
+			[
+				"text",
+				"textDiv"
+			],
+			[
+				"bg",
+				"bgDiv"
+			],
+			[
+				"fon",
+				"fontStack1"
+			],
+			[
+				"card",
+				"cardBorderColor"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"switch",
+				"switchPage"
+			],
+			[
+				"no",
+				"no-touch"
+			],
+			[
+				"coo",
+				"coolHeading"
+			],
+			[
+				"med",
+				"mediaHolder"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"proj",
+				"projInfo"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"pD",
+				"pData"
+			],
+			[
+				"pDa",
+				"projectData"
+			],
+			[
+				"project",
+				"projectData"
+			],
+			[
+				"con",
+				"contentIndex"
+			],
+			[
+				"por",
+				"projectData"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"switc",
+				"switchPage"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"html",
+				"html	html"
+			],
+			[
+				"length",
+				"length-1"
+			],
+			[
+				"pay",
+				"backupPayoffs"
+			],
+			[
+				"which",
+				"whichBrowser"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"has",
+				"hasWebGl"
+			],
+			[
+				"fa",
+				"fade6s"
+			],
+			[
+				"pro",
+				"progress"
+			],
+			[
+				"crea",
+				"createGain"
+			],
+			[
+				"stacked",
+				"stackedVideo"
+			],
+			[
+				"song",
+				"songChapter"
+			],
+			[
+				"Br",
+				"Bridge2"
+			],
+			[
+				"pr",
+				"progress"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"stac",
+				"stackedVideo"
+			],
+			[
+				"daeth",
+				"deathVideo"
+			],
+			[
+				"death",
+				"deathVidPath"
+			],
+			[
+				"dathV",
+				"deathVidPath"
+			],
+			[
+				"perc",
+				"percent"
+			],
+			[
+				"gr",
+				"graphicsBlendMode"
+			],
+			[
+				"graph",
+				"graphicsBlendMode"
+			],
+			[
+				"gra",
+				"graphicsFill"
+			],
+			[
+				"B",
+				"BLEND_MODES"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"ren",
+				"renderer2"
+			],
+			[
+				"load",
+				"loadPerc"
+			],
+			[
+				"d",
+				"dperc"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"look",
+				"lookup"
+			],
+			[
+				"tap",
+				"tapSection"
+			],
+			[
+				"conso",
+				"consoleOutput"
+			],
+			[
+				"tapT",
+				"tapTimeout"
+			],
+			[
+				"pixe",
+				"pixelSize"
+			],
+			[
+				"cirl",
+				"circleBurst"
+			],
+			[
+				"fade",
+				"fade2s"
+			],
+			[
+				"circl",
+				"circleBurst"
+			],
+			[
+				"cir",
+				"circleShapes"
+			],
+			[
+				"b",
+				"bMargin"
+			],
+			[
+				"consl",
+				"consoleOutput"
+			],
+			[
+				"all",
+				"allTaps"
+			],
+			[
+				"lerp",
+				"lerpStop"
+			],
+			[
+				"err",
+				"errorOverlay"
+			],
+			[
+				"cons",
+				"consoleOutput"
+			],
+			[
+				"au",
+				"audioFormat"
+			],
+			[
+				"Chor",
+				"Chorus3"
+			],
+			[
+				"trans",
+				"translateX"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"tab",
+				"tablet"
+			],
+			[
+				"image",
+				"imageSprites"
+			],
+			[
+				"set",
+				"setupVideo"
+			],
+			[
+				"video",
+				"videoNames"
+			],
+			[
+				"vide",
+				"videoNames"
+			],
+			[
+				"sta",
+				"statusResponse"
+			],
+			[
+				"medi",
+				"media_ids"
+			],
+			[
+				"tapS",
+				"tapSection"
+			],
+			[
+				"tapSe",
+				"tapSections"
+			],
+			[
+				"lerpS",
+				"lerpStart"
+			],
+			[
+				"payoff",
+				"payoffCanvas"
+			],
+			[
+				"global",
+				"globalAlpha"
+			],
+			[
+				"random",
+				"randomInt"
+			],
+			[
+				"Cho",
+				"Chorus3"
+			],
+			[
+				"active",
+				"activeVid"
+			],
+			[
+				"play",
+				"playVideo"
+			],
+			[
+				"a",
+				"a	<a>"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"w",
+				"w	width"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"glitch",
+				"glitchOut"
+			],
+			[
+				"glit",
+				"glitchOut"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"toggl",
+				"toggleStack"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"media",
+				"mediaPath"
+			],
+			[
+				"vid",
+				"vidPlaying"
+			],
+			[
+				"is",
+				"isPlaying"
+			],
+			[
+				"hasD",
+				"hasDied"
+			],
+			[
+				"blink",
+				"blinking"
+			],
+			[
+				"isA",
+				"isAlive"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"bli",
+				"blinking"
+			],
+			[
+				"remov",
+				"removeClass"
+			],
+			[
+				"show",
+				"showBpm"
+			],
+			[
+				"sho",
+				"showBpm"
+			],
+			[
+				"start",
+				"startDying"
+			],
+			[
+				"resi",
+				"resizeGraphics"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"fad",
+				"fade6s"
+			],
+			[
+				"ranom",
+				"randomInt"
+			],
+			[
+				"beat",
+				"beatHeart"
+			],
+			[
+				"heart",
+				"heartAnimations"
+			],
+			[
+				"hear",
+				"heartAnimations"
+			],
+			[
+				"rand",
+				"randomGradient"
+			],
+			[
+				"view",
+				"viewer"
+			],
+			[
+				"viewe",
+				"viewerID"
+			],
+			[
+				"wave",
+				"waveCanvas"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/MD export.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MD export.sublime-build",
+					"HTML"
+				],
+				[
+					"Packages/User/MD export.sublime-build",
+					"PDF"
+				],
+				[
+					"Packages/User/MD export.sublime-build",
+					"RTF"
+				],
+				[
+					"Packages/User/MD export.sublime-build",
+					"DOC"
+				]
+			],
+			[
+				"Packages/User/MD export.sublime-build",
+				"HTML"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"mark	",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"lore",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"lorem",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"js",
+				"Pretty JSON: Validate"
+			],
+			[
+				"json",
+				"Pretty JSON: Validate"
+			],
+			[
+				"va",
+				"Pretty JSON: Validate"
+			],
+			[
+				"swi",
+				"Set Syntax: Swift"
+			],
+			[
+				"swift",
+				"Set Syntax: Swift"
+			],
+			[
+				"l",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"vali",
+				"Pretty JSON: Validate"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"bu",
+				"Build With: MD export - HTML"
+			],
+			[
+				"packa rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"syntax",
+				"SyntaxFold: Open README"
+			],
+			[
+				"syntax fold",
+				"SyntaxFold: Unfold All Default"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"intsall",
+				"Package Control: Install Package"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"remv",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ivaylopg/Documents/00_Projects/OverheardAppProject/Misc/outlines.mdown",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/index.html",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/fonts/fonts.css",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/js/luxloop.min.js",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/luxloop.sublime-project",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/package.json",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/gulpfile.js",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/css/luxloop.css",
+		"/Users/ivaylopg/Documents/01_Websites/luxloop/CNAME",
+		"/Users/ivaylopg/Documents/00_Projects/OverheardAppProject/Overheard/Overheard/OHAssets/OHData/overheard.json",
+		"/Users/ivaylopg/Desktop/Backup Sergei iPhonestein - 2016-03-28.imazing",
+		"/Users/ivaylopg/Documents/00_Projects/OverheardAppAPI/package.json",
+		"/Users/ivaylopg/Library/Mobile Documents/com~apple~CloudDocs/Misc/WakaTimeBackups/2016-03-15-to-2016-03-22.json",
+		"/Users/ivaylopg/Dotfiles/03_osxSetup.sh",
+		"/Users/ivaylopg/Desktop/overhead.json",
+		"/Users/ivaylopg/Dotfiles/.functions",
+		"/Users/ivaylopg/Dotfiles/.aliases",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/payoffImages",
+		"/Users/ivaylopg/Documents/openFrameworks/apps/PRMuseumProject/interactivemuseumscreen/bin/lessonMedia/content.xml",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/elohim.sublime-project",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/gulpfile.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/overflow.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/templates/payoff.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/genid.js",
+		"/Users/ivaylopg/Documents/01_Websites/photoboothwebsite/photoboothwebsite.sublime-project",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/util.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/TODO.mdown",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/vendor/shuffle.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/twitter_config.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/s3_config.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/vid/getvideos.sh",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/fonts/pigmentsfonts.css",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/package.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/viewer.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/controller.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/controllerSketch.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/css/controller.css",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/fonts/sourcepro.css",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/sprites/clouds.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/vendor/filters/NoiseFilter.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/vendor/filters/InvertFilter.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/vendor/filters/ConvergenceFilter.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/vendor/waaclock.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/pigmentsPixi.js",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/SyntaxFold/README.md",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/syntax_fold.sublime-settings",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/js/pigmentsSketch.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/sass/controller.scss",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/controller.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/sass/viewer.scss",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/viewer.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/public/css/viewer.css",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/pairingmodel.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/package.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/ElohimVideo/.gitignore",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/dbModels/slackchannel.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/server.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/luxloopapi.js",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/dbModels/slackuser.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/dbModels/slackmessage.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/sass/slack.scss",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/js/util.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/js/chartThemes.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/js/package.json",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/sass/partials/_bpDefaults.scss",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/package.json",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ivaylopg/Dropbox (Luxloop)/Company Paperwork/References/ClassNotes/UnityRoadShow/UnityRoadshowNotes.mdown",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/templates/login.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/js/analytics.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/js/typekit.js",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/public/index.html",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/LuxloopAPI/luxloopapi.sublime-project",
+		"/Users/ivaylopg/Dotfiles/02_brewAndNpm.sh",
+		"/Users/ivaylopg/Dotfiles/.gitconfig",
+		"/Users/ivaylopg/Dotfiles/.bash_profile",
+		"/Users/ivaylopg/Dotfiles/.zshrc",
+		"/Users/ivaylopg/Dotfiles/01_tools.sh",
+		"/Users/ivaylopg/Dotfiles/.eslintrc",
+		"/Users/ivaylopg/Dotfiles/.bash_prompt",
+		"/Users/ivaylopg/Desktop/ivaylo.mdown",
+		"/Users/ivaylopg/Dotfiles/.vimrc",
+		"/Users/ivaylopg/Dotfiles/.gitignore",
+		"/Users/ivaylopg/Dotfiles/.path",
+		"/Users/ivaylopg/Dotfiles/05_misc.sh",
+		"/Users/ivaylopg/Dotfiles/04_symlink-setup.sh",
+		"/Users/ivaylopg/Dotfiles/.editorconfig",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ivaylopg/Dotfiles/00_backup.sh",
+		"/Users/ivaylopg/Dotfiles/.mackup.cfg",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/move bins",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.gitconfig",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.exports",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.bash_profile",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.path",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.aliases",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/bin/battery",
+		"/Users/ivaylopg/Desktop/battery",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.functions",
+		"/Users/ivaylopg/Desktop/license",
+		"/Users/ivaylopg/Desktop/spark",
+		"/Users/ivaylopg/Desktop/lictest.txt",
+		"/Users/ivaylopg/Desktop/license.txt",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/reference.md",
+		"/Users/ivaylopg/Desktop/Dunnet",
+		"/Users/ivaylopg/Documents/00_Projects/Luxloop/iBeaconTest/OverheardBeaconTests/OverheardBeaconTests/ViewController.swift",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/03_osxSetup.sh",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/04_symlink-setup.sh",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/highlighter.sublime-settings",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/Highlighter/highlighter.sublime-settings",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/01_tools.sh",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/dotfiles.sublime-project",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/02_brewAndNpm.sh",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/public/project.html",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/public/js/nodeField.js",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/ivaylogetov.sublime-project",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/ivaylo.js",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/public/js/encode.js",
+		"/Users/ivaylopg/Documents/01_Websites/ivaylogetov.com/sass/partials/_cube.scss",
+		"/Users/ivaylopg/Desktop/font",
+		"/Users/ivaylopg/Documents/99_Misc/Dotfiles/.zshrc",
+		"/Users/ivaylopg/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>",
+			"/Users/ivaylopg/Documents/99_Misc/Dotfiles"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"restore",
+			"lastsce",
+			"html",
+			"\">\n",
+			"html",
+			"detect",
+			"underline",
+			"fillbox",
+			"hover",
+			"clear'",
+			"intervaL",
+			"setPa",
+			"foo",
+			"target",
+			"targer",
+			"interva",
+			"setIn",
+			"set",
+			"descrip",
+			"projname",
+			"font-fam",
+			"font",
+			"opacity",
+			"switch",
+			"linear",
+			"console",
+			"valida",
+			"validae",
+			"fontStack1",
+			"overflo",
+			"public",
+			"condi",
+			"favic",
+			"xcode",
+			"swift",
+			"langu",
+			"afconver",
+			"whichBr",
+			"ismobile",
+			"requestAnimationFrame",
+			"animate",
+			"versionCompare",
+			"WhichBrowser",
+			"doubl",
+			"font",
+			"css",
+			".js",
+			"checkPer",
+			"support",
+			"jpg",
+			"png",
+			"jpg",
+			"png",
+			"stems",
+			"heartbea",
+			"mp3",
+			"soundwave",
+			"heartSmall.png",
+			"heart.png",
+			"mediapa",
+			"png",
+			"jpg",
+			"png",
+			"showError",
+			"setupSpri",
+			"fromFrame(heart)",
+			"credits",
+			"phonew",
+			"device",
+			"renderer = ",
+			"resizemedi",
+			"resizeSpr",
+			"webglRed",
+			"haswebgl",
+			"usingWe",
+			"hasWebGl",
+			"modern",
+			"addGet",
+			"getWebGLErrorMessage",
+			"gains[1]",
+			"clampAu",
+			"clamp",
+			"source.vo",
+			"gains[i",
+			"window.AudioContext",
+			"context",
+			"elementS",
+			"element",
+			"splas",
+			"splash",
+			"loadimages",
+			"loadperc",
+			"var loadperc",
+			"loadperc",
+			"dying",
+			"isdying",
+			"songDeadSpeed",
+			"cors",
+			"songDying",
+			"songdying",
+			"sprites",
+			"heart",
+			"beating",
+			"case 'PostChorus':",
+			"addbursts(1)",
+			"graphi",
+			"animate",
+			"mixes[mixes.length - 1]",
+			"volumes",
+			"setmixes",
+			"source.mu",
+			"favico",
+			"createnewp",
+			"icon",
+			"iocn",
+			"favi",
+			"createNew",
+			"makeuni",
+			"animate",
+			"shortid",
+			"useWebAudio",
+			"nosup",
+			"nosuppo",
+			"nosupp",
+			"hide",
+			"usewebau",
+			"hideload",
+			"load"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"mixes[mixes.length - 1]",
+			"'stackA'",
+			"p.progress",
+			"'meter'",
+			"$('.loadText').text",
+			"",
+			"pgmtP5",
+			"\\\"",
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 106.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fun",
+				".functions"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/01_Websites/ivaylogetov.com/sass/ivaylogetov.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
