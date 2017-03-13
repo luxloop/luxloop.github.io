@@ -1,5 +1,7 @@
 # Luxloop
 
+![](http://luxloop.com/assets/img/luxScreenshot.png)
+
 Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds.
 
 ---

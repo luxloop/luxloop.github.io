@@ -29,7 +29,8 @@
   "scripts": {
     "build": "gulp build",
     "local": "python ./scripts/localserver.py",
-    "publish": "bash ./scripts/deploy.sh -v"
+    "publish": "bash ./scripts/deploy.sh -v",
+    "livetest": "rsync -rv --exclude 'tests' docs luxloopaws:/var/www/luxTest/"
   },
   "repository": {
     "type": "git",
