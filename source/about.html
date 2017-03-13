@@ -12,19 +12,19 @@
 
   <!-- <link rel="stylesheet" href="/assets/css/normalize.min.css"> -->
   <link rel="stylesheet" href="/assets/css/lux.min.css">
-  <!-- <style type="text/css">
-    .showcaseImage:nth-of-type(1) .aspectContent {
-      background-image: url('/assets/projects/overheard/demo.gif');
+  <style type="text/css">
+    #featuredProjects .boxesBox:nth-of-type(2) .buttonImg {
+      background-image: url('/assets/projects/overheard/cover.png');
     }
 
-    .showcaseImage:nth-of-type(2) .aspectContent {
-      background-image: url('/assets/projects/overheard/oh8.jpg');
+    #featuredProjects .boxesBox:nth-of-type(3) .buttonImg {
+      background-image: url('/assets/projects/blackcloak/cover.png');
     }
 
-    .showcaseImage:nth-of-type(3) .aspectContent {
-      background-image: url('/assets/projects/overheard/oh2.jpg');
+    #featuredProjects .boxesBox:nth-of-type(4) .buttonImg {
+      background-image: url('/assets/projects/pigments/cover.jpg');
     }
-  </style> -->
+  </style>
   <script src="/assets/js/vendor/modernizr.min.js"></script>
 </head>
 <body id="aboutPage" class="enableFade">
@@ -59,40 +59,59 @@
     </section>
 
 
-    <section id="blurb" class="blurbGridContainer">
-      <div class="blurbColumn blurbCol4 blurbImage noShowMobile">
-        <!-- <div class="aspect ratio-1-1">
-          <div class="aspectContent"></div>
-        </div> -->
-        <div class="flexBlurbImage">
+    <section class="fullWidthCopy">
+      <p>
+        We tell stories using new and near-future technology to create engaging interactive experiences that evoke wonder and foster a sense of discovery for artists and brands alike.
+      </p>
 
+      <p>
+        We often think about how technology can change the world around us. Rather than focus on a specific technology, we focus on story and engagement and pick the technology that will allow us to bring the idea to life.
+      </p>
+
+      <p>
+        We dream, sketch, prototype, and play.<br>
+        We build apps to tell stories.<br>
+        We use projection to transform worlds.<br>
+        We like to find ways to make magic real.<br>
+      </p>
+    </section>
+
+    <section id="featuredProjects" class="showcaseBoxes gridContainer">
+
+      <div class="column column12 boxesHead">
+        <h1>Featured Projects</h1>
+      </div>
+
+      <div class="column column4 boxesBox">
+        <div class="aspect ratio-3-4">
+          <div class="aspectContent">
+            <a href="overheard.html" class="blockContainer blockButton expandButton">
+              <div class="buttonImg"></div>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="blurbColumn blurbCol8 blurbCopy">
-        <h1>Changing Minds About Things and People</h1>
-        <p>
-          We tell stories using new and near-future technology to create engaging interactive experiences that evoke wonder and foster a sense of discovery for artists and brands alike.
-        </p>
-
-        <p>
-          We often think about how technology can change the world around us. Rather than focus on a specific technology, we focus on story and engagement and pick the technology that will allow us to bring the idea to life.
-        </p>
-
-        <p>
-          We dream, sketch, prototype, and play.<br>
-          We build apps to tell stories.<br>
-          We use projection to transform worlds.<br>
-          We like to find ways to make magic real.<br>
-        </p>
-
+      <div class="column column4 boxesBox">
+        <div class="aspect ratio-3-4">
+          <div class="aspectContent">
+            <a href="blackcloak.html" class="blockContainer blockButton expandButton">
+              <div class="buttonImg"></div>
+            </a>
+          </div>
+        </div>
       </div>
 
-     <!--  <div class="buttonHolder">
-        <a href="about.html" id="whatWeDoButton" class="expandButton">
-          <p class="blockText blockTextBR">What We Do</p>
-        </a>
-      </div> -->
+      <div class="column column4 boxesBox">
+        <div class="aspect ratio-3-4">
+          <div class="aspectContent">
+            <a href="pigments.html" class="blockContainer blockButton expandButton">
+              <div class="buttonImg"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
 
     </section>
 
@@ -101,15 +120,14 @@
         <div class="aspectContent parallax cropped" data-offset="-200"><img src="/assets/img/pigments.jpg" alt=""></div>
       </div>
 
-      <div class="floatQuote">
-
+      <div class="floatQuote blockContainer">
+        <p class="blockText blockTextTL">
+          Changing Minds About<br>Things and People
+        </p>
       </div>
 
     </section>
 
-    <section class="showcaseBoxes">
-
-    </section>
 
     {{> footer}}
 

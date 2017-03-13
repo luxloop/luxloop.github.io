@@ -49,6 +49,11 @@ $mediumGrid: (
   media: $mobile,
 );
 
+$smallScreenGrid: (
+  gutter: $pageMargin/2,
+  media: $smallScreen,
+);
+
 $largeGrid: (
   gutter: $pageMargin,
   media: $tablet,
@@ -83,6 +88,24 @@ $largeGrid: (
   }
   @include grid-media($largeGrid){
     @include grid-column(4);
+  }
+}
+
+.column3 {
+  @include grid-media($largeGrid){
+    @include grid-column(3);
+  }
+}
+
+.column4 {
+  @include grid-media($mediumGrid){
+    @include grid-column(8);
+    @include grid-push(2);
+  }
+
+  @include grid-media($largeGrid){
+    @include grid-column(4);
+    @include grid-push(0)
   }
 }
 
@@ -142,6 +165,13 @@ $largeBlurbGrid: (
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+@mixin floatCentered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin absTopRight {
@@ -298,6 +328,12 @@ body {
   background-color: white;
   box-shadow: 12px 11px 0px 0px $frontPageColor;
 
+  .buttonImg {
+    @include fullBg;
+    width: 100%;
+    height: 100%;
+  }
+
   .blockText {
     font-family: $headerFont;
     font-size: 2rem;
@@ -326,7 +362,7 @@ body {
   -webkit-transition: background-color $boxLinkTransitionTime ease-in-out;
           transition: background-color $boxLinkTransitionTime ease-in-out;
 
-  .blockTextBR, .blockTextTL {
+  .blockTextBR, .blockTextTL, .buttonImg {
     opacity: 1.0;
     -webkit-transition: opacity $boxLinkTransitionTime/4 ease-in-out;
             transition: opacity $boxLinkTransitionTime/4 ease-in-out;
@@ -339,7 +375,7 @@ body {
     background-color: #FF3531;
     z-index: 99;
 
-    .blockTextBR, .blockTextTL {
+    .blockTextBR, .blockTextTL, .buttonImg {
       opacity: 0.0;
     }
   }
@@ -558,6 +594,82 @@ body {
   }
 }
 
+.fullWidthMedia {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .parallax.cropped {
+    img {
+      width: 130%;
+      height: auto;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .floatQuote {
+    @include floatCentered;
+  }
+}
+
+.fullWidthCopy {
+  width: 100%;
+  padding: 2*$pageMargin $pageMargin;
+  font-size: 1.5rem;
+  text-align: justify;
+  position: relative;
+
+  h1 {
+    font-family: $headerFont;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  p {
+    font-family: $blurbFont;
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+  }
+}
+
+.showcaseBoxes {
+  position: relative;
+  .boxesHead {
+    // margin: 2rem 0 1rem 0;
+    text-align: center;
+
+    h1 {
+      font-family: $headerFont;
+      font-size: 2rem;
+      margin-top: 4rem;
+    }
+  }
+
+  .boxesBox {
+    // height: 12rem;
+
+    .aspect {
+      width: 90%;
+      margin: 1rem auto;
+
+      .aspectContent {
+        .blockContainer {
+          background: red;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
 
 ///////////////////////
 // Main Page Cover Styles
@@ -699,68 +811,12 @@ body {
   }
 }
 
-.fullWidthMedia {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .parallax.cropped {
-    img {
-      width: 130%;
-      height: auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-}
-
 ///////////////////////
 // About Page Styles
 
 #aboutPage {
-  #blurb {
-    margin: $pageMargin*2 0;
-    position: relative;
-
-    .blurbImage {
-      .flexBlurbImage {
-        width: 100%;
-        height: 28rem;
-        max-height: 50vh;
-        background-image: url('/assets/img/bluebutterfly.jpg');
-        background-position: 85% center !important;
-      }
-    }
-
-    .blurbCopy {
-      padding: 0 $pageMargin;
-      font-size: 1.5rem;
-      text-align: justify;
-
-      h1 {
-        font-family: $headerFont;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      p {
-        font-family: $bodyFont;
-        font-size: 1.1rem;
-        padding: 1rem 0rem;
-      }
-    }
-
-    .buttonHolder {
-      position: absolute;
-      top: 90%;
-      margin: 0 $pageMargin*2;
-    }
+  #featuredProjects {
+    margin-bottom: 8rem;
   }
 }
 
@@ -990,6 +1046,23 @@ body {
     }
   }
 
+  .fullWidthCopy {
+    margin-top: 3rem;
+    padding: 0 $pageMargin/2;
+    p {
+      font-size: 1.1rem;
+      // padding: 1rem 0rem;
+    }
+  }
+
+  .fullWidthMedia {
+    .floatQuote {
+      .blockText {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   #homePage {
     #bigLuxLogoBox {
       h1 {
@@ -1017,24 +1090,6 @@ body {
   }
 
   #aboutPage {
-    #blurb {
-      .blurbImage {
-        .flexBlurbImage {
-          width: 100%;
-          max-height: 30vh;
-        }
-      }
-
-      .blurbCopy {
-        margin-top: 3rem;
-        padding: 0 $pageMargin/2;
-        font-size: 1.3rem;
-        p {
-          // font-size: 1.1rem;
-          // padding: 1rem 0rem;
-        }
-      }
-    }
   }
 
   #projects {
@@ -1102,6 +1157,14 @@ body {
 
   .noShowMobile {display: none !important;}
   #cornerLogo {left: 1rem}
+
+  .fullWidthMedia {
+    .floatQuote {
+      .blockText {
+        font-size: 1rem;
+      }
+    }
+  }
 
   #homePage {
     #bigLuxLogoBox {
@@ -1180,6 +1243,14 @@ body {
 
 @media (max-width:$smallMobile) {
   #cornerLogo {left: 1rem}
+
+  .fullWidthMedia {
+    .floatQuote {
+      .blockText {
+        font-size: 0.7rem;
+      }
+    }
+  }
 
   #homePage {
     #bigLuxLogoBox {
