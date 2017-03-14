@@ -1147,8 +1147,8 @@ a {
     border-radius: initial;
   }
   #menuPos #cornerMenu .menuBg {
-    width: 100vw;
-    height: 100vh;
+    width: 105vw;
+    height: 105vh;
     background-color: transparent;
   }
   #menuPos #cornerMenu .menuBg .linkBox {
