@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
-    fs = require('fs'),
+    insert = require('gulp-insert'),
+    data = require('gulp-data'),
     hb = require('gulp-hb'),
     matter = require('gray-matter'),
     gutil = require('gulp-util'),
@@ -22,35 +23,32 @@ gulp.task('html', function () {
   return gulp
     .src(sourceDir + '{,!(_*)/}*.html')
     .pipe(hb({
-      partials: sourceDir + '_partials/*.hbs',
-      helpers: sourceDir + '_helpers/*.js',
-      data: sourceDir + '_data/*.{js,json}'
+      partials: sourceDir + '_templates/partials/*.hbs',
+      helpers: sourceDir + '_templates/helpers/*.js',
+      data: sourceDir + '_templates/data/*.{js,json}'
     }))
     .on('error', onError)
     .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('makeProjects', function() {
-  var fileData = {};
-
-  fs.readFile(sourceDir + 'projects/overheard.md', 'utf8', function (err,data) {
-    if (err) {
-      return console.log(err);
-    }
-    var m = matter(String(data));
-    fileData = m.data;
-    fileData.content = m.content;
-    //console.log(fileData);
-
-    return gulp
-      .src(sourceDir + 'index.html')
-      .pipe(hb({
-        partials: sourceDir + '_partials/*.hbs',
-        helpers: sourceDir + '_helpers/*.js',
-        data: fileData
-      }))
-      .pipe(gulp.dest('./test'));
-  });
+gulp.task('buildProjData', function() {
+  return gulp
+    .src(sourceDir + 'projects/*.{md,markdown}')
+    .pipe(data(function(file){
+      var m = matter(String(file.contents))
+      var project = m.data;
+      project.content = m.content;
+      //console.log(m)
+      file.contents = new Buffer(JSON.stringify(m.data));
+      return file;
+    }))
+    .pipe(concat('projects.json', {newLine: ','}))
+    //.pipe(insert.append(','))
+    .pipe(insert.wrap('[', ']'))
+    // .pipe(data(function(file){
+    //   console.log(String(file.contents))
+    // }))
+    .pipe(gulp.dest(sourceDir + '_templates/data'));
 });
 
 
