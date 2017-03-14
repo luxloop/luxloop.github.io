@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
+    fs = require('fs'),
     hb = require('gulp-hb'),
+    matter = require('gray-matter'),
     gutil = require('gulp-util'),
     notify = require("gulp-notify");
 
@@ -26,6 +28,29 @@ gulp.task('html', function () {
     }))
     .on('error', onError)
     .pipe(gulp.dest('./docs'));
+});
+
+gulp.task('makeProjects', function() {
+  var fileData = {};
+
+  fs.readFile(sourceDir + 'projects/overheard.md', 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    var m = matter(String(data));
+    fileData = m.data;
+    fileData.content = m.content;
+    //console.log(fileData);
+
+    return gulp
+      .src(sourceDir + 'index.html')
+      .pipe(hb({
+        partials: sourceDir + '_partials/*.hbs',
+        helpers: sourceDir + '_helpers/*.js',
+        data: fileData
+      }))
+      .pipe(gulp.dest('./test'));
+  });
 });
 
 
