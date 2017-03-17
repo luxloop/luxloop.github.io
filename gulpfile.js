@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     hb = require('gulp-hb'),
     matter = require('gray-matter'),
     gutil = require('gulp-util'),
-    notify = require("gulp-notify");
+    notify = require("gulp-notify"),
+    runSequence = require('run-sequence');
 
 var sourceDir = "source/"
 var destDir = "docs/"
@@ -38,16 +39,11 @@ gulp.task('buildProjData', function() {
       var m = matter(String(file.contents))
       var project = m.data;
       project.content = m.content;
-      //console.log(m)
       file.contents = new Buffer(JSON.stringify(m.data));
       return file;
     }))
     .pipe(concat('projects.json', {newLine: ','}))
-    //.pipe(insert.append(','))
-    .pipe(insert.wrap('[', ']'))
-    // .pipe(data(function(file){
-    //   console.log(String(file.contents))
-    // }))
+    .pipe(insert.wrap('{"projects": [', ']}'))
     .pipe(gulp.dest(sourceDir + '_templates/data'));
 });
 
@@ -150,20 +146,31 @@ function onError(error) {
 gulp.task('style', ['sass','moveCss']);
 gulp.task('js', ['compileJs','compileTools','moveJs']);
 
-gulp.task('build', ['html','js','style']);
+//gulp.task('build', ['buildProjData','html','js','style']);
+
+gulp.task('build', function() {
+  runSequence(
+    'buildProjData',
+    ['html','js','style']
+  );
+});
+
+gulp.task('watchdata', function() {
+  gulp.watch([sourceDir + 'projects/*.{md,markdown}'],['buildProjData'])
+})
 
 gulp.task('watchhtml', function() {
-    gulp.watch([sourceDir + '{,!(_*)/}*.html',sourceDir + '_partials/*.hbs'], ['html']);
+  gulp.watch([sourceDir + '{,!(_*)/}*.html',sourceDir + '_templates/partials/*.hbs'], ['html']);
 });
 
 gulp.task('watchcss', function() {
-    gulp.watch([sourceDir + '_sass/*.scss',sourceDir + '_sass/partials/*.scss'], ['sass']);
+  gulp.watch([sourceDir + '_sass/*.scss',sourceDir + '_sass/partials/*.scss'], ['sass']);
 });
 
 gulp.task('watchjs', function() {
-    gulp.watch(sourceDir + '_js/*.js', ['compileJs']);
+  gulp.watch(sourceDir + '_js/*.js', ['compileJs']);
 });
 
-gulp.task('watch', ['watchhtml','watchcss','watchjs']);
+gulp.task('watch', ['watchdata','watchhtml','watchcss','watchjs']);
 
 gulp.task('default', ['build']);
