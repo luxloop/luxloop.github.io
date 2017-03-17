@@ -5,26 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Luxloop</title>
+  <title>Luxloop - {{ name }}</title>
   <meta name="description" content="Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds by finding new ways to captivate and inspire our fellow humans. " />
 
   <!-- <link rel="SHORTCUT ICON" href="/assets/img/favicon.ico" /> -->
 
   <!-- <link rel="stylesheet" href="/assets/css/normalize.min.css"> -->
   <link rel="stylesheet" href="/assets/css/lux.min.css">
-  <style type="text/css">
-    .showcaseImage:nth-of-type(1) .aspectContent {
-      background-image: url('/assets/projects/overheard/demo.gif');
-    }
-
-    .showcaseImage:nth-of-type(2) .aspectContent {
-      background-image: url('/assets/projects/overheard/oh8.jpg');
-    }
-
-    .showcaseImage:nth-of-type(3) .aspectContent {
-      background-image: url('/assets/projects/overheard/oh2.jpg');
-    }
-  </style>
   <script src="/assets/js/vendor/modernizr.min.js"></script>
 </head>
 <body id="projectPage" class="enableFade">
@@ -40,8 +27,18 @@
 
     <section id="pageCover">
       <div class="coverImage">
-      <!-- <img src="/assets/projects/overheard/cover.png"> -->
-        <video muted loop class="bgVid enableFade fadeOut" src="" type="video/mp4" poster="/assets/projects/overheard/cover.png" data-file="/assets/projects/overheard/cover.mp4"></video>
+      {{#if coverVid}}
+        <video muted loop class="bgVid enableFade fadeOut" src="" type="video/mp4"
+          {{#if coverVid.poster}}
+          poster="{{coverVid.poster}}"
+          {{else if coverImg}}
+          poster="{{coverImg}}"
+          {{/if}}
+          data-file="{{coverVid.vid}}">
+        </video>
+      {{else if coverImg}}
+        <img src="{{coverImg}}">
+      {{/if}}
       </div>
       <div id="cornerLogo">
         <a href="/" class="fadeLink">luxloop</a>
@@ -51,8 +48,10 @@
         <div class="aspect ratio-2-3">
           <div class="aspectContent blockContainer">
             <div class="title blockText">
-              <p>Overheard</p>
-              <!-- <p class="subTitle">Subtitle</p> -->
+              <p>{{name}}</p>
+              {{#if subTitle}}
+              <p class="subTitle">{{subTitle}}</p>
+              {{/if}}
             </div>
           </div>
         </div>
@@ -62,20 +61,10 @@
 
     <section id="projectInfo" class="gridContainer">
       <div class="title column column8">
-        <h1>site-specific audio narrative</h1>
+        <h1>{{headline}}</h1>
       </div>
       <div class="description column column8">
-        <p>
-          Overheard is a site-specific audio narrative woven into the Minneapolis Institute of Art. Similar to immersive theatre, it allows you to explore stories in your own way, at your own pace as you journey through the museum.
-        </p>
-
-        <p>
-          As you explore the galleries, the app will recognize your location, allowing you to “overhear” characters through your headphones as if they are right there with you. You can listen in on a first date, go on a ghost hunt with children, or catch up with a couple old friends. It will be a new way to move through Mia and experience the incredible works on view through different people’s perspectives and explore the fascinating ways that people can connect with art.
-        </p>
-
-        <p>
-          Overheard is the winning project of the inaugural 3M Art and Technology Award that recognizes artistry and innovation in the field of technology.
-        </p>
+        {{{content}}}
 
         <!-- <img src="/assets/projects/overheard/oh2.jpg"> -->
         <!-- <div class="fitVid">
@@ -84,101 +73,95 @@
 
       </div>
       <div class="details column column4-6">
+
+      {{#if roles}}
         <h1>Roles</h1>
         <ul>
-          <li>Concept Development</li>
-          <li>Content Production</li>
-          <li>Interactive Experience-Design</li>
+        {{#each roles}}
+          <li>{{this}}</li>
+        {{/each}}
         </ul>
+      {{/if}}
 
+      {{#if tech}}
         <h1>Tech</h1>
         <ul>
-          <li>Native iOS App</li>
-          <li>Custom Web API</li>
-          <li>Bluetooth Beacons</li>
+        {{#each tech}}
+          <li>{{this}}</li>
+        {{/each}}
         </ul>
+      {{/if}}
+
       </div>
       <div class="details column column4-6">
+
+      {{#if team}}
         <h1>Team</h1>
+        {{#each team}}
         <div class="teamEntry">
+        {{#if credit}}
           <div class="role">
-            <p>Produced and Directed by</p>
+          {{#ifObject credit}}
+            {{#each credit}}
+            <p>{{this}}</p>
+            {{/each}}
+          {{else}}
+            <p>{{credit}}</p>
+          {{/ifObject}}
           </div>
-
+        {{/if}}
+        {{#if people}}
           <div class="people">
-            <p>Mandy Mandelstein</p>
-            <p>Ivaylo Getov</p>
+          {{#ifObject people}}
+            {{#each people}}
+            <p>{{this}}</p>
+            {{/each}}
+          {{else}}
+            <p>{{people}}</p>
+          {{/ifObject}}
           </div>
+        {{/if}}
         </div>
 
-        <div class="teamEntry">
-          <div class="role">
-            <p>Story by</p>
-          </div>
+        {{/each}}
+      {{/if}}
 
-          <div class="people">
-            <p>Jeremy Ungar</p>
-            <p>Mandy Mandelstein</p>
-            <p>Ivaylo Getov</p>
-          </div>
-        </div>
-
-        <div class="teamEntry">
-          <div class="role">
-            <p>Written by</p>
-          </div>
-
-          <div class="people">
-            <p>Jeremy Ungar</p>
-          </div>
-        </div>
-
-        <div class="teamEntry">
-          <div class="role">
-            <p>Presented By: 3M</p>
-            <p>Generous support provided by Accenture.</p>
-          </div>
-
-          <div class="people"></div>
-        </div>
-
+      {{#if links}}
         <h1>Links</h1>
         <ul>
-          <li><a href="http://www.nytimes.com/2016/10/30/arts/design/technology-invites-a-deep-dive-into-art.html?smid=fb-share&_r=1" class="linkAnim" target="_blank">New York Times</a></li>
-          <li><a href="http://www.3m.com/3M/en_US/Newsroom/Full-Story/?storyid=a38c9241-42d9-4608-9de4-e50d0db70480" class="linkAnim" target="_blank">3M Newsroom</a></li>
-          <li><a href="http://overheard.luxloop.com" class="linkAnim" target="_blank">Project Page</a></li>
+        {{#each links}}
+          <li><a href="{{{address}}}" class="linkAnim"
+                 {{#if alt}}
+                 alt="{{alt}}"
+                 {{/if}}
+                 target="_blank">{{text}}</a></li>
+        {{/each}}
         </ul>
+      {{/if}}
 
       </div>
     </section>
 
-    <section id="alternatingImages" class="v2">
-
+    <section {{#if showcaseVersion}}class="v{{showcaseVersion}}"{{else}}class="v1"{{/if}} id="alternatingImages">
+      {{!--
       <!-- <div class="showcaseImage parallax" data-offset="-100">
         <div class="aspect ratio-2-3">
           <div class="aspectContent fitVid">
             <iframe src="http://player.vimeo.com/video/114310483?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
         </div>
-      </div> -->
+      </div> --> --}}
 
-      <div class="showcaseImage parallax" data-offset="-100">
-        <div class="aspect ratio-2-3">
-          <div class="aspectContent"></div>
+    {{#each showcaseImages }}
+      <div {{#if offset}}
+           data-offset="{{offset}}"
+           {{/if}}
+           class="showcaseImage parallax">
+        <div class="aspect ratio-{{aspectRatio}}">
+          <div class="aspectContent" style="background-image: url('{{image}}');"></div>
         </div>
       </div>
-
-      <div class="showcaseImage">
-        <div class="aspect ratio-2-3">
-          <div class="aspectContent"></div>
-        </div>
-      </div>
-
-      <div class="showcaseImage parallax" data-offset="-200">
-        <div class="aspect ratio-9-16">
-          <div class="aspectContent"></div>
-        </div>
-      </div>
+    {{/each }}
 
     </section>
 

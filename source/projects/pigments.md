@@ -8,10 +8,12 @@ coverImg: /assets/projects/pigments/cover.jpg
 showcaseImages:
   - image: /assets/projects/pigments/download-1.png
     aspectRatio: 9-16
+    offset: -100
   - image: /assets/projects/pigments/pigments.gif
     aspectRatio: 2-3
   - image: /assets/projects/pigments/download-4.png
     aspectRatio: 1-3
+    offset: -200
 roles:
   - Interaction Design
   - Full-Stack Development
@@ -24,7 +26,7 @@ team:
   - credit: Co-Creator/Writer
     people:
       - Sebastian Lyman
-  - credit: Co-Creator/Writer
+  - credit: Co-Creator/Designer
     people:
       - Natalie Seitz
   - credit: Video Director
@@ -54,7 +56,7 @@ links:
     text: Pigeons and Planes
   - address: http://whitestone.io/project/pigments/
     text: Whitestone
-subtitle: ""
+subTitle: ""
 ---
 
 <p>

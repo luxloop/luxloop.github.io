@@ -11,10 +11,13 @@ coverVid:
 showcaseImages:
   - image: /assets/projects/overheard/demo.gif
     aspectRatio: 2-3
+    offset: -100
   - image: /assets/projects/overheard/oh8.jpg
     aspectRatio: 2-3
   - image: /assets/projects/overheard/oh2.jpg
     aspectRatio: 9-16
+    offset: -200
+showcaseVersion: 2
 roles:
   - Concept Development
   - Content Production
@@ -46,7 +49,7 @@ links:
     text: 3M Newsroom
   - address: http://overheard.luxloop.com
     text: Project Page
-subtitle: ""
+subTitle: ""
 ---
 
 <p>
