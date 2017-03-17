@@ -197,11 +197,12 @@
       var video = $(this);
       var vidElement = video.get(0);
       var vidFile = $(this).attr('data-file');
+      var imgDest = $(this).attr('poster');
+      var parent = video.parent();
       if ($('html').hasClass('touch')) {
-        var imgDest = $(this).attr('poster');
-        var parent = video.parent();
         video.remove();
-        parent.append('<img id="theImg" src="' + imgDest + '" />')
+        //parent.append('<img id="theImg" src="' + imgDest + '" />')
+        parent.css("background-image","url('" + imgDest + "')");
         console.log("foo")
       } else {
         vidElement.src = vidFile;
@@ -213,7 +214,9 @@
         }, false);
         vidElement.addEventListener('error', function() {
           console.log(vidElement.error);
-          video.removeClass('fadeOut');
+          //video.removeClass('fadeOut');
+          video.remove();
+          parent.css("background-image","url('" + imgDest + "')");
         }, false);
         vidElement.load();
       }
