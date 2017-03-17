@@ -29,7 +29,7 @@ gulp.task('html', function () {
       data: sourceDir + '_templates/data/*.{js,json}'
     }))
     .on('error', onError)
-    .pipe(gulp.dest('./docs'));
+    .pipe(gulp.dest(destDir));
 });
 
 gulp.task('buildProjData', function() {
@@ -45,6 +45,23 @@ gulp.task('buildProjData', function() {
     .pipe(concat('projects.json', {newLine: ','}))
     .pipe(insert.wrap('{"projects": [', ']}'))
     .pipe(gulp.dest(sourceDir + '_templates/data'));
+});
+
+gulp.task('buildProjPages', function() {
+  var projects = require('./' + sourceDir + '_templates/data/projects.json').projects;
+  for (var i = projects.length - 1; i >= 0; i--) {
+    //console.log(projects[i].name);
+    var fileName = projects[i].slug + '_compiled.html'
+      gulp.src(sourceDir + '_templates/project.html')
+        .pipe(hb({
+          partials: sourceDir + '_templates/partials/*.hbs',
+          helpers: sourceDir + '_templates/helpers/*.js',
+          data: projects[i]
+      }))
+      .on('error', onError)
+      .pipe(rename(fileName))
+      .pipe(gulp.dest(destDir + '/projects' ));
+  }
 });
 
 
