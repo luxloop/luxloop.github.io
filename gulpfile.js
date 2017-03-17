@@ -42,6 +42,7 @@ gulp.task('buildProjData', function() {
       file.contents = new Buffer(JSON.stringify(m.data));
       return file;
     }))
+    .on('error', onError)
     .pipe(concat('projects.json', {newLine: ','}))
     .pipe(insert.wrap('{"projects": [', ']}'))
     .pipe(gulp.dest(sourceDir + '_templates/data'));
@@ -168,12 +169,19 @@ gulp.task('js', ['compileJs','compileTools','moveJs']);
 gulp.task('build', function() {
   runSequence(
     'buildProjData',
-    ['html','js','style']
+    ['html','js','style','buildProjPages']
+  );
+});
+
+gulp.task('buildTemplated', function() {
+  runSequence(
+    'buildProjData',
+    ['html','buildProjPages']
   );
 });
 
 gulp.task('watchdata', function() {
-  gulp.watch([sourceDir + 'projects/*.{md,markdown}'],['buildProjData'])
+  gulp.watch([sourceDir + 'projects/*.{md,markdown}'],['buildTemplated'])
 })
 
 gulp.task('watchhtml', function() {
