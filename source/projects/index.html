@@ -52,110 +52,35 @@
 
     <section id="projectsList">
 
+    {{#projects}}
+      {{#each_with_sort projects 'priority'}}
+
       <div class="projectEntry">
         <div class="projectImage">
-          <div class="aspect ratio-9-16">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/img/oh.jpg" alt=""></div>
+          <div class="aspect ratio-{{aspectRatio}}">
+            <div class="aspectContent parallax cropped" data-offset="-100"><img src="{{previewImg}}" alt=""></div>
           </div>
         </div>
         <div class="buttonHolder">
-          <a href="overheard.html" class="bigBlockButton expandButton projectBlockButton">
+          <a href="{{slug}}" class="bigBlockButton expandButton projectBlockButton">
             <div class="blockText blockTextBR projTitle">
-              <p>Overheard</p>
-              <p>Site-Specific Audio Narrative</p>
+              <p>{{ name }}</p>
+              {{#if projectPageLine}}
+              <p>{{ projectPageLine }}</p>
+              {{else}}
+              <p>{{ headline }}</p>
+              {{/if}}
             </div>
           </a>
         </div>
       </div>
 
-      <div class="projectEntry">
-        <div class="projectImage">
-          <div class="aspect ratio-3-4">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/img/bc1.png" alt=""></div>
-          </div>
-        </div>
-        <div class="buttonHolder">
-          <a href="blackcloak.html" class="bigBlockButton expandButton projectBlockButton">
-            <div class="blockText blockTextBR projTitle">
-              <p>Black Cloak</p>
-              <p>Immersive Video Environment</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      {{/each_with_sort}}
+    {{/projects}}
 
-      <div class="projectEntry">
-        <div class="projectImage">
-          <div class="aspect ratio-2-3">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/img/pigments.jpg" alt=""></div>
-          </div>
-        </div>
-        <div class="buttonHolder">
-          <a href="pigments.html" class="bigBlockButton expandButton projectBlockButton">
-            <div class="blockText blockTextBR projTitle">
-              <p>Pigments</p>
-              <p>Interactive Online Music Video</p>
-            </div>
-          </a>
-        </div>
-      </div>
 
-      <div class="projectEntry">
-        <div class="projectImage">
-          <div class="aspect ratio-9-16">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/projects/socialsound/1.jpg" alt=""></div>
-          </div>
-        </div>
-        <div class="buttonHolder">
-          <a href="socialsound.html" class="bigBlockButton expandButton projectBlockButton">
-            <div class="blockText blockTextBR projTitle">
-              <p>Social Sound</p>
-              <p>A Tool for Live Performance of the Social Sphere</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="projectEntry">
-        <div class="projectImage">
-          <div class="aspect ratio-9-16">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/projects/gypsysport/cover.jpg" alt=""></div>
-          </div>
-        </div>
-        <div class="buttonHolder">
-          <a href="allado.html" class="bigBlockButton expandButton projectBlockButton">
-            <div class="blockText blockTextBR projTitle">
-              <p>Al La Do</p>
-              <p>Interactive Fashion Video</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="projectEntry">
-        <div class="projectImage">
-          <div class="aspect ratio-3-4">
-            <div class="aspectContent parallax cropped" data-offset="-100"><img src="/assets/projects/eyes/1.jpg" alt=""></div>
-          </div>
-        </div>
-        <div class="buttonHolder">
-          <a href="eyes.html" class="bigBlockButton expandButton projectBlockButton">
-            <div class="blockText blockTextBR projTitle">
-              <p>If the Walls Had Eyes</p>
-              <p>Interactive Video Installation</p>
-            </div>
-          </a>
-        </div>
-      </div>
 
     </section>
-
-
-  <!--   <section id="recentProjects">
-      <div class="showcaseImage parallax" data-offset="-100"></div>
-      <div class="showcaseImage"></div>
-      <div class="showcaseImage parallax" data-offset="-200"></div>
-    </section> -->
 
     {{> footer}}
 

@@ -142,6 +142,7 @@
       </div>
     </section>
 
+    {{#if showcaseImages}}
     <section {{#if showcaseVersion}}class="v{{showcaseVersion}}"{{else}}class="v1"{{/if}} id="alternatingImages">
       {{!--
       <!-- <div class="showcaseImage parallax" data-offset="-100">
@@ -164,6 +165,7 @@
     {{/each }}
 
     </section>
+    {{/if}}
 
     {{> footer}}
 

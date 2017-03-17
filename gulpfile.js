@@ -51,7 +51,7 @@ gulp.task('buildProjPages', function() {
   var projects = require('./' + sourceDir + '_templates/data/projects.json').projects;
   for (var i = projects.length - 1; i >= 0; i--) {
     //console.log(projects[i].name);
-    var fileName = projects[i].slug + '_compiled.html'
+    var fileName = projects[i].slug + '.html'
       gulp.src(sourceDir + '_templates/project.html')
         .pipe(hb({
           partials: sourceDir + '_templates/partials/*.hbs',

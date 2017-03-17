@@ -4,6 +4,7 @@ headline: Interactive Online Music Video
 slug: pigments
 previewImg: /assets/img/pigments.jpg
 aspectRatio: 2-3
+priority: 3
 coverImg: /assets/projects/pigments/cover.jpg
 showcaseImages:
   - image: /assets/projects/pigments/download-1.png
@@ -56,7 +57,6 @@ links:
     text: Pigeons and Planes
   - address: http://whitestone.io/project/pigments/
     text: Whitestone
-subTitle: ""
 ---
 
 <p>

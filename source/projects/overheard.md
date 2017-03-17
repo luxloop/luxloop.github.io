@@ -4,7 +4,7 @@ headline: Site-Specific Audio Narrative
 slug: overheard
 previewImg: /assets/img/oh.jpg
 aspectRatio: 9-16
-coverImg: /assets/projects/overheard/cover.png
+priority: 1
 coverVid:
   vid: /assets/projects/overheard/cover.mp4
   poster: /assets/projects/overheard/cover.png
@@ -49,7 +49,6 @@ links:
     text: 3M Newsroom
   - address: http://overheard.luxloop.com
     text: Project Page
-subTitle: ""
 ---
 
 <p>
