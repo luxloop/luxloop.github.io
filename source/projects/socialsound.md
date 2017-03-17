@@ -1,6 +1,5 @@
 ---
 name: Social Sound
-projectPageLine: Interactive Fashion Video
 headline: A Tool for Live Performance of the Social Sphere
 slug: socialsound
 previewImg: /assets/projects/socialsound/1.jpg
