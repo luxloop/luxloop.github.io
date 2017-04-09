@@ -125,8 +125,8 @@
   function printContactInfo() {
     $(".hiddenEmail").html(rot13rot5Encode('<n uers="znvygb:uryyb@yhkybbc.pbz" pynff="yvaxNavz">uryyb@yhkybbc.pbz</n>'));
     $(".hiddenEmail2").html(rot13rot5Encode('<n uers="znvygb:wbof@yhkybbc.pbz" pynff="yvaxNavz">wbof@yhkybbc.pbz</n>'));
-    $(".hiddenPhoneLA").html(rot13rot5Encode('<n uers="gry:+68657111092" pynff="yvaxNavz">865.711.1092 (YN)</n>'));
-    $(".hiddenPhoneNY").html(rot13rot5Encode('<n uers="gry:+61919393851" pynff="yvaxNavz">191.939.3851 (AL)</n>'));
+    $(".hiddenPhoneLA").html(rot13rot5Encode('<n uers="gry:+68657111092" pynff="yvaxNavz">865.711.1092</n>'));
+    $(".hiddenPhoneNY").html(rot13rot5Encode('<n uers="gry:+61919393851" pynff="yvaxNavz">191.939.3851</n>'));
   }
 
   function initParallax() {

@@ -26,8 +26,10 @@ If you have push-access to this repo, run `npm run publish` to publish changes t
 ---
 
 ## To-Do
+* [ ] Remove '.html' from all slugs and update localserver.py script
+* [ ] Add template helpers for inline images and video
 * [ ] Check and adjust image sizes in projects page
-* [ ] corner logo transitions (fade out)
+* [x] corner logo transitions (fade out)
 * [ ] fade cover elements on load
 * [ ] remake shadow buttons without `position:aboslute` text so that they scale better
     * [ ] style project title box with :before and :after instead of nested divs?
