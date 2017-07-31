@@ -52,7 +52,7 @@ links:
 <h1>Creating a Virtual Living System</h1>
 
 <p>
-  Any living system has a set of basic rules that interact to determine how organisms live, procreate and die. Luxloop worked with Huyghe to develop a living algorithm for the AR that responded to realtime on-site data from the rink such as the temperature, animal movement, and precipitation. The rule-set controlled the AR creatures’ movement, colonization, death rates, and birthrates, allowing the system to live autonomsly and be influenced by conditions in the environment.
+  Any living system has a set of basic rules that interact to determine how organisms live, procreate and die. Luxloop worked with Huyghe to develop a living algorithm for the AR that responded to realtime on-site data from the rink such as the temperature, animal movement, and precipitation. The rule-set controlled the AR creatures’ movement, colonization, death rates, and birthrates, allowing the system to live autonomously and be influenced by conditions in the environment.
 </p>
 
 <p>
