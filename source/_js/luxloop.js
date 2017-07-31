@@ -58,7 +58,9 @@
   $('.fadeLink').on('click',function(e) {
     e.preventDefault();
     var dest = e.target.getAttribute("href");
-    fadeTo(dest);
+    if (dest !== null && dest !== undefined) {
+      fadeTo(dest);
+    }
   });
 
   // TO-DO:
