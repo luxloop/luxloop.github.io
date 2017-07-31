@@ -1,6 +1,6 @@
 ---
 name: After ALife Ahead
-headline: Augmented Reality Layer for Art Installation
+headline: Augmented Reality for Art Installation
 slug: afteralifeahead
 previewImg: /assets/projects/afteralifeahead/phar1.png
 aspectRatio: 9-16
