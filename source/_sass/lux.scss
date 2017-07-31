@@ -1060,10 +1060,14 @@ body {
 // Single Project Page Styles
 
 #projectPage {
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+  }
+
   #pageCover {
     height: 80vh;
-
-
   }
 
   #projectInfo {

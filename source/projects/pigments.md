@@ -43,9 +43,6 @@ team:
     people:
       - Luxloop
 links:
-  - address: http://icantmakeuloveu.com/
-    alt: Pigments
-    text: Pigments Website
   - address: http://nerdist.com/las-elohim-shares-pigments-website-allows-users-to-control-her-heartbeat-premiere/
     alt: LA’s Elohim Shares “PIGMENTS” Website
     text: Nerdist
@@ -58,6 +55,10 @@ links:
   - address: http://whitestone.io/project/pigments/
     text: Whitestone
 ---
+
+<p>
+    <a href="http://icantmakeuloveu.com/" class="linkAnim bolder" target="_blank">icantmakeuloveu.com</a>
+</p>
 
 <p>
   LA-based artist Elohim approached Luxloop to create something more personal than a traditional music video.
