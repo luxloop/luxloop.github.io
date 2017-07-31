@@ -194,9 +194,9 @@ $largeBlurbGrid: (
 .moreSmaller {font-size: 0.7em;}
 //.muchSmaller {font-size: 0.7em;@include media(min-width $tablet){font-size: 0.5em;}}
 .centered {text-align: center;}
-.bolder {
-  font-family: $bodyFontBold;
-}
+.bolder {font-family: $bodyFontBold;}
+.italic {font-style: italic;}
+.justLeft {text-align: left;}
 
 ::selection {
   background: $selectColor;
@@ -553,6 +553,23 @@ body {
     background: #999;
     .aspectContent {
       @include fullBg;
+    }
+
+    .captionLeft, .captionRight {
+      position: absolute;
+      bottom: 2px;
+      color: #777;
+      z-index: 2;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    .captionRight {
+      right: 8px;
+    }
+
+    .captionLeft {
+      left: 4px;
     }
   }
 

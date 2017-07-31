@@ -160,6 +160,9 @@
            data-offset="{{offset}}"
            {{/if}}
            class="showcaseImage parallax">
+
+        {{#if captionRight}}<div class="captionRight">{{captionRight}}</div>{{/if}}
+        {{#if captionLeft}}<div class="captionLeft">{{captionLeft}}</div>{{/if}}
         <div class="aspect ratio-{{aspectRatio}}">
           <div class="aspectContent" style="background-image: url('{{image}}');"></div>
         </div>
