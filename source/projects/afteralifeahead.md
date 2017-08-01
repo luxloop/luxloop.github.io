@@ -5,9 +5,11 @@ slug: afteralifeahead
 previewImg: /assets/projects/afteralifeahead/phar1.png
 aspectRatio: 9-16
 priority: 1
-coverImg: /assets/projects/afteralifeahead/phar1.png
+coverVid:
+  vid: /assets/projects/afteralifeahead/phar.mp4
+  poster: /assets/projects/afteralifeahead/pharVidcover.png
 showcaseImages:
-  - image: /assets/projects/afteralifeahead/phar2.png
+  - image: /assets/projects/afteralifeahead/phar1.png
     aspectRatio: 2-3
     offset: -100
     captionLeft: "Photo: Ola Rindal"
@@ -17,13 +19,6 @@ showcaseImages:
     aspectRatio: 2-3
     offset: 50
     captionRight: "Photo: Ola Rindal"
-  - image: /assets/projects/afteralifeahead/phar4.png
-    aspectRatio: 3-4
-    offset: -450
-    captionRight: "Photo: Pierre Huyghe"
-  - image: /assets/projects/afteralifeahead/pharcover.png
-    aspectRatio: 3-4
-    offset: -900
 showcaseVersion: 2
 roles:
   - Content Production
