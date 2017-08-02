@@ -1,6 +1,6 @@
 ---
 name: After ALife Ahead
-headline: Augmented Reality for Art Installation
+headline: Real-Time Responsive Mobile Augmented Reality
 slug: afteralifeahead
 previewImg: /assets/projects/afteralifeahead/phar1.png
 aspectRatio: 9-16
@@ -22,12 +22,13 @@ showcaseImages:
     captionRight: "Photo: Ola Rindal"
 showcaseVersion: 2
 roles:
-  - Content Production
-  - System Design
+  - Augmented Reality Design + Development
+  - Custom iOS+Android Application
+  - Content Server System
 tech:
   - iOS & Android App
-  - Bluetooth Beacons
-  - Custom AR Server
+  - Custom Beacon Location Tracking 
+  - Real-time AR Server
 links:
   - address: https://www.artsy.net/article/artsy-editorial-pierre-huyghes-latest-project-biotech-lab-scene-sci-fi-film
     text: Artsy
@@ -38,14 +39,13 @@ links:
 ---
 
 <p>
-  Luxloop was approached to work with artist Pierre Huyghe on After ALife Ahead, the time-based bio-technical system he created for Skulptur Projkete Munster, an arts event that occurs every 10 years in Munster, Germany.
+  Luxloop was approached to work with artist Pierre Huyghe on After ALife Ahead, the time-based bio-technical system he created for Skulptur Projkete Munster, an arts event that occurs every 10 years in Munster, Germany. We created a custom dual platform mobile Augmented Reality application that responds to real time environmental data.
+
 </p>
 
 <p>
-  Huyghe’s work often explores the complex interactions between interdependent lifeforms and systems, including living cell cultures, animals, unicellular organisms and technology. For After ALife Ahead, he was interested in adding Augmented Reality as a virtual living element to the system. Imagining virtual entities living and interacting within the space, Huyghe needed an app that would allow visitors to peek into the virtual realm at any given moment.
+  For After ALife Ahead, he was interested in adding Augmented Reality as a virtual living element as part of the exhibition. Huyghe’s work often explores the complex interactions between interdependent lifeforms and systems, including living cell cultures, animals, unicellular organisms and technology. 
 </p>
-
-<h1>Creating a Virtual Living System</h1>
 
 <p>
   Any living system has a set of basic rules that interact to determine how organisms live, procreate and die. Luxloop worked with Huyghe to develop a living algorithm for the AR that responded to realtime on-site data from the rink such as the temperature, animal movement, and precipitation. The rule-set controlled the AR creatures’ movement, colonization, death rates, and birthrates, allowing the system to live autonomously and be influenced by conditions in the environment.
