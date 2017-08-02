@@ -478,7 +478,7 @@ body {
     line-height: 3rem;
     text-align: right;
 
-    @include responsive-font(3.5vw, 30px, 55px, 50px);
+    @include responsive-font(2.9vw, 20px, 50px, 40px);
 
     @media (min-width: $smallScreen) {
       // left: 2rem;
@@ -1108,6 +1108,12 @@ body {
 
 #projectPage {
 
+  #pageTitleBox {
+    @media (min-width:$tablet) {
+      padding-left: 2rem;
+    }
+  }
+
   a {
     color: $textColor;
     text-decoration: none;
@@ -1148,6 +1154,10 @@ body {
     }
     .details {
       margin-bottom: 2rem;
+
+      @media (min-width:$tablet) {
+        padding-left: 2rem;
+      }
 
       p, li {
         font-size: 0.9rem;
