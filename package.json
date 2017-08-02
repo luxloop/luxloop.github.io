@@ -7,10 +7,10 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "bourbon": "^4.3.3",
-    "bourbon-neat": "^2.0.0",
+    "bourbon-neat": "^2.1.0",
     "gray-matter": "^2.1.1",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.3",
+    "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.1",
     "gulp-data": "^1.2.1",
     "gulp-hb": "^6.0.2",

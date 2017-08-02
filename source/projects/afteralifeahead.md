@@ -1,6 +1,6 @@
 ---
 name: After ALife Ahead
-headline: Real-Time Responsive Mobile Augmented Reality
+headline: Real-Time Responsive Mobile Augmented Reality for PARTYING
 slug: afteralifeahead
 previewImg: /assets/projects/afteralifeahead/phar1.png
 aspectRatio: 9-16
