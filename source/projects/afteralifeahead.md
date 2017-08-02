@@ -13,8 +13,9 @@ showcaseImages:
     aspectRatio: 2-3
     offset: -100
     captionLeft: "Photo: Ola Rindal"
-  - image: /assets/projects/afteralifeahead/phar.gif
+  - image: /assets/projects/afteralifeahead/phar4.png
     aspectRatio: 9-16
+    captionRight: "Photo: Pierre Huyghe"
   - image: /assets/projects/afteralifeahead/phar3.png
     aspectRatio: 2-3
     offset: 50
