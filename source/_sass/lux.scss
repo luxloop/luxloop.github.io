@@ -188,6 +188,30 @@ $largeBlurbGrid: (
   right: 0px;
 }
 
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
 .underlined {text-decoration: underline;}
 .strike {text-decoration: line-through;}
 .smaller {font-size: 0.85em;}
@@ -444,14 +468,20 @@ body {
 
   .title {
     position: absolute;
-    left: 1.5rem;
+    // left: 1.5rem;
+    width: 100%;
     bottom: 1rem;
-    font-size: 3rem;
+    // font-size: 3rem;
     padding-right: 1.5rem;
+    //padding-left: 3rem;
+    padding-left: 33%;
     line-height: 3rem;
+    text-align: right;
+
+    @include responsive-font(3.5vw, 30px, 55px, 50px);
 
     @media (min-width: $smallScreen) {
-      left: 2rem;
+      // left: 2rem;
       bottom: 1.5rem;
     }
   }
@@ -1205,7 +1235,10 @@ body {
     min-width: 300px;
 
     .title {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      text-align: left;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
     .subTitle {
       font-size: 1.8rem;
