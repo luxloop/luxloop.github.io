@@ -729,6 +729,14 @@ textarea {
   font-family: "open_sansregular", sans-serif;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.justLeft {
+  text-align: left;
+}
+
 ::-moz-selection {
   background: #ddd;
 }
@@ -782,6 +790,7 @@ a {
 }
 
 .enableFade {
+  -webkit-transition: opacity 800ms linear;
   transition: opacity 800ms linear;
 }
 
@@ -874,10 +883,41 @@ a {
   visibility: hidden;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
 
 .csstransforms.csstransitions.no-touch a.linkAnim:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.no-touch a.linkAnimBoxed:hover p:first-of-type {
+  text-decoration: underline;
+}
+
+.csstransforms.csstransitions a.linkAnimBoxed p:first-of-type {
+  text-decoration: none;
+  position: relative;
+}
+
+.csstransforms.csstransitions a.linkAnimBoxed p:first-of-type:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px !important;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.csstransforms.csstransitions.no-touch a.linkAnimBoxed:hover p:first-of-type:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
@@ -964,6 +1004,7 @@ a {
   z-index: 30;
   background: none;
   overflow: hidden;
+  -webkit-transition: width 400ms ease-in-out, height 400ms ease-in-out, border-color 400ms linear, opacity 400ms linear;
   transition: width 400ms ease-in-out, height 400ms ease-in-out, border-color 400ms linear, opacity 400ms linear;
 }
 
@@ -981,6 +1022,7 @@ a {
 #menuPos #cornerMenu .menuBg {
   width: 100vh;
   height: 100vh;
+  -webkit-transition: background-color 400ms linear;
   transition: background-color 400ms linear;
   background-color: white;
 }
@@ -995,6 +1037,7 @@ a {
   right: 1.75rem;
   -webkit-transform-origin: center right;
           transform-origin: center right;
+  -webkit-transition: opacity 300ms linear, -webkit-transform 300ms ease-in-out;
   transition: opacity 300ms linear, -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, opacity 300ms linear;
   transition: transform 300ms ease-in-out, opacity 300ms linear, -webkit-transform 300ms ease-in-out;
@@ -1018,12 +1061,14 @@ a {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  -webkit-transition: -webkit-transform 200ms linear;
   transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
   transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
 #menuPos #cornerMenu .menuToggle:after, #menuPos #cornerMenu .menuToggle:before {
+  -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   background-color: black;
 }
@@ -1068,19 +1113,22 @@ a {
 #menuPos #cornerMenu.show .menuBg .linkBox:nth-of-type(1) {
   -webkit-transform: translateY(-50%) rotate(-15deg);
           transform: translateY(-50%) rotate(-15deg);
-  transition-delay: 300ms;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
 
 #menuPos #cornerMenu.show .menuBg .linkBox:nth-of-type(2) {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
-  transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
 }
 
 #menuPos #cornerMenu.show .menuBg .linkBox:nth-of-type(3) {
   -webkit-transform: translateY(-50%) rotate(-75deg);
           transform: translateY(-50%) rotate(-75deg);
-  transition-delay: 600ms;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
 }
 
 #menuPos #cornerMenu.show .menuToggle {
@@ -1176,10 +1224,12 @@ a {
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
+    -webkit-transition: background-color 200ms linear, -webkit-transform 200ms linear;
     transition: background-color 200ms linear, -webkit-transform 200ms linear;
     transition: transform 200ms linear, background-color 200ms linear;
     transition: transform 200ms linear, background-color 200ms linear, -webkit-transform 200ms linear;
-    transition-delay: 400ms;
+    -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
   }
   #menuPos #cornerMenu .menuToggle:before {
     left: 1.125rem;
@@ -1212,7 +1262,8 @@ a {
   #menuPos #cornerMenu.show .menuToggle {
     background-color: black;
     background-color: transparent;
-    transition-delay: 0ms;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
   }
 }
 
@@ -1237,6 +1288,7 @@ a {
 }
 
 .no-touch #menuPos #cornerMenu .menuBg .linkBox a {
+  -webkit-transition: color 100ms linear;
   transition: color 100ms linear;
 }
 
@@ -1338,6 +1390,7 @@ a {
 }
 
 .no-touch #footer .iconCircle {
+  -webkit-transition: background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, background-color 200ms ease-in-out;
   transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
@@ -1539,11 +1592,13 @@ body {
           transform: scale(1);
   z-index: 20;
   border-radius: 0%;
+  -webkit-transition: background-color 700ms ease-in-out;
   transition: background-color 700ms ease-in-out;
 }
 
 .blockButton .blockTextBR, #homePage #whatWeDoButton .blockTextBR, #projects #projectsList .projectEntry .bigBlockButton .blockTextBR, .blockButton .blockTextTL, #homePage #whatWeDoButton .blockTextTL, #projects #projectsList .projectEntry .bigBlockButton .blockTextTL, .blockButton .buttonImg, #homePage #whatWeDoButton .buttonImg, #projects #projectsList .projectEntry .bigBlockButton .buttonImg {
   opacity: 1.0;
+  -webkit-transition: opacity 175ms ease-in-out;
   transition: opacity 175ms ease-in-out;
 }
 
@@ -1606,16 +1661,30 @@ body {
 
 #pageTitleBox .title {
   position: absolute;
-  left: 1.5rem;
+  width: 100%;
   bottom: 1rem;
-  font-size: 3rem;
   padding-right: 1.5rem;
+  padding-left: 33%;
   line-height: 3rem;
+  text-align: right;
+  font-size: 40px;
+  font-size: 2.9vw;
+}
+
+@media (max-width: 689.65517px) {
+  #pageTitleBox .title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1724.13793px) {
+  #pageTitleBox .title {
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 1000px) {
   #pageTitleBox .title {
-    left: 2rem;
     bottom: 1.5rem;
   }
 }
@@ -1719,6 +1788,23 @@ body {
   background-size: cover !important;
 }
 
+#alternatingImages .showcaseImage .captionLeft, #alternatingImages .showcaseImage .captionRight {
+  position: absolute;
+  bottom: 2px;
+  color: #777;
+  z-index: 2;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+#alternatingImages .showcaseImage .captionRight {
+  right: 8px;
+}
+
+#alternatingImages .showcaseImage .captionLeft {
+  left: 4px;
+}
+
 #alternatingImages .showcaseImage:nth-of-type(1), #alternatingImages.v1 .showcaseImage:nth-of-type(1) {
   width: 50%;
   left: 50%;
@@ -1796,6 +1882,7 @@ body {
 
 #cornerLogo a {
   color: #3b6dff;
+  -webkit-transition: color 100ms linear;
   transition: color 100ms linear;
 }
 
@@ -2154,6 +2241,10 @@ body {
   margin: 0px;
 }
 
+#projects #projectsList .projectEntry .buttonHolder .projTitle p:first-of-type {
+  display: inline;
+}
+
 #projects #projectsList .projectEntry .buttonHolder .projTitle p:nth-of-type(2) {
   font-size: 1.2rem;
   font-family: "open_sanslight", sans-serif;
@@ -2166,6 +2257,17 @@ body {
 #projects #projectsList .projectEntry:nth-of-type(even) .buttonHolder {
   left: initial;
   right: 60%;
+}
+
+@media (min-width: 800px) {
+  #projectPage #pageTitleBox {
+    padding-left: 2rem;
+  }
+}
+
+#projectPage a {
+  color: #000;
+  text-decoration: none;
 }
 
 #projectPage #pageCover {
@@ -2206,6 +2308,12 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 800px) {
+  #projectPage #projectInfo .details {
+    padding-left: 2rem;
+  }
+}
+
 #projectPage #projectInfo .details p, #projectPage #projectInfo .details li {
   font-size: 0.9rem;
 }
@@ -2232,7 +2340,7 @@ body {
   color: #000;
 }
 
-#projectPage #projectInfo .details a.linkAnim:before {
+#projectPage #projectInfo .details a.linkAnim:before, #projectPage #projectInfo .details a.linkAnimBoxed:before {
   height: 1px !important;
 }
 
@@ -2274,7 +2382,10 @@ body {
     min-width: 300px;
   }
   #pageTitleBox .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   #pageTitleBox .subTitle {
     font-size: 1.8rem;
