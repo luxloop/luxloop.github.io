@@ -40,26 +40,26 @@ links:
     text: The Art Newspaper
 ---
 
-<p>
-  Luxloop was approached to work with artist Pierre Huyghe on After ALife Ahead, the time-based bio-technical system he created for Skulptur Projkete Munster, an arts event that occurs every 10 years in Munster, Germany. We created a custom dual platform mobile Augmented Reality application that responds to real time environmental data.
-
-</p>
-
-<p>
-  For After ALife Ahead, he was interested in adding Augmented Reality as a virtual living element as part of the exhibition. Huyghe’s work often explores the complex interactions between interdependent lifeforms and systems, including living cell cultures, animals, unicellular organisms and technology. 
-</p>
-
-<p>
-  Any living system has a set of basic rules that interact to determine how organisms live, procreate and die. Luxloop worked with Huyghe to develop a living algorithm for the AR that responded to realtime on-site data from the rink such as the temperature, animal movement, and precipitation. The rule-set controlled the AR creatures’ movement, colonization, death rates, and birthrates, allowing the system to live autonomously and be influenced by conditions in the environment.
-</p>
-
-<p>
-  We built a server-based system that allowed users’ devices to sync to this autonomous world so that even at capacity of 200+ viewers, all visitors would see the same augmented system and animations in real time, bringing to life the illusion that the AR app is a viewport into the augmented living world.
-</p>
-
 <p class="italic justLeft">
   Pierre Huyghe<br>
   After ALife Ahead<br>
   2017<br>
   Ice rink concrete floor; Sand, clay, phreatic water; Bacteria, algea, bee, chimera peacock; Aquarium, black switchable glass, conus textile; Incubator, human cancer cells; Genetic algorithm; Augemented reality; Automated ceiling structure; Rain; Ammoniac; Logic game.
 </p>
+
+<p>
+  Luxloop was approached by artist Pierre Huyghe to bring to life a living Augmented Reality element for After ALife Ahead, the time-based bio-technical system he created for <a target="_blank" href =" https://www.skulptur-projekte.de/#/De/Projects/2017/829/HUYGHE">Skulptur Projkete Munster</a>. The Augmented Reality experience tied into the larger living system of the exhibition at an old ice rink and was viewable through a custom mobile application. Huyghe’s work often explores the complex interactions between interdependent lifeforms and systems, including living cell cultures, animals, unicellular organisms and technology. 
+</p>
+<p>
+<h1> Tech</h1>
+  We built a server-based system that allowed users’ devices to sync to this autonomous world so that even at capacity of 200+ viewers, all visitors would see the same augmented system and animations in real time, bringing to life the illusion that the AR app is a viewport into the augmented living world.
+</p>
+<p>
+<h1> Design</h1>
+
+  Any living system has a set of basic rules that interact to determine how organisms live, procreate and die. Luxloop worked with Huyghe to develop a living algorithm for the AR that responded to realtime on-site data from the rink such as the temperature, animal movement, and precipitation. The rule-set controlled the AR creatures’ movement, colonization, death rates, and birthrates, allowing the system to live autonomously and be influenced by conditions in the environment.
+</p>
+
+
+
+
