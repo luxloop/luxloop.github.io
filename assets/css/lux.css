@@ -475,8 +475,8 @@ template {
 }
 
 @font-face {
-  font-family: 'code_boldregular';
-  src: url("/assets/fonts/code_bold-webfont.woff2") format("woff2"), url("/assets/fonts/code_bold-webfont.woff") format("woff");
+  font-family: 'code_proregular';
+  src: url("/assets/fonts/code_pro_lc-webfont.woff2") format("woff2"), url("/assets/fonts/code_pro_lc-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -735,6 +735,10 @@ textarea {
 
 .justLeft {
   text-align: left;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 ::-moz-selection {
@@ -1048,7 +1052,7 @@ a {
 
 #menuPos #cornerMenu .menuBg .linkBox a {
   color: #ffffff;
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   text-decoration: none;
   font-size: 4.8rem;
 }
@@ -1057,7 +1061,7 @@ a {
   width: 1.5rem;
   height: 1.5rem;
   color: white;
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1306,7 +1310,7 @@ a {
   position: relative;
   background: white;
   text-align: center;
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   padding-top: 3rem;
   padding-bottom: 4rem;
   font-size: 1.2em;
@@ -1571,7 +1575,7 @@ body {
 }
 
 .blockContainer .blockText, .blockButton .blockText, #homePage #whatWeDoButton .blockText, #projects #projectsList .projectEntry .bigBlockButton .blockText {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   font-size: 2rem;
 }
 
@@ -1653,6 +1657,7 @@ body {
   width: 30%;
   bottom: 6rem;
   right: 3rem;
+  text-transform: uppercase;
 }
 
 #pageTitleBox p {
@@ -1942,7 +1947,7 @@ body {
 }
 
 .fullWidthCopy h1 {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   padding: 0px;
   margin: 0px;
 }
@@ -1962,7 +1967,7 @@ body {
 }
 
 .showcaseBoxes .boxesHead h1 {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   font-size: 2rem;
   margin-top: 4rem;
 }
@@ -2153,7 +2158,7 @@ body {
 }
 
 #contactPage #contactInfo .column h1 {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   margin: 0;
 }
 
@@ -2278,6 +2283,10 @@ body {
   max-width: 220px;
 }
 
+#projectPage #pageTitleBox {
+  text-transform: none;
+}
+
 @media (min-width: 1000px) {
   #projectPage #pageTitleBox {
     padding-left: 2rem;
@@ -2300,12 +2309,12 @@ body {
 }
 
 #projectPage #projectInfo h1 {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   margin-top: 0px;
 }
 
 #projectPage #projectInfo h2 {
-  font-family: "code_boldregular", sans-serif;
+  font-family: "code_proregular", sans-serif;
   padding-top: 1rem;
   margin-top: 0px;
   margin-bottom: -0.8rem;
