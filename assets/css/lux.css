@@ -1881,17 +1881,28 @@ body {
   position: absolute;
   top: 0.8rem;
   left: 1rem;
-  padding: 0rem 1rem;
 }
 
-#cornerLogo a {
-  color: #3b6dff;
-  -webkit-transition: color 100ms linear;
-  transition: color 100ms linear;
+#cornerLogo .logoSvg {
+  max-width: 280px;
+  width: 90vw;
 }
 
-#cornerLogo a:hover {
-  color: white;
+#cornerLogo .logoSvg path {
+  -webkit-transition: fill 100ms linear;
+  transition: fill 100ms linear;
+}
+
+#cornerLogo .logoSvg path.st1 {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+#cornerLogo .logoSvg path:not(.st1):not(.st2) {
+  fill: black;
+}
+
+#cornerLogo .logoSvg:hover path:not(.st1):not(.st2) {
+  fill: #3b6dff;
 }
 
 .fullWidthMedia {
@@ -2263,7 +2274,11 @@ body {
   right: 60%;
 }
 
-@media (min-width: 800px) {
+#projectPage #cornerLogo .logoSvg {
+  max-width: 220px;
+}
+
+@media (min-width: 1000px) {
   #projectPage #pageTitleBox {
     padding-left: 2rem;
   }
@@ -2287,6 +2302,14 @@ body {
 #projectPage #projectInfo h1 {
   font-family: "code_boldregular", sans-serif;
   margin-top: 0px;
+}
+
+#projectPage #projectInfo h2 {
+  font-family: "code_boldregular", sans-serif;
+  padding-top: 1rem;
+  margin-top: 0px;
+  margin-bottom: -0.8rem;
+  font-size: 1.1em;
 }
 
 #projectPage #projectInfo .title, #projectPage #projectInfo .description {
@@ -2576,6 +2599,9 @@ body {
   }
   #pageTitleBox {
     min-width: 200px;
+    width: initial;
+    right: 1.25rem;
+    max-width: 300px;
   }
   #pageTitleBox .title {
     font-size: 2rem;
