@@ -512,7 +512,7 @@ body {
     line-height: 3rem;
     text-align: right;
 
-    @include responsive-font(2.9vw, 20px, 50px, 40px);
+    @include responsive-font(2.59vw, 15px, 50px, 40px);
 
     @media (min-width: $smallScreen) {
       // left: 2rem;
@@ -1170,7 +1170,7 @@ body {
     @media (min-width:$smallScreen) {
       padding-left: 2rem;
     }
-    text-transform: none;
+    // text-transform: none;
   }
 
   a {
