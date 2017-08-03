@@ -1673,16 +1673,16 @@ body {
   line-height: 3rem;
   text-align: right;
   font-size: 40px;
-  font-size: 2.9vw;
+  font-size: 2.59vw;
 }
 
-@media (max-width: 689.65517px) {
+@media (max-width: 579.15058px) {
   #pageTitleBox .title {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
-@media (min-width: 1724.13793px) {
+@media (min-width: 1930.50193px) {
   #pageTitleBox .title {
     font-size: 50px;
   }
@@ -2281,10 +2281,6 @@ body {
 
 #projectPage #cornerLogo .logoSvg {
   max-width: 220px;
-}
-
-#projectPage #pageTitleBox {
-  text-transform: none;
 }
 
 @media (min-width: 1000px) {
