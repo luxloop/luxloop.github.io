@@ -719,8 +719,8 @@ body {
 
 
   .logoSvg {
-    max-width: 220px;
-    width: 100vw;
+    max-width: 280px;
+    width: 90vw;
 
     path {
       transition: fill 100ms linear;
@@ -1159,6 +1159,10 @@ body {
 // Single Project Page Styles
 
 #projectPage {
+
+  #cornerLogo .logoSvg {
+    max-width: 220px;
+  }
 
   #pageTitleBox {
     @media (min-width:$smallScreen) {
