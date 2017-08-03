@@ -716,14 +716,26 @@ body {
   position: absolute;
   top: 0.8rem;
   left: 1rem;
-  padding: 0rem 1rem;
 
-  a {
-    color: $frontPageColor;
-    transition: color 100ms linear;
 
-    &:hover {
-      color: white;
+  .logoSvg {
+    max-width: 220px;
+    width: 100vw;
+
+    path {
+      transition: fill 100ms linear;
+    }
+
+    path.st1 {
+      fill: rgba(255,255,255,0.9);
+    }
+
+    path:not(.st1):not(.st2) {
+      fill: black;
+    }
+
+    &:hover path:not(.st1):not(.st2) {
+      fill: $frontPageColor;
     }
   }
 }
@@ -1149,8 +1161,8 @@ body {
 #projectPage {
 
   #pageTitleBox {
-    @media (min-width:$tablet) {
-      // padding-left: 2rem;
+    @media (min-width:$smallScreen) {
+      padding-left: 2rem;
     }
   }
 
