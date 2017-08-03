@@ -1150,7 +1150,7 @@ body {
 
   #pageTitleBox {
     @media (min-width:$tablet) {
-      padding-left: 2rem;
+      // padding-left: 2rem;
     }
   }
 
@@ -1171,6 +1171,14 @@ body {
     h1 {
       font-family: $headerFont;
       margin-top: 0px;
+    }
+
+    h2 {
+      font-family: $headerFont;
+      padding-top: 1rem;
+      margin-top: 0px;
+      margin-bottom: -0.8rem;
+      font-size: 1.1em;
     }
 
     .title, .description {
@@ -1588,6 +1596,10 @@ body {
 
   #pageTitleBox {
     min-width: 200px;
+    width: initial;
+    right: 1.25rem;
+    max-width: 300px;
+
 
     .title {
       font-size: 2rem;
