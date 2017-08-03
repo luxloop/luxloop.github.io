@@ -10,13 +10,32 @@
   font-style: normal;
 }
 
+// @font-face {
+//     font-family: 'code_boldregular';
+//     src: url('/assets/fonts/code_bold-webfont.woff2') format('woff2'),
+//          url('/assets/fonts/code_bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+// @font-face {
+//     font-family: 'code_boldregular';
+//     src: url('/assets/fonts/code_bold_lc-webfont.woff2') format('woff2'),
+//          url('/assets/fonts/code_bold_lc-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
 @font-face {
-    font-family: 'code_boldregular';
-    src: url('/assets/fonts/code_bold-webfont.woff2') format('woff2'),
-         url('/assets/fonts/code_bold-webfont.woff') format('woff');
+    font-family: 'code_proregular';
+    src: url('/assets/fonts/code_pro_lc-webfont.woff2') format('woff2'),
+         url('/assets/fonts/code_pro_lc-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+
 // @font-face {
 //     font-family: 'code_lightregular';
 //     src: url('/assets/fonts/code_light-webfont.woff2') format('woff2'),

@@ -23,7 +23,7 @@ $textColor: #000;
 $selectColor: #ddd;
 $defaultWeight: 100;
 
-$headerFont: 'code_boldregular', sans-serif;
+$headerFont: 'code_proregular', sans-serif;
 $bodyFont: 'open_sanslight', sans-serif;
 $bodyFontBold: 'open_sansregular', sans-serif;
 $blurbFont: 'open_sanslight_italic', sans-serif;
@@ -221,6 +221,7 @@ $largeBlurbGrid: (
 .bolder {font-family: $bodyFontBold;}
 .italic {font-style: italic;}
 .justLeft {text-align: left;}
+.uppercase {text-transform: uppercase};
 
 ::selection {
   background: $selectColor;
@@ -493,6 +494,7 @@ body {
   // width: 30%;
   // bottom: 20px;
   // right: $pageMargin;
+  text-transform: uppercase;
 
   p {
     margin: 0px;
@@ -1168,6 +1170,7 @@ body {
     @media (min-width:$smallScreen) {
       padding-left: 2rem;
     }
+    text-transform: none;
   }
 
   a {

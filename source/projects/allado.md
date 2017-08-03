@@ -1,5 +1,5 @@
 ---
-name: "Al La Do"
+name: "AL LA DO"
 projectPageLine: Interactive Fashion Video
 headline: Interactive Fashion Video for Gypsy Sport F/W 2016 Collection
 slug: allado
