@@ -977,6 +977,37 @@ body {
   }
 
   #featuredProjects {
+    .blockContainer {
+      // box-sizing: border-box;
+      // border: 0px;
+
+      .buttonImg {
+        // box-shadow: inset 0px 0px 0px 1px black;
+        transition: opacity 300ms linear;
+        background-size: auto calc(100% + 1px) !important;
+        opacity: 1.0;
+      }
+
+      .blockText {
+        position: absolute;
+        padding-left: 30%;
+        transition: opacity 300ms linear;
+        opacity: 0.0;
+      }
+
+      &:hover {
+        .buttonImg {
+          opacity: 0.3;
+        }
+
+        .blockText {
+          opacity: 1.0
+        }
+      }
+    }
+
+
+
     margin-bottom: 8rem;
   }
 }
