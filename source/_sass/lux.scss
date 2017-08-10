@@ -1109,6 +1109,12 @@ body {
     background: initial;
   }
 
+  .projectBlockButton {
+    .projTitle {
+      padding-left: 15%;
+    }
+  }
+
   #projectsList {
     margin-top: 6rem;
 
@@ -1358,6 +1364,12 @@ body {
     #projectsList {
       .projectEntry {
         .buttonHolder {
+
+          .bigBlockButton {
+            height: 200px;
+            max-height: 200px;
+          }
+
           .projTitle {
             font-size: 1.5rem;
             p:nth-of-type(2) {
@@ -1477,6 +1489,8 @@ body {
           left: 2rem;
           // bottom: -2vh;
 
+
+
           .projTitle {
             font-size: 1.5rem;
             p:nth-of-type(2) {
@@ -1586,10 +1600,18 @@ body {
             min-width: initial;
           }
 
+          .bigBlockButton {
+            height: 20vw;
+            max-height: 200px;
+            max-height: 100px;
+          }
+
           .projTitle {
             font-size: 1.5rem;
             p:nth-of-type(2) {
-              font-size: 1rem;
+              // font-size: 1rem;
+              visibility: hidden;
+              display: none;
             }
           }
         }
