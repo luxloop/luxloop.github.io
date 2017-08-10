@@ -855,6 +855,10 @@ a {
   padding-bottom: 56.25%;
 }
 
+.aspect.ratio-9-32 {
+  padding-bottom: 28.125%;
+}
+
 .aspect.ratio-16-9 {
   padding-bottom: 177.777%;
 }
@@ -1614,7 +1618,7 @@ body {
 }
 
 .blockButton.expandButton.expand .blockTextBR, #homePage .expandButton.expand#whatWeDoButton .blockTextBR, #projects #projectsList .projectEntry .expandButton.expand.bigBlockButton .blockTextBR, .blockButton.expandButton.expand .blockTextTL, #homePage .expandButton.expand#whatWeDoButton .blockTextTL, #projects #projectsList .projectEntry .expandButton.expand.bigBlockButton .blockTextTL, .blockButton.expandButton.expand .buttonImg, #homePage .expandButton.expand#whatWeDoButton .buttonImg, #projects #projectsList .projectEntry .expandButton.expand.bigBlockButton .buttonImg {
-  opacity: 0.0;
+  opacity: 0.0 !important;
 }
 
 .no-touch .blockButton:hover, .no-touch #homePage #whatWeDoButton:hover, #homePage .no-touch #whatWeDoButton:hover, .no-touch #projects #projectsList .projectEntry .bigBlockButton:hover, #projects #projectsList .projectEntry .no-touch .bigBlockButton:hover {
@@ -2127,6 +2131,29 @@ body {
   margin-bottom: 8rem;
 }
 
+#aboutPage #featuredProjects .blockContainer .buttonImg, #aboutPage #featuredProjects .blockButton .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .buttonImg {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  background-size: auto calc(100% + 1px) !important;
+  opacity: 1.0;
+}
+
+#aboutPage #featuredProjects .blockContainer .blockText, #aboutPage #featuredProjects .blockButton .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .blockText {
+  position: absolute;
+  padding-left: 30%;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  opacity: 0.0;
+}
+
+#aboutPage #featuredProjects .blockContainer:hover .buttonImg, #aboutPage #featuredProjects .blockButton:hover .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .buttonImg {
+  opacity: 0.3;
+}
+
+#aboutPage #featuredProjects .blockContainer:hover .blockText, #aboutPage #featuredProjects .blockButton:hover .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .blockText {
+  opacity: 1.0;
+}
+
 #contactPage #pageCover {
   height: 65vh;
 }
@@ -2205,6 +2232,10 @@ body {
 #projects #pageCover {
   height: 65vh;
   background: initial;
+}
+
+#projects .projectBlockButton .projTitle {
+  padding-left: 15%;
 }
 
 #projects #projectsList {
@@ -2406,6 +2437,10 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2.5rem;
   }
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p {
+    font-size: 1.2rem;
+    padding-left: 1.3rem !important;
+  }
   #pageTitleBox {
     width: 30%;
     bottom: 3rem;
@@ -2421,6 +2456,10 @@ body {
   }
   #pageTitleBox .subTitle {
     font-size: 1.8rem;
+  }
+  #projects #projectsList .projectEntry .buttonHolder .bigBlockButton {
+    height: 200px;
+    max-height: 200px;
   }
   #projects #projectsList .projectEntry .buttonHolder .projTitle {
     font-size: 1.5rem;
@@ -2494,6 +2533,10 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2rem;
   }
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p {
+    font-size: 2rem;
+    padding-left: 30%;
+  }
   #projects #projectsList .projectEntry .projectImage {
     width: 100%;
   }
@@ -2565,11 +2608,17 @@ body {
     width: 100%;
     min-width: initial;
   }
+  #projects #projectsList .projectEntry .buttonHolder .bigBlockButton {
+    height: 20vw;
+    max-height: 200px;
+    max-height: 100px;
+  }
   #projects #projectsList .projectEntry .buttonHolder .projTitle {
     font-size: 1.5rem;
   }
   #projects #projectsList .projectEntry .buttonHolder .projTitle p:nth-of-type(2) {
-    font-size: 1rem;
+    visibility: hidden;
+    display: none;
   }
   #projects #projectsList .projectEntry:nth-of-type(even) .projectImage {
     margin-left: 0px;
