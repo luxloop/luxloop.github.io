@@ -5,19 +5,17 @@ slug: overheard
 previewImg: /assets/img/oh.jpg
 aspectRatio: 9-16
 priority: 1
-coverVid:
-  vid: /assets/projects/overheard/cover.mp4
-  poster: /assets/projects/overheard/cover.png
+coverImg: /assets/projects/overheard/appinhand.jpg
 showcaseImages:
   - image: /assets/projects/overheard/demo.gif
     aspectRatio: 2-3
     offset: -100
-  - image: /assets/projects/overheard/oh8.jpg
+  - image: /assets/projects/overheard/cover.png
     aspectRatio: 2-3
-  - image: /assets/projects/overheard/oh2.jpg
+  - image: /assets/projects/overheard/oh8.jpg
     aspectRatio: 9-16
-    offset: -200
-showcaseVersion: 2
+    offset: -100
+showcaseVersion: 1
 roles:
   - Concept Development
   - Content Production
