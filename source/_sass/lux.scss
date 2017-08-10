@@ -1342,6 +1342,17 @@ body {
     }
 
   }
+
+  #aboutPage {
+    #featuredProjects {
+      .blockContainer {
+        p {
+          font-size: 1.2rem;
+          padding-left: 1.3rem !important;
+        }
+      }
+    }
+  }
   #pageTitleBox {
     width: 30%;
     bottom: $pageMargin;
@@ -1476,6 +1487,14 @@ body {
   }
 
   #aboutPage {
+    #featuredProjects {
+      .blockContainer {
+        p {
+          font-size: 2rem;
+          padding-left: 30%;
+        }
+      }
+    }
   }
 
   #projects {
