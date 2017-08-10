@@ -446,7 +446,7 @@ body {
     z-index: 99 !important;
 
     .blockTextBR, .blockTextTL, .buttonImg {
-      opacity: 0.0;
+      opacity: 0.0 !important;
     }
   }
 }
