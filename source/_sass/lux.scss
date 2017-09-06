@@ -1313,8 +1313,30 @@ body {
 
   &.caseStudyPage {
     #projectInfo {
-      h1:not(:first-child) {
-        margin-top: 5rem;
+      .description {
+
+        & > h1:not(:first-child) {
+          margin-top: 5rem;
+        }
+
+        .quote {
+          @extend .blockContainer;
+
+          font-style: italic;
+
+          margin: 4rem 0rem 5rem 0rem;
+          padding: 2.5rem 2rem;
+          font-size:1.5rem;
+
+          .source {
+            font-size:1.2rem;
+            display:block;
+            margin-top:2rem
+          }
+
+          .source::before{content:"— "}
+        }
+
       }
     }
   }

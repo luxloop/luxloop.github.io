@@ -1,6 +1,5 @@
 ---
 name: Black Cloak
-projectPageLine: Immersive Video Environment
 headline: Immersive Video Environment for Pop-up Dinner by Michelin-Star Chef
 slug: blackcloak
 coverImg: /assets/projects/blackcloak/screen1Offset.png
