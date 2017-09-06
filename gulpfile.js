@@ -65,6 +65,39 @@ gulp.task('buildProjPages', function() {
   }
 });
 
+gulp.task('buildCaseStudyData', function() {
+  return gulp
+    .src(sourceDir + 'casestudies/*.{md,markdown}')
+    .pipe(data(function(file){
+      var m = matter(String(file.contents))
+      var project = m.data;
+      project.content = m.content;
+      file.contents = new Buffer(JSON.stringify(m.data));
+      return file;
+    }))
+    .on('error', onError)
+    .pipe(concat('casestudies.json', {newLine: ','}))
+    .pipe(insert.wrap('{"casestudies": [', ']}'))
+    .pipe(gulp.dest(sourceDir + '_templates/data'));
+});
+
+gulp.task('buildCaseStudyPages', function() {
+  var casestudies = require('./' + sourceDir + '_templates/data/casestudies.json').casestudies;
+  for (var i = casestudies.length - 1; i >= 0; i--) {
+    //console.log(projects[i].name);
+    var fileName = casestudies[i].slug + '.html'
+      gulp.src(sourceDir + '_templates/casestudy.html')
+        .pipe(hb({
+          partials: sourceDir + '_templates/partials/*.hbs',
+          helpers: sourceDir + '_templates/helpers/*.js',
+          data: casestudies[i]
+      }))
+      .on('error', onError)
+      .pipe(rename(fileName))
+      .pipe(gulp.dest(destDir + '/casestudies' ));
+  }
+});
+
 
 gulp.task('sass', function() {
     return gulp.src(sourceDir + '_sass/*.scss')
@@ -168,15 +201,15 @@ gulp.task('js', ['compileJs','compileTools','moveJs']);
 
 gulp.task('build', function() {
   runSequence(
-    'buildProjData',
-    ['html','js','style','buildProjPages']
+    ['buildProjData','buildCaseStudyData'],
+    ['html','js','style','buildProjPages','buildCaseStudyPages']
   );
 });
 
 gulp.task('buildTemplated', function() {
   runSequence(
-    'buildProjData',
-    ['html','buildProjPages']
+    ['buildProjData','buildCaseStudyData'],
+    ['html','buildProjPages','buildCaseStudyPages']
   );
 });
 

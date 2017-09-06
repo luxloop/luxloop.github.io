@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Luxloop - {{ name }}</title>
+  <meta name="description" content="Luxloop is an experience-design and production studio mediating the intersection of the physical and digital worlds by finding new ways to captivate and inspire our fellow humans. " />
+
+  <!-- <link rel="SHORTCUT ICON" href="/assets/img/favicon.ico" /> -->
+
+  <!-- <link rel="stylesheet" href="/assets/css/normalize.min.css"> -->
+  <link rel="stylesheet" href="/assets/css/lux.min.css">
+  <script src="/assets/js/vendor/modernizr.min.js"></script>
+</head>
+<body id="projectPage" class="enableFade">
+
+  {{> menu}}
+
+  <div class="pageContainer">
+
+    <div id="linesBg">
+      <!-- <img src="/assets/img/linesBg.png" alt="" class="parallax" data-offset="max"> -->
+      <img src="/assets/img/linesBg.png" alt="">
+    </div>
+
+    <section id="pageCover">
+      <div class="coverImage">
+      {{#if coverVid}}
+        <video muted loop class="bgVid enableFade fadeOut" src="" type="video/mp4"
+          {{#if coverVid.poster}}
+          poster="{{coverVid.poster}}"
+          {{else if coverImg}}
+          poster="{{coverImg}}"
+          {{/if}}
+          data-file="{{coverVid.vid}}">
+        </video>
+      {{else if coverImg}}
+        <img src="{{coverImg}}">
+      {{/if}}
+      </div>
+      <div id="cornerLogo">
+        <!-- <a href="/" class="fadeLink"><svg src="/assets/img/logoOutline1.svg" class="logoSvg inlineSVG"/></a> -->
+        <a href="/" class="fadeLink"><img id="cornerLogo" class="svg logoSvg" src="/assets/img/logoOutline1.svg"/></a>
+      </div>
+
+      <div id="pageTitleBox">
+        <div class="aspect ratio-2-3">
+          <div class="aspectContent blockContainer">
+            <div class="title blockText">
+              <p>{{name}}</p>
+              {{#if subTitle}}
+              <p class="subTitle">{{subTitle}}</p>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projectInfo" class="gridContainer">
+      <div class="title column column8">
+        <h1>{{headline}}</h1>
+      </div>
+      <div class="description column column8">
+        {{{content}}}
+
+        {{!--
+        <!-- <img src="/assets/projects/overheard/oh2.jpg"> -->
+        <!-- <div class="fitVid">
+          <iframe src="http://player.vimeo.com/video/114310483?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div> -->
+        --}}
+
+      </div>
+      <div class="details column column4-6">
+
+      {{#if roles}}
+        <h1>Roles</h1>
+        <ul>
+        {{#each roles}}
+          <li>{{this}}</li>
+        {{/each}}
+        </ul>
+      {{/if}}
+
+      {{#if tech}}
+        <h1>Tech</h1>
+        <ul>
+        {{#each tech}}
+          <li>{{this}}</li>
+        {{/each}}
+        </ul>
+      {{/if}}
+
+      </div>
+      <div class="details column column4-6">
+
+      {{#if team}}
+        <h1>Team</h1>
+        {{#each team}}
+        <div class="teamEntry">
+        {{#if credit}}
+          <div class="role">
+          {{#ifObject credit}}
+            {{#each credit}}
+            <p>{{this}}</p>
+            {{/each}}
+          {{else}}
+            <p>{{credit}}</p>
+          {{/ifObject}}
+          </div>
+        {{/if}}
+        {{#if people}}
+          <div class="people">
+          {{#ifObject people}}
+            {{#each people}}
+            <p>{{this}}</p>
+            {{/each}}
+          {{else}}
+            <p>{{people}}</p>
+          {{/ifObject}}
+          </div>
+        {{/if}}
+        </div>
+
+        {{/each}}
+      {{/if}}
+
+      {{#if links}}
+        <h1>Press</h1>
+        <ul>
+        {{#each links}}
+          <li><a href="{{{address}}}" class="linkAnim"
+                 {{#if alt}}
+                 alt="{{alt}}"
+                 {{/if}}
+                 target="_blank">{{text}}</a></li>
+        {{/each}}
+        </ul>
+      {{/if}}
+
+      </div>
+    </section>
+
+    {{> footer}}
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+
+  <script src="/assets/js/tools.min.js"></script>
+  <script src="/assets/js/luxloop.min.js"></script>
+
+  {{> analytics}}
+
+</body>
+</html>
+
