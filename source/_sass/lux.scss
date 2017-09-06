@@ -1310,6 +1310,14 @@ body {
       }
     }
   }
+
+  &.caseStudyPage {
+    #projectInfo {
+      h1:not(:first-child) {
+        margin-top: 5rem;
+      }
+    }
+  }
 }
 
 

@@ -214,7 +214,7 @@ gulp.task('buildTemplated', function() {
 });
 
 gulp.task('watchdata', function() {
-  gulp.watch([sourceDir + 'projects/*.{md,markdown}'],['buildTemplated'])
+  gulp.watch([sourceDir + 'projects/*.{md,markdown}',sourceDir + 'casestudies/*.{md,markdown}'],['buildTemplated'])
 })
 
 gulp.task('watchhtml', function() {
