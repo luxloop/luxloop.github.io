@@ -14,6 +14,7 @@
     initParallax();
     initCover();
     sizeCover();
+    createCaptions();
     printContactInfo();
     initVideos();
     scrollHandler();
@@ -297,6 +298,16 @@
           $img.replaceWith($svg);
 
       }, 'xml');
+    });
+  }
+
+  function createCaptions() {
+    $('img.caption').each(function() {
+      var el = $(this);
+      var elSource = el.attr('src');
+      var classes = el.attr('class');
+      var caption = el.attr('data-caption');
+      el.replaceWith('<div class="imageWithCaption"><img src="' + elSource + '"><div class="captionElement ' + classes + '">' + caption + '</div></div>');
     });
   }
 

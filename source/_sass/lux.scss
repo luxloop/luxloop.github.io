@@ -819,6 +819,45 @@ body {
   }
 }
 
+.imageWithCaption {
+  position: relative;
+
+  img {
+    padding: 0rem !important;
+  }
+  .captionElement {
+    &, &.captionIn, &.captionRight, &.captionDark {
+      position: absolute;
+      bottom: 2px;
+      right: 8px;
+      color: #111;
+      z-index: 2;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    &.captionLeft {
+      right: initial;
+      left: 4px;
+    }
+
+    &.captionCenter {
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.captionOut {
+      bottom: -1.5rem;
+    }
+
+    &.captionLight {
+      color: #777;
+    }
+
+  }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // Main Page Cover Styles
@@ -1337,6 +1376,10 @@ body {
           .source::before{content:"— "}
         }
 
+      }
+
+      .imageWithCaption {
+        margin: 3rem 0rem;
       }
     }
   }
