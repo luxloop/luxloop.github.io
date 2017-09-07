@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -1560,7 +1561,7 @@ body {
   opacity: 1.0;
 }
 
-.blockContainer, .blockButton, #homePage #whatWeDoButton, #projects #projectsList .projectEntry .bigBlockButton {
+.blockContainer, .blockButton, #homePage #whatWeDoButton, #projects #projectsList .projectEntry .bigBlockButton, #projectPage.caseStudyPage #projectInfo .description .quote {
   position: relative;
   display: block;
   text-decoration: none;
@@ -1570,7 +1571,7 @@ body {
   box-shadow: 12px 11px 0px 0px #3b6dff;
 }
 
-.blockContainer .buttonImg, .blockButton .buttonImg, #homePage #whatWeDoButton .buttonImg, #projects #projectsList .projectEntry .bigBlockButton .buttonImg {
+.blockContainer .buttonImg, .blockButton .buttonImg, #homePage #whatWeDoButton .buttonImg, #projects #projectsList .projectEntry .bigBlockButton .buttonImg, #projectPage.caseStudyPage #projectInfo .description .quote .buttonImg {
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
@@ -1578,7 +1579,7 @@ body {
   height: 100%;
 }
 
-.blockContainer .blockText, .blockButton .blockText, #homePage #whatWeDoButton .blockText, #projects #projectsList .projectEntry .bigBlockButton .blockText {
+.blockContainer .blockText, .blockButton .blockText, #homePage #whatWeDoButton .blockText, #projects #projectsList .projectEntry .bigBlockButton .blockText, #projectPage.caseStudyPage #projectInfo .description .quote .blockText {
   font-family: "code_proregular", sans-serif;
   font-size: 2rem;
 }
@@ -1981,10 +1982,48 @@ body {
   margin: 1rem auto;
 }
 
-.showcaseBoxes .boxesBox .aspect .aspectContent .blockContainer, .showcaseBoxes .boxesBox .aspect .aspectContent .blockButton, .showcaseBoxes .boxesBox .aspect .aspectContent #homePage #whatWeDoButton, #homePage .showcaseBoxes .boxesBox .aspect .aspectContent #whatWeDoButton, .showcaseBoxes .boxesBox .aspect .aspectContent #projects #projectsList .projectEntry .bigBlockButton, #projects #projectsList .projectEntry .showcaseBoxes .boxesBox .aspect .aspectContent .bigBlockButton {
+.showcaseBoxes .boxesBox .aspect .aspectContent .blockContainer, .showcaseBoxes .boxesBox .aspect .aspectContent .blockButton, .showcaseBoxes .boxesBox .aspect .aspectContent #homePage #whatWeDoButton, #homePage .showcaseBoxes .boxesBox .aspect .aspectContent #whatWeDoButton, .showcaseBoxes .boxesBox .aspect .aspectContent #projects #projectsList .projectEntry .bigBlockButton, #projects #projectsList .projectEntry .showcaseBoxes .boxesBox .aspect .aspectContent .bigBlockButton, .showcaseBoxes .boxesBox .aspect .aspectContent #projectPage.caseStudyPage #projectInfo .description .quote, #projectPage.caseStudyPage #projectInfo .description .showcaseBoxes .boxesBox .aspect .aspectContent .quote {
   background: #fafafa;
   width: 100%;
   height: 100%;
+}
+
+.imageWithCaption {
+  position: relative;
+}
+
+.imageWithCaption img {
+  padding: 0rem !important;
+}
+
+.imageWithCaption .captionElement, .imageWithCaption .captionElement.captionIn, .imageWithCaption .captionElement.captionRight, .imageWithCaption .captionElement.captionDark {
+  position: absolute;
+  bottom: 2px;
+  right: 8px;
+  color: #111;
+  z-index: 2;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.imageWithCaption .captionElement.captionLeft {
+  right: initial;
+  left: 4px;
+}
+
+.imageWithCaption .captionElement.captionCenter {
+  right: initial;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.imageWithCaption .captionElement.captionOut {
+  bottom: -1.5rem;
+}
+
+.imageWithCaption .captionElement.captionLight {
+  color: #777;
 }
 
 #homePage #pageCover {
@@ -2131,14 +2170,14 @@ body {
   margin-bottom: 8rem;
 }
 
-#aboutPage #featuredProjects .blockContainer .buttonImg, #aboutPage #featuredProjects .blockButton .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .buttonImg {
+#aboutPage #featuredProjects .blockContainer .buttonImg, #aboutPage #featuredProjects .blockButton .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .buttonImg, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote .buttonImg, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote .buttonImg {
   -webkit-transition: opacity 300ms linear;
   transition: opacity 300ms linear;
   background-size: auto calc(100% + 1px) !important;
   opacity: 1.0;
 }
 
-#aboutPage #featuredProjects .blockContainer .blockText, #aboutPage #featuredProjects .blockButton .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .blockText {
+#aboutPage #featuredProjects .blockContainer .blockText, #aboutPage #featuredProjects .blockButton .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .blockText, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote .blockText, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote .blockText {
   position: absolute;
   padding-left: 30%;
   -webkit-transition: opacity 300ms linear;
@@ -2146,11 +2185,11 @@ body {
   opacity: 0.0;
 }
 
-#aboutPage #featuredProjects .blockContainer:hover .buttonImg, #aboutPage #featuredProjects .blockButton:hover .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .buttonImg {
+#aboutPage #featuredProjects .blockContainer:hover .buttonImg, #aboutPage #featuredProjects .blockButton:hover .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .buttonImg, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote:hover .buttonImg, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote:hover .buttonImg {
   opacity: 0.3;
 }
 
-#aboutPage #featuredProjects .blockContainer:hover .blockText, #aboutPage #featuredProjects .blockButton:hover .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .blockText {
+#aboutPage #featuredProjects .blockContainer:hover .blockText, #aboutPage #featuredProjects .blockButton:hover .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .blockText, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote:hover .blockText, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote:hover .blockText {
   opacity: 1.0;
 }
 
@@ -2423,6 +2462,31 @@ body {
   font-family: "open_sanslight_italic", sans-serif;
 }
 
+#projectPage.caseStudyPage #projectInfo .description > h1:not(:first-child) {
+  margin-top: 5rem;
+}
+
+#projectPage.caseStudyPage #projectInfo .description .quote {
+  font-style: italic;
+  margin: 4rem 0rem 5rem 0rem;
+  padding: 2.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+#projectPage.caseStudyPage #projectInfo .description .quote .source {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 2rem;
+}
+
+#projectPage.caseStudyPage #projectInfo .description .quote .source::before {
+  content: "— ";
+}
+
+#projectPage.caseStudyPage #projectInfo .imageWithCaption {
+  margin: 3rem 0rem;
+}
+
 @media (max-width: 1000px) {
   #homePage #blurb .blurbCopy p {
     font-size: 2rem;
@@ -2437,7 +2501,7 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2.5rem;
   }
-  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p {
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p {
     font-size: 1.2rem;
     padding-left: 1.3rem !important;
   }
@@ -2533,7 +2597,7 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2rem;
   }
-  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p {
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p {
     font-size: 2rem;
     padding-left: 30%;
   }
