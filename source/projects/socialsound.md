@@ -64,3 +64,7 @@ links:
 <div class="fitVid">
   <iframe src="http://player.vimeo.com/video/131315580?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
+
+<img src="/assets/projects/socialsound/1.jpg">
+<img src="/assets/projects/socialsound/2.jpg">
+<img src="/assets/projects/socialsound/3.jpg">

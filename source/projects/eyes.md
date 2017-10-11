@@ -6,16 +6,6 @@ previewImg: /assets/projects/eyes/1.jpg
 aspectRatio: 3-4
 priority: 6
 coverImg: /assets/projects/eyes/1.jpg
-showcaseImages:
-  - image: /assets/projects/eyes/gifSmall.gif
-    aspectRatio: 1-2
-    offset: -100
-  - image: /assets/projects/eyes/5.jpg
-    aspectRatio: 2-3
-  - image: /assets/projects/eyes/2.jpg
-    aspectRatio: 9-16
-    offset: -200
-showcaseVersion: 1
 roles:
   - Concept Development
   - Content Production
@@ -46,3 +36,8 @@ links:
 <div class="fitVid">
   <iframe src="http://player.vimeo.com/video/113986453?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
+
+<!-- <img src="/assets/projects/afteralifeahead/phar1.png" class="caption captionLight captionRight captionIn" data-caption="Photo: Ola Rindal"> -->
+<img src="/assets/projects/eyes/gifSmall.gif">
+<img src="/assets/projects/eyes/5.jpg">
+<img src="/assets/projects/eyes/2.jpg">
