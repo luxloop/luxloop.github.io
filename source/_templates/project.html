@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/assets/css/lux.min.css">
   <script src="/assets/js/vendor/modernizr.min.js"></script>
 </head>
-<body id="projectPage" class="enableFade">
+<body id="projectPage" class="caseStudyPage enableFade">
 
   {{> menu}}
 
@@ -144,34 +144,6 @@
 
       </div>
     </section>
-
-    {{#if showcaseImages}}
-    <section {{#if showcaseVersion}}class="v{{showcaseVersion}}"{{else}}class="v1"{{/if}} id="alternatingImages">
-      {{!--
-      <!-- <div class="showcaseImage parallax" data-offset="-100">
-        <div class="aspect ratio-2-3">
-          <div class="aspectContent fitVid">
-            <iframe src="http://player.vimeo.com/video/114310483?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div> --> --}}
-
-    {{#each showcaseImages }}
-      <div {{#if offset}}
-           data-offset="{{offset}}"
-           {{/if}}
-           class="showcaseImage parallax">
-
-        {{#if captionRight}}<div class="captionRight{{#if captionDark}} captionDark{{/if}}">{{captionRight}}</div>{{/if}}
-        {{#if captionLeft}}<div class="captionLeft{{#if captionDark}} captionDark{{/if}}">{{captionLeft}}</div>{{/if}}
-        <div class="aspect ratio-{{aspectRatio}}">
-          <div class="aspectContent" style="background-image: url('{{image}}');"></div>
-        </div>
-      </div>
-    {{/each }}
-
-    </section>
-    {{/if}}
 
     {{> footer}}
 

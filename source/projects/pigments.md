@@ -6,15 +6,6 @@ previewImg: /assets/img/pigments.jpg
 aspectRatio: 2-3
 priority: 3
 coverImg: /assets/projects/pigments/cover.jpg
-showcaseImages:
-  - image: /assets/projects/pigments/download-1.png
-    aspectRatio: 9-16
-    offset: -100
-  - image: /assets/projects/pigments/pigments.gif
-    aspectRatio: 2-3
-  - image: /assets/projects/pigments/download-4.png
-    aspectRatio: 1-3
-    offset: -200
 roles:
   - Interaction Design
   - Full-Stack Development
@@ -23,25 +14,6 @@ tech:
   - Canvas
   - WebAudio API
   - Websockets
-team:
-  - credit: Co-Creator/Writer
-    people:
-      - Sebastian Lyman
-  - credit: Co-Creator/Designer
-    people:
-      - Natalie Seitz
-  - credit: Video Director
-    people:
-      - Chase O'Black
-  - credit: Video Synthesis
-    people:
-      - Alex Beauregard
-  - credit: Creative Technologist/Developer
-    people:
-      - Ivaylo Getov
-  - credit: Produced by
-    people:
-      - Luxloop
 links:
   - address: http://nerdist.com/las-elohim-shares-pigments-website-allows-users-to-control-her-heartbeat-premiere/
     alt: LA’s Elohim Shares “PIGMENTS” Website
@@ -74,4 +46,27 @@ links:
 
 <div class="fitVid">
   <iframe src="http://player.vimeo.com/video/198270687?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<div class="quote">
+    The project is an ingenious cross-platform concept that riffs on our growing obsession with virtual intelligence.
+    <span class="source">Nerdist</span>
+</div>
+
+<h1>Building Connections</h1>
+<p>
+    Using node.js and socket.io, we built a custom websocket routing server to maintain pairs between a user’s phone and computer and handle their interaction input. Client-side WebGL and JavaScript dynamically build the experience for each user, react to their input, and generate the shareable graphics. The Webaudio API applies dynamic effects on multiple synced audio tracks to create the “dying” effect if users stop tapping out the heartbeat.
+</p>
+
+<img src="/assets/projects/pigments/download-1.png">
+<img src="/assets/projects/pigments/pigments.gif">
+<img src="/assets/projects/pigments/download-4.png">
+
+<div class="quote">
+    Focusing on this sense of emotion, the premise for Elohim’s interactive video clip for ‘Pigments’ is allowing you to control her heartbeat. It’s perhaps a little creepy, but also very beautiful.
+    <span class="source">Pigeons and Planes</span>
+</div>
+
+<div class="fitVid">
+  <iframe src="http://player.vimeo.com/video/198270480?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>

@@ -1,3 +1,47 @@
+<!-- example YAML
+---
+name: After ALife Ahead
+headline: Real-Time Responsive Mobile Augmented Reality
+slug: afteralifeahead
+previewImg: /assets/projects/afteralifeahead/phar1.png
+aspectRatio: 3-4
+priority: 1
+coverVid:
+  vid: /assets/projects/afteralifeahead/phar.mp4
+  poster: /assets/projects/afteralifeahead/pharVidcover.png
+showcaseImages:
+  - image: /assets/projects/afteralifeahead/phar1.png
+    aspectRatio: 2-3
+    offset: -100
+    captionLeft: "Photo: Ola Rindal"
+  - image: /assets/projects/afteralifeahead/pharOverview.gif
+    aspectRatio: 3-4
+    captionRight: "System Server View"
+    captionDark: true
+  - image: /assets/projects/afteralifeahead/phar4.png
+    aspectRatio: 9-16
+    offset: 50
+    captionLeft: "Photo: Pierre Huyghe"
+    captionDark: true
+showcaseVersion: 2
+roles:
+  - Augmented Reality Design + Development
+  - Custom iOS+Android Application
+  - Content Server System
+tech:
+  - iOS & Android App
+  - Custom Beacon Location Tracking
+  - Real-time AR Server
+links:
+  - address: https://www.artsy.net/article/artsy-editorial-pierre-huyghes-latest-project-biotech-lab-scene-sci-fi-film
+    text: Artsy
+  - address: http://www.artnews.com/2017/06/26/constant-displacement-pierre-huyghe-on-his-work-at-skulptur-projekte-munster-2017/
+    text: Art News
+  - address: http://theartnewspaper.com/reports/pierre-huyghe-creates-sci-fi-landscape-in-m-nster/
+    text: The Art Newspaper
+---
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +58,7 @@
   <link rel="stylesheet" href="/assets/css/lux.min.css">
   <script src="/assets/js/vendor/modernizr.min.js"></script>
 </head>
-<body id="projectPage" class="caseStudyPage enableFade">
+<body id="projectPage" class="enableFade">
 
   {{> menu}}
 
@@ -144,6 +188,34 @@
 
       </div>
     </section>
+
+    {{#if showcaseImages}}
+    <section {{#if showcaseVersion}}class="v{{showcaseVersion}}"{{else}}class="v1"{{/if}} id="alternatingImages">
+      {{!--
+      <!-- <div class="showcaseImage parallax" data-offset="-100">
+        <div class="aspect ratio-2-3">
+          <div class="aspectContent fitVid">
+            <iframe src="http://player.vimeo.com/video/114310483?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> --> --}}
+
+    {{#each showcaseImages }}
+      <div {{#if offset}}
+           data-offset="{{offset}}"
+           {{/if}}
+           class="showcaseImage parallax">
+
+        {{#if captionRight}}<div class="captionRight{{#if captionDark}} captionDark{{/if}}">{{captionRight}}</div>{{/if}}
+        {{#if captionLeft}}<div class="captionLeft{{#if captionDark}} captionDark{{/if}}">{{captionLeft}}</div>{{/if}}
+        <div class="aspect ratio-{{aspectRatio}}">
+          <div class="aspectContent" style="background-image: url('{{image}}');"></div>
+        </div>
+      </div>
+    {{/each }}
+
+    </section>
+    {{/if}}
 
     {{> footer}}
 
