@@ -2487,6 +2487,10 @@ body {
   margin: 3rem 0rem;
 }
 
+#projectPage.caseStudyPage #projectInfo video {
+  width: 100%;
+}
+
 @media (max-width: 1000px) {
   #homePage #blurb .blurbCopy p {
     font-size: 2rem;
