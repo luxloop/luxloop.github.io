@@ -4,7 +4,7 @@ headline: Site-Specific Audio Narrative
 slug: overheard
 previewImg: /assets/img/oh.jpg
 aspectRatio: 9-16
-priority: 1
+priority: 2
 coverImg: /assets/projects/overheard/appinhand.jpg
 roles:
   - Concept Development
