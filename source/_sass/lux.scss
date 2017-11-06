@@ -926,6 +926,18 @@ body {
       }
     }
 
+    .centerLogo {
+      position: relative;
+      width: 35vw;
+      font-size: 8rem;
+      margin: 7rem 10rem;
+      z-index: 5;
+
+      .logoSvg path:not(.st1):not(.st2) {
+        fill: $frontPageColor;
+      }
+    }
+
     .topline {
       border-right: black solid $outLineWidth;
       border-bottom: black solid $outLineWidth;
@@ -1412,6 +1424,8 @@ body {
   // #cornerLogo {font-size: 2.5rem;}
 
   #homePage {
+
+
     #blurb {
       .blurbCopy {
         p {
@@ -1551,10 +1565,15 @@ body {
 
   #homePage {
     #bigLuxLogoBox {
-      h1 {
-        font-size: 6rem;
+
+      .centerLogo {
+        width: 55vw;
         margin: 5rem 6.5rem;
       }
+      // h1 {
+      //   font-size: 6rem;
+      //
+      // }
     }
 
     #blurb {
@@ -1673,10 +1692,15 @@ body {
 
   #homePage {
     #bigLuxLogoBox {
-      h1 {
-        font-size: 4.8rem;
-        margin: 4rem 4rem;
+
+      .centerLogo {
+        width: 70vw;
+        margin: 2rem 3rem;
       }
+      // h1 {
+      //   font-size: 4.8rem;
+      //   margin: 4rem 4rem;
+      // }
     }
     #blurb {
       .blurbCopy {
@@ -1770,10 +1794,14 @@ body {
 
   #homePage {
     #bigLuxLogoBox {
-      h1 {
-        font-size: 3rem;
-        margin: 3rem 4rem;
+      .centerLogo {
+        width: 60vw;
+        margin: 1rem 3rem 2rem 3rem;
       }
+      // h1 {
+      //   font-size: 3rem;
+      //   margin: 3rem 4rem;
+      // }
     }
   }
 
