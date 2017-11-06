@@ -57,13 +57,17 @@
     }
   });
 
-  $('.fadeLink').on('click',function(e) {
+  $('.fadeLink').on('click', function(e) {
     e.preventDefault();
-    var dest = e.target.getAttribute("href");
+    var dest = e.target.getAttribute("href") || e.target.getAttribute("data-dest") || $(this).closest("a:has(*[data-dest])").children('[data-dest]').first().attr('data-dest');
     if (dest !== null && dest !== undefined) {
       fadeTo(dest);
     }
   });
+
+  // $('.fadeLink').on('click', .'replaced-svg', function() {
+
+  // });
 
   // TO-DO:
   // $(window).on('resize', function() {
@@ -276,6 +280,7 @@
       var $img = jQuery(this);
       var imgID = $img.attr('id');
       var imgClass = $img.attr('class');
+      var dest = $img.attr('data-dest');
       var imgURL = $img.attr('src');
 
       $.get(imgURL, function(data) {
@@ -289,6 +294,11 @@
           // Add replaced image's classes to the new SVG
           if(typeof imgClass !== 'undefined') {
               $svg = $svg.attr('class', imgClass+' replaced-svg');
+          }
+
+          // Add replaced image's destination to the new SVG
+          if(typeof dest !== 'undefined') {
+              $svg = $svg.attr('data-dest', dest);
           }
 
           // Remove any invalid XML tags as per http://validator.w3.org
