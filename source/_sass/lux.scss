@@ -232,6 +232,12 @@ h1 {
   font-size: 1.3em;
 }
 
+h1, h2, h3 {
+  &.altFont {
+    font-family: $headerFont;
+  }
+}
+
 h2 {
   //@extend .bolder;
   font-size: 1em;
@@ -1015,6 +1021,15 @@ body {
   #pageCover {
     height: 65vh;
   }
+
+
+  .fullWidthCopy {
+    p {
+      font-size: 1.25rem;
+    }
+
+  }
+
 
   #featuredProjects {
     .blockContainer {
