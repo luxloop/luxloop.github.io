@@ -770,6 +770,13 @@ body {
 
   .floatQuote {
     @include floatCentered;
+    width: 50vw;
+    height: 30vh;
+    max-height: 300px;
+
+    .blockText {
+      margin: 1rem 1.3rem 1rem 1.3rem;
+    }
   }
 }
 
@@ -1557,8 +1564,11 @@ body {
 
   .fullWidthMedia {
     .floatQuote {
+      width: 55vw;
+
       .blockText {
         font-size: 1.5rem;
+        margin: 0.6rem 1rem;
       }
     }
   }
@@ -1678,8 +1688,12 @@ body {
 
   .fullWidthMedia {
     .floatQuote {
+      width: 85vw;
+      max-height: 100px;
+
       .blockText {
         font-size: 1rem;
+        margin: 0.6rem;
       }
     }
   }
@@ -1787,7 +1801,7 @@ body {
   .fullWidthMedia {
     .floatQuote {
       .blockText {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
       }
     }
   }
