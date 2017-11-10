@@ -81,14 +81,39 @@ $largeGrid: (
   }
 }
 
+// .column4 {
+//   @include grid-media($mediumGrid){
+//     @include grid-column(12);
+//   }
+//   @include grid-media($largeGrid){
+//     @include grid-column(4);
+//   }
+// }
+
 .column4 {
   @include grid-media($mediumGrid){
-    @include grid-column(12);
+    @include grid-column(8);
+    @include grid-push(2);
   }
+
   @include grid-media($largeGrid){
     @include grid-column(4);
+    @include grid-push(0)
   }
 }
+
+.column4-center {
+  @include grid-media($mediumGrid){
+    @include grid-column(8);
+    @include grid-push(2);
+  }
+
+  @include grid-media($largeGrid){
+    @include grid-column(4);
+    @include grid-push(4)
+  }
+}
+
 
 .column4-6 {
   @include grid-media($mediumGrid){
@@ -102,18 +127,6 @@ $largeGrid: (
 .column3 {
   @include grid-media($largeGrid){
     @include grid-column(3);
-  }
-}
-
-.column4 {
-  @include grid-media($mediumGrid){
-    @include grid-column(8);
-    @include grid-push(2);
-  }
-
-  @include grid-media($largeGrid){
-    @include grid-column(4);
-    @include grid-push(0)
   }
 }
 
@@ -1801,7 +1814,7 @@ body {
   .fullWidthMedia {
     .floatQuote {
       .blockText {
-        font-size: 0.9rem;
+        font-size: 0rem;
       }
     }
   }
