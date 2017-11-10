@@ -46,6 +46,11 @@ $neat-grid: (
   gutter: 1rem,
 );
 
+$smallGrid: (
+  gutter: $pageMargin/3,
+  media: $smallMobile,
+);
+
 $mediumGrid: (
   gutter: $pageMargin/2,
   media: $mobile,
@@ -127,6 +132,24 @@ $largeGrid: (
 .column3 {
   @include grid-media($largeGrid){
     @include grid-column(3);
+  }
+}
+
+.columnLogos {
+
+  @include grid-media($smallGrid){
+    @include grid-column(3);
+    @include grid-push(0);
+  }
+
+  // @include grid-media($mediumGrid){
+  //   @include grid-column(2);
+  //   @include grid-push(0);
+  // }
+
+  @include grid-media($largeGrid){
+    @include grid-column(2);
+    @include grid-push(0)
   }
 }
 
@@ -1079,6 +1102,10 @@ body {
         padding-left: 30%;
         transition: opacity 300ms linear;
         opacity: 0.0;
+
+        &.noFade {
+          opacity: 1.0;
+        }
       }
 
       &:hover {
@@ -1092,9 +1119,17 @@ body {
       }
     }
 
-
-
     margin-bottom: 8rem;
+  }
+
+  #clients {
+    h1:first-of-type {
+      //margin-top: 0rem;
+    }
+
+    .aspectContent {
+      background: red;
+    }
   }
 }
 
@@ -1469,7 +1504,7 @@ body {
   }
 
   #aboutPage {
-    #featuredProjects {
+    #featuredProjects, #clients {
       .blockContainer {
         p {
           font-size: 1.2rem;
@@ -1620,7 +1655,7 @@ body {
   }
 
   #aboutPage {
-    #featuredProjects {
+    #featuredProjects, #clients {
       .blockContainer {
         p {
           font-size: 2rem;
