@@ -17,7 +17,7 @@ tech:
 links:
   - address: http://www.nytimes.com/2016/10/30/arts/design/technology-invites-a-deep-dive-into-art.html?smid=fb-share&_r=1
     text: New York Times
-  - address: http://www.3m.com/3M/en_US/Newsroom/Full-Story/?storyid=a38c9241-42d9-4608-9de4-e50d0db70480
+  - address: https://www.3m.com/3M/en_US/particles/all-articles/article-detail/?storyid=a38c9241-42d9-4608-9de4-e50d0db70480
     text: 3M Newsroom
   - address: http://overheard.luxloop.com
     text: Project Page
