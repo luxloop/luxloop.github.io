@@ -925,28 +925,28 @@ body {
 
     $outLineWidth: 2px;
 
+    // White Boxes
+    // &::before {
+    //   content: "";
+    //   border: black solid $outLineWidth;
+    //   background: white;
+    //   position: absolute;
+    //   top: -5px;
+    //   left: -5px;
+    //   right: 5px;
+    //   bottom: 5px;
+    // }
 
-    &::before {
-      content: "";
-      border: black solid $outLineWidth;
-      background: white;
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: 5px;
-      bottom: 5px;
-    }
-
-    &::after {
-      content: "";
-      border: black solid $outLineWidth;
-      background: white;
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: -5px;
-      bottom: -5px;
-    }
+    // &::after {
+    //   content: "";
+    //   border: black solid $outLineWidth;
+    //   background: white;
+    //   position: absolute;
+    //   top: 5px;
+    //   left: 5px;
+    //   right: -5px;
+    //   bottom: -5px;
+    // }
 
     h1 {
       position: relative;
@@ -976,8 +976,25 @@ body {
       margin: 7rem 10rem;
       z-index: 5;
 
-      .logoSvg path:not(.st1):not(.st2) {
-        fill: $frontPageColor;
+      // .logoSvg path:not(.st1):not(.st2) {
+      //   fill: $frontPageColor;
+      // }
+
+      @media (min-width: $tablet) {
+        &:after {
+          font-family: $bodyFont;
+          font-size: 0.9rem;
+          text-align: center;
+          //color: rgba(0,0,0,0.5);
+          color: white;
+          content: "An Experience-design and Production Studio";
+          position: absolute;
+          left: 50%;
+          top: 120%;
+          width: 400px;
+          transform: translateX(-50%);
+          // background: red;
+        }
       }
     }
 
