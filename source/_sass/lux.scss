@@ -457,6 +457,13 @@ body {
   .blockText {
     font-family: $headerFont;
     font-size: 2rem;
+
+    &.smallerBlockText {
+      @media (min-width: $smallScreen) {
+        font-size: 1.8rem;
+        margin-bottom: 0.2rem;
+      }
+    }
   }
 }
 

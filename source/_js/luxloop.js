@@ -17,6 +17,7 @@
     createCaptions();
     printContactInfo();
     initVideos();
+    initProjectPageGifs();
     scrollHandler();
   });
 
@@ -321,5 +322,27 @@
     });
   }
 
+  function initProjectPageGifs() {
+    $(".featuredProject .buttonImg").each(function(){
+      var button = $(this);
+      var gif = button.css("content");
+      if (gif != "" && gif != undefined) {
+        //$(this).css("background-image", "url(" + gif + ")")
+        console.log(gif);
+
+        var gifLoader = new Image();
+        gifLoader.src = gif.replace(/"/g,"");
+
+        gifLoader.onload = function() {
+          console.log("Loaded Gif");
+          //console.log(button);
+          button.css("background-image", "url(" + gif + ")")
+        }
+        gifLoader.onerror = function() {
+          console.log("Failed To Load Gif");
+        }
+      }
+    });
+  }
 
 })();
