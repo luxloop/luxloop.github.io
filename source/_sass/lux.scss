@@ -147,6 +147,24 @@ $largeGrid: (
   //   @include grid-push(0);
   // }
 
+  // @include grid-media($largeGrid){
+  //   @include grid-column(2);
+  //   @include grid-push(0)
+  // }
+}
+
+.columnLogosPress {
+
+  @include grid-media($smallGrid){
+    @include grid-column(3);
+    @include grid-push(0);
+  }
+
+  // @include grid-media($mediumGrid){
+  //   @include grid-column(2);
+  //   @include grid-push(0);
+  // }
+
   @include grid-media($largeGrid){
     @include grid-column(2);
     @include grid-push(0)
@@ -262,6 +280,8 @@ $largeBlurbGrid: (
 .margin-top-1 {margin-top: 1rem;}
 .margin-top-2 {margin-top: 2rem;}
 .margin-top-3 {margin-top: 3rem;}
+.margin-top-5 {margin-top: 5rem;}
+.margin-top-10 {margin-top: 10rem;}
 
 .margin-bottom-1 {margin-bottom: 1rem;}
 .margin-bottom-2 {margin-bottom: 2rem;}
@@ -1161,10 +1181,12 @@ body {
 
     .aspectContent {
       // background: red;
+      text-align: center;
     }
 
     .pressLogo, .clientLogo {
       width: 100%;
+      max-width: 150px;
     }
   }
 }
