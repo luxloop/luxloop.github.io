@@ -147,10 +147,10 @@ $largeGrid: (
   //   @include grid-push(0);
   // }
 
-  // @include grid-media($largeGrid){
-  //   @include grid-column(2);
-  //   @include grid-push(0)
-  // }
+  @include grid-media($largeGrid){
+    @include grid-column(2);
+    @include grid-push(0)
+  }
 }
 
 .columnLogosPress {
