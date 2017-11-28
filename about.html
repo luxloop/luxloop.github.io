@@ -13,16 +13,19 @@
   <!-- <link rel="stylesheet" href="/assets/css/normalize.min.css"> -->
   <link rel="stylesheet" href="/assets/css/lux.min.css">
   <style type="text/css">
-    #featuredProjects .boxesBox:nth-of-type(2) .buttonImg {
+    .featuredProject:nth-of-type(2) .buttonImg {
       background-image: url('assets/projects/afteralifeahead/phar1.png');
+      content: "/assets/projects/afteralifeahead/phar.gif";
     }
 
-    #featuredProjects .boxesBox:nth-of-type(3) .buttonImg {
+    .featuredProject:nth-of-type(3) .buttonImg {
       background-image: url('/assets/projects/overheard/cover.png');
+      content: "/assets/projects/overheard/button.gif";
     }
 
-    #featuredProjects .boxesBox:nth-of-type(4) .buttonImg {
+    .featuredProject:nth-of-type(4) .buttonImg {
       background-image: url('/assets/projects/blackcloak/screen1Offset.png');
+      content: "/assets/projects/blackcloak/cloak2.gif";
     }
   </style>
   <script src="/assets/js/vendor/modernizr.min.js"></script>
@@ -55,7 +58,7 @@
 
       <div id="cornerLogo">
         <!-- <a href="/" class="fadeLink">luxloop</a> -->
-        <a href="/" class="fadeLink"><img id="cornerLogo" class="svg logoSvg" src="/assets/img/logoOutline1.svg"/></a>
+        <a href="/" class="fadeLink"><img id="cornerLogo" class="svg logoSvg fadeLink" src="/assets/img/logoOutline1.svg" data-dest="/"/></a>
       </div>
 
       <div id="pageTitleBox">
@@ -72,8 +75,9 @@
 
 
     <section class="fullWidthCopy">
+
       <p>
-        We tell stories using new and near-future technology to create engaging interactive experiences that evoke wonder and foster a sense of discovery for artists and brands alike.
+         We inspire engagement and play by activating spaces with media and technology, and explore new ways that story can live in the world.
       </p>
 
       <p>
@@ -94,7 +98,7 @@
         <h1>FEATURED PROJECTS</h1>
       </div>
 
-      <div class="column column4 boxesBox">
+      <div class="column column4 boxesBox featuredProject">
         <div class="aspect ratio-3-4">
           <div class="aspectContent">
             <a href="projects/afteralifeahead.html" class="blockContainer blockButton expandButton">
@@ -105,7 +109,7 @@
         </div>
       </div>
 
-      <div class="column column4 boxesBox">
+      <div class="column column4 boxesBox featuredProject">
         <div class="aspect ratio-3-4">
           <div class="aspectContent">
             <a href="projects/overheard.html" class="blockContainer blockButton expandButton">
@@ -116,7 +120,7 @@
         </div>
       </div>
 
-      <div class="column column4 boxesBox">
+      <div class="column column4 boxesBox featuredProject">
         <div class="aspect ratio-3-4">
           <div class="aspectContent">
             <a href="projects/blackcloak.html" class="blockContainer blockButton expandButton">
@@ -127,26 +131,183 @@
         </div>
       </div>
 
-      <!-- <div class="column column4 boxesBox">
-        <div class="aspect ratio-3-4">
+      <div class="column column4-center boxesBox margin-top-2">
+        <div class="aspect ratio-1-3 ">
           <div class="aspectContent">
-            <a href="projects/pigments.html" class="blockContainer blockButton expandButton">
-              <div class="buttonImg"></div>
+            <a href="projects" class="blockContainer blockButton expandButton">
+              <p class="blockText noFade blockTextBR uppercase smallerBlockText">More Projects</p>
             </a>
           </div>
         </div>
-      </div> -->
+      </div>
+
+    </section>
+
+    <section id="clients" class="showcaseBoxes gridContainer margin-bottom-3">
+
+      <div class="column column12 boxesHead">
+        <h1>SELECTED CLIENTS + PARTNERS</h1>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/01.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/02.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/03.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/04.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/05.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/06.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/07.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/08.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/09.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/10.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/11.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogos boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <img src="/assets/img/clientLogos/12.png" alt="" class="clientLogo">
+          </div>
+        </div>
+      </div>
+
+      <div class="column column12 boxesHead margin-top-3">
+        <h1>SELECTED PRESS</h1>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://www.nytimes.com/2016/10/30/arts/design/technology-invites-a-deep-dive-into-art.html?smid=fb-share&_r=1" title="" target="_blank"><img src="/assets/img/clientLogos/press1.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://www.artsy.net/article/artsy-editorial-pierre-huyghes-latest-project-biotech-lab-scene-sci-fi-film" title="" target="_blank"><img src="/assets/img/clientLogos/press3.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://creators.vice.com/en_us/article/9and43/social-sound-is-a-tool-for-turning-twitter-into-live-sound-art" title="" target="_blank"><img src="/assets/img/clientLogos/press2.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://nerdist.com/las-elohim-shares-pigments-website-allows-users-to-control-her-heartbeat-premiere/" title="" target="_blank"><img src="/assets/img/clientLogos/press4.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://i-d.vice.com/en_uk/article/a3g9pz/exclusive-watch-gypsy-sports-interactive-new-film-with-music-by-jaden-and-willow-smith" title="" target="_blank"><img src="/assets/img/clientLogos/press5.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column columnLogosPress boxesBox">
+        <div class="aspect ratio-1-1">
+          <div class="aspectContent">
+            <a href="https://www.nylon.com/articles/willow-jaden-smith-gypsy-sport" title="" target="_blank"><img src="/assets/img/clientLogos/press6.png" alt="" class="pressLogo"></a>
+          </div>
+        </div>
+      </div>
+
 
 
     </section>
 
-    <section class="fullWidthMedia">
+    <section class="fullWidthMedia margin-top-5">
       <div class="aspect ratio-1-2">
         <div class="aspectContent parallax cropped" data-offset="-200"><img src="/assets/img/pigments.jpg" alt=""></div>
       </div>
 
       <div class="floatQuote blockContainer">
-        <p class="blockText blockTextTL uppercase">
+        <p class="blockText blockTextBR uppercase">
           We Mediate the Intersection of the Physical and Digital Worlds
         </p>
       </div>

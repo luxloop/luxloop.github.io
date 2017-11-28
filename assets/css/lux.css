@@ -606,9 +606,10 @@ textarea {
 
 @media only screen and (min-width: 500px) {
   .column4 {
-    width: calc(100% - 3rem);
+    width: calc(66.66667% - 2.5rem);
     float: left;
     margin-left: 1.5rem;
+    margin-left: calc(16.66667% - 1.75rem + 3rem);
   }
 }
 
@@ -617,6 +618,25 @@ textarea {
     width: calc(33.33333% - 4rem);
     float: left;
     margin-left: 3rem;
+    margin-left: calc(0% - 3rem + 6rem);
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .column4-center {
+    width: calc(66.66667% - 2.5rem);
+    float: left;
+    margin-left: 1.5rem;
+    margin-left: calc(16.66667% - 1.75rem + 3rem);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .column4-center {
+    width: calc(33.33333% - 4rem);
+    float: left;
+    margin-left: 3rem;
+    margin-left: calc(33.33333% - 4rem + 6rem);
   }
 }
 
@@ -644,18 +664,36 @@ textarea {
   }
 }
 
-@media only screen and (min-width: 500px) {
-  .column4 {
-    width: calc(66.66667% - 2.5rem);
+@media only screen and (min-width: 380px) {
+  .columnLogos {
+    width: calc(25% - 1.25rem);
     float: left;
-    margin-left: 1.5rem;
-    margin-left: calc(16.66667% - 1.75rem + 3rem);
+    margin-left: 1rem;
+    margin-left: calc(0% - 1rem + 2rem);
   }
 }
 
 @media only screen and (min-width: 800px) {
-  .column4 {
-    width: calc(33.33333% - 4rem);
+  .columnLogos {
+    width: calc(16.66667% - 3.5rem);
+    float: left;
+    margin-left: 3rem;
+    margin-left: calc(0% - 3rem + 6rem);
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .columnLogosPress {
+    width: calc(25% - 1.25rem);
+    float: left;
+    margin-left: 1rem;
+    margin-left: calc(0% - 1rem + 2rem);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .columnLogosPress {
+    width: calc(16.66667% - 3.5rem);
     float: left;
     margin-left: 3rem;
     margin-left: calc(0% - 3rem + 6rem);
@@ -742,6 +780,38 @@ textarea {
   text-transform: uppercase;
 }
 
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+.margin-top-3 {
+  margin-top: 3rem;
+}
+
+.margin-top-5 {
+  margin-top: 5rem;
+}
+
+.margin-top-10 {
+  margin-top: 10rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-3 {
+  margin-bottom: 3rem;
+}
+
 ::-moz-selection {
   background: #ddd;
 }
@@ -752,6 +822,10 @@ textarea {
 
 h1 {
   font-size: 1.3em;
+}
+
+h1.altFont, h2.altFont, h3.altFont {
+  font-family: "code_proregular", sans-serif;
 }
 
 h2 {
@@ -1584,6 +1658,13 @@ body {
   font-size: 2rem;
 }
 
+@media (min-width: 1000px) {
+  .blockContainer .blockText.smallerBlockText, .blockButton .blockText.smallerBlockText, #homePage #whatWeDoButton .blockText.smallerBlockText, #projects #projectsList .projectEntry .bigBlockButton .blockText.smallerBlockText, #projectPage.caseStudyPage #projectInfo .description .quote .blockText.smallerBlockText {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
 .blockTextBR {
   text-align: right;
   position: absolute;
@@ -1941,6 +2022,13 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 30vh;
+  max-height: 300px;
+}
+
+.fullWidthMedia .floatQuote .blockText {
+  margin: 1rem 1.3rem 1rem 1.3rem;
 }
 
 .fullWidthCopy {
@@ -2039,28 +2127,6 @@ body {
   background: none;
 }
 
-#homePage #bigLuxLogoBox::before {
-  content: "";
-  border: black solid 2px;
-  background: white;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: 5px;
-  bottom: 5px;
-}
-
-#homePage #bigLuxLogoBox::after {
-  content: "";
-  border: black solid 2px;
-  background: white;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: -5px;
-  bottom: -5px;
-}
-
 #homePage #bigLuxLogoBox h1 {
   position: relative;
   font-family: "mark_my_wordsregular";
@@ -2079,6 +2145,30 @@ body {
     position: absolute;
     left: 3.3rem;
     bottom: 1.8rem;
+  }
+}
+
+#homePage #bigLuxLogoBox .centerLogo {
+  position: relative;
+  width: 35vw;
+  font-size: 8rem;
+  margin: 7rem 10rem;
+  z-index: 5;
+}
+
+@media (min-width: 800px) {
+  #homePage #bigLuxLogoBox .centerLogo:after {
+    font-family: "open_sanslight", sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    color: white;
+    content: "An Experience-design and Production Studio";
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    width: 400px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -2138,8 +2228,8 @@ body {
 }
 
 #homePage #blurb .blurbImage .aspectContent {
-  background-image: url("/assets/img/bluebutterfly.jpg");
-  background-position: 85% center !important;
+  background-image: url("/assets/img/app_inhand.jpg");
+  background-position: center 100% !important;
 }
 
 #homePage #blurb .blurbCopy p {
@@ -2166,6 +2256,10 @@ body {
   height: 65vh;
 }
 
+#aboutPage .fullWidthCopy p {
+  font-size: 1.4rem;
+}
+
 #aboutPage #featuredProjects {
   margin-bottom: 8rem;
 }
@@ -2185,12 +2279,25 @@ body {
   opacity: 0.0;
 }
 
+#aboutPage #featuredProjects .blockContainer .blockText.noFade, #aboutPage #featuredProjects .blockButton .blockText.noFade, #aboutPage #featuredProjects #homePage #whatWeDoButton .blockText.noFade, #homePage #aboutPage #featuredProjects #whatWeDoButton .blockText.noFade, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton .blockText.noFade, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton .blockText.noFade, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote .blockText.noFade, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote .blockText.noFade {
+  opacity: 1.0;
+}
+
 #aboutPage #featuredProjects .blockContainer:hover .buttonImg, #aboutPage #featuredProjects .blockButton:hover .buttonImg, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .buttonImg, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .buttonImg, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .buttonImg, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .buttonImg, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote:hover .buttonImg, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote:hover .buttonImg {
   opacity: 0.3;
 }
 
 #aboutPage #featuredProjects .blockContainer:hover .blockText, #aboutPage #featuredProjects .blockButton:hover .blockText, #aboutPage #featuredProjects #homePage #whatWeDoButton:hover .blockText, #homePage #aboutPage #featuredProjects #whatWeDoButton:hover .blockText, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton:hover .blockText, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton:hover .blockText, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote:hover .blockText, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote:hover .blockText {
   opacity: 1.0;
+}
+
+#aboutPage #clients .aspectContent {
+  text-align: center;
+}
+
+#aboutPage #clients .pressLogo, #aboutPage #clients .clientLogo {
+  width: 100%;
+  max-width: 150px;
 }
 
 #contactPage #pageCover {
@@ -2505,7 +2612,7 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2.5rem;
   }
-  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p {
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p, #aboutPage #clients .blockContainer p, #aboutPage #clients .blockButton p, #aboutPage #clients #homePage #whatWeDoButton p, #homePage #aboutPage #clients #whatWeDoButton p, #aboutPage #clients #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #clients .bigBlockButton p, #aboutPage #clients #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #clients .quote p {
     font-size: 1.2rem;
     padding-left: 1.3rem !important;
   }
@@ -2577,11 +2684,15 @@ body {
   .fullWidthCopy p {
     font-size: 1.1rem;
   }
+  .fullWidthMedia .floatQuote {
+    width: 55vw;
+  }
   .fullWidthMedia .floatQuote .blockText {
     font-size: 1.5rem;
+    margin: 0.6rem 1rem;
   }
-  #homePage #bigLuxLogoBox h1 {
-    font-size: 6rem;
+  #homePage #bigLuxLogoBox .centerLogo {
+    width: 55vw;
     margin: 5rem 6.5rem;
   }
   #homePage #blurb {
@@ -2601,7 +2712,7 @@ body {
   #homePage #whatWeDoButton .blockText {
     font-size: 2rem;
   }
-  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p {
+  #aboutPage #featuredProjects .blockContainer p, #aboutPage #featuredProjects .blockButton p, #aboutPage #featuredProjects #homePage #whatWeDoButton p, #homePage #aboutPage #featuredProjects #whatWeDoButton p, #aboutPage #featuredProjects #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #featuredProjects .bigBlockButton p, #aboutPage #featuredProjects #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #featuredProjects .quote p, #aboutPage #clients .blockContainer p, #aboutPage #clients .blockButton p, #aboutPage #clients #homePage #whatWeDoButton p, #homePage #aboutPage #clients #whatWeDoButton p, #aboutPage #clients #projects #projectsList .projectEntry .bigBlockButton p, #projects #projectsList .projectEntry #aboutPage #clients .bigBlockButton p, #aboutPage #clients #projectPage.caseStudyPage #projectInfo .description .quote p, #projectPage.caseStudyPage #projectInfo .description #aboutPage #clients .quote p {
     font-size: 2rem;
     padding-left: 30%;
   }
@@ -2645,15 +2756,20 @@ body {
   #cornerLogo {
     left: 1rem;
   }
+  .fullWidthMedia .floatQuote {
+    width: 85vw;
+    max-height: 100px;
+  }
   .fullWidthMedia .floatQuote .blockText {
     font-size: 1rem;
+    margin: 0.6rem;
   }
   #aboutPage .fullWidthCopy {
     margin-top: 8rem;
   }
-  #homePage #bigLuxLogoBox h1 {
-    font-size: 4.8rem;
-    margin: 4rem 4rem;
+  #homePage #bigLuxLogoBox .centerLogo {
+    width: 70vw;
+    margin: 2rem 3rem;
   }
   #homePage #blurb .blurbCopy p {
     font-size: 1.8rem;
@@ -2713,11 +2829,11 @@ body {
     left: 1rem;
   }
   .fullWidthMedia .floatQuote .blockText {
-    font-size: 0.7rem;
+    font-size: 0rem;
   }
-  #homePage #bigLuxLogoBox h1 {
-    font-size: 3rem;
-    margin: 3rem 4rem;
+  #homePage #bigLuxLogoBox .centerLogo {
+    width: 60vw;
+    margin: 1rem 3rem 2rem 3rem;
   }
   #pageTitleBox {
     min-width: 200px;
