@@ -4,7 +4,7 @@ headline: Interactive Video Installation
 slug: eyes
 previewImg: /assets/projects/eyes/1.jpg
 aspectRatio: 3-4
-priority: 6
+priority: 7
 coverImg: /assets/projects/eyes/d3.png
 roles:
   - Concept Development

@@ -4,7 +4,7 @@ slug: afteralifeahead
 headline: Real-Time Responsive Mobile Augmented Reality
 previewImg: /assets/projects/afteralifeahead/phar1.png
 aspectRatio: 3-4
-priority: 1
+priority: 2
 coverVid:
   vid: /assets/projects/afteralifeahead/phar.mp4
   poster: /assets/projects/afteralifeahead/pharVidcover.png

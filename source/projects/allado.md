@@ -5,7 +5,7 @@ headline: Interactive Fashion Video for Gypsy Sport F/W 2016 Collection
 slug: allado
 previewImg: /assets/projects/gypsysport/cover.jpg
 aspectRatio: 9-16
-priority: 5
+priority: 6
 coverImg: /assets/projects/gypsysport/cover.jpg
 roles:
   - Content Production

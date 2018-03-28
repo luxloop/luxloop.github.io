@@ -4,7 +4,7 @@ headline: A Tool for Live Performance of the Social Sphere
 slug: socialsound
 previewImg: /assets/projects/socialsound/1.jpg
 aspectRatio: 9-16
-priority: 4
+priority: 5
 coverVid:
   vid: /assets/projects/socialsound/socialsoundBg.mp4
   poster: /assets/projects/socialsound/vidThumb.jpg

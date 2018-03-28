@@ -6,7 +6,7 @@ slug: blackcloak
 coverImg: /assets/projects/blackcloak/screen1Offset.png
 previewImg: /assets/projects/blackcloak/screen1Offset.png
 aspectRatio: 3-4
-priority: 3
+priority: 4
 roles:
   - Event Design
   - Film/Video Production
