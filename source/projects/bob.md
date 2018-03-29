@@ -27,7 +27,7 @@ links:
 ---
 
 <p class="italic justLeft">
-    Ian Cheng - Bob - 2018<br>
+    Ian Cheng - BOB - 2018<br>
     BOB stands for Bag of Beliefs. BOB is an artificial lifeform who enjoys the thrill of making his own path, and the growing pains of developing a generative attitude towards living. BOB's experiences solidify into personality traits and patterns of growth. The life story of BOB is persistent, irreversible, ageing, and consequential. Yet, when conditions are ripe, BOB may engage in activities powerful enough to change its mind and reshape its body.
 </p>
 
